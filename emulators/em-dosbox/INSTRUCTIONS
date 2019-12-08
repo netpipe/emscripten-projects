@@ -1,0 +1,20 @@
+#use these to package up your files
+modify the makefile in the src folder to not include the emterpretify lines and add these in
+-s FORCE_FILESYSTEM=1
+make CXXFLAGS+="-s ERROR_ON_UNDEFINED_SYMBOLS=0 -s USE_SDL=2"
+
+python packager.py lemmings /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/emulator/em-dosbox/src/exes/LEMINGS3 /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/emulator/em-dosbox/src/exes/LEMINGS3/GOLEM.EXE
+./packager.py test ./exes/test/ LOL.EXE
+
+./packager.py test ./exes/test/TEST.EXE
+
+
+#tried this but nogo
+emcc dosbox.bc -o dosbox2.html -s TOTAL_MEMORY=134217728 -s USE_SDL=2 -s ERROR_ON_UNDEFINED_SYMBOLS=0 -s ALLOW_MEMORY_GROWTH=0 -L/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/emulator/em-dosbox/src/libs/gui_tk -lgui_tk -s ASYNCIFY=1 -s FORCE_FILESYSTEM=1 -s EMTERPRETIFY_WHITELIST=@emterpretify.txt -s FETCH=1 -L/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/emulator/em-dosbox/src/libs/gui_tk -lgui_tk -L./cpu/ -lcpu -L./debug -ldebug -L./dos -L./fpu -lfpu -L./hardware -lhardware -L./gui/ -lgui -L./ints/ -l ints -L./misc -lmisc -L./shell -lshell -L./hardware/serialport -lserial -DHAVE_CONFIG_H
+
+
+
+modify makefile with these in /src folder
+
+am__append_1 = -s ASYNCIFY=1 -s EMTERPRETIFY_WHITELIST=@emterpretify.txt -s FETCH=1 -s FORCE_FILESYSTEM=1 --preload-file media/
+EXEEXT = .html
