@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1575412583 source:/home/netpipe/Desktop/TheoPlay/TheoPlay/main.cpp
+	<stdio.h>
+	<string.h>
+	<sys/io.h>
+	<assert.h>
+	"theoraplay.h"
+	"SDL.h"
+
+1475930527 /home/netpipe/Desktop/TheoPlay/TheoPlay/theoraplay.h
+
+1575412583 source:/home/netpipe/Desktop/EMScripten-AddonBundle/TheoPlay/TheoPlay/main.cpp
+	<stdio.h>
+	<string.h>
+	<sys/io.h>
+	<assert.h>
+	"theoraplay.h"
+	"SDL.h"
+
+1475930527 /home/netpipe/Desktop/EMScripten-AddonBundle/TheoPlay/TheoPlay/theoraplay.h
+
+1575707037 source:/home/netpipe/Desktop/EMScripten-AddonBundle/TheoPlay/TheoPlay/theoraplay.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<windows.h>
+	<pthread.h>
+	<unistd.h>
+	"theoraplay.h"
+	<theora/theoradec.h>
+	<vorbis/codec.h>
+	"theoraplay_cvtrgb.h"
+	"theoraplay_cvtrgb.h"
+
+1573254114 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/media/theora/include/theora/theoradec.h
+	<stddef.h>
+	<ogg/ogg.h>
+	"codec.h"
+
+1572020761 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/media/Ogg/include/ogg/ogg.h
+	<stddef.h>
+	<ogg/os_types.h>
+
+1572055690 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/media/Ogg/include/ogg/os_types.h
+	<stdint.h>
+	<sys/types.h>
+	<stdint.h>
+	<inttypes.h>
+	<sys/types.h>
+	<inttypes.h>
+	<ogg/config_types.h>
+
+1572055917 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/media/Ogg/include/ogg/config_types.h
+	<inttypes.h>
+	<stdint.h>
+	<sys/types.h>
+
+1573254114 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/media/theora/include/theora/codec.h
+	<ogg/ogg.h>
+
+1572020774 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/media/Vorbis/include/vorbis/codec.h
+	<ogg/ogg.h>
+
+1475930527 /home/netpipe/Desktop/EMScripten-AddonBundle/TheoPlay/TheoPlay/theoraplay_cvtrgb.h
+
