@@ -1,0 +1,195 @@
+# depslib dependency file v1.0
+1226809850 source:/home/clayton/Desktop/em8051_161108/core.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"emu8051.h"
+
+1147558368 /home/clayton/Desktop/em8051_161108/emu8051.h
+
+1147558384 source:/home/clayton/Desktop/em8051_161108/disasm.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"emu8051.h"
+
+1147618050 source:/home/clayton/Desktop/em8051_161108/logicboard.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"curses.h"
+	"emu8051.h"
+	"emulator.h"
+
+1147558384 /home/clayton/Desktop/em8051_161108/emulator.h
+
+1147642690 source:/home/clayton/Desktop/em8051_161108/mainview.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"curses.h"
+	"emu8051.h"
+	"emulator.h"
+
+1147558384 source:/home/clayton/Desktop/em8051_161108/memeditor.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"curses.h"
+	"emu8051.h"
+	"emulator.h"
+
+1226785042 source:/home/clayton/Desktop/em8051_161108/opcodes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"emu8051.h"
+
+1147558384 source:/home/clayton/Desktop/em8051_161108/options.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"curses.h"
+	"emu8051.h"
+	"emulator.h"
+
+1226854650 source:/home/clayton/Desktop/em8051_161108/popups.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"curses.h"
+	"emu8051.h"
+	"emulator.h"
+
+1463593477 source:/home/clayton/Desktop/em8051_161108/emu.c
+	<windows.h>
+	<sys/time.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"curses.h"
+	"emu8051.h"
+	"emulator.h"
+
+1226809850 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/core.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"emu8051.h"
+
+1147558368 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/emu8051.h
+
+1147558384 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/disasm.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"emu8051.h"
+
+1575847082 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/emu.c
+	<windows.h>
+	<sys/time.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<curses.h>
+	"emu8051.h"
+	"emulator.h"
+
+1575846703 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/emulator.h
+
+1575846971 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/logicboard.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<curses.h>
+	"emu8051.h"
+	"emulator.h"
+
+1575846983 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/mainview.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<curses.h>
+	"emu8051.h"
+	"emulator.h"
+
+1575847011 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/memeditor.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<curses.h>
+	"emu8051.h"
+	"emulator.h"
+
+1226785042 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/opcodes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"emu8051.h"
+
+1575847011 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/options.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<curses.h>
+	"emu8051.h"
+	"emulator.h"
+
+1575847010 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/popups.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<curses.h>
+	"emu8051.h"
+	"emulator.h"
+
+1575113490 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/curses.h
+	<ncurses_dll.h>
+	<stdint.h>
+	<stdio.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdbool.h>
+	<libutf8.h>
+	<wchar.h>
+	<unctrl.h>
+
+1575112711 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/ncurses/include/ncurses_dll.h
+
+1575112711 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/ncurses/include/unctrl.h
+	<curses.h>
+
+1575112743 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/ncurses/include/curses.h
+	<ncurses_dll.h>
+	<stdint.h>
+	<stdio.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdbool.h>
+	<libutf8.h>
+	<wchar.h>
+	<unctrl.h>
+
+1575113665 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Programs/Emulators/em8051_161108/options.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"curses.h"
+	"emu8051.h"
+	"emulator.h"
+
+1574089818 /usr/include/ncurses/curses.h
+	<ncurses/ncurses_dll.h>
+	<stdint.h>
+	<features.h>
+	<sys/types.h>
+	<stdio.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdbool.h>
+	<libutf8.h>
+	<wchar.h>
+	<ncurses/unctrl.h>
+

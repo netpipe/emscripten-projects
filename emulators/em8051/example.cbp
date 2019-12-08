@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Irrlicht Pong" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="./Pong" prefix_auto="0" extension_auto="0" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="0" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
+			<Target title="emscripten">
+				<Option output="./Pong.html" prefix_auto="0" extension_auto="0" />
+				<Option object_output=".emobjs" />
+				<Option type="1" />
+				<Option compiler="emscripten" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add directory="../../../games/Luna/EMLibs/ncurses/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libstdc++" />
+					<Add library="GL" />
+					<Add library="Irrlicht" />
+					<Add library="ncurses" />
+					<Add library="ncurses++" />
+					<Add library="ncurses_g" />
+					<Add directory="../../../games/Luna/EMLibs/ncurses/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="default;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add directory="/home/Dev/libs/game/Irrlicht-SVN/include" />
+			<Add directory="/usr/include/ncurses" />
+		</Compiler>
+		<Linker>
+			<Add library="stdc++" />
+			<Add library="ncurses" />
+			<Add library="ncurses++" />
+			<Add library="tinfo" />
+			<Add library="ncursesw" />
+			<Add directory="/home/Dev/libs/game/Irrlicht-SVN/lib/Linux" />
+		</Linker>
+		<Unit filename="core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="curses.h" />
+		<Unit filename="disasm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="emu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="emu8051.h" />
+		<Unit filename="emulator.h" />
+		<Unit filename="logicboard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mainview.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="memeditor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="opcodes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="options.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="popups.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
