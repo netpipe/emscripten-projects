@@ -1,0 +1,36 @@
+I have found a solution in your code for my colour issue because OGLES has BGRA8888 extension... that is OK.
+but still, I am not clear for 32 bit enforcement; I had already done with G:8,B8,B:8,A8 configuration for EGL config... are you saying this changes ? 
+
+#else
+   EGLint attribs[] =
+
+   {
+
+      EGL_RED_SIZE, 8,
+
+      EGL_GREEN_SIZE, 8,
+
+      EGL_BLUE_SIZE, 8,
+
+      EGL_ALPHA_SIZE, 8,
+
+      EGL_BUFFER_SIZE, 16,
+
+      EGL_SURFACE_TYPE, EGL_WINDOW_BIT,
+
+//      EGL_COLOR_BUFFER_TYPE, EGL_RGB_BUFFER,
+
+      EGL_DEPTH_SIZE, 16,
+
+      EGL_RENDERABLE_TYPE, EGL_OPENGL_ES_BIT,
+
+      EGL_NONE, 0
+
+   };
+
+#endif
+   EGLConfig config;
+
+   EGLint num_configs;
+
+   if (!eglChooseConfig(EglDisplay, attribs, &config, 1, &num_configs))

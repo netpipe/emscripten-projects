@@ -1,0 +1,279 @@
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o   -c /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: error: ‘Q_WS_WIN’ undeclared (first use in this function)
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_WIN
+  cmakeRequireSymbol(0,&Q_WS_WIN);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o   -c /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: error: ‘Q_WS_QWS’ undeclared (first use in this function)
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_QWS
+  cmakeRequireSymbol(0,&Q_WS_QWS);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o   -c /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: error: ‘Q_WS_MAC’ undeclared (first use in this function)
+/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/clayton/Desktop/polyvox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_MAC
+  cmakeRequireSymbol(0,&Q_WS_MAC);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o   -c /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: error: ‘Q_WS_WIN’ undeclared (first use in this function)
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_WIN
+  cmakeRequireSymbol(0,&Q_WS_WIN);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o   -c /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: error: ‘Q_WS_QWS’ undeclared (first use in this function)
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_QWS
+  cmakeRequireSymbol(0,&Q_WS_QWS);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o   -c /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: error: ‘Q_WS_MAC’ undeclared (first use in this function)
+/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:25: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec/fast] Error 2
+
+File /home/Dev/libs/game/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <QtCore/qglobal.h>
+
+void cmakeRequireSymbol(int dummy,...){(void)dummy;}
+int main()
+{
+#ifndef Q_WS_MAC
+  cmakeRequireSymbol(0,&Q_WS_MAC);
+#endif
+  return 0;
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_1fec4/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_1fec4.dir/build.make CMakeFiles/cmTC_1fec4.dir/build
+gmake[1]: Entering directory '/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1fec4.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_1fec4.dir/CheckSymbolExists.cxx.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+gmake[1]: *** [CMakeFiles/cmTC_1fec4.dir/build.make:66: CMakeFiles/cmTC_1fec4.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:126: cmTC_1fec4/fast] Error 2
+
+File /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_15123/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_15123.dir/build.make CMakeFiles/cmTC_15123.dir/build
+gmake[1]: Entering directory '/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_15123.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_15123.dir/CheckSymbolExists.cxx.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+gmake[1]: *** [CMakeFiles/cmTC_15123.dir/build.make:66: CMakeFiles/cmTC_15123.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:126: cmTC_15123/fast] Error 2
+
+File /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_bb38d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_bb38d.dir/build.make CMakeFiles/cmTC_bb38d.dir/build
+gmake[1]: Entering directory '/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bb38d.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_bb38d.dir/CheckSymbolExists.cxx.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+gmake[1]: *** [CMakeFiles/cmTC_bb38d.dir/build.make:66: CMakeFiles/cmTC_bb38d.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:126: cmTC_bb38d/fast] Error 2
+
+File /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

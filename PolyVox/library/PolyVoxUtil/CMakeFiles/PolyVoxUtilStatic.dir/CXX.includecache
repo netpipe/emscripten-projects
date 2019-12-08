@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Dev/libs/game/PolyVox/library/PolyVoxUtil/source/Dummy.cpp
+PolyVoxImpl/TypeDef.h
+/home/Dev/libs/game/PolyVox/library/PolyVoxUtil/source/PolyVoxImpl/TypeDef.h
+
+library/PolyVoxCore/include/PolyVoxImpl/TypeDef.h
+boost/smart_ptr.hpp
+-
+boost/function.hpp
+-
+boost/functional/hash.hpp
+-
+boost/bind.hpp
+-
+boost/cstdint.hpp
+-
+cstdint
+-
+functional
+-
+memory
+-
+

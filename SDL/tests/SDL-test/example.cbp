@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Irrlicht Pong" />
+		<Option pch_mode="0" />
+		<Option compiler="emscripten" />
+		<Build>
+			<Target title="default">
+				<Option output="./Pong" prefix_auto="0" extension_auto="0" />
+				<Option type="1" />
+				<Option compiler="emscripten" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="default;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-s USE_SDL=2" />
+			<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-s USE_SDL=2" />
+			<Add library="Irrlicht" />
+			<Add library="GLESv2" />
+			<Add library="GL" />
+			<Add library="SDL" />
+			<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/lib/Linux" />
+		</Linker>
+		<Unit filename="sdl2_canvas_blank.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

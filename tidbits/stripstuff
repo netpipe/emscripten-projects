@@ -1,0 +1,27 @@
+emscripten webdelivery, extract the wasm and relaunch
+https://wiki.wxwidgets.org/Reducing_Executable_Size
+
+https://gist.github.com/natrim/1a19f4b7668e0474897f3f28171f3b33
+
+godot emscritpen
+scons platform=javascript tools=no target=release
+
+
+
+Use -s to strip debug info from the binary (and don't use -g).
+Use -Os to optimize for output file size. (This will make the code run slower than with -O2 or -O3.
+Use -m32 to compile a 32-bit binary. 32-bit binaries are smaller than 64-bit binaries because pointers are shorter.
+In C++, use -fno-exceptions if your code doesn't use exceptions.
+In C++, use -fno-rtti if your code doesn't use RTTI (run-time type identification) or dynamic_cast. 
+
+
+strip -S --strip-unneeded --remove-section=.note.gnu.gold-version --remove-section=.comment --remove-section=.note --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag
+
+
+strip -S --strip-unneeded --remove-section=.note.gnu.gold-version --remove-section=.comment --remove-section=.note --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag on the resulting binary to strip even more unneeded parts. This replaces the gcc -s flag with even more aggressive stripping. 
+
+
+gcc -W -Wall
+
+
+

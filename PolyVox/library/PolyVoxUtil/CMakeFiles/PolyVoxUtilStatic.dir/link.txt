@@ -1,0 +1,2 @@
+/usr/bin/ar qc libPolyVoxUtil.a  CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o
+/usr/bin/ranlib libPolyVoxUtil.a

@@ -1,0 +1,29 @@
+#include <machine/endian.h>
+
+#include <sys/types.h>
+
+-s ERROR_ON_UNDEFINED_SYMBOLS=0
+
+
+
+cmake stuff
+add_compile_options("-fopenmp")
+
+-static-libstdc++
+
+-stdlib=libc++
+-s WASM=1
++
+-s ASSERTIONS=1 -s SAFE_HEAP=1
+
+-s USE_WEBGL2=1
+
+
+nm -D lib.a shows all exported functions
+
+
+git submodule update --init --recursive
+
+
+
+By default, Emscripten .so files are the same as .bc or .o files, that is, they contain LLVM bitcode. Dynamic libraries that you specify in the final build stage (when generating JavaScript or HTML) are linked in as static libraries. Emcc ignores commands to dynamically link libraries when linking together bitcode (i.e., not in the final build stage). This is to ensure that the same dynamic library is not linked multiple times in intermediate build stages, which would result in duplicate symbol errors.

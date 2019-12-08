@@ -1,0 +1,48 @@
+./emcc --cflags=-Wimplicit-int tests/sdl2_mouse.c -s USE_SDL_MIXER=2 -s USE_SDL=2 -s USE_SDL_TTF=2 -s USE_SDL_IMAGE=2 -s USE_OGG=1 -o out.js
+
+#find function and generate
+file=SDL_emscriptenaudio.c
+source /home/Dev/libs/Scripting/emsdk/emsdk_env.sh
+emcc $file -s USE_SDL_MIXER=2 -s USE_SDL=2 -s USE_SDL_TTF=2 -s USE_SDL_IMAGE=2 -s USE_OGG=1 -o out.html
+
+source /home/Dev/libs/Scripting/emsdk/emsdk_env.sh
+ -s USE_OGG=1 -s USE_VORBIS=1
+
+
+emconfigure ../configure --host=asmjs-unknown-emscripten --disable-assembly --disable-threads --disable-mmx --disable-sdltest --disable-shared --enable-cpuinfo=false CFLAGS="-O3"
+
+export SDL2_CONFIG=/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2/build
+
+export -DSDL2_INCLUDE_DIR=/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs/SDL2/
+export SDL2_LIBRARY=/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs/SDL2/build
+
+emcmake cmake -DSDL2MAIN_LIBRARY=/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs/SDL2/build -DSDL2_INCLUDE_DIR=/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs/SDL2/ -DSDL2_LIBRARY=/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs/SDL2/build -DZLIB_LIBRARY=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/zlib-1.2.3 -DZLIB_INCLUDE_DIR=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/EMLibs/zlib-1.2.3 -DLHASA_LIBRARY=/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/MilkyTracker-1.02.00/emlibs/lhasa/lib/.libs -DLHASA_INCLUDE_DIR=/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/MilkyTracker-1.02.00/emlibs/lhasa/src -DZZIPLIB_LIBRARY=/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/MilkyTracker-1.02.00/emlibs/zziplib/x86_64-pc-linux-gnu/zzip/.libs -DZZIPLIB_INCLUDE_DIR=/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/MilkyTracker-1.02.00/emlibs/zziplib/x86_64-pc-linux-gnu/
+
+
+-DLHASA_LIBRARY=/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/MilkyTracker-1.02.00/emlibs/lhasa/lib/.libs
+-DLHASA_INCLUDE_DIR=/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/MilkyTracker-1.02.00/emlibs/lhasa/src
+-DZZIPLIB_LIBRARY=/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/MilkyTracker-1.02.00/emlibs/zziplib/x86_64-pc-linux-gnu/zzip/.libs
+-DZZIPLIB_INCLUDE_DIR=/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/MilkyTracker-1.02.00/emlibs/zziplib/zzip
+
+
+zziplib
+emconfigure ./configure CPPFLAGS="-I./EMLibs/zlib-1.2.3"
+
+emcc --show-ports
+
+
+--extra-cflags 
+--prefix=
+--extra-ldflags
+export CPPFLAGS='-I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/tests/freetype/include'
+export LDFLAGS='-lfreetype -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/tests/freetype/objs/.libs'
+
+
+/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs
+
+/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs/SDL2_mixer/build/.libs
+/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs
+
+
+
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/tests/freetype/objs/.libs

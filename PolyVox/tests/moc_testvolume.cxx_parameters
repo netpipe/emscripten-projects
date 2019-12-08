@@ -1,0 +1,14 @@
+-I/usr/include
+-I/usr/include/QtOpenGL
+-I/usr/include/QtGui
+-I/usr/include/QtTest
+-I/usr/include/QtCore
+-I/home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/include
+-I/home/netpipe/Desktop/emscripten-projects/PolyVox/tests
+-D$<$<NOT:$<CONFIG:Debug>>:QT_NO_DEBUG>
+-DQT_OPENGL_LIB
+-DQT_TEST_LIB
+-DQT_CORE_LIB
+-o
+/home/netpipe/Desktop/emscripten-projects/PolyVox/tests/moc_testvolume.cxx
+/home/netpipe/Desktop/emscripten-projects/PolyVox/tests/testvolume.h

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SDL Examples Emscripten" />
+		<Option pch_mode="0" />
+		<Option compiler="emscripten" />
+		<Build>
+			<Target title="sdl2_audio_beep">
+				<Option output="./sdl2_audio_beep.html" prefix_auto="0" extension_auto="0" />
+				<Option type="1" />
+				<Option compiler="emscripten" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
+			<Target title="sdl2_canvas_blank">
+				<Option output="sdl2_canvas_blank.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_canvas_palette">
+				<Option output="sdl2_canvas_palette.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_canvas_palette2">
+				<Option output="sdl2_canvas_palette2.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_canvas_proxy">
+				<Option output="sdl2_canvas_proxy.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_canvas_size">
+				<Option output="sdl2_canvas_size.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_canvas_twice">
+				<Option output="sdl2_canvas_twice.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2 canvas write">
+				<Option output="sdlcanvaswrite.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl custom cursor">
+				<Option output="sdlcustomcursor.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl_fog_density">
+				<Option output="sdl_fog_density.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_fog_exp2">
+				<Option output="sdl2_fog_exp2.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_fog_linear">
+				<Option output="sdl2_fog_linear.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2 fog negative">
+				<Option output="sdl2_fog_negative.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2 fog simple">
+				<Option output="sdl2_fog_simple.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2 gfx">
+				<Option output="sdl2_gfx.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2 gl frames swap">
+				<Option output="sdl2_gl_frames_swap.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_gl_read">
+				<Option output="sdl2_gl_read.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_image">
+				<Option output="sdl2_image.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_image_prepare">
+				<Option output="sdl2_image_prepare.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_image_preapare_data">
+				<Option output="sdl2_image_preapare_data.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_key">
+				<Option output="sdl2_key.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_misc">
+				<Option output="sdl2_misc.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_mixer">
+				<Option output="sdl2_mixer.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_mixer_wav">
+				<Option output="sdl2_mixer_wav.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_mouse">
+				<Option output="sdl2_mouse.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_net_client">
+				<Option output="sdl2_net_client.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_net_server">
+				<Option output="sdl2_net_server.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_pumpevents">
+				<Option output="sdl2_pumpevents.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_swsurface">
+				<Option output="sdl2_swsurface.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_text">
+				<Option output="sdl2_text.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_threads">
+				<Option output="sdl2_threads.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_timer">
+				<Option output="sdl2_timer.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2_ttf">
+				<Option output="sdl2_ttf.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+			<Target title="sdl2glshader">
+				<Option output="sdl2glshader.html" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="emscripten" />
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="sdl2_audio_beep;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-s USE_SDL=2" />
+			<Add option="-D__EMSCRIPTEN__" />
+			<Add directory="/home/netpipe/Desktop/EMScripten-AddonBundle/SDLProjects/sdlt/SDL2/includes" />
+		</Compiler>
+		<Linker>
+			<Add option='-s SDL2_IMAGE_FORMATS=&apos;[&quot;png&quot;]&apos;' />
+			<Add option="--preload-file media/" />
+			<Add option="-s DISABLE_DEPRECATED_FIND_EVENT_TARGET_BEHAVIOR=1" />
+			<Add option="-s USE_SDL=2" />
+			<Add library="GLESv2" />
+			<Add library="GL" />
+			<Add library="SDL2" />
+			<Add library="SDL2_image" />
+			<Add library="SDL2_ttf" />
+			<Add library="freetype" />
+			<Add library="SDL2_mixer" />
+			<Add directory="/home/netpipe/Desktop/EMScripten-AddonBundle/SDLProjects/sdlt/SDL2/build/.libsd" />
+			<Add directory="/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs/SDL2/build/.libss" />
+		</Linker>
+		<Unit filename="sdl2_audio_beep.cpp">
+			<Option target="sdl2_audio_beep" />
+		</Unit>
+		<Unit filename="sdl2_canvas_blank.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_canvas_blank" />
+		</Unit>
+		<Unit filename="sdl2_canvas_palette.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_canvas_palette" />
+		</Unit>
+		<Unit filename="sdl2_canvas_palette_2.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_canvas_palette2" />
+		</Unit>
+		<Unit filename="sdl2_canvas_proxy.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_canvas_proxy" />
+		</Unit>
+		<Unit filename="sdl2_canvas_size.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_canvas_size" />
+		</Unit>
+		<Unit filename="sdl2_canvas_twice.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_canvas_twice" />
+		</Unit>
+		<Unit filename="sdl2_canvas_write.cpp">
+			<Option target="sdl2 canvas write" />
+		</Unit>
+		<Unit filename="sdl2_custom_cursor.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl custom cursor" />
+		</Unit>
+		<Unit filename="sdl2_fog_density.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl_fog_density" />
+		</Unit>
+		<Unit filename="sdl2_fog_exp2.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_fog_exp2" />
+		</Unit>
+		<Unit filename="sdl2_fog_linear.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_fog_linear" />
+		</Unit>
+		<Unit filename="sdl2_fog_negative.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2 fog negative" />
+		</Unit>
+		<Unit filename="sdl2_fog_simple.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2 fog simple" />
+		</Unit>
+		<Unit filename="sdl2_gfx.cpp">
+			<Option target="sdl2 gfx" />
+		</Unit>
+		<Unit filename="sdl2_gl_frames_swap.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2 gl frames swap" />
+		</Unit>
+		<Unit filename="sdl2_gl_read.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_gl_read" />
+		</Unit>
+		<Unit filename="sdl2_image.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_image" />
+		</Unit>
+		<Unit filename="sdl2_image_prepare.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_image_prepare" />
+		</Unit>
+		<Unit filename="sdl2_image_prepare_data.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_image_preapare_data" />
+		</Unit>
+		<Unit filename="sdl2_key.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_key" />
+		</Unit>
+		<Unit filename="sdl2_misc.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_misc" />
+		</Unit>
+		<Unit filename="sdl2_mixer.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_mixer" />
+		</Unit>
+		<Unit filename="sdl2_mixer_wav.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_mixer_wav" />
+		</Unit>
+		<Unit filename="sdl2_mouse.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_mouse" />
+		</Unit>
+		<Unit filename="sdl2_net_client.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_net_client" />
+		</Unit>
+		<Unit filename="sdl2_net_server.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_net_server" />
+		</Unit>
+		<Unit filename="sdl2_pumpevents.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_pumpevents" />
+		</Unit>
+		<Unit filename="sdl2_swsurface.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_swsurface" />
+		</Unit>
+		<Unit filename="sdl2_text.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_text" />
+		</Unit>
+		<Unit filename="sdl2_threads.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_threads" />
+		</Unit>
+		<Unit filename="sdl2_timer.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_timer" />
+		</Unit>
+		<Unit filename="sdl2_ttf.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2_ttf" />
+		</Unit>
+		<Unit filename="sdl2glshader.c">
+			<Option compilerVar="CC" />
+			<Option target="sdl2glshader" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
