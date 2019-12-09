@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1575544612 source:/home/netpipe/public_html/emtests/video/launcher.cpp
+	<iostream>
+	<emscripten.h>
+	<stdio.h>
+	<unistd.h>
+	<stdlib.h>
+

@@ -1,0 +1,1 @@
+goal is to shrink the wasm size in half by unloading it then launching it or by uncompressing the js modules somehow from tar
