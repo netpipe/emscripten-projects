@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+af4713e90855d25a3cbc440e96b87515 CMakeFiles/pocketsphinx.js
