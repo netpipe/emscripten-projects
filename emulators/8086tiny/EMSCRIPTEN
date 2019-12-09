@@ -1,0 +1,8 @@
+emcc 8086tiny.c -DNO_GRAPHICS -o 8086tiny.html -fsigned-char -O1 --embed-file bios --embed-file fd.img
+
+node 8086tiny.js bios fd.img
+
+keyboard not working without graphics running so that needs to be fixed too.
+
+http://extradio.sourceforge.net/extmodem.html
+this could be an alternate way to do it
