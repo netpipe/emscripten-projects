@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="emscripten" />
+	<File name="source/osSimpleVehicle.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3149" topLine="94" />
+		</Cursor>
+		<Folding>
+			<Collapse line="72" />
+			<Collapse line="85" />
+			<Collapse line="102" />
+			<Collapse line="104" />
+			<Collapse line="142" />
+			<Collapse line="158" />
+			<Collapse line="160" />
+			<Collapse line="215" />
+			<Collapse line="217" />
+			<Collapse line="232" />
+			<Collapse line="234" />
+			<Collapse line="269" />
+			<Collapse line="290" />
+			<Collapse line="293" />
+			<Collapse line="314" />
+			<Collapse line="330" />
+		</Folding>
+	</File>
+	<File name="include/osVec3.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1837" topLine="8" />
+		</Cursor>
+	</File>
+	<EditorTabsLayout layout="03de3b705de471660010286c00000002=0;libOpenSteer:include/osVec3.h,*1;libOpenSteer:source/osSimpleVehicle.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=486;besth=296;minw=486;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=03de3b705de471660010286c00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+</CodeBlocks_layout_file>

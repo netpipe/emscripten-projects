@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libOpenSteer" />
+		<Option pch_mode="2" />
+		<Option compiler="emscripten" />
+		<Build>
+			<Target title="Release">
+				<Option output="lib/libIrrOpenSteer.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output=".obj/Release/" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O3" />
+				</Compiler>
+			</Target>
+			<Target title="Debug">
+				<Option output="lib/libIrrOpenSteer.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output=".obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-DDEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="emscripten">
+				<Option output="lib/libIrrOpenSteer.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output=".emobj/Release/" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-D_IRR_STATIC_LIB_" />
+					<Add option="-D_IRR_EMSCRIPTEN_PLATFORM_" />
+					<Add option="-D__EMSCRIPTEN__" />
+					<Add directory="../irrlicht-ogl-es/irrlicht/include" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add directory="../irrlicht-ogl-es/irrlicht/lib/Linux" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c99" />
+			<Add option="-DDO_NOT_USE_IrrExtensions_Terrain2" />
+			<Add directory="include" />
+			<Add directory="../irrlicht-1.8.4/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="../irrlicht-1.8.4/lib/Linux" />
+		</Linker>
+		<Unit filename="help/IrrOpenSteer.chm" />
+		<Unit filename="include/IrrOpenSteer.h" />
+		<Unit filename="include/osAbstractVehicle.h" />
+		<Unit filename="include/osAnnotation.h" />
+		<Unit filename="include/osClock.h" />
+		<Unit filename="include/osColor.h" />
+		<Unit filename="include/osLocalSpace.h" />
+		<Unit filename="include/osObstacle.h" />
+		<Unit filename="include/osOldPathway.h" />
+		<Unit filename="include/osPath.h" />
+		<Unit filename="include/osPathway.h" />
+		<Unit filename="include/osPlugIn.h" />
+		<Unit filename="include/osPolylineSegmentedPath.h" />
+		<Unit filename="include/osPolylineSegmentedPathwaySegmentRadii.h" />
+		<Unit filename="include/osPolylineSegmentedPathwaySingleRadius.h" />
+		<Unit filename="include/osProximity.h" />
+		<Unit filename="include/osQueryPathAlike.h" />
+		<Unit filename="include/osQueryPathAlikeBaseDataExtractionPolicies.h" />
+		<Unit filename="include/osQueryPathAlikeMappings.h" />
+		<Unit filename="include/osQueryPathAlikeUtilities.h" />
+		<Unit filename="include/osSegmentedPath.h" />
+		<Unit filename="include/osSegmentedPathAlikeUtilities.h" />
+		<Unit filename="include/osSegmentedPathway.h" />
+		<Unit filename="include/osSharedPointer.h" />
+		<Unit filename="include/osSimpleVehicle.h" />
+		<Unit filename="include/osStandardTypes.h" />
+		<Unit filename="include/osSteerLibrary.h" />
+		<Unit filename="include/osTerrainRayTest.h" />
+		<Unit filename="include/osUnusedParameter.h" />
+		<Unit filename="include/osUtilities.h" />
+		<Unit filename="include/osVec3.h" />
+		<Unit filename="include/osVec3Utilities.h" />
+		<Unit filename="include/osWaypoint.h" />
+		<Unit filename="include/osWaypointMap.h" />
+		<Unit filename="include/oslq.h" />
+		<Unit filename="source/osClock.cpp" />
+		<Unit filename="source/osColor.cpp" />
+		<Unit filename="source/osObstacle.cpp" />
+		<Unit filename="source/osOldPathway.cpp" />
+		<Unit filename="source/osPath.cpp" />
+		<Unit filename="source/osPathway.cpp" />
+		<Unit filename="source/osPlugIn.cpp" />
+		<Unit filename="source/osPolylineSegmentedPath.cpp" />
+		<Unit filename="source/osPolylineSegmentedPathwaySegmentRadii.cpp" />
+		<Unit filename="source/osPolylineSegmentedPathwaySingleRadius.cpp" />
+		<Unit filename="source/osSegmentedPath.cpp" />
+		<Unit filename="source/osSegmentedPathway.cpp" />
+		<Unit filename="source/osSimpleVehicle.cpp">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="source/osTerrainRayTest.cpp" />
+		<Unit filename="source/osVec3.cpp" />
+		<Unit filename="source/osVec3Utilities.cpp" />
+		<Unit filename="source/osWaypoint.cpp" />
+		<Unit filename="source/osWaypointMap.cpp" />
+		<Unit filename="source/oslq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="work/help.doxy" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
