@@ -69,17 +69,21 @@ typedef enum
 one or more flags from THR_InitFlags OR'd together.
 It returns the flags successfully initialized, or 0 on failure.
 */
-extern DECLSPEC int SDLCALL THR_Init(int flags);
+int SDLCALL THR_Init(int flags);
 
 /* Unloads libraries loaded with IMG_Init */
-extern DECLSPEC void SDLCALL THR_Quit(void);
+void SDLCALL THR_Quit(void);
 
 /* Loads a video file TODO: support RWops*/
-extern DECLSPEC int SDLCALL THR_Load(const char *file, SDL_Renderer* renderer);
-extern DECLSPEC SDL_Texture* SDLCALL THR_UpdateVideo(int video);
-extern DECLSPEC int SDLCALL THR_IsPlaying(int video);
-extern DECLSPEC void SDLCALL THR_DestroyVideo(int video);
+//extern DECLSPEC int SDLCALL THR_Load(const char *file, SDL_Renderer* renderer);
+//extern DECLSPEC SDL_Texture* SDLCALL THR_UpdateVideo(int video);
+//extern DECLSPEC int SDLCALL THR_IsPlaying(int video);
+//extern DECLSPEC void SDLCALL THR_DestroyVideo(int video);
 
+int  THR_Load(const char *file, SDL_Renderer* renderer);
+SDL_Texture* SDLCALL THR_UpdateVideo(int video);
+ int  THR_IsPlaying(int video);
+ void  THR_DestroyVideo(int video);
 /* We'll use SDL for reporting errors */
 #define THR_SetError    SDL_SetError
 #define THR_GetError    SDL_GetError
