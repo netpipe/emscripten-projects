@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Box2D" />
+		<Option pch_mode="2" />
+		<Option compiler="emscripten" />
+		<Build>
+			<Target title="Release x64">
+				<Option output="bin/Release/Box2D" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/x64/Release/Box2D/" />
+				<Option deps_output="bin/Release/" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS" />
+					<Add option="-DNDEBUG" />
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DWIN32" />
+					<Add directory="../../" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="winmm.lib" />
+					<Add library="comctl32.lib" />
+					<Add library="kernel32.lib" />
+					<Add library="user32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winspool.lib" />
+					<Add library="comdlg32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="ole32.lib" />
+					<Add library="oleaut32.lib" />
+					<Add library="uuid.lib" />
+					<Add library="odbc32.lib" />
+					<Add library="odbccp32.lib" />
+				</Linker>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="bin/Release/Box2D" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/x32/Release/Box2D/" />
+				<Option deps_output="bin/Release/" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS" />
+					<Add option="-DNDEBUG" />
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DWIN32" />
+					<Add directory="../../" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="winmm.lib" />
+					<Add library="comctl32.lib" />
+					<Add library="kernel32.lib" />
+					<Add library="user32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winspool.lib" />
+					<Add library="comdlg32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="ole32.lib" />
+					<Add library="oleaut32.lib" />
+					<Add library="uuid.lib" />
+					<Add library="odbc32.lib" />
+					<Add library="odbccp32.lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug Win32">
+				<Option output="bin/Debug/Box2D" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/x32/Debug/Box2D/" />
+				<Option deps_output="bin/Debug/" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D_CRT_SECURE_NO_WARNINGS" />
+					<Add option="-O0" />
+					<Add option="-Wall" />
+					<Add option="-Wextra" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add directory="../../" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="winmm.lib" />
+					<Add library="comctl32.lib" />
+					<Add library="kernel32.lib" />
+					<Add library="user32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winspool.lib" />
+					<Add library="comdlg32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="ole32.lib" />
+					<Add library="oleaut32.lib" />
+					<Add library="uuid.lib" />
+					<Add library="odbc32.lib" />
+					<Add library="odbccp32.lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug x64">
+				<Option output="bin/Debug/Box2D" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/x64/Debug/Box2D/" />
+				<Option deps_output="bin/Debug/" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D_CRT_SECURE_NO_WARNINGS" />
+					<Add option="-O0" />
+					<Add option="-Wall" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add directory="../../" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="winmm.lib" />
+					<Add library="comctl32.lib" />
+					<Add library="kernel32.lib" />
+					<Add library="user32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winspool.lib" />
+					<Add library="comdlg32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="ole32.lib" />
+					<Add library="oleaut32.lib" />
+					<Add library="uuid.lib" />
+					<Add library="odbc32.lib" />
+					<Add library="odbccp32.lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="./" />
+			<Add directory="../" />
+		</Compiler>
+		<Unit filename="Box2D.h" />
+		<Unit filename="Collision/Shapes/b2ChainShape.cpp" />
+		<Unit filename="Collision/Shapes/b2ChainShape.h" />
+		<Unit filename="Collision/Shapes/b2CircleShape.cpp" />
+		<Unit filename="Collision/Shapes/b2CircleShape.h" />
+		<Unit filename="Collision/Shapes/b2EdgeShape.cpp" />
+		<Unit filename="Collision/Shapes/b2EdgeShape.h" />
+		<Unit filename="Collision/Shapes/b2PolygonShape.cpp" />
+		<Unit filename="Collision/Shapes/b2PolygonShape.h" />
+		<Unit filename="Collision/Shapes/b2Shape.h" />
+		<Unit filename="Collision/b2BroadPhase.cpp" />
+		<Unit filename="Collision/b2BroadPhase.h" />
+		<Unit filename="Collision/b2CollideCircle.cpp" />
+		<Unit filename="Collision/b2CollideEdge.cpp" />
+		<Unit filename="Collision/b2CollidePolygon.cpp" />
+		<Unit filename="Collision/b2Collision.cpp" />
+		<Unit filename="Collision/b2Collision.h" />
+		<Unit filename="Collision/b2Distance.cpp" />
+		<Unit filename="Collision/b2Distance.h" />
+		<Unit filename="Collision/b2DynamicTree.cpp" />
+		<Unit filename="Collision/b2DynamicTree.h" />
+		<Unit filename="Collision/b2TimeOfImpact.cpp" />
+		<Unit filename="Collision/b2TimeOfImpact.h" />
+		<Unit filename="Common/b2BlockAllocator.cpp" />
+		<Unit filename="Common/b2BlockAllocator.h" />
+		<Unit filename="Common/b2Draw.cpp" />
+		<Unit filename="Common/b2Draw.h" />
+		<Unit filename="Common/b2GrowableStack.h" />
+		<Unit filename="Common/b2Math.cpp" />
+		<Unit filename="Common/b2Math.h" />
+		<Unit filename="Common/b2Settings.cpp" />
+		<Unit filename="Common/b2Settings.h" />
+		<Unit filename="Common/b2StackAllocator.cpp" />
+		<Unit filename="Common/b2StackAllocator.h" />
+		<Unit filename="Common/b2Timer.cpp" />
+		<Unit filename="Common/b2Timer.h" />
+		<Unit filename="Dynamics/Contacts/b2ChainAndCircleContact.cpp" />
+		<Unit filename="Dynamics/Contacts/b2ChainAndCircleContact.h" />
+		<Unit filename="Dynamics/Contacts/b2ChainAndPolygonContact.cpp" />
+		<Unit filename="Dynamics/Contacts/b2ChainAndPolygonContact.h" />
+		<Unit filename="Dynamics/Contacts/b2CircleContact.cpp" />
+		<Unit filename="Dynamics/Contacts/b2CircleContact.h" />
+		<Unit filename="Dynamics/Contacts/b2Contact.cpp" />
+		<Unit filename="Dynamics/Contacts/b2Contact.h" />
+		<Unit filename="Dynamics/Contacts/b2ContactSolver.cpp" />
+		<Unit filename="Dynamics/Contacts/b2ContactSolver.h" />
+		<Unit filename="Dynamics/Contacts/b2EdgeAndCircleContact.cpp" />
+		<Unit filename="Dynamics/Contacts/b2EdgeAndCircleContact.h" />
+		<Unit filename="Dynamics/Contacts/b2EdgeAndPolygonContact.cpp" />
+		<Unit filename="Dynamics/Contacts/b2EdgeAndPolygonContact.h" />
+		<Unit filename="Dynamics/Contacts/b2PolygonAndCircleContact.cpp" />
+		<Unit filename="Dynamics/Contacts/b2PolygonAndCircleContact.h" />
+		<Unit filename="Dynamics/Contacts/b2PolygonContact.cpp" />
+		<Unit filename="Dynamics/Contacts/b2PolygonContact.h" />
+		<Unit filename="Dynamics/Joints/b2DistanceJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2DistanceJoint.h" />
+		<Unit filename="Dynamics/Joints/b2FrictionJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2FrictionJoint.h" />
+		<Unit filename="Dynamics/Joints/b2GearJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2GearJoint.h" />
+		<Unit filename="Dynamics/Joints/b2Joint.cpp" />
+		<Unit filename="Dynamics/Joints/b2Joint.h" />
+		<Unit filename="Dynamics/Joints/b2MotorJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2MotorJoint.h" />
+		<Unit filename="Dynamics/Joints/b2MouseJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2MouseJoint.h" />
+		<Unit filename="Dynamics/Joints/b2PrismaticJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2PrismaticJoint.h" />
+		<Unit filename="Dynamics/Joints/b2PulleyJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2PulleyJoint.h" />
+		<Unit filename="Dynamics/Joints/b2RevoluteJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2RevoluteJoint.h" />
+		<Unit filename="Dynamics/Joints/b2RopeJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2RopeJoint.h" />
+		<Unit filename="Dynamics/Joints/b2WeldJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2WeldJoint.h" />
+		<Unit filename="Dynamics/Joints/b2WheelJoint.cpp" />
+		<Unit filename="Dynamics/Joints/b2WheelJoint.h" />
+		<Unit filename="Dynamics/b2Body.cpp" />
+		<Unit filename="Dynamics/b2Body.h" />
+		<Unit filename="Dynamics/b2ContactManager.cpp" />
+		<Unit filename="Dynamics/b2ContactManager.h" />
+		<Unit filename="Dynamics/b2Fixture.cpp" />
+		<Unit filename="Dynamics/b2Fixture.h" />
+		<Unit filename="Dynamics/b2Island.cpp" />
+		<Unit filename="Dynamics/b2Island.h" />
+		<Unit filename="Dynamics/b2TimeStep.h" />
+		<Unit filename="Dynamics/b2World.cpp" />
+		<Unit filename="Dynamics/b2World.h" />
+		<Unit filename="Dynamics/b2WorldCallbacks.cpp" />
+		<Unit filename="Dynamics/b2WorldCallbacks.h" />
+		<Unit filename="Rope/b2Rope.cpp" />
+		<Unit filename="Rope/b2Rope.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
