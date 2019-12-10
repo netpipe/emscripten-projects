@@ -1,0 +1,49 @@
+# Makefile for Irrlicht Examples
+# It's usually sufficient to change just the target name and source file list
+# and be sure that CXX is set to a valid compiler
+Target = 02.Quake3Map
+Sources = main.cpp
+
+# general compiler settings
+CPPFLAGS = -I../../include
+#CXXFLAGS = -O3 -ffast-math
+CXXFLAGS = -g -Wall
+# emcc expects files to .bc extension
+SUF = .bc
+EMCC = emcc
+EMCCFLAGS = -s FULL_ES2=1 -s ALLOW_MEMORY_GROWTH=1
+
+#default target is Linux
+all: all_linux
+
+ifeq ($(HOSTTYPE), x86_64)
+LIBSELECT=64
+endif
+
+#OGLESLIBS := -lEGL -lGLESv1_CM -lGLESv2
+# target specific settings
+all_linux: LDFLAGS = -L../../lib/Linux -lIrrlicht
+all_linux clean_linux: SYSTEM=Linux
+all_win32: LDFLAGS = -L../../lib/Win32-gcc -lIrrlicht
+static_win32: LDFLAGS += -lgdi32 -lopengl32 -ld3dx9d -lwinmm -lm
+static_win32: CPPFLAGS += -D_IRR_STATIC_LIB_
+static_win32 all_win32 clean_win32: SYSTEM=Win32-gcc
+static_win32 all_win32 clean_win32: SUF=.exe
+# name of the binary - only valid for targets which set SYSTEM
+BinPath = ../../bin/$(SYSTEM)
+DESTPATH = $(BinPath)/$(Target)$(SUF)
+
+all_linux all_win32 static_win32:
+	$(warning Building...)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(Sources) -o $(DESTPATH) $(LDFLAGS)
+	cp -a media02 $(BinPath)
+	cd $(BinPath) && \
+	$(EMCC) $(EMCCFLAGS) $(Target)$(SUF) -o $(Target).html --preload-file media02/
+
+clean: clean_linux clean_win32
+	$(warning Cleaning...)
+
+clean_linux clean_win32:
+	@$(RM) $(DESTPATH)
+
+.PHONY: all all_win32 clean clean_linux clean_win32 static_win32
