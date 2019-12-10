@@ -1,0 +1,3 @@
+0.3.0:
+Ricardo Pillosu - Sun Jun  2 22:25:31 PDT 2013
+* Added minimal API to play video
