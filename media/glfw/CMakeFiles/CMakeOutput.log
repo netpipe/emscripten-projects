@@ -1,0 +1,60 @@
+The target system is: Emscripten - 1 - x86
+The host system is: Linux - 4.12.14-lp150.12.79-default - x86_64
+Determining if the pthread_create exist passed with the following output:
+Change Dir: /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/OpenSteer/third-party/glfw/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_b8607/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b8607.dir/build.make CMakeFiles/cmTC_b8607.dir/build
+gmake[1]: Entering directory '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/OpenSteer/third-party/glfw/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b8607.dir/CheckSymbolExists.c.o
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_b8607.dir/CheckSymbolExists.c.o   -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/OpenSteer/third-party/glfw/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b8607.js
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8607.dir/link.txt --verbose=1
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/emcc      @CMakeFiles/cmTC_b8607.dir/objects1.rsp  -o cmTC_b8607.js 
+gmake[1]: Leaving directory '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/OpenSteer/third-party/glfw/CMakeFiles/CMakeTmp'
+
+File /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/OpenSteer/third-party/glfw/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+The target system is: Emscripten - 1 - x86
+The host system is: Linux - 4.12.14-lp150.12.82-default - x86_64
+Determining if the pthread_create exist passed with the following output:
+Change Dir: /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/glfw/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_dbe2d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_dbe2d.dir/build.make CMakeFiles/cmTC_dbe2d.dir/build
+gmake[1]: Entering directory '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/glfw/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dbe2d.dir/CheckSymbolExists.c.o
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_dbe2d.dir/CheckSymbolExists.c.o   -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/glfw/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_dbe2d.js
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbe2d.dir/link.txt --verbose=1
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/emcc      @CMakeFiles/cmTC_dbe2d.dir/objects1.rsp  -o cmTC_dbe2d.js 
+gmake[1]: Leaving directory '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/glfw/CMakeFiles/CMakeTmp'
+
+File /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/glfw/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
