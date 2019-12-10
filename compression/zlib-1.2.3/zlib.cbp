@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="zlib" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Linux32 - Static">
+				<Option platforms="Unix;Mac;" />
+				<Option output="../Compiled/Linux/zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../objs/zlib/Linux" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+			</Target>
+			<Target title="Linux64 - Static">
+				<Option output="../Libs/Compiled/zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../objs/zlib/Linux" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+			</Target>
+			<Target title="Win32 DLL Release">
+				<Option output="zlib" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Win32_DLL_Release" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+			</Target>
+			<Target title="Win32 DLL Debug">
+				<Option output="zlib1d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Win32_DLL_Debug" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+			</Target>
+			<Target title="Win32 DLL ASM Release">
+				<Option output="zlib" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Win32_DLL_ASM_Release" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DASMV" />
+					<Add option="-DASMINF" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+			</Target>
+			<Target title="Win32 DLL ASM Debug">
+				<Option output="zlib1d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Win32_DLL_ASM_Debug" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DASMV" />
+					<Add option="-DASMINF" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+			</Target>
+			<Target title="Win32 LIB Release">
+				<Option output="zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Win32_LIB_Release" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Win32 LIB Debug">
+				<Option output="C:/Dev/agnostic/libs/zlib-1.2.3/projects/visualc6/Win32_LIB_Debug/zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Win32_LIB_Debug" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Win32 LIB ASM Release">
+				<Option output="zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Win32_LIB_ASM_Release" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DASMV" />
+					<Add option="-DASMINF" />
+				</Compiler>
+			</Target>
+			<Target title="Win32 LIB ASM Debug">
+				<Option output="zlibd" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Win32_LIB_ASM_Debug" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DASMV" />
+					<Add option="-DASMINF" />
+				</Compiler>
+			</Target>
+			<Target title="emscripten">
+				<Option platforms="Unix;Mac;" />
+				<Option output="./zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../objs/zlib/Linux" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="README.txt" />
+		<Unit filename="adler32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="contrib/masmx86/gvmat32.asm">
+			<Option target="Win32 DLL ASM Release" />
+			<Option target="Win32 DLL ASM Debug" />
+			<Option target="Win32 LIB ASM Release" />
+			<Option target="Win32 LIB ASM Debug" />
+		</Unit>
+		<Unit filename="contrib/masmx86/gvmat32c.c">
+			<Option compilerVar="CC" />
+			<Option target="Win32 DLL ASM Release" />
+			<Option target="Win32 DLL ASM Debug" />
+			<Option target="Win32 LIB ASM Release" />
+			<Option target="Win32 LIB ASM Debug" />
+		</Unit>
+		<Unit filename="contrib/masmx86/inffas32.asm">
+			<Option target="Win32 DLL ASM Release" />
+			<Option target="Win32 DLL ASM Debug" />
+			<Option target="Win32 LIB ASM Release" />
+			<Option target="Win32 LIB ASM Debug" />
+		</Unit>
+		<Unit filename="crc32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crc32.h" />
+		<Unit filename="deflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="deflate.h" />
+		<Unit filename="gzio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="infback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="inffast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="inffast.h" />
+		<Unit filename="inffixed.h" />
+		<Unit filename="inflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="inflate.h" />
+		<Unit filename="inftrees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="inftrees.h" />
+		<Unit filename="trees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="trees.h" />
+		<Unit filename="uncompr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="win32/zlib.def">
+			<Option target="Win32 DLL Release" />
+			<Option target="Win32 DLL Debug" />
+			<Option target="Win32 DLL ASM Release" />
+			<Option target="Win32 DLL ASM Debug" />
+			<Option target="Linux32 - Static" />
+			<Option target="Linux64 - Static" />
+			<Option target="emscripten" />
+		</Unit>
+		<Unit filename="zconf.h" />
+		<Unit filename="zlib.h" />
+		<Unit filename="zutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zutil.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

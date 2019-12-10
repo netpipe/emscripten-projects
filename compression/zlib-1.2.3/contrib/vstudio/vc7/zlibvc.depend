@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1103651528 source:c:\dev\libs\zlib-1.2.3\adler32.c
+	"zlib.h"
+
+1121653609 c:\dev\libs\zlib-1.2.3\zlib.h
+	"zconf.h"
+
+1117262435 c:\dev\libs\zlib-1.2.3\zconf.h
+	<windows.h>
+	<sys/types.h>
+	<unistd.h>
+	<unixio.h>
+
+1057556276 source:c:\dev\libs\zlib-1.2.3\compress.c
+	"zlib.h"
+
+1107687360 source:c:\dev\libs\zlib-1.2.3\contrib\masmx86\gvmat32c.c
+	"deflate.h"
+
+1117382122 c:\dev\libs\zlib-1.2.3\deflate.h
+	"zutil.h"
+
+1121114148 c:\dev\libs\zlib-1.2.3\zutil.h
+	"zlib.h"
+	<stddef.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<alloc.h>
+	<malloc.h>
+	<malloc.h>
+	<unix.h>
+	<stdio.h>
+
+1121191720 source:c:\dev\libs\zlib-1.2.3\contrib\minizip\ioapi.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"zlib.h"
+	"ioapi.h"
+
+1121191720 c:\dev\libs\zlib-1.2.3\contrib\minizip\ioapi.h
+
+1121191720 source:c:\dev\libs\zlib-1.2.3\contrib\minizip\iowin32.c
+	<stdlib.h>
+	"zlib.h"
+	"ioapi.h"
+	"iowin32.h"
+
+1121191720 c:\dev\libs\zlib-1.2.3\contrib\minizip\iowin32.h
+	<windows.h>
+
+1121191720 source:c:\dev\libs\zlib-1.2.3\contrib\minizip\unzip.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"zlib.h"
+	"unzip.h"
+	<stddef.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	"crypt.h"
+
+1121191720 c:\dev\libs\zlib-1.2.3\contrib\minizip\unzip.h
+	"zlib.h"
+	"ioapi.h"
+
+1121191720 c:\dev\libs\zlib-1.2.3\contrib\minizip\crypt.h
+
+1121191720 source:c:\dev\libs\zlib-1.2.3\contrib\minizip\zip.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"zlib.h"
+	"zip.h"
+	<stddef.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	"crypt.h"
+
+1121191720 c:\dev\libs\zlib-1.2.3\contrib\minizip\zip.h
+	"zlib.h"
+	"ioapi.h"
+

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="zlibvc" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="z" prefix_auto="1" extension_auto="1" />
+				<Option object_output="DebugDll" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DZLIB_WINAPI" />
+					<Add option="-DASMV" />
+					<Add option="-DASMINF" />
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="..\..\masmx86\gvmat32.obj" />
+					<Add library="..\..\masmx86\inffas32.obj" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseWithoutAsm Win32">
+				<Option output=".\zlibDllWithoutAsm\zlibwapi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="zlibDllWithoutAsm" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DZLIB_WINAPI" />
+					<Add option="-W" />
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="crtdll" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseWithoutCrtdll Win32">
+				<Option output=".\zlibDllWithoutCrtDll\zlibwapi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="zlibDllWithoutCrtDll" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DZLIB_WINAPI" />
+					<Add option="-DASMV" />
+					<Add option="-DASMINF" />
+					<Add option="-W" />
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="..\..\masmx86\gvmat32.obj" />
+					<Add library="..\..\masmx86\inffas32.obj" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseAxp Win32">
+				<Option output="zlibvc__\zlibwapi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="zlibvc__" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DZLIB_WINAPI" />
+					<Add option="-W" />
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="crtdll" />
+				</Linker>
+			</Target>
+			<Target title="Release Win32">
+				<Option output=".\ReleaseDll\zlibwapi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="ReleaseDll" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DZLIB_WINAPI" />
+					<Add option="-DASMV" />
+					<Add option="-DASMINF" />
+					<Add option="-W" />
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\..\.." />
+					<Add directory="..\..\masmx86" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="..\..\masmx86\gvmat32.obj" />
+					<Add library="..\..\masmx86\inffas32.obj" />
+					<Add library="crtdll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="..\..\..\adler32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\masmx86\gvmat32c.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug Win32" />
+			<Option target="ReleaseWithoutCrtdll Win32" />
+			<Option target="ReleaseAxp Win32" />
+			<Option target="Release Win32" />
+		</Unit>
+		<Unit filename="..\..\minizip\ioapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\minizip\iowin32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\minizip\unzip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\minizip\zip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlibvc.def" />
+		<Unit filename="..\..\..\crc32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\deflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\deflate.h" />
+		<Unit filename="..\..\..\gzio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\infback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\infblock.h" />
+		<Unit filename="..\..\..\infcodes.h" />
+		<Unit filename="..\..\..\inffast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\inffast.h" />
+		<Unit filename="..\..\..\inflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\inftrees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\inftrees.h" />
+		<Unit filename="..\..\..\infutil.h" />
+		<Unit filename="..\..\..\trees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\uncompr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\zconf.h" />
+		<Unit filename="..\..\..\zlib.h" />
+		<Unit filename="..\..\..\zutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\zutil.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
