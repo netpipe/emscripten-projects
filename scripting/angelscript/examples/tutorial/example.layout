@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="All" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="2317" topLine="110" />
+	</File>
+	<File name="scriptstring/scriptstring.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="96" topLine="434" />
+	</File>
+</CodeBlocks_layout_file>

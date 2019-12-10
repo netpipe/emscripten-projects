@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="examples/tutorial/example.cbp" />
+		<Project filename="examples/concurrent/example.cbp" />
+		<Project filename="examples/console/example.cbp" />
+		<Project filename="examples/coroutine/example.cbp" />
+		<Project filename="examples/events/example.cbp" />
+		<Project filename="examples/includer/example.cbp" active="1" />
+		<Project filename="angelscript.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

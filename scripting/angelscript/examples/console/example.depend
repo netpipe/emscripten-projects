@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1228539006 source:/home/Dev/libs/scripting/angelscript/angelscript/projects/codeblocks/tutorial/main.cpp
+	<iostream>
+	<assert.h>
+	<sys/time.h>
+	<stdio.h>
+	<termios.h>
+	<unistd.h>
+	<conio.h>
+	<windows.h>
+	<angelscript.h>
+	"../../../add_on/scriptstring/scriptstring.h"
+
+1241902320 /home/Dev/libs/scripting/angelscript/angelscript/include/angelscript.h
+	<stddef.h>
+
+1228800088 /home/Dev/libs/scripting/angelscript/add_on/scriptstring/scriptstring.h
+	<angelscript.h>
+	<string>
+
+1228800088 /home/Dev/libs/scripting/angelscript/angelscript/add_on/scriptstring/scriptstring.h
+	<angelscript.h>
+	<string>
+
+1228800312 source:/home/Dev/libs/scripting/angelscript/angelscript/examples/console/main.cpp
+	<iostream>
+	<string>
+	<assert.h>
+	<math.h>
+	<angelscript.h>
+	"../../../add_on/scriptstring/scriptstring.h"
+
+1264737259 source:/home/Dev/libs/scripting/angelscript/angelscript/examples/console/scriptstring/scriptstring.cpp
+	<assert.h>
+	<string.h>
+	"scriptstring.h"
+	<stdio.h>
+
+1228800088 /home/Dev/libs/scripting/angelscript/angelscript/examples/console/scriptstring/scriptstring.h
+	<angelscript.h>
+	<string>
+
+1228800312 source:/home/Dev/libs/scripting/angelscript/examples/console/main.cpp
+	<iostream>
+	<string>
+	<assert.h>
+	<math.h>
+	<angelscript.h>
+	"../../../add_on/scriptstring/scriptstring.h"
+
+1264737259 source:/home/Dev/libs/scripting/angelscript/examples/console/scriptstring/scriptstring.cpp
+	<assert.h>
+	<string.h>
+	"scriptstring.h"
+	<stdio.h>
+
+1228800088 /home/Dev/libs/scripting/angelscript/examples/console/scriptstring/scriptstring.h
+	<angelscript.h>
+	<string>
+
+1241902320 /home/Dev/libs/scripting/angelscript/include/angelscript.h
+	<stddef.h>
+
