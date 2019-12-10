@@ -1,0 +1,30 @@
+emscripten_usr_dir = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk
+cc = emcc
+optflags = -O2
+cflags = -I../Python-2.7/Include -I../Python-2.7/ -I../libtar/lib -I../libtar/listhash -std=gnu99 $optflags -g -I. -I$emscripten_usr_dir/include -I$emscripten_usr_dir/include/python2.7 -Wno-warn-absolute-paths
+ldflags = -L../Python-2.7 -L$emscripten_usr_dir/lib $optflags -Wno-warn-absolute-paths
+emflags = $
+  -s TOTAL_MEMORY=164Mb $
+  -s ASSERTIONS=2 $
+  -s EMULATE_FUNCTION_POINTER_CASTS=1 $
+  --memory-init-file 0 $
+ -s ERROR_ON_UNDEFINED_SYMBOLS=0 $
+-s EXIT_RUNTIME=1
+
+ldlibs = ../Python-2.7/libpython2.7.a ../libtar/lib/.libs/libtar.a
+
+rule cc
+  command = $cc -o $out -c $in -MMD -MF $out.d $cflags
+  deps = gcc
+  depfile = $out.d
+  description = CC $in
+
+rule ccld
+  command = $cc -o $asmjs $ldflags $emflags --embed-file $embed@/pydata.tar $objs $ldlibs
+  description = CCLD $asmjs
+
+build main.bc : cc main.c
+build python.asm.js python.asm.js.mem : ccld main.bc ../pydata.tar
+  asmjs = python.asm.js
+  objs = main.bc
+  embed = ../pydata.tar
