@@ -30,9 +30,9 @@ SOFTWARE.
 #pragma comment( lib, "SDL/libx86/SDL2.lib" )
 #pragma comment( lib, "SDL/libx86/SDL2main.lib" )
 
-#include "SDL/include/SDL.h"
-#include "SDL/include/SDL_version.h"
-#include "SDL/include/begin_code.h"
+#include "SDL2/SDL.h"
+#include "SDL2/SDL_version.h"
+#include "SDL2/begin_code.h"
 
 /* Set up for C function definitions, even when using C++ */
 #ifdef __cplusplus
@@ -89,6 +89,6 @@ extern DECLSPEC void SDLCALL THR_DestroyVideo(int video);
 }
 #endif
 
-#include "SDL/include/close_code.h"
+#include "SDL2/close_code.h"
 
 #endif // __SDL_THEORA_H__
