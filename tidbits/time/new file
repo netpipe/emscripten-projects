@@ -1,0 +1,48 @@
+#include <iostream>
+#include <unistd.h>
+
+using namespace std;
+void newline(); 
+
+int main() {
+
+int msec = 0;
+int sec = 0;
+int min = 0;
+int hr = 0;
+
+
+//cout << "Press any key to start:";
+//char start = _gtech();
+
+for (;;)
+{
+        newline();
+                if(msec == 1000)
+                {
+                        ++sec;
+                        msec = 0;
+                }
+                if(sec == 60)
+                {
+                        ++min;
+                        sec = 0; 
+                }
+                if(min == 60)
+                {
+                        ++hr;
+                        min = 0;
+                }
+        cout << hr << " : " << min << " : " << sec << " . " << msec << endl;
+        ++msec;
+        usleep(100000); 
+
+}
+
+    return 0;
+}
+
+void newline()
+{
+        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+}
