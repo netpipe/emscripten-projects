@@ -1,0 +1,855 @@
+--- libmad-0.15.1b.orig/debian/rules
++++ libmad-0.15.1b/debian/rules
+@@ -0,0 +1,25 @@
++#!/usr/bin/make -f
++# makefile for libmad
++
++# Uncomment this to turn on verbose mode. 
++#export DH_VERBOSE=1
++
++DEB_DH_MAKESHLIBS_ARGS_libmad0 = -V 'libmad0 (>= 0.15.1b-3)'
++
++include /usr/share/cdbs/1/rules/debhelper.mk
++include /usr/share/cdbs/1/class/autotools.mk
++include /usr/share/cdbs/1/rules/patchsys-quilt.mk
++include /usr/share/cdbs/1/rules/autoreconf.mk
++
++export AUTOMAKE = automake --foreign
++
++DEB_CONFIGURE_EXTRA_FLAGS=--enable-shared --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
++ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
++DEB_CONFIGURE_EXTRA_FLAGS += --enable-profiling --enable-debugging
++else
++DEB_CONFIGURE_EXTRA_FLAGS += --disable-profiling --disable-debugging
++endif
++
++clean::
++	# annoying lintian errors
++	rm -f config.cache libz/config.log libz/config.status
+--- libmad-0.15.1b.orig/debian/libmad0-dev.examples
++++ libmad-0.15.1b/debian/libmad0-dev.examples
+@@ -0,0 +1 @@
++minimad.c
+--- libmad-0.15.1b.orig/debian/mad.pc
++++ libmad-0.15.1b/debian/mad.pc
+@@ -0,0 +1,11 @@
++prefix=/usr
++exec_prefix=${prefix}
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include
++
++Name: mad
++Description: MPEG Audio Decoder
++Requires:
++Version: 0.15.0b
++Libs: -L${libdir} -lmad
++Cflags: -I${includedir}
+--- libmad-0.15.1b.orig/debian/libmad0.install
++++ libmad-0.15.1b/debian/libmad0.install
+@@ -0,0 +1 @@
++debian/tmp/usr/lib/*/libmad.so.*
+--- libmad-0.15.1b.orig/debian/compat
++++ libmad-0.15.1b/debian/compat
+@@ -0,0 +1 @@
++5
+--- libmad-0.15.1b.orig/debian/libmad0.debhelper.log
++++ libmad-0.15.1b/debian/libmad0.debhelper.log
+@@ -0,0 +1 @@
++dh_autoreconf_clean
+--- libmad-0.15.1b.orig/debian/libmad0-dev.files
++++ libmad-0.15.1b/debian/libmad0-dev.files
+@@ -0,0 +1,4 @@
++usr/include/mad.h
++usr/lib/libmad.a
++usr/lib/libmad.la
++usr/lib/libmad.so
+--- libmad-0.15.1b.orig/debian/libmad0-dev.debhelper.log
++++ libmad-0.15.1b/debian/libmad0-dev.debhelper.log
+@@ -0,0 +1 @@
++dh_autoreconf_clean
+--- libmad-0.15.1b.orig/debian/libmad0.files
++++ libmad-0.15.1b/debian/libmad0.files
+@@ -0,0 +1 @@
++usr/lib/libmad.so.*
+--- libmad-0.15.1b.orig/debian/copyright
++++ libmad-0.15.1b/debian/copyright
+@@ -0,0 +1,26 @@
++This package was debianized by Sean 'Shaleh' Perry <shaleh@debian.org> on
++Tue, 23 May 2000 12:25:00 -0700.
++
++It was downloaded from http://www.underbit.com/products/mad/
++
++Upstream Author: Robert Leslie <rob@mars.org>
++
++Copyright (C) 2000-2004 Underbit Technologies, Inc.
++
++This program is free software; you can redistribute it and/or modify it
++under the terms of the GNU General Public License as published by the
++Free Software Foundation; either version 2, or (at your option) any
++later version.
++
++This program is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++GNU General Public License for more details.
++
++You should have received a copy of the GNU General Public License
++along with this program; if not, write to the Free Software
++Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++
++On Debian GNU/Linux systems, the complete text of the GNU General
++Public License can be found in `/usr/share/common-licenses/GPL'.
++
+--- libmad-0.15.1b.orig/debian/control
++++ libmad-0.15.1b/debian/control
+@@ -0,0 +1,34 @@
++Source: libmad
++Priority: optional
++Section: sound
++Build-Depends: debhelper (>= 8.1.3~), gettext, cdbs (>= 0.4.93~), autotools-dev, quilt, dh-autoreconf
++Maintainer: Mad Maintainers <pkg-mad-maintainers@lists.alioth.debian.org>
++Uploaders: Kurt Roeckx <kurt@roeckx.be>, Clément Stenac <zorglub@debian.org>, Sam Clegg <samo@debian.org>
++Standards-Version: 3.7.3
++
++Package: libmad0
++Architecture: any
++Multi-Arch: same
++Section: libs
++Pre-Depends: ${misc:Pre-Depends}
++Depends: ${shlibs:Depends}, ${misc:Depends}
++Description: MPEG audio decoder library
++ MAD is an MPEG audio decoder. It currently only supports the MPEG 1
++ standard, but fully implements all three audio layers (Layer I, Layer II,
++ and Layer III, the latter often colloquially known as MP3.)
++ .
++ MAD has the following special features:
++   - 100% fixed-point (integer) computation
++   - completely new implementation based on the ISO/IEC 11172-3 standard
++   - distributed under the terms of the GNU General Public License (GPL)
++
++Package: libmad0-dev
++Architecture: any
++Section: libdevel
++Depends: libmad0 (=${binary:Version}), ${misc:Depends}
++Description: MPEG audio decoder development library
++ MAD is an MPEG audio decoder. It currently only supports the MPEG 1
++ standard, but fully implements all three audio layers (Layer I, Layer II,
++ and Layer III, the latter often colloquially known as MP3.)
++ .
++ This is the package you need to develop or compile applications that use MAD.
+--- libmad-0.15.1b.orig/debian/libmad0.dirs
++++ libmad-0.15.1b/debian/libmad0.dirs
+@@ -0,0 +1 @@
++usr/lib
+--- libmad-0.15.1b.orig/debian/libmad0.docs
++++ libmad-0.15.1b/debian/libmad0.docs
+@@ -0,0 +1,2 @@
++CREDITS
++README
+--- libmad-0.15.1b.orig/debian/libmad0-dev.docs
++++ libmad-0.15.1b/debian/libmad0-dev.docs
+@@ -0,0 +1,2 @@
++CREDITS
++README
+--- libmad-0.15.1b.orig/debian/watch
++++ libmad-0.15.1b/debian/watch
+@@ -0,0 +1,2 @@
++version=2
++ftp://ftp.mars.org/mpeg/libmad-(.*)\.tar\.gz debian uupdate
+--- libmad-0.15.1b.orig/debian/libmad0-dev.install
++++ libmad-0.15.1b/debian/libmad0-dev.install
+@@ -0,0 +1,4 @@
++debian/tmp/usr/include/mad.h /usr/include
++debian/tmp/usr/lib/*/libmad.a
++debian/tmp/usr/lib/*/libmad.so
++debian/mad.pc /usr/lib/pkgconfig
+--- libmad-0.15.1b.orig/debian/libmad0-dev.dirs
++++ libmad-0.15.1b/debian/libmad0-dev.dirs
+@@ -0,0 +1,2 @@
++usr/lib
++usr/include
+--- libmad-0.15.1b.orig/debian/changelog
++++ libmad-0.15.1b/debian/changelog
+@@ -0,0 +1,296 @@
++libmad (0.15.1b-8) unstable; urgency=low
++
++  * Add multiarch support.  (Closes: #653676)
++    Patch by Steve Langasek <steve.langasek@canonical.com>
++  * Use dh-autoreconf to update libtool so that it works on x32
++    (Closes: #700437)
++
++ -- Kurt Roeckx <kurt@roeckx.be>  Mon, 20 May 2013 18:02:18 +0200
++
++libmad (0.15.1b-7) unstable; urgency=low
++
++  * Fix arm's MAD_F_MLN thumb case causing problems on arhmf.  Patch
++    by Dave Martin (Closes: #656814)
++  * Add ${misc:Depends} to the Depends.
++
++ -- Kurt Roeckx <kurt@roeckx.be>  Sun, 22 Jan 2012 23:02:29 +0100
++
++libmad (0.15.1b-6) unstable; urgency=low
++
++  [ Konstantinos Margaritis ]
++  * Add support for armhf (Closes: #596936)
++    - libmad.thumb.diff: use "adr" instead of "add" to make code ready for
++      thumb2
++    - Provide-Thumb-2-alternative-code-for-MAD_F_MLN.diff: fix another
++      ftbfs with thumb2 as "rsc" doesnt exist anymore - thanks to Dave
++      Martin for this patch
++
++ -- Kurt Roeckx <kurt@roeckx.be>  Tue, 29 Mar 2011 22:26:22 +0200
++
++libmad (0.15.1b-5) unstable; urgency=low
++
++  * gcc-4.4 removed an assembler constraint on mips/mipsel.  Use the new
++    way of doing it.  (Closes: #568418)
++
++ -- Kurt Roeckx <kurt@roeckx.be>  Fri, 19 Feb 2010 20:51:00 +0100
++
++libmad (0.15.1b-4) unstable; urgency=low
++
++  * On an invalid mpeg file we can go past the end of the buffer.
++    (Closes: #508133)
++
++ -- Kurt Roeckx <kurt@roeckx.be>  Tue, 23 Dec 2008 21:38:34 +0100
++
++libmad (0.15.1b-3) unstable; urgency=low
++
++  * Acknowledge NMU
++  * Use DEB_DH_MAKESHLIBS_ARGS_libmad0 instead to set shlibs.
++  * Update Clément Stenac's email address to use zorglub@debian.org
++  * Add build dependency on autotools-dev, quilt
++  * Don't use -O plus some other -f options, just use -O2.  (Closes: #415279)
++  * Use the 64bit fixed point math on amd64 to have a higher quality
++    output than the default.  (Closes: #465438)
++  * Bump shlibs since it changes the size of mad_build on amd64.
++  * Add compat file, level 5.  Change build dependency of debhelper to 5.
++  * Don't set -lm in the mad.pc file.  libmad doesn't use any math function.
++  * Remove libmad0 Depends on pkg-config.
++  * Change to Standards-Version 3.7.3:
++    - Change ${Source-Version} into ${binary:Version}
++
++ -- Kurt Roeckx <kurt@roeckx.be>  Sat, 15 Mar 2008 13:51:31 +0000
++
++libmad (0.15.1b-2.1) unstable; urgency=high
++
++  * Non-maintainer upload, not targetted for Sarge.
++  * Urgency high because this is generating uploads with broken depends
++    that may be propagating to testing (see #311488).
++  * debian/rules: set DEB_DH_MAKESHLIBS_ARGS_ALL = -V 'libmad0 (>= 0.15.1b)'
++    to restore the updated shlibs lost in the switch to CDBS
++    (closes: #310311).
++
++ -- Jordi Mallach <jordi@debian.org>  Wed,  1 Jun 2005 17:12:24 +0200
++
++libmad (0.15.1b-2) unstable; urgency=low
++
++  * Sam Clegg :
++    * debian/control: update Maintainer: and Uploaders: (closes: #300097)
++    * debian/rules: convert to CDBS
++    * debian/control: build-depend on debhelper >= 4.1.0
++    * debian/libmad0.postinst: removed since debhelper runs ldconfig for us.
++    * debian/libmad0*.files: removed; use dh_install instead.
++  * Clément Stenac :
++    * Better copyright file
++  * Kurt Roeckx
++    * Add watch file.
++
++ -- Sam Clegg <samo@debian.org>  Sun,  8 May 2005 18:59:49 +0100
++
++libmad (0.15.1b-1.1) unstable; urgency=low
++
++  * Orphaning this package, setting maintainer to QA.
++
++ -- Kyle McMartin <kyle@debian.org>  Thu, 17 Mar 2005 10:59:11 -0500
++
++libmad (0.15.1b-1) unstable; urgency=low
++
++  * New upstream version. (closes: #252902)
++  * Removed TODO from installed documentation.
++  * Added minimad.c to the libmad0-dev documentation. Thanks to
++    Mario Lang for the patch. (closes: #249067)
++
++ -- Kyle McMartin <kyle@debian.org>  Sat, 5 Jun 2004 18:52:00 -0400
++
++libmad (0.15.0b-3) unstable; urgency=low
++
++  * Updated section from devel to libdevel as per mail.
++
++ -- Kyle McMartin <kyle@debian.org>  Tue, 21 Oct 2003 22:40:08 -0400
++
++libmad (0.15.0b-2) unstable; urgency=low
++
++  * Updated pkgconfig Version entry for mad (closes: #203656)
++
++ -- Kyle McMartin <kyle@debian.org>  Tue, 21 Oct 2003 22:09:04 -0400
++
++libmad (0.15.0b-1) unstable; urgency=low
++
++  * New upstream version(s).
++  * Split package into each library, as upstream has done.
++
++ -- Kyle McMartin <kyle@debian.org>  Sat, 21 Jun 2003 14:21:42 -0400
++
++mad (0.14.2b-7) unstable; urgency=low
++
++  * Clean up some lintian warnings.
++  * Fixed id3tag.pc, accidently had -L instead of -I.
++
++ -- Kyle McMartin <kyle@debian.org>  Tue, 28 Jan 2003 09:45:02 -0500
++
++mad (0.14.2b-6) unstable; urgency=medium
++
++  * Updated config.* (closes: #168663)
++
++ -- Kyle McMartin <kyle@debian.org>  Thu, 14 Nov 2002 18:41:29 -0500
++
++mad (0.14.2b-5) unstable; urgency=medium
++
++  * Added build-dep on libesd0-dev, this should fix some
++    problems people have been having when using esd as the
++    output device... (closes: #150823)
++
++ -- Kyle McMartin <kyle@debian.org>  Wed, 06 Nov 2002 18:20:18 -0500
++
++mad (0.14.2b-4) unstable; urgency=low
++
++  * added pkgconfig entry, and dependancy on pkg-config. (closes: #144481)
++
++ -- Kyle McMartin <kyle@debian.org>  Mon, 05 Aug 2002 14:37:00 -0400
++
++mad (0.14.2b-3) unstable; urgency=high
++
++  * updated libid3tag0-dev depends to account for zlib1g-dev (closes: #142611)
++
++ -- Kyle McMartin <kyle@debian.org>  Thu, 18 Apr 2002 19:37:00 -0500
++
++mad (0.14.2b-2) unstable; urgency=high
++
++  * fix for the shlibs rc bug (closes: #136196)
++
++ -- Kyle McMartin <kyle@debian.org>  Thu, 28 Feb 2002 18:21:40 -0500
++
++mad (0.14.2b-1) unstable; urgency=low
++
++  * new upstream version
++  * new maintainer
++  * new version fixes enum (closes: #129178)
++  * closing old fixed bug [missing symlink to libmad.so.0] (closes: #119350)
++
++ -- Kyle McMartin <kyle@debian.org>  Wed, 16 Jan 2002 22:09:58 -0500
++
++mad (0.14.1b-4) unstable; urgency=low
++
++  * yet another stupid maintainer mistakes release
++  * fix the call to dh_makeshlibs, I neglected to add proper
++    arguments for the new libid3tag0 library (closes: #119146)
++  * now that the shlibs are sorted out, madplay will have the correct depends
++    (closes: #119792)
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Thu, 15 Nov 2001 22:11:24 -0800
++
++mad (0.14.1b-3) unstable; urgency=medium
++
++  * duh, id3tag's headers ended up in libmad-dev.  Closes: #118625.
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Wed,  7 Nov 2001 13:45:53 -0800
++
++mad (0.14.1b-2) unstable; urgency=medium
++
++  * Added versioned depends info for piecemeal updaters.  (Closes: #117646)
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Wed,  7 Nov 2001 08:10:42 -0800
++
++mad (0.14.1b-1) unstable; urgency=low
++
++  * reverted package name to libmad0(-dev).  The upstream fixed it's SONAME
++    issues, yay.
++  * added libid3tag(-dev), the upstream now supports the installation of this
++    as a separate entity (closes: #116321)
++  * -dev packages are now in Section: devel (closes: #116710)
++  * supports DEB_BUILD_OPTIONS for debug (closes: #104013)
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Tue, 23 Oct 2001 11:08:53 -0700
++
++mad (0.14.0b-3) unstable; urgency=low
++
++  * added a conflicts on libmad0 to the lib and -dev packages, closes: #116581
++  * updated config.{sub,guess}, closes: #116577
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Sun, 21 Oct 2001 16:26:39 -0700
++
++mad (0.14.0b-2) unstable; urgency=low
++
++  * D'oh, not binary compatible.  The every changing SONAME problem.
++  * chnaged library package name to match SONAME.  This is horrible because
++    now I have to change the package name for every release.  However there
++    is no alternative.  closes: 116305.
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Fri, 19 Oct 2001 14:30:29 -0700
++
++mad (0.14.0b-1) unstable; urgency=low
++
++  * New upstream release
++  * source now build-depends on zlib
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Thu, 18 Oct 2001 21:59:28 -0700
++
++mad (0.13.0b-2.1) unstable; urgency=low
++  * Run libtoolize to get support for new architectures.  Closes: #96616
++
++ -- LaMont Jones <lamont@debian.org>  Mon,  9 Jul 2001 21:39:34 -0600
++
++mad (0.13.0b-2) unstable; urgency=low
++
++  * Now build-depend on gettext (closes: #94964)
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Mon, 23 Apr 2001 11:29:21 -0700
++
++mad (0.13.0b-1) unstable; urgency=low
++
++  * new upstream release
++  * manpage cleaned up, Closes: #87165
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Wed, 11 Apr 2001 18:40:08 -0700
++
++mad (0.12.5b-1) unstable; urgency=low
++
++  * New upstream, closes: #92825
++  * updated upstream changelog
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Tue,  3 Apr 2001 15:11:05 -0700
++
++mad (0.12.4b-1) unstable; urgency=low
++
++  * New upstream version
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Mon, 12 Feb 2001 14:16:21 -0800
++
++mad (0.12.3b-2) unstable; urgency=low
++
++  * Oops, wrong section
++  * left off the Closes: #84103
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Thu,  8 Feb 2001 12:17:12 -0800
++
++mad (0.12.3b-1) unstable; urgency=low
++
++  * New upstream version
++  * added a madplay package
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Wed,  7 Feb 2001 12:04:28 -0800
++
++mad (0.11.4b-1) unstable; urgency=low
++
++  * New upstream release
++  * added libmad0 package containing the shared library
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Mon,  2 Oct 2000 17:38:01 -0700
++
++mad (0.11.0b-0) unstable; urgency=low
++
++  * New upstream release
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Mon,  5 Jun 2000 14:25:39 -0700
++
++mad (0.10.3b-0) unstable; urgency=low
++
++  * New upstream release
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Thu,  1 Jun 2000 15:05:02 -0700
++
++mad (0.10.2b-0) unstable; urgency=low
++
++  * Initial Release.
++
++ -- Sean 'Shaleh' Perry <shaleh@debian.org>  Tue, 23 May 2000 12:25:00 -0700
++
++
+--- libmad-0.15.1b.orig/debian/patches/libmad.thumb.diff
++++ libmad-0.15.1b/debian/patches/libmad.thumb.diff
+@@ -0,0 +1,14 @@
++From: Konstantinos Margaritis <markos@debian.org>
++Subject: use "adr" instead of "add" to make code ready for thumb2
++
++--- ./imdct_l_arm.S.orig	2010-02-25 13:25:23.000000000 +0100
+++++ ./imdct_l_arm.S	2010-02-25 13:27:26.000000000 +0100
++@@ -468,7 +468,7 @@
++ 
++     @----
++ 
++-    add     r2, pc, #(imdct36_long_karray-.-8)  @ r2 = base address of Knn array (PIC safe ?)
+++    adr     r2, imdct36_long_karray
++ 
++ 
++ loop:
+--- libmad-0.15.1b.orig/debian/patches/frame_length.diff
++++ libmad-0.15.1b/debian/patches/frame_length.diff
+@@ -0,0 +1,197 @@
++; You can calculate where the next frame will start depending on things
++; like the bitrate. See mad_header_decode().  It seems that when decoding
++; the frame you can go past that boundary.  This attempts to catch those cases,
++; but might not catch all of them.
++; For more info see http://bugs.debian.org/508133
++Index: libmad-0.15.1b/layer12.c
++===================================================================
++--- libmad-0.15.1b.orig/layer12.c	2008-12-23 21:38:07.000000000 +0100
+++++ libmad-0.15.1b/layer12.c	2008-12-23 21:38:12.000000000 +0100
++@@ -134,6 +134,12 @@
++   for (sb = 0; sb < bound; ++sb) {
++     for (ch = 0; ch < nch; ++ch) {
++       nb = mad_bit_read(&stream->ptr, 4);
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++ 
++       if (nb == 15) {
++ 	stream->error = MAD_ERROR_BADBITALLOC;
++@@ -146,6 +152,12 @@
++ 
++   for (sb = bound; sb < 32; ++sb) {
++     nb = mad_bit_read(&stream->ptr, 4);
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++ 
++     if (nb == 15) {
++       stream->error = MAD_ERROR_BADBITALLOC;
++@@ -162,6 +174,12 @@
++     for (ch = 0; ch < nch; ++ch) {
++       if (allocation[ch][sb]) {
++ 	scalefactor[ch][sb] = mad_bit_read(&stream->ptr, 6);
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++ 
++ # if defined(OPT_STRICT)
++ 	/*
++@@ -187,6 +205,12 @@
++ 	frame->sbsample[ch][s][sb] = nb ?
++ 	  mad_f_mul(I_sample(&stream->ptr, nb),
++ 		    sf_table[scalefactor[ch][sb]]) : 0;
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++       }
++     }
++ 
++@@ -195,6 +219,12 @@
++ 	mad_fixed_t sample;
++ 
++ 	sample = I_sample(&stream->ptr, nb);
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++ 
++ 	for (ch = 0; ch < nch; ++ch) {
++ 	  frame->sbsample[ch][s][sb] =
++@@ -403,7 +433,15 @@
++     nbal = bitalloc_table[offsets[sb]].nbal;
++ 
++     for (ch = 0; ch < nch; ++ch)
+++    {
++       allocation[ch][sb] = mad_bit_read(&stream->ptr, nbal);
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
+++    }
++   }
++ 
++   for (sb = bound; sb < sblimit; ++sb) {
++@@ -411,6 +449,13 @@
++ 
++     allocation[0][sb] =
++     allocation[1][sb] = mad_bit_read(&stream->ptr, nbal);
+++
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++   }
++ 
++   /* decode scalefactor selection info */
++@@ -419,6 +464,12 @@
++     for (ch = 0; ch < nch; ++ch) {
++       if (allocation[ch][sb])
++ 	scfsi[ch][sb] = mad_bit_read(&stream->ptr, 2);
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++     }
++   }
++ 
++@@ -442,6 +493,12 @@
++     for (ch = 0; ch < nch; ++ch) {
++       if (allocation[ch][sb]) {
++ 	scalefactor[ch][sb][0] = mad_bit_read(&stream->ptr, 6);
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++ 
++ 	switch (scfsi[ch][sb]) {
++ 	case 2:
++@@ -452,11 +509,23 @@
++ 
++ 	case 0:
++ 	  scalefactor[ch][sb][1] = mad_bit_read(&stream->ptr, 6);
+++		if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++		{
+++			stream->error = MAD_ERROR_LOSTSYNC;
+++			stream->sync = 0;
+++			return -1;
+++		}
++ 	  /* fall through */
++ 
++ 	case 1:
++ 	case 3:
++ 	  scalefactor[ch][sb][2] = mad_bit_read(&stream->ptr, 6);
+++		if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++		{
+++			stream->error = MAD_ERROR_LOSTSYNC;
+++			stream->sync = 0;
+++			return -1;
+++		}
++ 	}
++ 
++ 	if (scfsi[ch][sb] & 1)
++@@ -488,6 +557,12 @@
++ 	  index = offset_table[bitalloc_table[offsets[sb]].offset][index - 1];
++ 
++ 	  II_samples(&stream->ptr, &qc_table[index], samples);
+++		if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++		{
+++			stream->error = MAD_ERROR_LOSTSYNC;
+++			stream->sync = 0;
+++			return -1;
+++		}
++ 
++ 	  for (s = 0; s < 3; ++s) {
++ 	    frame->sbsample[ch][3 * gr + s][sb] =
++@@ -506,6 +581,12 @@
++ 	index = offset_table[bitalloc_table[offsets[sb]].offset][index - 1];
++ 
++ 	II_samples(&stream->ptr, &qc_table[index], samples);
+++	if (mad_bit_nextbyte(&stream->ptr) > stream->next_frame)
+++	{
+++		stream->error = MAD_ERROR_LOSTSYNC;
+++		stream->sync = 0;
+++		return -1;
+++	}
++ 
++ 	for (ch = 0; ch < nch; ++ch) {
++ 	  for (s = 0; s < 3; ++s) {
++Index: libmad-0.15.1b/layer3.c
++===================================================================
++--- libmad-0.15.1b.orig/layer3.c	2008-12-23 21:38:07.000000000 +0100
+++++ libmad-0.15.1b/layer3.c	2008-12-23 21:38:12.000000000 +0100
++@@ -2608,6 +2608,12 @@
++     next_md_begin = 0;
++ 
++   md_len = si.main_data_begin + frame_space - next_md_begin;
+++  if (md_len + MAD_BUFFER_GUARD > MAD_BUFFER_MDLEN)
+++  {
+++	stream->error = MAD_ERROR_LOSTSYNC;
+++	stream->sync = 0;
+++	return -1;
+++  }
++ 
++   frame_used = 0;
++ 
+--- libmad-0.15.1b.orig/debian/patches/Provide-Thumb-2-alternative-code-for-MAD_F_MLN.diff
++++ libmad-0.15.1b/debian/patches/Provide-Thumb-2-alternative-code-for-MAD_F_MLN.diff
+@@ -0,0 +1,34 @@
++From: Dave Martin
++Subject: "rsc" doesnt exist anymore in thumb2
++
++diff --git a/fixed.h b/fixed.h
++index 4b58abf..ba4bc26 100644
++--- a/fixed.h
+++++ b/fixed.h
++@@ -275,12 +275,25 @@ mad_fixed_t mad_f_mul_inline(mad_fixed_t x, mad_fixed_t y)
++ 	 : "+r" (lo), "+r" (hi)  \
++ 	 : "%r" (x), "r" (y))
++ 
+++#ifdef __thumb__
+++/* In Thumb-2, the RSB-immediate instruction is only allowed with a zero
+++	operand.  If needed this code can also support Thumb-1 
+++	(simply append "s" to the end of the second two instructions). */
+++#  define MAD_F_MLN(hi, lo)  \
+++    asm ("rsbs        %0, %0, #0\n\t"  \
+++	 "sbc   %1, %1, %1\n\t"  \
+++	 "sub   %1, %1, %2"  \
+++	 : "+&r" (lo), "=&r" (hi)  \
+++	 : "r" (hi)  \
+++	 : "cc")
+++#else /* ! __thumb__ */
++ #  define MAD_F_MLN(hi, lo)  \
++     asm ("rsbs	%0, %2, #0\n\t"  \
++ 	 "rsc	%1, %3, #0"  \
++-	 : "=r" (lo), "=r" (hi)  \
+++	 : "=&r" (lo), "=r" (hi)  \
++ 	 : "0" (lo), "1" (hi)  \
++ 	 : "cc")
+++#endif /* __thumb__ */
++ 
++ #  define mad_f_scale64(hi, lo)  \
++     ({ mad_fixed_t __result;  \
+--- libmad-0.15.1b.orig/debian/patches/optimize.diff
++++ libmad-0.15.1b/debian/patches/optimize.diff
+@@ -0,0 +1,77 @@
++Index: libmad-0.15.1b/configure.ac
++===================================================================
++--- libmad-0.15.1b.orig/configure.ac	2008-03-07 20:31:23.000000000 +0000
+++++ libmad-0.15.1b/configure.ac	2008-03-07 20:34:26.000000000 +0000
++@@ -124,71 +124,7 @@
++ 
++ if test "$GCC" = yes
++ then
++-    if test -z "$arch"
++-    then
++-	case "$host" in
++-	    i386-*)           ;;
++-	    i?86-*)           arch="-march=i486" ;;
++-	    arm*-empeg-*)     arch="-march=armv4 -mtune=strongarm1100" ;;
++-	    armv4*-*)         arch="-march=armv4 -mtune=strongarm" ;;
++-	    powerpc-*)        ;;
++-	    mips*-agenda-*)   arch="-mcpu=vr4100" ;;
++-	    mips*-luxsonor-*) arch="-mips1 -mcpu=r3000 -Wa,-m4010" ;;
++-	esac
++-    fi
++-
++-    case "$optimize" in
++-	-O|"-O "*)
++-	    optimize="-O"
++-	    optimize="$optimize -fforce-mem"
++-	    optimize="$optimize -fforce-addr"
++-	    : #x optimize="$optimize -finline-functions"
++-	    : #- optimize="$optimize -fstrength-reduce"
++-	    optimize="$optimize -fthread-jumps"
++-	    optimize="$optimize -fcse-follow-jumps"
++-	    optimize="$optimize -fcse-skip-blocks"
++-	    : #x optimize="$optimize -frerun-cse-after-loop"
++-	    : #x optimize="$optimize -frerun-loop-opt"
++-	    : #x optimize="$optimize -fgcse"
++-	    optimize="$optimize -fexpensive-optimizations"
++-	    optimize="$optimize -fregmove"
++-	    : #* optimize="$optimize -fdelayed-branch"
++-	    : #x optimize="$optimize -fschedule-insns"
++-	    optimize="$optimize -fschedule-insns2"
++-	    : #? optimize="$optimize -ffunction-sections"
++-	    : #? optimize="$optimize -fcaller-saves"
++-	    : #> optimize="$optimize -funroll-loops"
++-	    : #> optimize="$optimize -funroll-all-loops"
++-	    : #x optimize="$optimize -fmove-all-movables"
++-	    : #x optimize="$optimize -freduce-all-givs"
++-	    : #? optimize="$optimize -fstrict-aliasing"
++-	    : #* optimize="$optimize -fstructure-noalias"
++-
++-	    case "$host" in
++-		arm*-*)
++-		    optimize="$optimize -fstrength-reduce"
++-		    ;;
++-		mips*-*)
++-		    optimize="$optimize -fstrength-reduce"
++-		    optimize="$optimize -finline-functions"
++-		    ;;
++-		i?86-*)
++-		    optimize="$optimize -fstrength-reduce"
++-		    ;;
++-		powerpc-apple-*)
++-		    # this triggers an internal compiler error with gcc2
++-		    : #optimize="$optimize -fstrength-reduce"
++-
++-		    # this is really only beneficial with gcc3
++-		    : #optimize="$optimize -finline-functions"
++-		    ;;
++-		*)
++-		    # this sometimes provokes bugs in gcc 2.95.2
++-		    : #optimize="$optimize -fstrength-reduce"
++-		    ;;
++-	    esac
++-	    ;;
++-    esac
+++    optimize="-O2"
++ fi
++ 
++ case "$host" in
+--- libmad-0.15.1b.orig/debian/patches/amd64-64bit.diff
++++ libmad-0.15.1b/debian/patches/amd64-64bit.diff
+@@ -0,0 +1,12 @@
++Index: libmad-0.15.1b/configure.ac
++===================================================================
++--- libmad-0.15.1b.orig/configure.ac	2008-03-07 20:33:05.000000000 +0000
+++++ libmad-0.15.1b/configure.ac	2008-03-07 20:33:31.000000000 +0000
++@@ -233,6 +233,7 @@
++ then
++     case "$host" in
++ 	i?86-*)     FPM="INTEL"  ;;
+++	x86_64*)    FPM="64BIT"  ;;
++ 	arm*-*)     FPM="ARM"    ;;
++ 	mips*-*)    FPM="MIPS"   ;;
++ 	sparc*-*)   FPM="SPARC"  ;;
+--- libmad-0.15.1b.orig/debian/patches/series
++++ libmad-0.15.1b/debian/patches/series
+@@ -0,0 +1,6 @@
++optimize.diff
++amd64-64bit.diff
++frame_length.diff
++Provide-Thumb-2-alternative-code-for-MAD_F_MLN.diff
++libmad.thumb.diff
++mips-gcc4.4.diff
+--- libmad-0.15.1b.orig/debian/patches/mips-gcc4.4.diff
++++ libmad-0.15.1b/debian/patches/mips-gcc4.4.diff
+@@ -0,0 +1,25 @@
++From: Aurelien Jarno <aurelien@aurel32.net>
++Subject: Different constraints for mips with gcc-4.4
++
++This asm constraints has been removed from gcc 4.4, that's why it was not
++failing before. See http://gcc.gnu.org/gcc-4.4/changes.html for more
++details, including a description of the new way to do it.
++
++--- libmad-0.15.1b.orig/fixed.h
+++++ libmad-0.15.1b/fixed.h
++@@ -297,6 +297,14 @@
++ 
++ /* --- MIPS ---------------------------------------------------------------- */
++ 
+++# elif defined(FPM_MIPS) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 4))
+++   typedef unsigned int u64_di_t __attribute__ ((mode (DI))); 
+++#  define MAD_F_MLX(hi, lo, x, y) \
+++   do { \
+++      u64_di_t __ll = (u64_di_t) (x) * (y); \
+++      hi = __ll >> 32; \
+++      lo = __ll; \
+++   } while (0)
++ # elif defined(FPM_MIPS)
++ 
++ /*
++

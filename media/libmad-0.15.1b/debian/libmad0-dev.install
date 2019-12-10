@@ -1,0 +1,4 @@
+debian/tmp/usr/include/mad.h /usr/include
+debian/tmp/usr/lib/*/libmad.a
+debian/tmp/usr/lib/*/libmad.so
+debian/mad.pc /usr/lib/pkgconfig
