@@ -1,0 +1,56 @@
+<H1><FONT color="#414141"><STRONG>Frequently Asked Questions: Using SDL</STRONG></FONT></H1>
+<BR>
+<BLOCKQUOTE><H3>Table Of Contents</H3>
+<UL>
+<LI><A href="#9">How do I choose a specific video driver?</A>
+<LI><A href="#10">How do I choose a specific audio driver?</A>
+<LI><A href="#11">What environment variables are used by SDL?</A>
+</UL>
+<HR width="100%">
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=9><B>How do I choose a specific video driver?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>You can set the environment variable "SDL_VIDEODRIVER" to the name of the driver you want to use.  The drivers available depend on the platform and SDL compile-time options.  Here is a partial list for some platforms:
+<br>
+<ul>
+<li> Linux: <ul>
+     <li> x11 - (default) Use the X11 windowing system
+     <li> dga - Use XFree86 DGA 2.0 for fullscreen hardware acceleration
+     <li> fbcon - Use the framebuffer console
+     <li> directfb - Use the DirectFB API
+     <li> svgalib - Use the SVGAlib API
+     <li> ggi - Use the General Graphics Interface API
+     <li> aalib - Use the Ascii Art library
+     </ul>
+<li> Win32: <ul>
+     <li> directx - (default) Use the DirectDraw API
+     <li> windib - Use the standard Win32 GDI
+     </ul>
+</ul></TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=10><B>How do I choose a specific audio driver?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>You can set the environment variable "SDL_AUDIODRIVER" to the name of the driver you want to use.  The drivers available depend on the platform and SDL compile-time options.  Here is a partial list for some platforms:
+<br>
+<ul>
+<li> Linux: <ul>
+     <li> dsp - (default) Use the OSS API by opening /dev/dsp
+     <li> dma - Use the OSS API to perform DMA access on /dev/dsp
+     <li> esd - Connect to the ESound audio daemon
+     <li> artsc - Connect to the ARTS audio daemon
+     </ul>
+<li> Win32: <ul>
+     <li> dsound - (default) Use the DirectSound API
+     <li> waveout - Use the Win32 MultiMedia API
+     </ul>
+</ul></TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=11><B>What environment variables are used by SDL?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>Mattias Engdegård has made a partial list of the environment variables that SDL may use.  Keep in mind that these environment variables are not officially supported, and may change or go away at any time.
+<br>
+<a href="ftp://ptah.lnf.kth.se/pub/misc/sdl-env-vars">ftp://ptah.lnf.kth.se/pub/misc/sdl-env-vars</a></TD></TR>
+</TABLE>
+<HR>
+</BLOCKQUOTE>

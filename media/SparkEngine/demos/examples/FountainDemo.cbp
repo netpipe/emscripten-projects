@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FountainDemo" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Linux">
+				<Option output="../bin/FountainDemo" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="../bin" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
+			<Target title="Win32">
+				<Option output="../bin/FountainDemo" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="../bin" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Linux;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add directory="/home/Dev/libs/Irrlicht/include" />
+			<Add directory="../../include" />
+			<Add directory="/home/Dev/libs/gui/freetype-2.3.9/include" />
+		</Compiler>
+		<Linker>
+			<Add library="Xxf86vm" />
+			<Add library="Irrlicht" />
+			<Add library="SPARK_GL" />
+			<Add library="SPARK_IRR" />
+			<Add library="GL" />
+			<Add library="SDL" />
+			<Add library="GLU" />
+			<Add library="glut" />
+			<Add library="ftgl" />
+			<Add library="freetype" />
+			<Add library="SPARK" />
+			<Add directory="/home/Dev/libs/Irrlicht/lib/gcc" />
+			<Add directory="../../lib/Linux/static" />
+			<Add directory="/home/Dev/libs/gui/freetype-2.3.9/objs/.libs" />
+		</Linker>
+		<Unit filename="FountainDemo.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

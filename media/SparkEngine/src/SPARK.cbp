@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SPARK Engine CORE LIB/DLL" />
+		<Option pch_mode="2" />
+		<Option compiler="emscripten" />
+		<Option virtualFolders="Headers/" />
+		<Build>
+			<Target title="STATIC-Debug Win32">
+				<Option output="../lib/mingw/static/SPARK_debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Debug Win32" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Static - Release Win32">
+				<Option output="../lib/mingw/static/SPARK" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release Win32" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-O" />
+					<Add option="-W" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Static - Linux">
+				<Option output="../lib/Linux/static/SPARK" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release Win32" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-O" />
+					<Add option="-W" />
+					<Add option="-D_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Dynamic-Debug Win32">
+				<Option output="../lib/mingw/static/SPARK_debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../../lib/mingw/dynamic" />
+				<Option object_output="Debug Win32" />
+				<Option type="3" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DSPK_CORE_EXPORT" />
+				</Compiler>
+			</Target>
+			<Target title="Dynamic - Release Win32">
+				<Option output="../lib/mingw/static/SPARK" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../lib/mingw/static" />
+				<Option object_output="Release Win32" />
+				<Option type="3" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-O" />
+					<Add option="-W" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DSPK_CORE_EXPORT" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Dynamic - Linux">
+				<Option output="../lib/Linux/static/SPARK" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../lib/Linux/static" />
+				<Option object_output="Release Win32" />
+				<Option type="3" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-O" />
+					<Add option="-W" />
+					<Add option="-DSPK_CORE_EXPORT" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="emscripten">
+				<Option output="../lib/emscripten/static/SPARK" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release Win32" />
+				<Option type="2" />
+				<Option compiler="emscripten" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-O" />
+					<Add option="-W" />
+					<Add option="-D_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../include" />
+		</Compiler>
+		<Unit filename="SPK_All.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

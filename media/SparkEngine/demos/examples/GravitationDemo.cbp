@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GravitationDemo" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Linux">
+				<Option output="../bin/GravitationDemo" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="../bin" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
+			<Target title="Win32">
+				<Option output="../bin/GravitationDemo" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="../bin" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Linux;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add directory="../../include" />
+			<Add directory="/home/Dev/libs/gui/freetype-2.3.9/include" />
+		</Compiler>
+		<Linker>
+			<Add library="GL" />
+			<Add library="GLU" />
+			<Add library="SDL" />
+			<Add library="glut" />
+			<Add library="Xxf86vm" />
+			<Add library="SPARK" />
+			<Add library="SPARK_GL" />
+			<Add library="ftgl" />
+			<Add library="freetype" />
+			<Add directory="/home/Dev/libs/Irrlicht/lib/gcc" />
+			<Add directory="../../lib/Linux/static" />
+			<Add directory="/home/Dev/libs/gui/freetype-2.3.9/objs/.libs" />
+		</Linker>
+		<Unit filename="GravitationDemo.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveProject path="../../../../../tecan/games/Luna/LunaLibs/SparkEngine/demos/examples/BasicDemo.cbp" />
+	<PreferredTarget name="All" />
+	<EditorTabsLayout layout="030990b0592c35420020f78c00000002=0;WritingDemo:WritingDemo.cpp,1;CarDemo:Tuto2.cpp,*2;IRRFireDemo:IRRFireDemo.cpp,3;IRRBasicDemo:IRRBasicDemo.cpp,4;FountainDemo:FountainDemo.cpp,5;ExplosionDemo:ExplosionDemo.cpp,6;CollisionDemo:CollisionDemo.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=388;besth=763;minw=388;minh=763;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=030990b0592c35420020f78c00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+</CodeBlocks_workspace_layout_file>

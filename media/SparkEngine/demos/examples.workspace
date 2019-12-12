@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="examples/BasicDemo.cbp" active="1" />
+		<Project filename="examples/WritingDemo.cbp" />
+		<Project filename="examples/Tuto2.cbp" />
+		<Project filename="examples/Tuto1.cbp" />
+		<Project filename="examples/RainDemo.cbp" />
+		<Project filename="examples/IRRFireDemo.cbp" />
+		<Project filename="examples/IRRBasicDemo.cbp" />
+		<Project filename="examples/GravitationDemo.cbp" />
+		<Project filename="examples/FountainDemo.cbp" />
+		<Project filename="examples/FlakesDemo.cbp" />
+		<Project filename="examples/ExplosionDemo.cbp" />
+		<Project filename="examples/CollisionDemo.cbp" />
+		<Project filename="examples/Collision2Demo.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

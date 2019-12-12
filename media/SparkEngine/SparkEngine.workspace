@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="src/SPARK.cbp" active="1" />
+		<Project filename="src/SPARK-GL.cbp" />
+		<Project filename="src/SPARK-IRR.cbp" />
+		<Project filename="src/SPARK-SFML.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

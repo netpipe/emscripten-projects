@@ -1,0 +1,665 @@
+# depslib dependency file v1.0
+1260933119 source:/home/Dev/libs/game/SparkEngine/src/SPK_All.cpp
+	"Core/SPK_DEF.cpp"
+	"Core/SPK_Vector3D.cpp"
+	"Core/SPK_Registerable.cpp"
+	"Core/SPK_Transformable.cpp"
+	"Core/SPK_BufferHandler.cpp"
+	"Core/SPK_Renderer.cpp"
+	"Core/SPK_System.cpp"
+	"Core/SPK_Particle.cpp"
+	"Core/SPK_Zone.cpp"
+	"Core/SPK_Interpolator.cpp"
+	"Core/SPK_Model.cpp"
+	"Core/SPK_Emitter.cpp"
+	"Core/SPK_Modifier.cpp"
+	"Core/SPK_Group.cpp"
+	"Core/SPK_Factory.cpp"
+	"Extensions/Zones/SPK_AABox.cpp"
+	"Extensions/Zones/SPK_Point.cpp"
+	"Extensions/Zones/SPK_Sphere.cpp"
+	"Extensions/Zones/SPK_Plane.cpp"
+	"Extensions/Zones/SPK_Line.cpp"
+	"Extensions/Zones/SPK_Ring.cpp"
+	"Extensions/Emitters/SPK_StraightEmitter.cpp"
+	"Extensions/Emitters/SPK_SphericEmitter.cpp"
+	"Extensions/Emitters/SPK_NormalEmitter.cpp"
+	"Extensions/Emitters/SPK_RandomEmitter.cpp"
+	"Extensions/Modifiers/SPK_Obstacle.cpp"
+	"Extensions/Modifiers/SPK_Destroyer.cpp"
+	"Extensions/Modifiers/SPK_PointMass.cpp"
+	"Extensions/Modifiers/SPK_ModifierGroup.cpp"
+	"Extensions/Modifiers/SPK_LinearForce.cpp"
+	"Extensions/Modifiers/SPK_Collision.cpp"
+	"Extensions/Modifiers/SPK_Vortex.cpp"
+	"Extensions/Renderers/SPK_QuadRendererInterface.cpp"
+	"Extensions/Renderers/SPK_Oriented3DRendererInterface.cpp"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_DEF.cpp
+	"Core/SPK_DEF.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_DEF.h
+	<cstdlib>
+	<cmath>
+	<algorithm>
+	<deque>
+	<list>
+	<iostream>
+	<vector>
+	<limits>
+	<map>
+	<set>
+	<string>
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Vector3D.cpp
+	"Core/SPK_Vector3D.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Vector3D.h
+	"Core/SPK_DEF.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Registerable.cpp
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Factory.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Registerable.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Vector3D.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Factory.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+
+1260935465 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Transformable.cpp
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Zone.h"
+	<memory.h>
+
+1260935334 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Transformable.h
+	"Core/SPK_Vector3D.h"
+	<memory.h>
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Zone.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Vector3D.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_BufferHandler.cpp
+	"Core/SPK_BufferHandler.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_BufferHandler.h
+	"Core/SPK_DEF.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Renderer.cpp
+	"Core/SPK_Renderer.h"
+	"Core/SPK_Particle.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Renderer.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_BufferHandler.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Particle.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Pool.h"
+	"Core/SPK_Model.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Pool.h
+	"Core/SPK_DEF.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Model.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Interpolator.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Interpolator.h
+	"Core/SPK_DEF.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_System.cpp
+	"Core/SPK_System.h"
+	"Core/SPK_Group.h"
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Emitter.h"
+	"Core/SPK_Modifier.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_System.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Vector3D.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Group.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Pool.h"
+	"Core/SPK_Particle.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Emitter.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Zone.h"
+	"Core/SPK_Particle.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Modifier.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_BufferHandler.h"
+	"Core/SPK_Zone.h"
+	"Core/SPK_Particle.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Particle.cpp
+	"Core/SPK_Particle.h"
+	"Core/SPK_Group.h"
+	"Core/SPK_Modifier.h"
+	"Core/SPK_System.h"
+	"Core/SPK_Buffer.h"
+	"Core/SPK_Interpolator.h"
+
+1260932721 /home/Dev/libs/game/SparkEngine/include/Core/SPK_Buffer.h
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Zone.cpp
+	"Core/SPK_Zone.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Interpolator.cpp
+	"Core/SPK_Interpolator.h"
+	"Core/SPK_Model.h"
+	"Core/SPK_Particle.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Model.cpp
+	"Core/SPK_Model.h"
+	"Core/SPK_Interpolator.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Emitter.cpp
+	"Core/SPK_Emitter.h"
+	"Extensions/Zones/SPK_Point.h"
+
+1260932719 /home/Dev/libs/game/SparkEngine/include/Extensions/Zones/SPK_Point.h
+	"Core/SPK_Zone.h"
+	"Core/SPK_Particle.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Modifier.cpp
+	"Core/SPK_Modifier.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Group.cpp
+	"Core/SPK_Group.h"
+	"Core/SPK_Emitter.h"
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Renderer.h"
+	"Core/SPK_Factory.h"
+	"Core/SPK_Buffer.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Core/SPK_Factory.cpp
+	"Core/SPK_Factory.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Extensions/Zones/SPK_AABox.cpp
+	"Extensions/Zones/SPK_AABox.h"
+	"Core/SPK_Particle.h"
+
+1260932719 /home/Dev/libs/game/SparkEngine/include/Extensions/Zones/SPK_AABox.h
+	"Core/SPK_Zone.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Extensions/Zones/SPK_Point.cpp
+	"Extensions/Zones/SPK_Point.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Extensions/Zones/SPK_Sphere.cpp
+	"Extensions/Zones/SPK_Sphere.h"
+	"Core/SPK_Particle.h"
+
+1260932719 /home/Dev/libs/game/SparkEngine/include/Extensions/Zones/SPK_Sphere.h
+	"Core/SPK_Zone.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Extensions/Zones/SPK_Plane.cpp
+	"Extensions/Zones/SPK_Plane.h"
+
+1260932719 /home/Dev/libs/game/SparkEngine/include/Extensions/Zones/SPK_Plane.h
+	"Core/SPK_Zone.h"
+	"Core/SPK_Particle.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Extensions/Zones/SPK_Line.cpp
+	"Extensions/Zones/SPK_Line.h"
+	"Core/SPK_Particle.h"
+
+1260932719 /home/Dev/libs/game/SparkEngine/include/Extensions/Zones/SPK_Line.h
+	"Core/SPK_Zone.h"
+
+1260933118 /home/Dev/libs/game/SparkEngine/src/Extensions/Zones/SPK_Ring.cpp
+	"Extensions/Zones/SPK_Ring.h"
+	"Core/SPK_Particle.h"
+
+1260932719 /home/Dev/libs/game/SparkEngine/include/Extensions/Zones/SPK_Ring.h
+	"Core/SPK_Zone.h"
+
+1260933117 /home/Dev/libs/game/SparkEngine/src/Extensions/Emitters/SPK_StraightEmitter.cpp
+	"Extensions/Emitters/SPK_StraightEmitter.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Emitters/SPK_StraightEmitter.h
+	"Core/SPK_Emitter.h"
+	"Core/SPK_Particle.h"
+
+1260933117 /home/Dev/libs/game/SparkEngine/src/Extensions/Emitters/SPK_SphericEmitter.cpp
+	"Extensions/Emitters/SPK_SphericEmitter.h"
+	"Core/SPK_Particle.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Emitters/SPK_SphericEmitter.h
+	"Core/SPK_Emitter.h"
+
+1260933117 /home/Dev/libs/game/SparkEngine/src/Extensions/Emitters/SPK_NormalEmitter.cpp
+	"Extensions/Emitters/SPK_NormalEmitter.h"
+	"Core/SPK_Particle.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Emitters/SPK_NormalEmitter.h
+	"Core/SPK_Emitter.h"
+
+1260933117 /home/Dev/libs/game/SparkEngine/src/Extensions/Emitters/SPK_RandomEmitter.cpp
+	"Extensions/Emitters/SPK_RandomEmitter.h"
+	"Core/SPK_Particle.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Emitters/SPK_RandomEmitter.h
+	"Core/SPK_Emitter.h"
+
+1260933116 /home/Dev/libs/game/SparkEngine/src/Extensions/Modifiers/SPK_Obstacle.cpp
+	"Extensions/Modifiers/SPK_Obstacle.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Modifiers/SPK_Obstacle.h
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Particle.h"
+	"Core/SPK_Zone.h"
+
+1260933116 /home/Dev/libs/game/SparkEngine/src/Extensions/Modifiers/SPK_Destroyer.cpp
+	"Extensions/Modifiers/SPK_Destroyer.h"
+	"Core/SPK_Particle.h"
+	"Core/SPK_Zone.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Modifiers/SPK_Destroyer.h
+	"Core/SPK_Modifier.h"
+
+1260933116 /home/Dev/libs/game/SparkEngine/src/Extensions/Modifiers/SPK_PointMass.cpp
+	"Extensions/Modifiers/SPK_PointMass.h"
+	"Core/SPK_Particle.h"
+	"Core/SPK_Zone.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Modifiers/SPK_PointMass.h
+	"Core/SPK_Modifier.h"
+
+1260933116 /home/Dev/libs/game/SparkEngine/src/Extensions/Modifiers/SPK_ModifierGroup.cpp
+	"Extensions/Modifiers/SPK_ModifierGroup.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Modifiers/SPK_ModifierGroup.h
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Particle.h"
+	"Core/SPK_Zone.h"
+
+1260933116 /home/Dev/libs/game/SparkEngine/src/Extensions/Modifiers/SPK_LinearForce.cpp
+	"Extensions/Modifiers/SPK_LinearForce.h"
+	"Core/SPK_Particle.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Modifiers/SPK_LinearForce.h
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Model.h"
+
+1260933116 /home/Dev/libs/game/SparkEngine/src/Extensions/Modifiers/SPK_Collision.cpp
+	"Extensions/Modifiers/SPK_Collision.h"
+	"Core/SPK_Group.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Modifiers/SPK_Collision.h
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Particle.h"
+
+1260933116 /home/Dev/libs/game/SparkEngine/src/Extensions/Modifiers/SPK_Vortex.cpp
+	"Extensions/Modifiers/SPK_Vortex.h"
+	"Core/SPK_Particle.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Modifiers/SPK_Vortex.h
+	"Core/SPK_Modifier.h"
+
+1260933117 /home/Dev/libs/game/SparkEngine/src/Extensions/Renderers/SPK_QuadRendererInterface.cpp
+	"Extensions/Renderers/SPK_QuadRendererInterface.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Renderers/SPK_QuadRendererInterface.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Particle.h"
+
+1260933117 /home/Dev/libs/game/SparkEngine/src/Extensions/Renderers/SPK_Oriented3DRendererInterface.cpp
+	"Extensions/Renderers/SPK_Oriented3DRendererInterface.h"
+
+1260932718 /home/Dev/libs/game/SparkEngine/include/Extensions/Renderers/SPK_Oriented3DRendererInterface.h
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Group.h"
+
+1358243761 source:/home/Dev/agnostic-code/libs/SparkEngine/src/SPK_All.cpp
+	"Core/SPK_DEF.cpp"
+	"Core/SPK_Vector3D.cpp"
+	"Core/SPK_Registerable.cpp"
+	"Core/SPK_Transformable.cpp"
+	"Core/SPK_BufferHandler.cpp"
+	"Core/SPK_Renderer.cpp"
+	"Core/SPK_System.cpp"
+	"Core/SPK_Particle.cpp"
+	"Core/SPK_Zone.cpp"
+	"Core/SPK_Interpolator.cpp"
+	"Core/SPK_Model.cpp"
+	"Core/SPK_Emitter.cpp"
+	"Core/SPK_Modifier.cpp"
+	"Core/SPK_Group.cpp"
+	"Core/SPK_Factory.cpp"
+	"Extensions/Zones/SPK_AABox.cpp"
+	"Extensions/Zones/SPK_Point.cpp"
+	"Extensions/Zones/SPK_Sphere.cpp"
+	"Extensions/Zones/SPK_Plane.cpp"
+	"Extensions/Zones/SPK_Line.cpp"
+	"Extensions/Zones/SPK_Ring.cpp"
+	"Extensions/Emitters/SPK_StraightEmitter.cpp"
+	"Extensions/Emitters/SPK_SphericEmitter.cpp"
+	"Extensions/Emitters/SPK_NormalEmitter.cpp"
+	"Extensions/Emitters/SPK_RandomEmitter.cpp"
+	"Extensions/Modifiers/SPK_Obstacle.cpp"
+	"Extensions/Modifiers/SPK_Destroyer.cpp"
+	"Extensions/Modifiers/SPK_PointMass.cpp"
+	"Extensions/Modifiers/SPK_ModifierGroup.cpp"
+	"Extensions/Modifiers/SPK_LinearForce.cpp"
+	"Extensions/Modifiers/SPK_Collision.cpp"
+	"Extensions/Modifiers/SPK_Vortex.cpp"
+	"Extensions/Renderers/SPK_QuadRendererInterface.cpp"
+	"Extensions/Renderers/SPK_Oriented3DRendererInterface.cpp"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_DEF.cpp
+	"Core/SPK_DEF.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_DEF.h
+	<cstdlib>
+	<cmath>
+	<algorithm>
+	<deque>
+	<list>
+	<iostream>
+	<vector>
+	<limits>
+	<map>
+	<set>
+	<string>
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Vector3D.cpp
+	"Core/SPK_Vector3D.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Vector3D.h
+	"Core/SPK_DEF.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Registerable.cpp
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Factory.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Registerable.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Vector3D.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Factory.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Transformable.cpp
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Zone.h"
+	<memory.h>
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Transformable.h
+	"Core/SPK_Vector3D.h"
+	<memory.h>
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Zone.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Vector3D.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_BufferHandler.cpp
+	"Core/SPK_BufferHandler.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_BufferHandler.h
+	"Core/SPK_DEF.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Renderer.cpp
+	"Core/SPK_Renderer.h"
+	"Core/SPK_Particle.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Renderer.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_BufferHandler.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Particle.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Pool.h"
+	"Core/SPK_Model.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Pool.h
+	"Core/SPK_DEF.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Model.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Interpolator.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Interpolator.h
+	"Core/SPK_DEF.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_System.cpp
+	"Core/SPK_System.h"
+	"Core/SPK_Group.h"
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Emitter.h"
+	"Core/SPK_Modifier.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_System.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Vector3D.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Group.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Pool.h"
+	"Core/SPK_Particle.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Emitter.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_Transformable.h"
+	"Core/SPK_Zone.h"
+	"Core/SPK_Particle.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Modifier.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Registerable.h"
+	"Core/SPK_BufferHandler.h"
+	"Core/SPK_Zone.h"
+	"Core/SPK_Particle.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Particle.cpp
+	"Core/SPK_Particle.h"
+	"Core/SPK_Group.h"
+	"Core/SPK_Modifier.h"
+	"Core/SPK_System.h"
+	"Core/SPK_Buffer.h"
+	"Core/SPK_Interpolator.h"
+
+1358243746 /home/Dev/agnostic-code/libs/SparkEngine/include/Core/SPK_Buffer.h
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Zone.cpp
+	"Core/SPK_Zone.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Interpolator.cpp
+	"Core/SPK_Interpolator.h"
+	"Core/SPK_Model.h"
+	"Core/SPK_Particle.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Model.cpp
+	"Core/SPK_Model.h"
+	"Core/SPK_Interpolator.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Emitter.cpp
+	"Core/SPK_Emitter.h"
+	"Extensions/Zones/SPK_Point.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Zones/SPK_Point.h
+	"Core/SPK_Zone.h"
+	"Core/SPK_Particle.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Modifier.cpp
+	"Core/SPK_Modifier.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Group.cpp
+	"Core/SPK_Group.h"
+	"Core/SPK_Emitter.h"
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Renderer.h"
+	"Core/SPK_Factory.h"
+	"Core/SPK_Buffer.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Core/SPK_Factory.cpp
+	"Core/SPK_Factory.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Zones/SPK_AABox.cpp
+	"Extensions/Zones/SPK_AABox.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Zones/SPK_AABox.h
+	"Core/SPK_Zone.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Zones/SPK_Point.cpp
+	"Extensions/Zones/SPK_Point.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Zones/SPK_Sphere.cpp
+	"Extensions/Zones/SPK_Sphere.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Zones/SPK_Sphere.h
+	"Core/SPK_Zone.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Zones/SPK_Plane.cpp
+	"Extensions/Zones/SPK_Plane.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Zones/SPK_Plane.h
+	"Core/SPK_Zone.h"
+	"Core/SPK_Particle.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Zones/SPK_Line.cpp
+	"Extensions/Zones/SPK_Line.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Zones/SPK_Line.h
+	"Core/SPK_Zone.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Zones/SPK_Ring.cpp
+	"Extensions/Zones/SPK_Ring.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Zones/SPK_Ring.h
+	"Core/SPK_Zone.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Emitters/SPK_StraightEmitter.cpp
+	"Extensions/Emitters/SPK_StraightEmitter.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Emitters/SPK_StraightEmitter.h
+	"Core/SPK_Emitter.h"
+	"Core/SPK_Particle.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Emitters/SPK_SphericEmitter.cpp
+	"Extensions/Emitters/SPK_SphericEmitter.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Emitters/SPK_SphericEmitter.h
+	"Core/SPK_Emitter.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Emitters/SPK_NormalEmitter.cpp
+	"Extensions/Emitters/SPK_NormalEmitter.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Emitters/SPK_NormalEmitter.h
+	"Core/SPK_Emitter.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Emitters/SPK_RandomEmitter.cpp
+	"Extensions/Emitters/SPK_RandomEmitter.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Emitters/SPK_RandomEmitter.h
+	"Core/SPK_Emitter.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Modifiers/SPK_Obstacle.cpp
+	"Extensions/Modifiers/SPK_Obstacle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Modifiers/SPK_Obstacle.h
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Particle.h"
+	"Core/SPK_Zone.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Modifiers/SPK_Destroyer.cpp
+	"Extensions/Modifiers/SPK_Destroyer.h"
+	"Core/SPK_Particle.h"
+	"Core/SPK_Zone.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Modifiers/SPK_Destroyer.h
+	"Core/SPK_Modifier.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Modifiers/SPK_PointMass.cpp
+	"Extensions/Modifiers/SPK_PointMass.h"
+	"Core/SPK_Particle.h"
+	"Core/SPK_Zone.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Modifiers/SPK_PointMass.h
+	"Core/SPK_Modifier.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Modifiers/SPK_ModifierGroup.cpp
+	"Extensions/Modifiers/SPK_ModifierGroup.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Modifiers/SPK_ModifierGroup.h
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Particle.h"
+	"Core/SPK_Zone.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Modifiers/SPK_LinearForce.cpp
+	"Extensions/Modifiers/SPK_LinearForce.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Modifiers/SPK_LinearForce.h
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Model.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Modifiers/SPK_Collision.cpp
+	"Extensions/Modifiers/SPK_Collision.h"
+	"Core/SPK_Group.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Modifiers/SPK_Collision.h
+	"Core/SPK_Modifier.h"
+	"Core/SPK_Particle.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Modifiers/SPK_Vortex.cpp
+	"Extensions/Modifiers/SPK_Vortex.h"
+	"Core/SPK_Particle.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Modifiers/SPK_Vortex.h
+	"Core/SPK_Modifier.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Renderers/SPK_QuadRendererInterface.cpp
+	"Extensions/Renderers/SPK_QuadRendererInterface.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Renderers/SPK_QuadRendererInterface.h
+	"Core/SPK_DEF.h"
+	"Core/SPK_Particle.h"
+
+1358243760 /home/Dev/agnostic-code/libs/SparkEngine/src/Extensions/Renderers/SPK_Oriented3DRendererInterface.cpp
+	"Extensions/Renderers/SPK_Oriented3DRendererInterface.h"
+
+1358243745 /home/Dev/agnostic-code/libs/SparkEngine/include/Extensions/Renderers/SPK_Oriented3DRendererInterface.h
+	"Core/SPK_Vector3D.h"
+	"Core/SPK_Group.h"
+

@@ -1,0 +1,213 @@
+<H1><FONT color="#414141"><STRONG>Frequently Asked Questions: Linux</STRONG></FONT></H1>
+<BR>
+<BLOCKQUOTE><H3>Table Of Contents</H3>
+<UL>
+<LI><A href="#37">What is supported?</A>
+<LI><A href="#21">How do I add SDL to my project?</A>
+<LI><A href="#22">I installed the SDL RPM, but can't compile SDL applications</A>
+<LI><A href="#36">I'm using nasm 0.98 and getting a crash when linking SDL</A>
+<LI><A href="#23">I installed SDL from source but can't build or run SDL applications</A>
+<LI><A href="#35">I'm running Mandrake or Slackware and applications can't find SDL!</A>
+<LI><A href="#24">How do I set an environment variable?</A>
+<LI><A href="#25">I get the error: "no video devices available"</A>
+<LI><A href="#32">I get the error: "SDL: Audio timeout - buggy audio driver? (disabled)"</A>
+<LI><A href="#26">How do I disable framebuffer console acceleration?</A>
+<LI><A href="#27">How do I enable DMA audio support?</A>
+<LI><A href="#28">How do I turn off DGA mouse support?</A>
+<LI><A href="#29">How do I enable X11 mouse acceleration?</A>
+<LI><A href="#33">How do I disable XFree86 XVideo acceleration?</A>
+<LI><A href="#30">How do I tell SDL to default to AALib?</A>
+<LI><A href="#31">How do I tell SDL to use the DGA 2.0 video driver?</A>
+<LI><A href="#34">When I specify SDL_FULLSCREEN in X11, the screen goes black and my window is centered in the middle, instead of covering the whole screen!</A>
+</UL>
+<HR width="100%">
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=37><B>What is supported?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>SDL supports all known Linux hardware with GNU libc and kernel version 2.0 or newer.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=21><B>How do I add SDL to my project?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD><p>
+The short answer is use the output of the command "sdl-config --cflags --libs"
+<br>
+For example: gcc -o test test.c `sdl-config --cflags --libs`
+</p>
+<p>
+If you are using home-grown Makefiles for your project, you can get the proper CFLAGS and LDFLAGS for SDL by adding the following lines to your
+Makefile:
+</p>
+<p><code><pre>
+SDL_CFLAGS := $(shell sdl-config --cflags)
+SDL_LDFLAGS := $(shell sdl-config --libs)
+</pre></code></p>
+<p>
+If you are using autoconf and automake for your project, you can copy the contents of 'sdl.m4' into your acinclude.m4 file, and then add the following to your configure.in file:
+</p>
+<p><code><pre>
+dnl Check for SDL
+SDL_VERSION=1.2.0
+AM_PATH_SDL($SDL_VERSION,
+            :,
+            AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
+)
+CFLAGS="$CFLAGS $SDL_CFLAGS"
+LIBS="$LIBS $SDL_LIBS"
+</pre></code></p></TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=22><B>I installed the SDL RPM, but can't compile SDL applications</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>You need to install the SDL-devel RPM, available from:
+<a href="http://www.libsdl.org/download.php">http://www.libsdl.org/download.php</a></TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=36><B>I'm using nasm 0.98 and getting a crash when linking SDL</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>There is a bug in the nasm assembler version 0.98 - the version shipped with RedHat 7.1.  You should upgrade nasm to at least version 0.98.08.  If for some reason you can't upgrade, you can disable the assembly code in SDL by passing "--disable-nasm" to configure when building SDL from source.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=23><B>I installed SDL from source but can't build or run SDL applications</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>Edit the file /etc/ld.so.conf, and make sure it contains the line:
+<pre>
+/usr/local/lib
+</pre>
+As root, run <b>/sbin/ldconfig</b>
+<p>
+Make sure /usr/local/bin is in your execution path:
+<pre>
+        export PATH=$PATH:/usr/local/bin/
+</pre>
+</p>
+<p>
+Make sure that there aren't any other versions of SDL on your system, and that you have removed any file named "config.cache" from the directory of the software that refuses to build.
+</p>
+<p>
+If all of the above still don't work, send e-mail to the SDL mailing list with the output from the following commands run from the directory of the software that refuses to build:
+<ul>
+<li> which sdl-config
+<li> sdl-config --version
+<li> locate libSDL
+<li> tail config.log
+</ul>
+</p></TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=35><B>I'm running Mandrake or Slackware and applications can't find SDL!</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>You probably have a version of SDL built with aRts sound support, and the KDE libraries are not installed in a system standard location.  You need to add the directory containing libartsc.so.0 to the file /etc/ld.so.conf and then run the command "ldconfig".  On newer versions of Mandrake, this directory is:
+<br>
+/opt/kde/lib</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=24><B>How do I set an environment variable?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>How to set an environment variable depends on your login shell:
+<p>
+For Bourne shell derivatives: (sh, ash, ksh, zsh, bash, etc.)
+<br>
+<tt>VARIABLE='value'; export VARIABLE</tt>
+</p>
+<p>
+For C shell derivatives: (csh, tcsh, etc.)
+<br>
+<tt>setenv VARIABLE 'value'</tt>
+</p></TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=25><B>I get the error: "no video devices available"</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>SDL doesn't use the X11 video driver if it can't open the X display, and if no other drivers are available, it will report this error.
+<br>
+To fix this, set your display environment variable appropriately:
+<br>
+sh: <CODE>DISPLAY=:0 ; export DISPLAY</code>
+<br>
+csh: <CODE>setenv DISPLAY :0</code>
+<br>
+If you still have problems, try running <CODE>xhost + localhost</code>
+<br>
+Finally, if all those didn't work, and you built SDL from source, make sure that you have the X11 development libraries installed, otherwise you'll get a version of SDL that doesn't include X11 display support.  After you install the X development libraries, you need to "make clean" and then rerun the configure and build process.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=32><B>I get the error: "SDL: Audio timeout - buggy audio driver? (disabled)"</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>Some audio drivers don't properly implement select(). I added a hack to approximate the timing using timing functions, and you can enabled this by setting the environment variable SDL_DSP_NOSELECT to "1".
+<br>
+You can also use ESounD or aRts as a high-latency sound server.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=26><B>How do I disable framebuffer console acceleration?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>As of SDL 1.0.3, you can set the environment variable SDL_FBACCEL to "0".</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=27><B>How do I enable DMA audio support?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>As of SDL 1.0.4, you can set the environment variable SDL_AUDIODRIVER to "dma".</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=28><B>How do I turn off DGA mouse support?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>As of SDL 1.0.8, you can set the environment variable SDL_VIDEO_X11_DGAMOUSE to "0".</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=29><B>How do I enable X11 mouse acceleration?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>As of SDL 1.0.8, you can set the environment variable SDL_VIDEO_X11_MOUSEACCEL to "X/Y", where 'X' is the numerator and 'Y' is the denomenator of the mouse acceleration.  For example, if you wanted to set mouse acceleration to 2, you would set the variable to "2/1". By default SDL does not change the current X11 mouse acceleration.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=33><B>How do I disable XFree86 XVideo acceleration?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>You can disable all YUV hardware acceleration by setting the environment variable SDL_VIDEO_YUV_HWACCEL to "0".</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=30><B>How do I tell SDL to default to AALib?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>Building SDL:  make distclean; ./configure --enable-video-aalib ; make install
+<br>
+Running your app: set the environment variable SDL_VIDEODRIVER to "aalib".</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=31><B>How do I tell SDL to use the DGA 2.0 video driver?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>Make sure that you have XFree86 4.01 or newer, run the program as root, set the environment variable SDL_VIDEODRIVER to "dga", and use a video card like the Voodoo 3000, Matrox G400, or any other card with a decent DGA driver.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=34><B>When I specify SDL_FULLSCREEN in X11, the screen goes black and my window is centered in the middle, instead of covering the whole screen!</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>X needs to be able to switch to the desired resolution. For this to work, your monitor must support the resolution, and you need to have the resolution listed in your X server configuration.
+<p>
+The following example is taken from my config for XFree86 4.0.1, but 3.3.x is similiar.  Note that if your monitor isn't capable of using these video modes, the X server will drop these modes from the list of available video modes.
+<br>
+Example:
+<pre>
+Section "Screen"
+    Identifier  "Screen 1"
+    Device      "3dfx"
+    Monitor     "Samsung LCD"
+    DefaultDepth 16
+
+    Subsection "Display"
+        Depth       8
+        Modes       "1280x1024" "1024x768" "800x600" "640x480" "320x240"
+        ViewPort    0 0
+    EndSubsection
+    Subsection "Display"
+        Depth       16
+        Modes       "1280x1024" "1024x768" "800x600" "640x480"
+        ViewPort    0 0
+    EndSubsection
+EndSection
+</pre>
+<p>
+Note the different entries for 8 & 16 bit screendepth. I.e. the 320x240 resolution is *not* available when X is started with 16bit depth (the default).
+</p>
+<p>
+To test these entries, restart X after you modified XF86Config and press ctrl-alt-plus and ctrl-alt-minus to cycle through the resolutions.
+</p>
+-- contributed by Andreas Umbach</TD></TR>
+</TABLE>
+<HR>
+</BLOCKQUOTE>

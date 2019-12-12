@@ -1,0 +1,121 @@
+<H1><FONT color="#414141"><STRONG>Frequently Asked Questions: MacOS X</STRONG></FONT></H1>
+<BR>
+<BLOCKQUOTE><H3>Table Of Contents</H3>
+<UL>
+<LI><A href="#52">What is supported?</A>
+<LI><A href="#55">What is SDLMain.m? Do I need it? Why is _main undefined?</A>
+<LI><A href="#56">I can't get OpenGL to work.</A>
+<LI><A href="#62">Is there a way to avoid SDLMain.m and Objective-C in my program? I want a pure C/C++ program.</A>
+<LI><A href="#68">What's the deal with windowed mode? Why is it so much slower than fullscreen? Can I make it faster?</A>
+<LI><A href="#71">Why doesn't page flipping work?</A>
+<LI><A href="#78">I can't get debugging to work in Project Builder.</A>
+</UL>
+<HR width="100%">
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=52><B>What is supported?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>SDL supports MacOS X 10.1 and newer, using either ProjectBuilder or the classic UNIX style build system.
+<br>
+Currently only ProjectBuilder can be used to build the SDL Framework. The UNIX build system creates a static version of the SDL library.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=55><B>What is SDLMain.m? Do I need it? Why is _main undefined?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>Just like main() is the entry point for C programs (inc. C++, Objective-C, and Objective-C++), SDL_main() is the main entry point for SDL programs. However, you don't actually write an SDL_main() function. The header file "SDL_main.h" remaps your main() function to the SDL_main() function with a function macro. Your SDL_main() function is called after the code in SDLMain.m has performed the required "bootstrap" initializations to support the SDL runtime.<br><br>
+
+You *must* include SDLMain.m/.h in your application, because this is the code that defines SDL's entry point. If you fail to do this, it is likely that "_main undefined" will be thrown by the linker.<br><br>
+
+The second thing you *must* do is give your main() procedure the following prototype:<br><br>
+
+int main(int argc, char*argv[]);<br><br>
+
+The third thing you *must* do is make sure the file that contains your main() procedure #includes SDL.h.<br><br>
+
+Otherwise, the macro will not remap main() to SDL_main(), you will get an undefined _main error, or the bootstrap process will not run, and SDL will behave strangely or your application will crash or hang.<br></TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=56><B>I can't get OpenGL to work.</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>On Mac OS X, you access the OpenGL headers like so:<br><br>
+
+#include &lt;OpenGL/gl.h&gt;<br>
+#include &lt;OpenGL/glu.h&gt;<br>
+#include &lt;OpenGL/glext.h&gt;<br><br>
+
+The header file "SDL_opengl.h" accounts for the first two headers shown here on all supported SDL systems.<br><br>
+
+If you are are using Project Builder, add OpenGL.framework to your project. On the command line, add:<br><br>
+
+-framework OpenGL<br><br>
+
+to the GCC or LD arguments in your Makefile</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=62><B>Is there a way to avoid SDLMain.m and Objective-C in my program? I want a pure C/C++ program.</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>No. SDLMain.m must be included in your application, which requires Cocoa/Objective-C.<br><br>
+
+You can still write your SDL application in C++. The easiest way to get started with this is to rename "main.c" in the project stationary to "main.cpp" and recompile your application.<br><br>
+
+For command-line/Makefile builds, just add SDLMain.m to your build commands like any other source file and add "-framework Cocoa" to the gcc or ld flags. Better yet, use the sdl-config script (in the source code distribution) which handles this for you, and will also create a .app bundle for your program.<br><br>
+</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=68><B>What's the deal with windowed mode? Why is it so much slower than fullscreen? Can I make it faster?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>In Mac OS X, all windows are double-buffered. The application (in this case, SDL's blitting engine) draws into the back buffer. The front buffer is that actual display video memory. When the application is finished drawing, it tells the window server to display the back buffer on the screen. The window server examines the back buffer of other on-screen windows that can affect the appearance of the window you are drawing into, composites your back buffer with the other ones to create the final image which goes back to visible video memory, and you see the result. This is how Quartz can achieve all those fancy alpha affects, and get tear-free window dragging and animation.<br><br>
+
+The downside is that in the worst case you have to process 2X as many pixels as you normally would, and worse still if there is lots of compositing to do. In fullscreen mode, we bypass the window server and draw directly to video memory, which is why that is so much faster. We can't get away with that in windowed mode.<br><br>
+
+You may be able to make things faster by calling SDL_UpdateRects() instead of SDL_UpdateRect() or SDL_Flip(). With SDL_UpdateRects() you can tell SDL exactly what rectangles of the surface you painted, and they will all be handed to the window server at once. That way, the window server does the least amount of work possible. Try using the QuartzDebug tool to investigate what areas of the screen you are telling the window server to redraw. If large areas aren't changing but are being updated, this optimization will really help you.<br><br>
+
+If you must scroll/redraw the entire window every frame, try OpenGL. OpenGL will use graphics hardware in windowed mode, thus bypassing the window server's compositing engine. Just about every system that can run Mac OS X has hardware OpenGL support.<br><br>
+
+Mac OS 10.2 (Jaguar) changes things a bit with QuartzExtreme. QuartzExtreme offloads compositing to the graphics hardware, so it can be much faster at some tasks. In addition, it uses busmaster DMA to transfer the backbuffer as a texture to the OpenGL compositor. This second point is of interest, since the backbuffer can be transferred while leaving the CPU free for other tasks. To get the best performance on 10.2, you have to take advantage of those idle CPU cycles.<br><br>
+
+Since the DMA transfer occurs in SDL_UpdateRects()(or SDL_Flip() or SDL_UpdateRect()), try to delay all drawing to the screen surface until just before SDL_UpdateRects() is called so you can overlap the DMA transfer with other tasks. Also, you can use a double-buffered SDL surface (which translates to triple buffering). That way, you can overlap screen blitting operations with the DMA transfer. Remember the aformentioned 10.1 optimizations still apply (though to a lesser extent). In 10.2, you are optimizing the amount of data being DMA'd, not the amount of compositing done in the window server.<br><br>
+
+Also in QE, the OpenGL compositor always uses 32-bit textures. So depending on the application, you may see better performance by using a 32-bit SDL surface since you avoid pixel format conversion. Note that you might not see a speedup since DMA overlap may be decreased if you're not careful. Remember that you can't draw into a surface while it is being DMA'd to video memory. If you try to, you'll just stall your application as it waits for the DMA transfer to complete, thus wasting valuable CPU cycles.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=71><B>Why doesn't page flipping work?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>The SDL_DOUBLEBUF flag (and hence page flipping) is unsupported on Mac OS X. There is no support in the operating system for this feature.<br><br>
+
+Prior to version 1.2.6, SDL did not report an error when SDL_DOUBLEBUF was used, but instead returned a single-buffered surface. This resulted in various visual anomalies, depending on the application.<br><br>
+
+The only good alternatives are to use a software surface instead (SDL_SWSURFACE), or use OpenGL. With OpenGL, you'll have to write your own blitting engine, or borrow someone <a href="http://olofson.net/mixed.html">elses<a>.<br>
+<br>
+Update: SDL 1.2.6 has added experimental retrace-synchronized software "flipping". You access it by using SDL_DOUBLBUF|SDL_HWSURFACE|SDL_FULLSCREEN passed to SDL_SetVideoMode. SDL_Flip() will return immediately and the flip will be performed asynchronously in a separate thread.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=78><B>I can't get debugging to work in Project Builder.</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>If the debugger seems to do nothing when you start debugging, and you have the Dec. 2002 Developer Tools installed, you've probably hit a known bug gdb introduced in this version of the developer tools. To get around this bug, the SDL framework must reside in YourApp.app/Contents/Frameworks/<br>
+<br>
+Here are two workarounds, pick which one you like best (the second one is the better choice, IMHO).<br>
+<br>
+First Method: Create a "Copy Files" build phase. Here's how:<br>
+<br>
+1. Drag "SDL.framework" from the Finder into your project<br>
+2. Go to the target settings (command-option-e).<br>
+3. Control-click on the Build Phases and select "New Build Phase->New Copy Files Build Phase".<br>
+4. For "Where" enter "Frameworks"<br>
+5. For "Files:" drag the framework from the Groups & Files pane to the text box<br>
+<br>
+Second Method: Create a "Shell Script" build phase.<br>
+<br>
+1. Go to the target settings (command-option-e).<br>
+2. Control-click on the Build Phases and select "New Build Phase->New Shell Script Build Phase".<br>
+3. Enter this script:<br>
+<br>
+<pre>
+DST="build/$PRODUCT_NAME.app/Contents/Frameworks"
+mkdir -p "$DST"
+/Developer/Tools/CpMac -r ~/Library/Frameworks/SDL.framework
+ "$DST"
+</pre>
+<br>
+While you're at it, also remember to turn on debugging symbols and turn down the optimization level (0 is best for debugging). You will need to clean and rebuild the project for this to take effect.</TD></TR>
+</TABLE>
+<HR>
+</BLOCKQUOTE>

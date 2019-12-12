@@ -1,0 +1,38 @@
+<H1><FONT color="#414141"><STRONG>Frequently Asked Questions: MacOS Classic</STRONG></FONT></H1>
+<BR>
+<BLOCKQUOTE><H3>Table Of Contents</H3>
+<UL>
+<LI><A href="#50">What is supported?</A>
+<LI><A href="#51">I'm using SDL audio and my application locks up immediately.</A>
+<LI><A href="#57">Why do I see bad flickering on my double-buffered surfaces?</A>
+<LI><A href="#59">Why don't threads, mutexes, and semaphores work?</A>
+</UL>
+<HR width="100%">
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=50><B>What is supported?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>SDL supports MacOS 9.0 and newer using both the ROM toolbox routines and GameSprockets.  It is possible to support older versions of MacOS, and if you need this for any reason please contact the SDL mailing list.
+<p>
+SDL can be built with either MPW (Apple's free compiler) or CodeWarrior.
+</p></TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=51><B>I'm using SDL audio and my application locks up immediately.</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>Your audio callback will be called at interrupt time, so you should do no I/O in it, nor should you call functions that change the memory heap, like malloc(), free() etc. Not following this rule will lead to hard crashes on classic MacOS.</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=57><B>Why do I see bad flickering on my double-buffered surfaces?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>The default SDL video driver does not do VBL-based flipping so it cannot sync to the monitor refresh. The DrawSprocket driver does do VBL-sync. Hold down the command key when starting your app and select the DSp driver. Or, you can add this line before you call SDL_Init():<br><br>
+
+putenv("SDL_VIDEODRIVER=DSp");</TD></TR>
+</TABLE>
+<HR>
+<TABLE cellpadding=5>
+<TR><TD valign=top><B>Q:</B></TD><TD><A name=59><B>Why don't threads, mutexes, and semaphores work?</B></A></TD></TR>
+<TR><TD valign=top><B>A:</B></TD><TD>Threads are not implemented because of limitations in Mac OS 9. While Mac OS 9 has preemptive threads and synchronization primitives as part of the MPLibrary and DriverServicesLib, the usefulness of any implementation is very limited due to the fact that the majority of the Mac OS API's are not thread-safe. Hence, most of the SDL API's would not be thread-safe as they are built upon unsafe API's.<br><br>
+
+Often programmers are misled into using threads, when a single-threaded solution is faster, simpler, and more robust. If you are unsure if you really need them, ask on the SDL mailing list and someone will provide assistance.</TD></TR>
+</TABLE>
+<HR>
+</BLOCKQUOTE>
