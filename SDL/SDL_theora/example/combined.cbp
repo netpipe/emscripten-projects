@@ -63,7 +63,6 @@
 			<Add directory="../" />
 		</Compiler>
 		<Linker>
-			<Add library="SDL_theora" />
 			<Add library="openal" />
 			<Add library="ogg" />
 			<Add library="vorbis" />
@@ -76,6 +75,21 @@
 			<Add directory="../../../../LunaLibs/libvorbis-1.2.3/" />
 			<Add directory="../" />
 		</Linker>
+		<Unit filename="../SDL_theora.h" />
+		<Unit filename="../THR.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../THR_audio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../THR_video.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../theoraplay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../theoraplay.h" />
+		<Unit filename="../theoraplay_cvtrgb.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
