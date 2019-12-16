@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/netpipe/Desktop/dynamic-loading-example/plugins/json_plugin.cpp
+sstream
+-
+iostream
+-
+iomanip
+-
+json_plugin.h
+/home/netpipe/Desktop/dynamic-loading-example/plugins/json_plugin.h
+plugin_base.h
+/home/netpipe/Desktop/dynamic-loading-example/plugins/plugin_base.h
+
+/home/netpipe/Desktop/dynamic-loading-example/plugins/json_plugin.h
+plugin_base.h
+/home/netpipe/Desktop/dynamic-loading-example/plugins/plugin_base.h
+netflix_show.h
+/home/netpipe/Desktop/dynamic-loading-example/plugins/netflix_show.h
+
+include/netflix_show.h
+string
+-
+
+include/plugin_base.h
+vector
+-
+netflix_show.h
+include/netflix_show.h
+

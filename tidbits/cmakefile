@@ -5,7 +5,26 @@ option(JS_ONLY "Compiles to native JS (No WASM)" OFF)
 add_definitions(-std=c++11 -O3)
 include_directories(include)
 
+set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+SET(CMAKE_EXE_LINKER_FLAGS "-static")
+
+
 file(GLOB SOURCES src/*.cpp)
+
+
+
+
+
+target_compile_options(myLib PRIVATE -fPIC)
+
+add_compile_options(-fPIC)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fpic")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpic")
+
+
+
+
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/public")
 add_executable(a ${SOURCES})
