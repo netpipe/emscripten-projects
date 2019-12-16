@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="sq" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/sq.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Release" />
+				<Option external_deps="../lib/libsquirrel.a;../lib/libsqstdlib.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add directory="../include" />
+					<Add directory="../sqstdlib" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libsquirrel.a" />
+					<Add library="../lib/libsqstdlib.a" />
+					<Add directory="../lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug">
+				<Option output="../bin/sqD.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Debug" />
+				<Option external_deps="../lib/libsquirrelD.a;../lib/libsqstdlibD.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add directory="../include" />
+					<Add directory="../sqstdlib" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libsquirrelD.a" />
+					<Add library="../lib/libsqstdlibD.a" />
+					<Add directory="../lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug - Unicode">
+				<Option output="../bin/sqDU.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Debug - Unicode" />
+				<Option external_deps="../lib/libsquirrelDU.a;../lib/libsqstdlibDU.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add directory="../include" />
+					<Add directory="../sqstdlib" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libsquirrelDU.a" />
+					<Add library="../lib/libsqstdlibDU.a" />
+					<Add directory="../lib" />
+				</Linker>
+			</Target>
+			<Target title="Release - Unicode">
+				<Option output="../bin/sqU.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Release - Unicode" />
+				<Option external_deps="../lib/libsquirrelU.a;../lib/libsqstdlibU.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add directory="../include" />
+					<Add directory="../sqstdlib" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libsquirrelU.a" />
+					<Add library="../lib/libsqstdlibU.a" />
+					<Add directory="../lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Release;Debug;Debug - Unicode;Release - Unicode;" />
+		</VirtualTargets>
+		<Unit filename="../etc/test.nut" />
+		<Unit filename="sq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

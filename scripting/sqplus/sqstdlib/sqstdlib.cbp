@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="sqstdlib" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../lib/libsqstdlib.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Release" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectResourceIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+			<Target title="Debug">
+				<Option output="../lib/libsqstdlibD.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Debug" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectResourceIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+			<Target title="Debug - Unicode">
+				<Option output="../lib/libsqstdlibDU.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Debug - Unicode" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectResourceIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-D_CRT_NON_CONFORMING_SWPRINTFS" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+			<Target title="Release - Unicode">
+				<Option output="../lib/libsqstdlibU.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Release - Unicode" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectResourceIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-D_CRT_NON_CONFORMING_SWPRINTFS" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Release;Debug;Debug - Unicode;Release - Unicode;" />
+		</VirtualTargets>
+		<Unit filename="sqstdaux.cpp" />
+		<Unit filename="sqstdblob.cpp" />
+		<Unit filename="sqstdblobimpl.h" />
+		<Unit filename="sqstdio.cpp" />
+		<Unit filename="sqstdmath.cpp" />
+		<Unit filename="sqstdrex.cpp" />
+		<Unit filename="sqstdstream.cpp" />
+		<Unit filename="sqstdstream.h" />
+		<Unit filename="sqstdstring.cpp" />
+		<Unit filename="sqstdsystem.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="testSqPlus" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug/testSqPlus.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Debug" />
+				<Option external_deps="../lib/libsqdbglibD.a;../lib/libsquirrelD.a;../lib/libsqstdlibD.a;../lib/libsqplusD.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add directory="../include" />
+					<Add directory="../sqplus" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libsqplusD.a" />
+					<Add library="../lib/libsquirrelD.a" />
+					<Add library="../lib/libsqstdlibD.a" />
+					<Add library="../lib/libsqdbglibD.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="Release/testSqPlus.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Release" />
+				<Option external_deps="../lib/libsqdbglib.a;../lib/libsquirrel.a;../lib/libsqstdlib.a;../lib/libsqplus.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add directory="../include" />
+					<Add directory="../sqplus" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libsqplus.a" />
+					<Add library="../lib/libsquirrel.a" />
+					<Add library="../lib/libsqstdlib.a" />
+					<Add library="../lib/libsqdbglib.a" />
+				</Linker>
+			</Target>
+			<Target title="Debug - Unicode">
+				<Option output="Debug - Unicode/testSqPlus.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Debug - Unicode" />
+				<Option external_deps="../lib/libsqdbglibDU.a;../lib/libsquirrelDU.a;../lib/libsqstdlibDU.a;../lib/libsqplusDU.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-D_CRT_NON_CONFORMING_SWPRINTFS" />
+					<Add directory="../include" />
+					<Add directory="../sqplus" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libsqplusDU.a" />
+					<Add library="../lib/libsquirrelDU.a" />
+					<Add library="../lib/libsqstdlibDU.a" />
+					<Add library="../lib/libsqdbglibDU.a" />
+				</Linker>
+			</Target>
+			<Target title="Release - Unicode">
+				<Option output="Release - Unicode/testSqPlus.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Release - Unicode" />
+				<Option external_deps="../lib/libsqdbglibU.a;../lib/libsquirrelU.a;../lib/libsqstdlibU.a;../lib/libsqplusU.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-D_CRT_NON_CONFORMING_SWPRINTFS" />
+					<Add directory="../include" />
+					<Add directory="../sqplus" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libsqplusU.a" />
+					<Add library="../lib/libsquirrelU.a" />
+					<Add library="../lib/libsqstdlibU.a" />
+					<Add library="../lib/libsqdbglibU.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Debug;Release;Debug - Unicode;Release - Unicode;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-fpermissive" />
+		</Compiler>
+		<Unit filename="testSqPlus.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

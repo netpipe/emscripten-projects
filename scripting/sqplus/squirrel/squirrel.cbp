@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="squirrel" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../lib/libsquirrelD.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Debug" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectResourceIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-DGARBAGE_COLLECTOR" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../lib/libsquirrel.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Release" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectResourceIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-DGARBAGE_COLLECTOR" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+			<Target title="Debug - Unicode">
+				<Option output="../lib/libsquirrelDU.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Debug - Unicode" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectResourceIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-DGARBAGE_COLLECTOR" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-D_CRT_NON_CONFORMING_SWPRINTFS" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+			<Target title="Release - Unicode">
+				<Option output="../lib/libsquirrelU.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Release - Unicode" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option projectResourceIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-DGARBAGE_COLLECTOR" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-D_CRT_NON_CONFORMING_SWPRINTFS" />
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Debug;Release;Debug - Unicode;Release - Unicode;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-fpermissive" />
+		</Compiler>
+		<Unit filename="sqapi.cpp" />
+		<Unit filename="sqarray.h" />
+		<Unit filename="sqbaselib.cpp" />
+		<Unit filename="sqclass.cpp" />
+		<Unit filename="sqclass.h" />
+		<Unit filename="sqclosure.h" />
+		<Unit filename="sqcompiler.cpp" />
+		<Unit filename="sqcompiler.h" />
+		<Unit filename="sqdebug.cpp" />
+		<Unit filename="sqfuncproto.h" />
+		<Unit filename="sqfuncstate.cpp" />
+		<Unit filename="sqfuncstate.h" />
+		<Unit filename="sqlexer.cpp" />
+		<Unit filename="sqlexer.h" />
+		<Unit filename="sqmem.cpp" />
+		<Unit filename="sqobject.cpp" />
+		<Unit filename="sqobject.h" />
+		<Unit filename="sqopcodes.h" />
+		<Unit filename="sqpcheader.h" />
+		<Unit filename="sqstate.cpp" />
+		<Unit filename="sqstate.h" />
+		<Unit filename="sqstring.h" />
+		<Unit filename="sqtable.cpp" />
+		<Unit filename="sqtable.h" />
+		<Unit filename="squserdata.h" />
+		<Unit filename="squtils.h" />
+		<Unit filename="sqvm.cpp" />
+		<Unit filename="sqvm.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
