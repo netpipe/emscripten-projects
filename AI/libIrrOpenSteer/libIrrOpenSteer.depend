@@ -2548,3 +2548,273 @@
 	"matrix4.h"
 	"IVideoDriver.h"
 
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osSimpleVehicle.cpp
+	"osSimpleVehicle.h"
+	<algorithm>
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osSimpleVehicle.h
+	"osAbstractVehicle.h"
+	"osSteerLibrary.h"
+	"osAnnotation.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osAbstractVehicle.h
+	"osLocalSpace.h"
+	<vector>
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osLocalSpace.h
+	"osVec3.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osVec3.h
+	<irrlicht.h>
+	"osUtilities.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osUtilities.h
+	<iostream>
+	<cstdlib>
+	<cfloat>
+	<cmath>
+	<vector>
+	<cassert>
+	<limits>
+
+1573590567 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osSteerLibrary.h
+	"osAbstractVehicle.h"
+	"osPathway.h"
+	"osObstacle.h"
+	"osUtilities.h"
+	"osColor.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osPathway.h
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osObstacle.h
+	"osVec3.h"
+	"osLocalSpace.h"
+	"osAbstractVehicle.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osColor.h
+	<irrlicht.h>
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osAnnotation.h
+	"IrrOpenSteer.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/IrrOpenSteer.h
+	<irrlicht.h>
+	"osSteerLibrary.h"
+	"osAbstractVehicle.h"
+	"osClock.h"
+	"osColor.h"
+	"oslq.h"
+	"osObstacle.h"
+	"osPath.h"
+	"osPathway.h"
+	"osPlugIn.h"
+	"osPolylineSegmentedPath.h"
+	"osProximity.h"
+	"osQueryPathAlike.h"
+	"osQueryPathAlikeBaseDataExtractionPolicies.h"
+	"osQueryPathAlikeMappings.h"
+	"osSegmentedPath.h"
+	"osSegmentedPathAlikeUtilities.h"
+	"osSegmentedPathway.h"
+	"osSharedPointer.h"
+	"osSimpleVehicle.h"
+	"osStandardTypes.h"
+	"osTerrainRayTest.h"
+	"osUnusedParameter.h"
+	"osUtilities.h"
+	"osVec3.h"
+	"osVec3Utilities.h"
+	"osQueryPathAlikeUtilities.h"
+	"osOldPathway.h"
+	"osLocalSpace.h"
+	"osAnnotation.h"
+	"osPolylineSegmentedPathwaySingleRadius.h"
+	"osPolylineSegmentedPathwaySegmentRadii.h"
+	"osWaypointMap.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osClock.h
+	"osUtilities.h"
+	<irrlicht.h>
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/oslq.h
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osPath.h
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osPlugIn.h
+	<iostream>
+	"osAbstractVehicle.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osPolylineSegmentedPath.h
+	<vector>
+	"osSegmentedPath.h"
+	"osQueryPathAlikeBaseDataExtractionPolicies.h"
+	"osVec3.h"
+	"osVec3Utilities.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osSegmentedPath.h
+	"osPath.h"
+	"osStandardTypes.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osStandardTypes.h
+	<cstddef>
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osQueryPathAlikeBaseDataExtractionPolicies.h
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osVec3Utilities.h
+	"osVec3.h"
+	"osStandardTypes.h"
+	"osUtilities.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osProximity.h
+	<algorithm>
+	<vector>
+	"osVec3.h"
+	"oslq.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osQueryPathAlike.h
+	<limits>
+	"osVec3.h"
+	"osVec3Utilities.h"
+	"osUtilities.h"
+	"osQueryPathAlikeBaseDataExtractionPolicies.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osQueryPathAlikeMappings.h
+	"osQueryPathAlikeUtilities.h"
+	"osVec3.h"
+	"osStandardTypes.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osQueryPathAlikeUtilities.h
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osSegmentedPathAlikeUtilities.h
+	<cassert>
+	"osStandardTypes.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osSegmentedPathway.h
+	"osPathway.h"
+	"osStandardTypes.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osSharedPointer.h
+	<algorithm>
+	<cassert>
+	"osStandardTypes.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osTerrainRayTest.h
+	<irrlicht.h>
+	<float.h>
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osUnusedParameter.h
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osOldPathway.h
+	"osVec3.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osPolylineSegmentedPathwaySingleRadius.h
+	"osSegmentedPathway.h"
+	"osPolylineSegmentedPath.h"
+	"osQueryPathAlikeBaseDataExtractionPolicies.h"
+	"osVec3.h"
+	"osVec3Utilities.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osPolylineSegmentedPathwaySegmentRadii.h
+	<vector>
+	"osSegmentedPathway.h"
+	"osPolylineSegmentedPath.h"
+	"osQueryPathAlikeBaseDataExtractionPolicies.h"
+	"osVec3.h"
+	"osVec3Utilities.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osWaypointMap.h
+	"osWaypoint.h"
+	"IrrOpenSteer.h"
+
+1370387087 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/include/osWaypoint.h
+	"IrrOpenSteer.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osClock.cpp
+	"osClock.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osColor.cpp
+	"osColor.h"
+	"osVec3.h"
+	<cassert>
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/oslq.c
+	<stdlib.h>
+	<float.h>
+	<limits.h>
+	"oslq.h"
+	"debuglq.c"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osObstacle.cpp
+	"osObstacle.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osOldPathway.cpp
+	"osOldPathway.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osPath.cpp
+	"osPath.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osPathway.cpp
+	"osPathway.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osPlugIn.cpp
+	<string.h>
+	"osPlugIn.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osPolylineSegmentedPath.cpp
+	"osPolylineSegmentedPath.h"
+	<numeric>
+	<algorithm>
+	<cassert>
+	"osVec3.h"
+	"osQueryPathAlike.h"
+	"osQueryPathAlikeMappings.h"
+	"osQueryPathAlikeUtilities.h"
+	"osUtilities.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osPolylineSegmentedPathwaySegmentRadii.cpp
+	"osPolylineSegmentedPathwaySegmentRadii.h"
+	<algorithm>
+	<functional>
+	"osQueryPathAlike.h"
+	"osQueryPathAlikeMappings.h"
+	"osQueryPathAlikeUtilities.h"
+	"osUtilities.h"
+	"osStandardTypes.h"
+	"osUnusedParameter.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osPolylineSegmentedPathwaySingleRadius.cpp
+	"osPolylineSegmentedPathwaySingleRadius.h"
+	<algorithm>
+	"osQueryPathAlike.h"
+	"osQueryPathAlikeMappings.h"
+	"osQueryPathAlikeUtilities.h"
+	"osUnusedParameter.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osSegmentedPath.cpp
+	"osSegmentedPath.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osSegmentedPathway.cpp
+	"osSegmentedPathway.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osTerrainRayTest.cpp
+	"osTerrainRayTest.h"
+	<cstdio>
+	<cstdlib>
+	<cmath>
+	<memory.h>
+	"osUtilities.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osVec3.cpp
+	"osVec3.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osVec3Utilities.cpp
+	"osVec3Utilities.h"
+	<cassert>
+	"osUtilities.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osWaypoint.cpp
+	"osWaypoint.h"
+
+1370387087 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/AI/libIrrOpenSteer/source/osWaypointMap.cpp
+	"osWaypointMap.h"
+
