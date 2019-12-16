@@ -15,7 +15,7 @@ else
 	PYTHON_BINARY=python.exe
 fi
 
-pushd "${PYTHON_DIR}"
+cd "${PYTHON_DIR}"
 
 if [ ! -f "${PYTHON_BINARY}" ]
 then

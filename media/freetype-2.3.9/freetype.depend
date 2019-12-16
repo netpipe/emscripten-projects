@@ -1,0 +1,2305 @@
+# depslib dependency file v1.0
+1182831812 source:c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\autofit.c
+	<ft2build.h>
+	"afangles.c"
+	"afglobal.c"
+	"afhints.c"
+	"afdummy.c"
+	"aflatin.c"
+	"aflatin2.c"
+	"afcjk.c"
+	"afindic.c"
+	"afloader.c"
+	"afmodule.c"
+	"afwarp.c"
+
+1138371555 
+
+1143203727 c:\dev\agnostic\libs\freetype-2.3.9\include\ft2build.h
+	<freetype/config/ftheader.h>
+
+1143203727 config/ftheader.h>
+
+1221196207 c:\dev\agnostic\libs\freetype-2.3.9\include\freetype\config\ftheader.h
+
+1162540685 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afangles.c
+	"aftypes.h"
+
+1230251677 "
+
+1231870431 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\aftypes.h
+	<ft2build.h>
+
+1181980546 h>
+
+1210405603 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afglobal.c
+	"afglobal.h"
+	"afdummy.h"
+	"aflatin.h"
+	"afcjk.h"
+	"afindic.h"
+	"aferrors.h"
+	"aflatin2.h"
+
+1236119043 h"
+
+1181592772 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afglobal.h
+	"aftypes.h"
+
+1109866412 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afdummy.h
+	"aftypes.h"
+
+1175540784 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\aflatin.h
+	"afhints.h"
+
+1212012572 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afhints.h
+	"aftypes.h"
+
+1183755778 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afcjk.h
+	"afhints.h"
+
+1182832558 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afindic.h
+	"afhints.h"
+
+1111583645 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\aferrors.h
+
+1181540254 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\aflatin2.h
+	"afhints.h"
+
+1231870498 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afhints.c
+	"afhints.h"
+	"aferrors.h"
+
+1109866366 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afdummy.c
+	"afdummy.h"
+	"afhints.h"
+
+1229854923 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\aflatin.c
+	"aflatin.h"
+	"aferrors.h"
+	"afwarp.h"
+
+1169721752 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afwarp.h
+	"afhints.h"
+
+1229855577 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\aflatin2.c
+	"aflatin.h"
+	"aflatin2.h"
+	"aferrors.h"
+	"afwarp.h"
+
+1229855571 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afcjk.c
+	"aftypes.h"
+	"aflatin.h"
+	"afcjk.h"
+	"aferrors.h"
+	"afwarp.h"
+
+1199434667 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afindic.c
+	"aftypes.h"
+	"aflatin.h"
+	"afindic.h"
+	"aferrors.h"
+	"afcjk.h"
+	"afwarp.h"
+
+1203234653 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afloader.c
+	"afloader.h"
+	"afhints.h"
+	"afglobal.h"
+	"aflatin.h"
+	"aferrors.h"
+
+1109869996 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afloader.h
+	"afhints.h"
+	"afglobal.h"
+
+1162541997 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afmodule.c
+	"afmodule.h"
+	"afloader.h"
+
+1109870114 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afmodule.h
+	<ft2build.h>
+
+1169831477 c:\dev\agnostic\libs\freetype-2.3.9\src\autofit\afwarp.c
+	"afwarp.h"
+
+1223119328 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftbase.c
+	<ft2build.h>
+	"ftadvanc.c"
+	"ftcalc.c"
+	"ftdbgmem.c"
+	"ftgloadr.c"
+	"ftnames.c"
+	"ftobjs.c"
+	"ftoutln.c"
+	"ftrfork.c"
+	"ftstream.c"
+	"fttrigon.c"
+	"ftutil.c"
+	"ftmac.c"
+
+1236118641 
+
+1235463101 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftadvanc.c
+	<ft2build.h>
+
+1221200472 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftcalc.c
+	<ft2build.h>
+
+1231870322 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftdbgmem.c
+	<ft2build.h>
+
+1155970887 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftgloadr.c
+	<ft2build.h>
+
+1023518838 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftnames.c
+	<ft2build.h>
+
+1236842469 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftobjs.c
+	<ft2build.h>
+	"ftbase.h"
+
+1223119912 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftbase.h
+	<ft2build.h>
+
+1227999231 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftoutln.c
+	<ft2build.h>
+
+1236844233 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftrfork.c
+	<ft2build.h>
+
+1227594976 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftstream.c
+	<ft2build.h>
+
+1132087326 c:\dev\agnostic\libs\freetype-2.3.9\src\base\fttrigon.c
+	<ft2build.h>
+
+1173371687 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftutil.c
+	<ft2build.h>
+
+1231228723 c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftmac.c
+	<ft2build.h>
+	"ftbase.h"
+	<CoreServices/CoreServices.h>
+	<ApplicationServices/ApplicationServices.h>
+	<sys/syslimits.h>
+
+1231228723 mits.h>
+
+1169853503 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftbbox.c
+	<ft2build.h>
+
+1231235718 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftbitmap.c
+	<ft2build.h>
+
+1236117955 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftfstype.c
+	<ft2build.h>
+
+1168342357 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftgasp.c
+	<ft2build.h>
+
+1214604817 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftglyph.c
+	<ft2build.h>
+
+1229857821 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftinit.c
+	<ft2build.h>
+
+1236810700 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftmm.c
+	<ft2build.h>
+
+1229883739 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftpfr.c
+	<ft2build.h>
+
+1236840888 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftstroke.c
+	<ft2build.h>
+
+1229514919 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftsynth.c
+	<ft2build.h>
+
+1221736367 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftsystem.c
+	<ft2build.h>
+
+1100246565 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\fttype1.c
+	<ft2build.h>
+
+1102983419 source:c:\dev\agnostic\libs\freetype-2.3.9\src\base\ftwinfnt.c
+	<ft2build.h>
+
+1168927855 source:c:\dev\agnostic\libs\freetype-2.3.9\src\bdf\bdf.c
+	<ft2build.h>
+	"bdflib.c"
+	"bdfdrivr.c"
+
+1023518838 c"
+
+1236840089 c:\dev\agnostic\libs\freetype-2.3.9\src\bdf\bdflib.c
+	<ft2build.h>
+	"bdf.h"
+	"bdferror.h"
+
+1168927855 c:\dev\agnostic\libs\freetype-2.3.9\src\bdf\bdf.h
+	<ft2build.h>
+
+1021990380 c:\dev\agnostic\libs\freetype-2.3.9\src\bdf\bdferror.h
+
+1228002331 c:\dev\agnostic\libs\freetype-2.3.9\src\bdf\bdfdrivr.c
+	<ft2build.h>
+	"bdf.h"
+	"bdfdrivr.h"
+	"bdferror.h"
+
+1087907297 c:\dev\agnostic\libs\freetype-2.3.9\src\bdf\bdfdrivr.h
+	<ft2build.h>
+	"bdf.h"
+
+1072427168 source:c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcache.c
+	<ft2build.h>
+	"ftcmru.c"
+	"ftcmanag.c"
+	"ftccache.c"
+	"ftccmap.c"
+	"ftcglyph.c"
+	"ftcimage.c"
+	"ftcsbits.c"
+	"ftcbasic.c"
+
+1142868855 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcmru.c
+	<ft2build.h>
+	"ftcmru.h"
+	"ftcerror.h"
+
+1142870065 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcmru.h
+	<ft2build.h>
+
+992991816 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcerror.h
+
+1236811644 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcmanag.c
+	<ft2build.h>
+	"ftcmanag.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1143038425 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcmanag.h
+	<ft2build.h>
+	"ftcmru.h"
+	"ftccache.h"
+
+1179329825 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftccache.h
+	"ftcmru.h"
+
+1142861663 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftccback.h
+	<ft2build.h>
+	"ftcmru.h"
+	"ftcimage.h"
+	"ftcmanag.h"
+	"ftcglyph.h"
+	"ftcsbits.h"
+
+1143040703 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcimage.h
+	<ft2build.h>
+	"ftcglyph.h"
+
+1179329825 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcglyph.h
+	<ft2build.h>
+	"ftcmanag.h"
+
+1143040734 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcsbits.h
+	<ft2build.h>
+	"ftcglyph.h"
+
+1179329825 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftccache.c
+	<ft2build.h>
+	"ftcmanag.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1221200900 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftccmap.c
+	<ft2build.h>
+	"ftcmanag.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1143041026 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcglyph.c
+	<ft2build.h>
+	"ftcglyph.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1146292237 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcimage.c
+	<ft2build.h>
+	"ftcimage.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1143040727 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcsbits.c
+	<ft2build.h>
+	"ftcsbits.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1179121995 c:\dev\agnostic\libs\freetype-2.3.9\src\cache\ftcbasic.c
+	<ft2build.h>
+	"ftcglyph.h"
+	"ftcimage.h"
+	"ftcsbits.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1072427168 source:c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cff.c
+	<ft2build.h>
+	"cffdrivr.c"
+	"cffparse.c"
+	"cffload.c"
+	"cffobjs.c"
+	"cffgload.c"
+	"cffcmap.c"
+
+1236835893 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffdrivr.c
+	<ft2build.h>
+	"cffdrivr.h"
+	"cffgload.h"
+	"cffload.h"
+	"cffcmap.h"
+	"cfferrs.h"
+
+1017506469 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffdrivr.h
+	<ft2build.h>
+
+1221544043 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffgload.h
+	<ft2build.h>
+	"cffobjs.h"
+
+1213076751 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffobjs.h
+	<ft2build.h>
+	"cfftypes.h"
+
+1210233209 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cfftypes.h
+	<ft2build.h>
+
+1216186747 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffload.h
+	<ft2build.h>
+	"cfftypes.h"
+
+1168927855 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffcmap.h
+	"cffobjs.h"
+
+992991817 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cfferrs.h
+
+1236766696 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffparse.c
+	<ft2build.h>
+	"cffparse.h"
+	"cfferrs.h"
+	"cfftoken.h"
+
+1072427168 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffparse.h
+	<ft2build.h>
+	"cfftypes.h"
+
+1092313348 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cfftoken.h
+
+1236845057 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffload.c
+	<ft2build.h>
+	"cffload.h"
+	"cffparse.h"
+	"cfferrs.h"
+
+1230250398 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffobjs.c
+	<ft2build.h>
+	"cffobjs.h"
+	"cffload.h"
+	"cffcmap.h"
+	"cfferrs.h"
+
+1236836495 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffgload.c
+	<ft2build.h>
+	"cffobjs.h"
+	"cffload.h"
+	"cffgload.h"
+	"cfferrs.h"
+
+1192467113 c:\dev\agnostic\libs\freetype-2.3.9\src\cff\cffcmap.c
+	"cffcmap.h"
+	"cffload.h"
+	"cfferrs.h"
+
+993750533 source:c:\dev\agnostic\libs\freetype-2.3.9\src\cid\type1cid.c
+	<ft2build.h>
+	"cidparse.c"
+	"cidload.c"
+	"cidobjs.c"
+	"cidriver.c"
+	"cidgload.c"
+
+993750538 .c"
+
+1180683455 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidparse.c
+	<ft2build.h>
+	"cidparse.h"
+	"ciderrs.h"
+
+1074891160 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidparse.h
+	<ft2build.h>
+
+992991818 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\ciderrs.h
+
+1236118098 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidload.c
+	<ft2build.h>
+	"cidload.h"
+	"ciderrs.h"
+	"cidtoken.h"
+
+1074891160 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidload.h
+	<ft2build.h>
+	"cidparse.h"
+
+1236118425 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidtoken.h
+
+1230251892 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidobjs.c
+	<ft2build.h>
+	"cidgload.h"
+	"cidload.h"
+	"ciderrs.h"
+
+1083844115 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidgload.h
+	<ft2build.h>
+	"cidobjs.h"
+
+1137166697 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidobjs.h
+	<ft2build.h>
+
+1236806433 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidriver.c
+	<ft2build.h>
+	"cidriver.h"
+	"cidgload.h"
+	"ciderrs.h"
+
+1017508084 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidriver.h
+	<ft2build.h>
+
+1183785300 c:\dev\agnostic\libs\freetype-2.3.9\src\cid\cidgload.c
+	<ft2build.h>
+	"cidload.h"
+	"cidgload.h"
+	"ciderrs.h"
+
+1236845018 source:c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\ftgzip.c
+	<ft2build.h>
+	<zlib.h>
+	"zlib.h"
+	"zutil.h"
+	"inftrees.h"
+	"infblock.h"
+	"infcodes.h"
+	"infutil.h"
+	"zutil.c"
+	"inftrees.c"
+	"infutil.c"
+	"infcodes.c"
+	"infblock.c"
+	"inflate.c"
+	"adler32.c"
+
+1040939440 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\zlib.h
+	"zconf.h"
+
+1180680977 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\zconf.h
+	<windows.h>
+	<windows.h>
+	<sys/types.h>
+	<unistd.h>
+
+1180680977 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\zutil.h
+	"zlib.h"
+	<stddef.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<alloc.h>
+	<unix.h>
+	<stdio.h>
+
+1066256456 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\inftrees.h
+
+1036625574 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\infblock.h
+
+1036625574 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\infcodes.h
+
+1055192104 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\infutil.h
+
+1146295876 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\zutil.c
+	"zutil.h"
+
+1223403319 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\inftrees.c
+	"zutil.h"
+	"inftrees.h"
+	"inffixed.h"
+
+1066256456 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\inffixed.h
+
+1066256456 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\infutil.c
+	"zutil.h"
+	"infblock.h"
+	"inftrees.h"
+	"infcodes.h"
+	"infutil.h"
+
+1043972658 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\infcodes.c
+	"zutil.h"
+	"inftrees.h"
+	"infblock.h"
+	"infcodes.h"
+	"infutil.h"
+
+1067463831 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\infblock.c
+	"zutil.h"
+	"infblock.h"
+	"inftrees.h"
+	"infcodes.h"
+	"infutil.h"
+
+1043972658 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\inflate.c
+	"zutil.h"
+	"infblock.h"
+
+1180680977 c:\dev\agnostic\libs\freetype-2.3.9\src\gzip\adler32.c
+	"zlib.h"
+
+1231870615 source:c:\dev\agnostic\libs\freetype-2.3.9\src\lzw\ftlzw.c
+	<ft2build.h>
+	"ftzopen.h"
+	"ftzopen.c"
+
+1212012815 c:\dev\agnostic\libs\freetype-2.3.9\src\lzw\ftzopen.h
+	<ft2build.h>
+
+1180074989 c:\dev\agnostic\libs\freetype-2.3.9\src\lzw\ftzopen.c
+	"ftzopen.h"
+
+1054958541 source:c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcf.c
+	<ft2build.h>
+	"pcfutil.c"
+	"pcfread.c"
+	"pcfdrivr.c"
+
+1168927855 c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcfutil.c
+	<ft2build.h>
+	"pcfutil.h"
+
+1082924109 c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcfutil.h
+	<ft2build.h>
+
+1236845197 c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcfread.c
+	<ft2build.h>
+	"pcf.h"
+	"pcfdrivr.h"
+	"pcfread.h"
+	"pcferror.h"
+
+1137166357 c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcf.h
+	<ft2build.h>
+
+1054958541 c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcfdrivr.h
+	<ft2build.h>
+
+1051103860 c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcfread.h
+	<ft2build.h>
+
+992991818 c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcferror.h
+
+1236810059 c:\dev\agnostic\libs\freetype-2.3.9\src\pcf\pcfdrivr.c
+	<ft2build.h>
+	"pcf.h"
+	"pcfdrivr.h"
+	"pcfread.h"
+	"pcferror.h"
+	"pcfutil.h"
+
+1033829823 source:c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfr.c
+	<ft2build.h>
+	"pfrload.c"
+	"pfrgload.c"
+	"pfrcmap.c"
+	"pfrobjs.c"
+	"pfrdrivr.c"
+	"pfrsbit.c"
+
+1169853555 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrload.c
+	"pfrload.h"
+	"pfrerror.h"
+
+1168927855 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrload.h
+	"pfrobjs.h"
+
+1083999623 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrobjs.h
+	"pfrtypes.h"
+
+1181020648 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrtypes.h
+	<ft2build.h>
+
+1019989555 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrerror.h
+
+1196808313 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrgload.c
+	"pfrgload.h"
+	"pfrsbit.h"
+	"pfrload.h"
+	"pfrerror.h"
+
+1033985563 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrgload.h
+	"pfrtypes.h"
+
+1033985563 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrsbit.h
+	"pfrobjs.h"
+
+1192467151 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrcmap.c
+	"pfrcmap.h"
+	"pfrobjs.h"
+	"pfrerror.h"
+
+1168927855 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrcmap.h
+	<ft2build.h>
+	"pfrtypes.h"
+
+1222899313 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrobjs.c
+	"pfrobjs.h"
+	"pfrload.h"
+	"pfrgload.h"
+	"pfrcmap.h"
+	"pfrsbit.h"
+	"pfrerror.h"
+
+1229884881 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrdrivr.c
+	<ft2build.h>
+	"pfrdrivr.h"
+	"pfrobjs.h"
+	"pfrerror.h"
+
+1019281113 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrdrivr.h
+	<ft2build.h>
+
+1140599149 c:\dev\agnostic\libs\freetype-2.3.9\src\pfr\pfrsbit.c
+	"pfrsbit.h"
+	"pfrload.h"
+	"pfrerror.h"
+
+1138037718 source:c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\psaux.c
+	<ft2build.h>
+	"psobjs.c"
+	"psauxmod.c"
+	"t1decode.c"
+	"t1cmap.c"
+	"afmparse.c"
+	"psconv.c"
+
+1231490239 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\psobjs.c
+	<ft2build.h>
+	"psobjs.h"
+	"psconv.h"
+	"psauxerr.h"
+
+1065505781 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\psobjs.h
+	<ft2build.h>
+
+1152890958 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\psconv.h
+	<ft2build.h>
+
+992991818 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\psauxerr.h
+
+1140162036 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\psauxmod.c
+	<ft2build.h>
+	"psauxmod.h"
+	"psobjs.h"
+	"t1decode.h"
+	"t1cmap.h"
+	"afmparse.h"
+
+993750534 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\psauxmod.h
+	<ft2build.h>
+
+993750538 .h>
+
+1064905242 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\t1decode.h
+	<ft2build.h>
+
+1137050365 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\t1cmap.h
+	<ft2build.h>
+
+1138371553 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\afmparse.h
+	<ft2build.h>
+
+1231791473 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\t1decode.c
+	<ft2build.h>
+	"t1decode.h"
+	"psobjs.h"
+	"psauxerr.h"
+
+1192467597 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\t1cmap.c
+	"t1cmap.h"
+	"psauxerr.h"
+
+1219470973 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\afmparse.c
+	<ft2build.h>
+	"afmparse.h"
+	"psconv.h"
+	"psauxerr.h"
+
+1208006853 c:\dev\agnostic\libs\freetype-2.3.9\src\psaux\psconv.c
+	<ft2build.h>
+	"psconv.h"
+	"psobjs.h"
+	"psauxerr.h"
+
+1054161761 source:c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshinter.c
+	<ft2build.h>
+	"pshrec.c"
+	"pshglob.c"
+	"pshalgo.c"
+	"pshmod.c"
+
+1179684460 c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshrec.c
+	<ft2build.h>
+	"pshrec.h"
+	"pshalgo.h"
+	"pshnterr.h"
+
+1212012787 c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshrec.h
+	<ft2build.h>
+	"pshglob.h"
+
+1054285969 c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshglob.h
+
+1212012763 c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshalgo.h
+	"pshrec.h"
+	"pshglob.h"
+
+1056396413 c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshnterr.h
+
+1141068200 c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshglob.c
+	<ft2build.h>
+	"pshglob.h"
+
+1231870581 c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshalgo.c
+	<ft2build.h>
+	"pshalgo.h"
+	"pshnterr.h"
+
+1179329825 c:\dev\agnostic\libs\freetype-2.3.9\src\pshinter\pshmod.c
+	<ft2build.h>
+	"pshrec.h"
+	"pshalgo.h"
+
+1219520990 source:c:\dev\agnostic\libs\freetype-2.3.9\src\psnames\psmodule.c
+	<ft2build.h>
+	"psmodule.h"
+	"pstables.h"
+	"psnamerr.h"
+
+993750535 c:\dev\agnostic\libs\freetype-2.3.9\src\psnames\psmodule.h
+	<ft2build.h>
+
+1228001915 c:\dev\agnostic\libs\freetype-2.3.9\src\psnames\pstables.h
+
+992991819 c:\dev\agnostic\libs\freetype-2.3.9\src\psnames\psnamerr.h
+
+993750536 source:c:\dev\agnostic\libs\freetype-2.3.9\src\raster\raster.c
+	<ft2build.h>
+	"ftraster.c"
+	"ftrend1.c"
+
+1236840677 c:\dev\agnostic\libs\freetype-2.3.9\src\raster\ftraster.c
+	"ftmisc.h"
+	"ftimage.h"
+	<ft2build.h>
+	"ftraster.h"
+	"rasterrs.h"
+
+1231869856 c:\dev\agnostic\libs\freetype-2.3.9\src\raster\ftmisc.h
+	<inttypes.h>
+
+993750536 c:\dev\agnostic\libs\freetype-2.3.9\src\raster\ftraster.h
+	<ft2build.h>
+
+992991819 c:\dev\agnostic\libs\freetype-2.3.9\src\raster\rasterrs.h
+
+1146606784 c:\dev\agnostic\libs\freetype-2.3.9\src\raster\ftrend1.c
+	<ft2build.h>
+	"ftrend1.h"
+	"ftraster.h"
+	"rasterrs.h"
+
+993750536 c:\dev\agnostic\libs\freetype-2.3.9\src\raster\ftrend1.h
+	<ft2build.h>
+
+1139962570 source:c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\sfnt.c
+	<ft2build.h>
+	"ttload.c"
+	"ttmtx.c"
+	"ttcmap.c"
+	"ttkern.c"
+	"sfobjs.c"
+	"sfdriver.c"
+	"ttsbit.c"
+	"ttpost.c"
+	"ttbdf.c"
+
+1228473379 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttload.c
+	<ft2build.h>
+	"ttload.h"
+	"sferrors.h"
+
+1139963019 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttload.h
+	<ft2build.h>
+
+1094454416 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\sferrors.h
+
+1227857348 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttmtx.c
+	<ft2build.h>
+	"ttmtx.h"
+	"sferrors.h"
+
+1139905557 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttmtx.h
+	<ft2build.h>
+
+1236583749 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttcmap.c
+	<ft2build.h>
+	"sferrors.h"
+	"ttload.h"
+	"ttcmap.h"
+
+1133361194 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttcmap.h
+	<ft2build.h>
+
+1236126798 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttkern.c
+	<ft2build.h>
+	"ttkern.h"
+	"ttload.h"
+	"sferrors.h"
+
+1167990850 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttkern.h
+	<ft2build.h>
+
+1234220122 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\sfobjs.c
+	<ft2build.h>
+	"sfobjs.h"
+	"ttload.h"
+	"ttcmap.h"
+	"ttkern.h"
+	"sferrors.h"
+	"ttbdf.h"
+
+1030479627 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\sfobjs.h
+	<ft2build.h>
+
+1141216169 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttbdf.h
+	<ft2build.h>
+	"ttload.h"
+
+1232278825 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\sfdriver.c
+	<ft2build.h>
+	"sfdriver.h"
+	"ttload.h"
+	"sfobjs.h"
+	"sferrors.h"
+	"ttsbit.h"
+	"ttpost.h"
+	"ttbdf.h"
+	"ttcmap.h"
+	"ttkern.h"
+	"ttmtx.h"
+
+993750536 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\sfdriver.h
+	<ft2build.h>
+
+1227857461 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttsbit.h
+	<ft2build.h>
+	"ttload.h"
+
+1030479627 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttpost.h
+	<ft2build.h>
+
+1236843992 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttsbit.c
+	<ft2build.h>
+	"ttsbit0.c"
+	<ft2build.h>
+	"ttsbit.h"
+	"sferrors.h"
+
+1236603766 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttsbit0.c
+	<ft2build.h>
+	"ttsbit.h"
+	"sferrors.h"
+
+1226129151 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttpost.c
+	<ft2build.h>
+	"ttpost.h"
+	"ttload.h"
+	"sferrors.h"
+
+1140889633 c:\dev\agnostic\libs\freetype-2.3.9\src\sfnt\ttbdf.c
+	<ft2build.h>
+	"ttbdf.h"
+	"sferrors.h"
+
+993750538 source:c:\dev\agnostic\libs\freetype-2.3.9\src\smooth\smooth.c
+	<ft2build.h>
+	"ftgrays.c"
+	"ftsmooth.c"
+
+1231794454 c:\dev\agnostic\libs\freetype-2.3.9\src\smooth\ftgrays.c
+	<stdio.h>
+	<stdarg.h>
+	<string.h>
+	<setjmp.h>
+	<limits.h>
+	"ftimage.h"
+	"ftgrays.h"
+	<ft2build.h>
+	"ftgrays.h"
+	"ftsmerrs.h"
+
+993750538 c:\dev\agnostic\libs\freetype-2.3.9\src\smooth\ftgrays.h
+	"ftimage.h"
+	<ft2build.h>
+
+992991821 c:\dev\agnostic\libs\freetype-2.3.9\src\smooth\ftsmerrs.h
+
+1231791155 c:\dev\agnostic\libs\freetype-2.3.9\src\smooth\ftsmooth.c
+	<ft2build.h>
+	"ftsmooth.h"
+	"ftgrays.h"
+	"ftsmerrs.h"
+
+1030479627 c:\dev\agnostic\libs\freetype-2.3.9\src\smooth\ftsmooth.h
+	<ft2build.h>
+
+1157261483 source:c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\truetype.c
+	<ft2build.h>
+	"ttdriver.c"
+	"ttpload.c"
+	"ttgload.c"
+	"ttobjs.c"
+	"ttinterp.c"
+	"ttgxvar.c"
+
+1231674904 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttdriver.c
+	<ft2build.h>
+	"ttdriver.h"
+	"ttgload.h"
+	"ttpload.h"
+	"ttgxvar.h"
+	"tterrors.h"
+
+1017671128 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttdriver.h
+	<ft2build.h>
+
+1221202822 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttgload.h
+	<ft2build.h>
+	"ttobjs.h"
+	"ttinterp.h"
+
+1226748623 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttobjs.h
+	<ft2build.h>
+
+1171321216 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttinterp.h
+	<ft2build.h>
+	"ttobjs.h"
+
+1142861663 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttpload.h
+	<ft2build.h>
+
+1168927855 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttgxvar.h
+	<ft2build.h>
+	"ttobjs.h"
+
+992991821 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\tterrors.h
+
+1228808453 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttpload.c
+	<ft2build.h>
+	"ttpload.h"
+	"ttgxvar.h"
+	"tterrors.h"
+
+1228784215 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttgload.c
+	<ft2build.h>
+	"ttgload.h"
+	"ttpload.h"
+	"ttgxvar.h"
+	"tterrors.h"
+
+1234396526 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttobjs.c
+	<ft2build.h>
+	"ttgload.h"
+	"ttpload.h"
+	"tterrors.h"
+	"ttinterp.h"
+	"ttgxvar.h"
+
+1232899211 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttinterp.c
+	<ft2build.h>
+	"ttinterp.h"
+	"tterrors.h"
+
+1224100902 c:\dev\agnostic\libs\freetype-2.3.9\src\truetype\ttgxvar.c
+	<ft2build.h>
+	"ttdriver.h"
+	"ttpload.h"
+	"ttgxvar.h"
+	"tterrors.h"
+
+993750547 source:c:\dev\agnostic\libs\freetype-2.3.9\src\type1\type1.c
+	<ft2build.h>
+	"t1parse.c"
+	"t1load.c"
+	"t1objs.c"
+	"t1driver.c"
+	"t1gload.c"
+	"t1afm.c"
+
+1212733479 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1parse.c
+	<ft2build.h>
+	"t1parse.h"
+	"t1errors.h"
+
+1212733351 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1parse.h
+	<ft2build.h>
+
+992991821 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1errors.h
+
+1236118707 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1load.c
+	<ft2build.h>
+	"t1load.h"
+	"t1errors.h"
+	"t1tokens.h"
+
+1169853694 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1load.h
+	<ft2build.h>
+	"t1parse.h"
+
+1236118767 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1tokens.h
+
+1230251125 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1objs.c
+	<ft2build.h>
+	"t1gload.h"
+	"t1load.h"
+	"t1errors.h"
+	"t1afm.h"
+
+1221202105 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1gload.h
+	<ft2build.h>
+	"t1objs.h"
+
+1168927855 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1objs.h
+	<ft2build.h>
+
+1138371555 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1afm.h
+	<ft2build.h>
+	"t1objs.h"
+
+1236118641 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1driver.c
+	<ft2build.h>
+	"t1driver.h"
+	"t1gload.h"
+	"t1load.h"
+	"t1errors.h"
+	"t1afm.h"
+
+1017698506 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1driver.h
+	<ft2build.h>
+
+1236809755 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1gload.c
+	<ft2build.h>
+	"t1gload.h"
+	"t1errors.h"
+
+1219470923 c:\dev\agnostic\libs\freetype-2.3.9\src\type1\t1afm.c
+	<ft2build.h>
+	"t1afm.h"
+	"t1errors.h"
+
+1023518838 source:c:\dev\agnostic\libs\freetype-2.3.9\src\type42\type42.c
+	<ft2build.h>
+	"t42objs.c"
+	"t42parse.c"
+	"t42drivr.c"
+
+1230251172 c:\dev\agnostic\libs\freetype-2.3.9\src\type42\t42objs.c
+	"t42objs.h"
+	"t42parse.h"
+	"t42error.h"
+
+1168826470 c:\dev\agnostic\libs\freetype-2.3.9\src\type42\t42objs.h
+	<ft2build.h>
+	"t42types.h"
+
+1222069909 c:\dev\agnostic\libs\freetype-2.3.9\src\type42\t42types.h
+	<ft2build.h>
+
+1066319319 c:\dev\agnostic\libs\freetype-2.3.9\src\type42\t42parse.h
+	"t42objs.h"
+
+1056396413 c:\dev\agnostic\libs\freetype-2.3.9\src\type42\t42error.h
+
+1236119175 c:\dev\agnostic\libs\freetype-2.3.9\src\type42\t42parse.c
+	"t42parse.h"
+	"t42error.h"
+
+1236119043 c:\dev\agnostic\libs\freetype-2.3.9\src\type42\t42drivr.c
+	"t42drivr.h"
+	"t42objs.h"
+	"t42error.h"
+
+1023518838 c:\dev\agnostic\libs\freetype-2.3.9\src\type42\t42drivr.h
+	<ft2build.h>
+
+1230251677 source:c:\dev\agnostic\libs\freetype-2.3.9\src\winfonts\winfnt.c
+	<ft2build.h>
+	"winfnt.h"
+	"fnterrs.h"
+
+1181980546 c:\dev\agnostic\libs\freetype-2.3.9\src\winfonts\winfnt.h
+	<ft2build.h>
+
+992991821 c:\dev\agnostic\libs\freetype-2.3.9\src\winfonts\fnterrs.h
+
+1358243570 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/autofit.c
+	<ft2build.h>
+	"afangles.c"
+	"afglobal.c"
+	"afhints.c"
+	"afdummy.c"
+	"aflatin.c"
+	"aflatin2.c"
+	"afcjk.c"
+	"afindic.c"
+	"afloader.c"
+	"afmodule.c"
+	"afwarp.c"
+
+1358243555 /home/Dev/agnostic/libs/freetype-2.3.9/include/ft2build.h
+	<freetype/config/ftheader.h>
+
+1358243556 /home/Dev/agnostic/libs/freetype-2.3.9/include/freetype/config/ftheader.h
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afangles.c
+	"aftypes.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/aftypes.h
+	<ft2build.h>
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afglobal.c
+	"afglobal.h"
+	"afdummy.h"
+	"aflatin.h"
+	"afcjk.h"
+	"afindic.h"
+	"aferrors.h"
+	"aflatin2.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afglobal.h
+	"aftypes.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afdummy.h
+	"aftypes.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/aflatin.h
+	"afhints.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afhints.h
+	"aftypes.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afcjk.h
+	"afhints.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afindic.h
+	"afhints.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/aferrors.h
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/aflatin2.h
+	"afhints.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afhints.c
+	"afhints.h"
+	"aferrors.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afdummy.c
+	"afdummy.h"
+	"afhints.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/aflatin.c
+	"aflatin.h"
+	"aferrors.h"
+	"afwarp.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afwarp.h
+	"afhints.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/aflatin2.c
+	"aflatin.h"
+	"aflatin2.h"
+	"aferrors.h"
+	"afwarp.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afcjk.c
+	"aftypes.h"
+	"aflatin.h"
+	"afcjk.h"
+	"aferrors.h"
+	"afwarp.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afindic.c
+	"aftypes.h"
+	"aflatin.h"
+	"afindic.h"
+	"aferrors.h"
+	"afcjk.h"
+	"afwarp.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afloader.c
+	"afloader.h"
+	"afhints.h"
+	"afglobal.h"
+	"aflatin.h"
+	"aferrors.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afloader.h
+	"afhints.h"
+	"afglobal.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afmodule.c
+	"afmodule.h"
+	"afloader.h"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afmodule.h
+	<ft2build.h>
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/autofit/afwarp.c
+	"afwarp.h"
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftbase.c
+	<ft2build.h>
+	"ftadvanc.c"
+	"ftcalc.c"
+	"ftdbgmem.c"
+	"ftgloadr.c"
+	"ftnames.c"
+	"ftobjs.c"
+	"ftoutln.c"
+	"ftrfork.c"
+	"ftstream.c"
+	"fttrigon.c"
+	"ftutil.c"
+	"ftmac.c"
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftadvanc.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftcalc.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftdbgmem.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftgloadr.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftnames.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftobjs.c
+	<ft2build.h>
+	"ftbase.h"
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftbase.h
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftoutln.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftrfork.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftstream.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/fttrigon.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftutil.c
+	<ft2build.h>
+
+1358243568 /home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftmac.c
+	<ft2build.h>
+	"ftbase.h"
+	<CoreServices/CoreServices.h>
+	<ApplicationServices/ApplicationServices.h>
+	<sys/syslimits.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftbbox.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftbitmap.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftfstype.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftgasp.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftglyph.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftinit.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftmm.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftpfr.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftstroke.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftsynth.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftsystem.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/fttype1.c
+	<ft2build.h>
+
+1358243568 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/base/ftwinfnt.c
+	<ft2build.h>
+
+1358243558 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/bdf/bdf.c
+	<ft2build.h>
+	"bdflib.c"
+	"bdfdrivr.c"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/bdf/bdflib.c
+	<ft2build.h>
+	"bdf.h"
+	"bdferror.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/bdf/bdf.h
+	<ft2build.h>
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/bdf/bdferror.h
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/bdf/bdfdrivr.c
+	<ft2build.h>
+	"bdf.h"
+	"bdfdrivr.h"
+	"bdferror.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/bdf/bdfdrivr.h
+	<ft2build.h>
+	"bdf.h"
+
+1358243565 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcache.c
+	<ft2build.h>
+	"ftcmru.c"
+	"ftcmanag.c"
+	"ftccache.c"
+	"ftccmap.c"
+	"ftcglyph.c"
+	"ftcimage.c"
+	"ftcsbits.c"
+	"ftcbasic.c"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcmru.c
+	<ft2build.h>
+	"ftcmru.h"
+	"ftcerror.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcmru.h
+	<ft2build.h>
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcerror.h
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcmanag.c
+	<ft2build.h>
+	"ftcmanag.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcmanag.h
+	<ft2build.h>
+	"ftcmru.h"
+	"ftccache.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftccache.h
+	"ftcmru.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftccback.h
+	<ft2build.h>
+	"ftcmru.h"
+	"ftcimage.h"
+	"ftcmanag.h"
+	"ftcglyph.h"
+	"ftcsbits.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcimage.h
+	<ft2build.h>
+	"ftcglyph.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcglyph.h
+	<ft2build.h>
+	"ftcmanag.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcsbits.h
+	<ft2build.h>
+	"ftcglyph.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftccache.c
+	<ft2build.h>
+	"ftcmanag.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftccmap.c
+	<ft2build.h>
+	"ftcmanag.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcglyph.c
+	<ft2build.h>
+	"ftcglyph.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcimage.c
+	<ft2build.h>
+	"ftcimage.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcsbits.c
+	<ft2build.h>
+	"ftcsbits.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1358243565 /home/Dev/agnostic/libs/freetype-2.3.9/src/cache/ftcbasic.c
+	<ft2build.h>
+	"ftcglyph.h"
+	"ftcimage.h"
+	"ftcsbits.h"
+	"ftccback.h"
+	"ftcerror.h"
+
+1358243559 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cff.c
+	<ft2build.h>
+	"cffdrivr.c"
+	"cffparse.c"
+	"cffload.c"
+	"cffobjs.c"
+	"cffgload.c"
+	"cffcmap.c"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffdrivr.c
+	<ft2build.h>
+	"cffdrivr.h"
+	"cffgload.h"
+	"cffload.h"
+	"cffcmap.h"
+	"cfferrs.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffdrivr.h
+	<ft2build.h>
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffgload.h
+	<ft2build.h>
+	"cffobjs.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffobjs.h
+	<ft2build.h>
+	"cfftypes.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cfftypes.h
+	<ft2build.h>
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffload.h
+	<ft2build.h>
+	"cfftypes.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffcmap.h
+	"cffobjs.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cfferrs.h
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffparse.c
+	<ft2build.h>
+	"cffparse.h"
+	"cfferrs.h"
+	"cfftoken.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffparse.h
+	<ft2build.h>
+	"cfftypes.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cfftoken.h
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffload.c
+	<ft2build.h>
+	"cffload.h"
+	"cffparse.h"
+	"cfferrs.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffobjs.c
+	<ft2build.h>
+	"cffobjs.h"
+	"cffload.h"
+	"cffcmap.h"
+	"cfferrs.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffgload.c
+	<ft2build.h>
+	"cffobjs.h"
+	"cffload.h"
+	"cffgload.h"
+	"cfferrs.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/cff/cffcmap.c
+	"cffcmap.h"
+	"cffload.h"
+	"cfferrs.h"
+
+1358243560 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/cid/type1cid.c
+	<ft2build.h>
+	"cidparse.c"
+	"cidload.c"
+	"cidobjs.c"
+	"cidriver.c"
+	"cidgload.c"
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidparse.c
+	<ft2build.h>
+	"cidparse.h"
+	"ciderrs.h"
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidparse.h
+	<ft2build.h>
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/ciderrs.h
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidload.c
+	<ft2build.h>
+	"cidload.h"
+	"ciderrs.h"
+	"cidtoken.h"
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidload.h
+	<ft2build.h>
+	"cidparse.h"
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidtoken.h
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidobjs.c
+	<ft2build.h>
+	"cidgload.h"
+	"cidload.h"
+	"ciderrs.h"
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidgload.h
+	<ft2build.h>
+	"cidobjs.h"
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidobjs.h
+	<ft2build.h>
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidriver.c
+	<ft2build.h>
+	"cidriver.h"
+	"cidgload.h"
+	"ciderrs.h"
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidriver.h
+	<ft2build.h>
+
+1358243560 /home/Dev/agnostic/libs/freetype-2.3.9/src/cid/cidgload.c
+	<ft2build.h>
+	"cidload.h"
+	"cidgload.h"
+	"ciderrs.h"
+
+1358243567 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/ftgzip.c
+	<ft2build.h>
+	<zlib.h>
+	"zlib.h"
+	"zutil.h"
+	"inftrees.h"
+	"infblock.h"
+	"infcodes.h"
+	"infutil.h"
+	"zutil.c"
+	"inftrees.c"
+	"infutil.c"
+	"infcodes.c"
+	"infblock.c"
+	"inflate.c"
+	"adler32.c"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/zlib.h
+	"zconf.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/zconf.h
+	<windows.h>
+	<windows.h>
+	<sys/types.h>
+	<unistd.h>
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/zutil.h
+	"zlib.h"
+	<stddef.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<alloc.h>
+	<unix.h>
+	<stdio.h>
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/inftrees.h
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/infblock.h
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/infcodes.h
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/infutil.h
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/zutil.c
+	"zutil.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/inftrees.c
+	"zutil.h"
+	"inftrees.h"
+	"inffixed.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/inffixed.h
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/infutil.c
+	"zutil.h"
+	"infblock.h"
+	"inftrees.h"
+	"infcodes.h"
+	"infutil.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/infcodes.c
+	"zutil.h"
+	"inftrees.h"
+	"infblock.h"
+	"infcodes.h"
+	"infutil.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/infblock.c
+	"zutil.h"
+	"infblock.h"
+	"inftrees.h"
+	"infcodes.h"
+	"infutil.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/inflate.c
+	"zutil.h"
+	"infblock.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/gzip/adler32.c
+	"zlib.h"
+
+1358243570 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/lzw/ftlzw.c
+	<ft2build.h>
+	"ftzopen.h"
+	"ftzopen.c"
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/lzw/ftzopen.h
+	<ft2build.h>
+
+1358243570 /home/Dev/agnostic/libs/freetype-2.3.9/src/lzw/ftzopen.c
+	"ftzopen.h"
+
+1358243566 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcf.c
+	<ft2build.h>
+	"pcfutil.c"
+	"pcfread.c"
+	"pcfdrivr.c"
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcfutil.c
+	<ft2build.h>
+	"pcfutil.h"
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcfutil.h
+	<ft2build.h>
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcfread.c
+	<ft2build.h>
+	"pcf.h"
+	"pcfdrivr.h"
+	"pcfread.h"
+	"pcferror.h"
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcf.h
+	<ft2build.h>
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcfdrivr.h
+	<ft2build.h>
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcfread.h
+	<ft2build.h>
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcferror.h
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/pcf/pcfdrivr.c
+	<ft2build.h>
+	"pcf.h"
+	"pcfdrivr.h"
+	"pcfread.h"
+	"pcferror.h"
+	"pcfutil.h"
+
+1358243558 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfr.c
+	<ft2build.h>
+	"pfrload.c"
+	"pfrgload.c"
+	"pfrcmap.c"
+	"pfrobjs.c"
+	"pfrdrivr.c"
+	"pfrsbit.c"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrload.c
+	"pfrload.h"
+	"pfrerror.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrload.h
+	"pfrobjs.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrobjs.h
+	"pfrtypes.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrtypes.h
+	<ft2build.h>
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrerror.h
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrgload.c
+	"pfrgload.h"
+	"pfrsbit.h"
+	"pfrload.h"
+	"pfrerror.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrgload.h
+	"pfrtypes.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrsbit.h
+	"pfrobjs.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrcmap.c
+	"pfrcmap.h"
+	"pfrobjs.h"
+	"pfrerror.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrcmap.h
+	<ft2build.h>
+	"pfrtypes.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrobjs.c
+	"pfrobjs.h"
+	"pfrload.h"
+	"pfrgload.h"
+	"pfrcmap.h"
+	"pfrsbit.h"
+	"pfrerror.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrdrivr.c
+	<ft2build.h>
+	"pfrdrivr.h"
+	"pfrobjs.h"
+	"pfrerror.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrdrivr.h
+	<ft2build.h>
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/pfr/pfrsbit.c
+	"pfrsbit.h"
+	"pfrload.h"
+	"pfrerror.h"
+
+1358243562 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/psaux.c
+	<ft2build.h>
+	"psobjs.c"
+	"psauxmod.c"
+	"t1decode.c"
+	"t1cmap.c"
+	"afmparse.c"
+	"psconv.c"
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/psobjs.c
+	<ft2build.h>
+	"psobjs.h"
+	"psconv.h"
+	"psauxerr.h"
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/psobjs.h
+	<ft2build.h>
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/psconv.h
+	<ft2build.h>
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/psauxerr.h
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/psauxmod.c
+	<ft2build.h>
+	"psauxmod.h"
+	"psobjs.h"
+	"t1decode.h"
+	"t1cmap.h"
+	"afmparse.h"
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/psauxmod.h
+	<ft2build.h>
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/t1decode.h
+	<ft2build.h>
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/t1cmap.h
+	<ft2build.h>
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/afmparse.h
+	<ft2build.h>
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/t1decode.c
+	<ft2build.h>
+	"t1decode.h"
+	"psobjs.h"
+	"psauxerr.h"
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/t1cmap.c
+	"t1cmap.h"
+	"psauxerr.h"
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/afmparse.c
+	<ft2build.h>
+	"afmparse.h"
+	"psconv.h"
+	"psauxerr.h"
+
+1358243562 /home/Dev/agnostic/libs/freetype-2.3.9/src/psaux/psconv.c
+	<ft2build.h>
+	"psconv.h"
+	"psobjs.h"
+	"psauxerr.h"
+
+1358243559 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshinter.c
+	<ft2build.h>
+	"pshrec.c"
+	"pshglob.c"
+	"pshalgo.c"
+	"pshmod.c"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshrec.c
+	<ft2build.h>
+	"pshrec.h"
+	"pshalgo.h"
+	"pshnterr.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshrec.h
+	<ft2build.h>
+	"pshglob.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshglob.h
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshalgo.h
+	"pshrec.h"
+	"pshglob.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshnterr.h
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshglob.c
+	<ft2build.h>
+	"pshglob.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshalgo.c
+	<ft2build.h>
+	"pshalgo.h"
+	"pshnterr.h"
+
+1358243559 /home/Dev/agnostic/libs/freetype-2.3.9/src/pshinter/pshmod.c
+	<ft2build.h>
+	"pshrec.h"
+	"pshalgo.h"
+
+1358243566 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/psnames/psmodule.c
+	<ft2build.h>
+	"psmodule.h"
+	"pstables.h"
+	"psnamerr.h"
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/psnames/psmodule.h
+	<ft2build.h>
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/psnames/pstables.h
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/psnames/psnamerr.h
+
+1358243561 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/raster/raster.c
+	<ft2build.h>
+	"ftraster.c"
+	"ftrend1.c"
+
+1358243561 /home/Dev/agnostic/libs/freetype-2.3.9/src/raster/ftraster.c
+	"ftmisc.h"
+	"ftimage.h"
+	<ft2build.h>
+	"ftraster.h"
+	"rasterrs.h"
+
+1358243561 /home/Dev/agnostic/libs/freetype-2.3.9/src/raster/ftmisc.h
+	<inttypes.h>
+
+1358243561 /home/Dev/agnostic/libs/freetype-2.3.9/src/raster/ftraster.h
+	<ft2build.h>
+
+1358243561 /home/Dev/agnostic/libs/freetype-2.3.9/src/raster/rasterrs.h
+
+1358243561 /home/Dev/agnostic/libs/freetype-2.3.9/src/raster/ftrend1.c
+	<ft2build.h>
+	"ftrend1.h"
+	"ftraster.h"
+	"rasterrs.h"
+
+1358243561 /home/Dev/agnostic/libs/freetype-2.3.9/src/raster/ftrend1.h
+	<ft2build.h>
+
+1358243569 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/sfnt.c
+	<ft2build.h>
+	"ttload.c"
+	"ttmtx.c"
+	"ttcmap.c"
+	"ttkern.c"
+	"sfobjs.c"
+	"sfdriver.c"
+	"ttsbit.c"
+	"ttpost.c"
+	"ttbdf.c"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttload.c
+	<ft2build.h>
+	"ttload.h"
+	"sferrors.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttload.h
+	<ft2build.h>
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/sferrors.h
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttmtx.c
+	<ft2build.h>
+	"ttmtx.h"
+	"sferrors.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttmtx.h
+	<ft2build.h>
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttcmap.c
+	<ft2build.h>
+	"sferrors.h"
+	"ttload.h"
+	"ttcmap.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttcmap.h
+	<ft2build.h>
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttkern.c
+	<ft2build.h>
+	"ttkern.h"
+	"ttload.h"
+	"sferrors.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttkern.h
+	<ft2build.h>
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/sfobjs.c
+	<ft2build.h>
+	"sfobjs.h"
+	"ttload.h"
+	"ttcmap.h"
+	"ttkern.h"
+	"sferrors.h"
+	"ttbdf.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/sfobjs.h
+	<ft2build.h>
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttbdf.h
+	<ft2build.h>
+	"ttload.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/sfdriver.c
+	<ft2build.h>
+	"sfdriver.h"
+	"ttload.h"
+	"sfobjs.h"
+	"sferrors.h"
+	"ttsbit.h"
+	"ttpost.h"
+	"ttbdf.h"
+	"ttcmap.h"
+	"ttkern.h"
+	"ttmtx.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/sfdriver.h
+	<ft2build.h>
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttsbit.h
+	<ft2build.h>
+	"ttload.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttpost.h
+	<ft2build.h>
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttsbit.c
+	<ft2build.h>
+	"ttsbit0.c"
+	<ft2build.h>
+	"ttsbit.h"
+	"sferrors.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttsbit0.c
+	<ft2build.h>
+	"ttsbit.h"
+	"sferrors.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttpost.c
+	<ft2build.h>
+	"ttpost.h"
+	"ttload.h"
+	"sferrors.h"
+
+1358243569 /home/Dev/agnostic/libs/freetype-2.3.9/src/sfnt/ttbdf.c
+	<ft2build.h>
+	"ttbdf.h"
+	"sferrors.h"
+
+1358243567 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/smooth/smooth.c
+	<ft2build.h>
+	"ftgrays.c"
+	"ftsmooth.c"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/smooth/ftgrays.c
+	<stdio.h>
+	<stdarg.h>
+	<string.h>
+	<setjmp.h>
+	<limits.h>
+	"ftimage.h"
+	"ftgrays.h"
+	<ft2build.h>
+	"ftgrays.h"
+	"ftsmerrs.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/smooth/ftgrays.h
+	"ftimage.h"
+	<ft2build.h>
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/smooth/ftsmerrs.h
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/smooth/ftsmooth.c
+	<ft2build.h>
+	"ftsmooth.h"
+	"ftgrays.h"
+	"ftsmerrs.h"
+
+1358243567 /home/Dev/agnostic/libs/freetype-2.3.9/src/smooth/ftsmooth.h
+	<ft2build.h>
+
+1358243558 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/truetype.c
+	<ft2build.h>
+	"ttdriver.c"
+	"ttpload.c"
+	"ttgload.c"
+	"ttobjs.c"
+	"ttinterp.c"
+	"ttgxvar.c"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttdriver.c
+	<ft2build.h>
+	"ttdriver.h"
+	"ttgload.h"
+	"ttpload.h"
+	"ttgxvar.h"
+	"tterrors.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttdriver.h
+	<ft2build.h>
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttgload.h
+	<ft2build.h>
+	"ttobjs.h"
+	"ttinterp.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttobjs.h
+	<ft2build.h>
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttinterp.h
+	<ft2build.h>
+	"ttobjs.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttpload.h
+	<ft2build.h>
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttgxvar.h
+	<ft2build.h>
+	"ttobjs.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/tterrors.h
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttpload.c
+	<ft2build.h>
+	"ttpload.h"
+	"ttgxvar.h"
+	"tterrors.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttgload.c
+	<ft2build.h>
+	"ttgload.h"
+	"ttpload.h"
+	"ttgxvar.h"
+	"tterrors.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttobjs.c
+	<ft2build.h>
+	"ttgload.h"
+	"ttpload.h"
+	"tterrors.h"
+	"ttinterp.h"
+	"ttgxvar.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttinterp.c
+	<ft2build.h>
+	"ttinterp.h"
+	"tterrors.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/truetype/ttgxvar.c
+	<ft2build.h>
+	"ttdriver.h"
+	"ttpload.h"
+	"ttgxvar.h"
+	"tterrors.h"
+
+1358243563 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/type1/type1.c
+	<ft2build.h>
+	"t1parse.c"
+	"t1load.c"
+	"t1objs.c"
+	"t1driver.c"
+	"t1gload.c"
+	"t1afm.c"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1parse.c
+	<ft2build.h>
+	"t1parse.h"
+	"t1errors.h"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1parse.h
+	<ft2build.h>
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1errors.h
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1load.c
+	<ft2build.h>
+	"t1load.h"
+	"t1errors.h"
+	"t1tokens.h"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1load.h
+	<ft2build.h>
+	"t1parse.h"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1tokens.h
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1objs.c
+	<ft2build.h>
+	"t1gload.h"
+	"t1load.h"
+	"t1errors.h"
+	"t1afm.h"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1gload.h
+	<ft2build.h>
+	"t1objs.h"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1objs.h
+	<ft2build.h>
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1afm.h
+	<ft2build.h>
+	"t1objs.h"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1driver.c
+	<ft2build.h>
+	"t1driver.h"
+	"t1gload.h"
+	"t1load.h"
+	"t1errors.h"
+	"t1afm.h"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1driver.h
+	<ft2build.h>
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1gload.c
+	<ft2build.h>
+	"t1gload.h"
+	"t1errors.h"
+
+1358243563 /home/Dev/agnostic/libs/freetype-2.3.9/src/type1/t1afm.c
+	<ft2build.h>
+	"t1afm.h"
+	"t1errors.h"
+
+1358243558 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/type42/type42.c
+	<ft2build.h>
+	"t42objs.c"
+	"t42parse.c"
+	"t42drivr.c"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/type42/t42objs.c
+	"t42objs.h"
+	"t42parse.h"
+	"t42error.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/type42/t42objs.h
+	<ft2build.h>
+	"t42types.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/type42/t42types.h
+	<ft2build.h>
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/type42/t42parse.h
+	"t42objs.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/type42/t42error.h
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/type42/t42parse.c
+	"t42parse.h"
+	"t42error.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/type42/t42drivr.c
+	"t42drivr.h"
+	"t42objs.h"
+	"t42error.h"
+
+1358243558 /home/Dev/agnostic/libs/freetype-2.3.9/src/type42/t42drivr.h
+	<ft2build.h>
+
+1358243566 source:/home/Dev/agnostic/libs/freetype-2.3.9/src/winfonts/winfnt.c
+	<ft2build.h>
+	"winfnt.h"
+	"fnterrs.h"
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/winfonts/winfnt.h
+	<ft2build.h>
+
+1358243566 /home/Dev/agnostic/libs/freetype-2.3.9/src/winfonts/fnterrs.h
+
