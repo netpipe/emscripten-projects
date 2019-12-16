@@ -1,0 +1,26 @@
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: /mnt/usb-Seagate_Expansion_NA82CB2L-0:0-part1/Dev/libs/GUI/guichan-git/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c2e74/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c2e74.dir/build.make CMakeFiles/cmTC_c2e74.dir/build
+make[1]: Entering directory '/mnt/usb-Seagate_Expansion_NA82CB2L-0:0-part1/Dev/libs/GUI/guichan-git/CMakeFiles/CMakeTmp'
+CMakeFiles/cmTC_c2e74.dir/build.make:64: *** target pattern contains no '%'.  Stop.
+make[1]: Leaving directory '/mnt/usb-Seagate_Expansion_NA82CB2L-0:0-part1/Dev/libs/GUI/guichan-git/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c2e74/fast' failed
+make: *** [cmTC_c2e74/fast] Error 2
+
+
+
+Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
+Change Dir: /mnt/usb-Seagate_Expansion_NA82CB2L-0:0-part1/Dev/libs/GUI/guichan-git/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_022b7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_022b7.dir/build.make CMakeFiles/cmTC_022b7.dir/build
+make[1]: Entering directory '/mnt/usb-Seagate_Expansion_NA82CB2L-0:0-part1/Dev/libs/GUI/guichan-git/CMakeFiles/CMakeTmp'
+CMakeFiles/cmTC_022b7.dir/build.make:64: *** target pattern contains no '%'.  Stop.
+make[1]: Leaving directory '/mnt/usb-Seagate_Expansion_NA82CB2L-0:0-part1/Dev/libs/GUI/guichan-git/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_022b7/fast' failed
+make: *** [cmTC_022b7/fast] Error 2
+
+
+
