@@ -1,0 +1,1 @@
+./img2webp -loop 1 img.jpg -mixed -d 80 -o out.webp
