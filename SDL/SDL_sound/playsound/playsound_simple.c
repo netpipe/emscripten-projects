@@ -15,8 +15,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "SDL.h"
-#include "SDL_sound.h"
+#include <SDL2/SDL.h>
+#include <SDL_sound.h>
 
 /* global decoding state. */
 typedef struct

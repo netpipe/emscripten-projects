@@ -50,7 +50,7 @@
 #ifndef _INCLUDE_SDL_SOUND_H_
 #define _INCLUDE_SDL_SOUND_H_
 
-#include <SDL2/SDL.h>
+#include "SDL.h"
 
 #if SDL_MAJOR_VERSION < 2
 #error SDL2_sound requires SDL 2.0.0 or later.

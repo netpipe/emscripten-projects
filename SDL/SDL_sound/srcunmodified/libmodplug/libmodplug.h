@@ -9,7 +9,7 @@
 #ifndef _INCL_LIBMODPLUG_H_
 #define _INCL_LIBMODPLUG_H_
 
-#include <SDL2/SDL.h>
+#include "SDL.h"
 
 #if (defined(__GNUC__) && (__GNUC__ >= 4)) || defined(__clang__)
 #pragma GCC visibility push(hidden)

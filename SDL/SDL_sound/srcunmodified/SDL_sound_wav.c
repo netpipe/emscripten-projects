@@ -19,7 +19,7 @@
 #if SOUND_SUPPORTS_WAV
 
 /* Better than SDL_ReadLE16, since you can detect i/o errors... */
-static  int read_le16(SDL_RWops *rw, Uint16 *ui16)
+static SDL_INLINE int read_le16(SDL_RWops *rw, Uint16 *ui16)
 {
     int rc = SDL_RWread(rw, ui16, sizeof (Uint16), 1);
     BAIL_IF_MACRO(rc != 1, ERR_IO_ERROR, 0);
@@ -29,7 +29,7 @@ static  int read_le16(SDL_RWops *rw, Uint16 *ui16)
 
 
 /* Better than SDL_ReadLE32, since you can detect i/o errors... */
-static  int read_le32(SDL_RWops *rw, Uint32 *ui32)
+static SDL_INLINE int read_le32(SDL_RWops *rw, Uint32 *ui32)
 {
     int rc = SDL_RWread(rw, ui32, sizeof (Uint32), 1);
     BAIL_IF_MACRO(rc != 1, ERR_IO_ERROR, 0);
@@ -37,19 +37,19 @@ static  int read_le32(SDL_RWops *rw, Uint32 *ui32)
     return 1;
 } /* read_le32 */
 
-static  int read_le16s(SDL_RWops *rw, Sint16 *si16)
+static SDL_INLINE int read_le16s(SDL_RWops *rw, Sint16 *si16)
 {
     return read_le16(rw, (Uint16 *) si16);
 } /* read_le16s */
 
-static  int read_le32s(SDL_RWops *rw, Sint32 *si32)
+static SDL_INLINE int read_le32s(SDL_RWops *rw, Sint32 *si32)
 {
     return read_le32(rw, (Uint32 *) si32);
 } /* read_le32s */
 
 
 /* This is just cleaner on the caller's end... */
-static  int read_uint8(SDL_RWops *rw, Uint8 *ui8)
+static SDL_INLINE int read_uint8(SDL_RWops *rw, Uint8 *ui8)
 {
     int rc = SDL_RWread(rw, ui8, sizeof (Uint8), 1);
     BAIL_IF_MACRO(rc != 1, ERR_IO_ERROR, 0);
@@ -99,7 +99,7 @@ typedef struct S_WAV_FMT_T
     Uint16 wBitsPerSample;
 
     Uint32 next_chunk_offset;
-
+    
     Uint32 sample_frame_size;
     Uint32 data_starting_offset;
     Uint32 total_bytes;
@@ -131,7 +131,7 @@ typedef struct S_WAV_FMT_T
 /*
  * Read in a fmt_t from disk. This makes this process safe regardless of
  *  the processor's byte order or how the fmt_t structure is packed.
- * Note that the union "fmt" is not read in here; that is handled as
+ * Note that the union "fmt" is not read in here; that is handled as 
  *  needed in the read_fmt_* functions.
  */
 static int read_fmt_chunk(SDL_RWops *rw, fmt_t *fmt)
@@ -142,7 +142,7 @@ static int read_fmt_chunk(SDL_RWops *rw, fmt_t *fmt)
     BAIL_IF_MACRO(!read_le32s(rw, &fmt->chunkSize), NULL, 0);
     BAIL_IF_MACRO(fmt->chunkSize < 16, "WAV: Invalid chunk size", 0);
     fmt->next_chunk_offset = SDL_RWtell(rw) + fmt->chunkSize;
-
+    
     BAIL_IF_MACRO(!read_le16s(rw, &fmt->wFormatTag), NULL, 0);
     BAIL_IF_MACRO(!read_le16(rw, &fmt->wChannels), NULL, 0);
     BAIL_IF_MACRO(!read_le32(rw, &fmt->dwSamplesPerSec), NULL, 0);
@@ -279,7 +279,7 @@ static int read_fmt_normal(SDL_RWops *rw, fmt_t *fmt)
 #define SMALLEST_ADPCM_DELTA       16
 
 
-static  int read_adpcm_block_headers(Sound_Sample *sample)
+static SDL_INLINE int read_adpcm_block_headers(Sound_Sample *sample)
 {
     Sound_SampleInternal *internal = (Sound_SampleInternal *) sample->opaque;
     SDL_RWops *rw = internal->rw;
@@ -315,7 +315,7 @@ static  int read_adpcm_block_headers(Sound_Sample *sample)
 } /* read_adpcm_block_headers */
 
 
-static  void do_adpcm_nibble(Uint8 nib,
+static SDL_INLINE void do_adpcm_nibble(Uint8 nib,
                                        ADPCMBLOCKHEADER *header,
                                        Sint32 lPredSamp)
 {
@@ -353,7 +353,7 @@ static  void do_adpcm_nibble(Uint8 nib,
 } /* do_adpcm_nibble */
 
 
-static  int decode_adpcm_sample_frame(Sound_Sample *sample)
+static SDL_INLINE int decode_adpcm_sample_frame(Sound_Sample *sample)
 {
     Sound_SampleInternal *internal = (Sound_SampleInternal *) sample->opaque;
     wav_t *w = (wav_t *) internal->decoder_private;
@@ -371,7 +371,7 @@ static  int decode_adpcm_sample_frame(Sound_Sample *sample)
         Sint16 iCoef1 = fmt->fmt.adpcm.aCoef[headers[i].bPredictor].iCoef1;
         Sint16 iCoef2 = fmt->fmt.adpcm.aCoef[headers[i].bPredictor].iCoef2;
         Sint32 lPredSamp = ((headers[i].iSamp1 * iCoef1) +
-                            (headers[i].iSamp2 * iCoef2)) /
+                            (headers[i].iSamp2 * iCoef2)) / 
                              FIXED_POINT_COEF_BASE;
 
         if (fmt->fmt.adpcm.nibble_state == 0)
@@ -392,7 +392,7 @@ static  int decode_adpcm_sample_frame(Sound_Sample *sample)
 } /* decode_adpcm_sample_frame */
 
 
-static  void put_adpcm_sample_frame1(void *_buf, fmt_t *fmt)
+static SDL_INLINE void put_adpcm_sample_frame1(void *_buf, fmt_t *fmt)
 {
     Uint16 *buf = (Uint16 *) _buf;
     ADPCMBLOCKHEADER *headers = fmt->fmt.adpcm.blockheaders;
@@ -402,7 +402,7 @@ static  void put_adpcm_sample_frame1(void *_buf, fmt_t *fmt)
 } /* put_adpcm_sample_frame1 */
 
 
-static  void put_adpcm_sample_frame2(void *_buf, fmt_t *fmt)
+static SDL_INLINE void put_adpcm_sample_frame2(void *_buf, fmt_t *fmt)
 {
     Uint16 *buf = (Uint16 *) _buf;
     ADPCMBLOCKHEADER *headers = fmt->fmt.adpcm.blockheaders;
@@ -532,7 +532,7 @@ static int seek_sample_fmt_adpcm(Sound_Sample *sample, Uint32 ms)
 
 /*
  * Read in the adpcm-specific info from disk. This makes this process
- *  safe regardless of the processor's byte order or how the fmt_t
+ *  safe regardless of the processor's byte order or how the fmt_t 
  *  structure is packed.
  */
 static int read_fmt_adpcm(SDL_RWops *rw, fmt_t *fmt)

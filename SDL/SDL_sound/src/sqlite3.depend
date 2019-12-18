@@ -1,0 +1,212 @@
+# depslib dependency file v1.0
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/fastmix.c
+	"libmodplug.h"
+	<math.h>
+
+1576634136 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/libmodplug.h
+	<SDL2/SDL.h>
+	<windows.h>
+	<windowsx.h>
+	<mmsystem.h>
+	<stdio.h>
+	<malloc.h>
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_669.c
+	"libmodplug.h"
+
+1576634025 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_abc.c
+	<limits.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<math.h>
+	<ctype.h>
+	"libmodplug.h"
+	"load_pat.h"
+
+1576559918 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_pat.h
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_amf.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_ams.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_dbm.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_dmf.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_dsm.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_far.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_it.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_mdl.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_med.c
+	"libmodplug.h"
+
+1576634029 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_mid.c
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<math.h>
+	<ctype.h>
+	"libmodplug.h"
+	"load_pat.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_mod.c
+	"libmodplug.h"
+	"tables.h"
+
+1576559918 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/tables.h
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_mt2.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_mtm.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_okt.c
+	"libmodplug.h"
+
+1576634032 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_pat.c
+	"libmodplug.h"
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<math.h>
+	<ctype.h>
+	<limits.h>
+	"load_pat.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_psm.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_ptm.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_s3m.c
+	"libmodplug.h"
+	"tables.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_stm.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_ult.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_umx.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/load_xm.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/mmcmp.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/modplug.c
+	"modplug.h"
+	"libmodplug.h"
+
+1576559918 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/modplug.h
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/snd_dsp.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/snd_flt.c
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/snd_fx.c
+	"libmodplug.h"
+	<stdlib.h>
+	"tables.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/sndfile.c
+	<math.h>
+	"modplug.h"
+	"libmodplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/libmodplug/sndmix.c
+	"libmodplug.h"
+	"tables.h"
+
+1576633793 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound.c
+	"SDL_sound_internal.h"
+
+1576559918 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_internal.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"SDL_sound.h"
+
+1576634071 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound.h
+	<SDL2/SDL.h>
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_aiff.c
+	"SDL_sound_internal.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_au.c
+	"SDL_sound_internal.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_coreaudio.c
+	"SDL_sound_internal.h"
+	<stddef.h>
+	<arpa/inet.h>
+	<AudioToolbox/AudioToolbox.h>
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_flac.c
+	"SDL_sound_internal.h"
+	"dr_flac.h"
+
+1576559918 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/dr_flac.h
+	<stddef.h>
+	<stdint.h>
+	<stdlib.h>
+	<string.h>
+	<intrin.h>
+	<endian.h>
+	<assert.h>
+	<stdio.h>
+	<windows.h>
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_modplug.c
+	"SDL_sound_internal.h"
+	"libmodplug/modplug.h"
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_mp3.c
+	"SDL_sound_internal.h"
+	"dr_mp3.h"
+
+1576559918 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/dr_mp3.h
+	<stddef.h>
+	<stdint.h>
+	<stdlib.h>
+	<string.h>
+	<stdint.h>
+	<limits.h>
+	<intrin.h>
+	<immintrin.h>
+	<arm_neon.h>
+	<assert.h>
+	<stdio.h>
+
+1576559918 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_raw.c
+	"SDL_sound_internal.h"
+
+1576633793 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/SDL/SDL_sound/src/SDL_sound_shn.c
+	"SDL_sound_internal.h"
+

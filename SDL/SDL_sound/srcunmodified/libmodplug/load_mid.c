@@ -35,7 +35,7 @@
 #define PAN_RIGHT   0xD0
 #define MAX_POLYPHONY 16  // max notes in one midi channel
 #define MAX_TRACKS    (MAX_BASECHANNELS-6)  // max mod tracks
-#define WHEELSHIFT    10  // how many bits the 13bit midi wheel value must shift right
+#define WHEELSHIFT    10  // how many bits the 13bit midi wheel value must shift right 
 
 #include "load_pat.h"
 
@@ -108,7 +108,7 @@ static void mid_message(const char *s1, const char *s2)
 	char txt[256];
 	if( SDL_strlen(s1) + SDL_strlen(s2) > 255 ) return;
 	SDL_snprintf(txt, sizeof (txt), s1, s2);
-///	SDL_LogInfo(SDL_LOG_CATEGORY_AUDIO, "load_mid > %s\n", txt);
+	SDL_LogInfo(SDL_LOG_CATEGORY_AUDIO, "load_mid > %s\n", txt);
 }
 
 static ULONG miditicks(MIDHANDLE *h, ULONG modtick)
@@ -700,7 +700,7 @@ static void MID_Cleanup(MIDHANDLE *handle)
 
 static int mid_is_global_event(MIDEVENT *e)
 {
-	return (e->fx == tmpo || e->fx == fxbrk);
+	return (e->fx == tmpo || e->fx == fxbrk); 
 }
 
 static MIDEVENT *mid_next_global(MIDEVENT *e)
@@ -846,7 +846,7 @@ static int MID_ReadPatterns(MODCOMMAND *pattern[], WORD psize[], MIDHANDLE *h, i
 						m->volcmd = VOLCMD_VOLUME;
 						m->vol    = vol;
 					}
-					else {
+					else { 
 						// two notes in one row, use FINEPITCHSLIDE runonce effect
 						// start first note on first tick and framedly runonce on seconds note tick
 						// use volume and instrument of last note
@@ -1203,7 +1203,7 @@ BOOL CSoundFile_ReadMID(CSoundFile *_this, const BYTE *lpStream, DWORD dwMemLeng
 							break;
 						case 0x0b: // expression
 							break;
-						case 0x7b:
+						case 0x7b: 
 							if( midibyte[1] == 0x00 ) // all notes off
 								mid_all_notes_off(h, ch);
 							break;
@@ -1320,7 +1320,7 @@ BOOL CSoundFile_ReadMID(CSoundFile *_this, const BYTE *lpStream, DWORD dwMemLeng
 		}
 	}
 	if( metalen & 0x03ff ) {
-		if( (metalen & 0x0f00) == 0x0400 )
+		if( (metalen & 0x0f00) == 0x0400 ) 
 			h->percussion = 10; // buggy sng2mid uses channel 10
 		else
 			h->percussion = 9;

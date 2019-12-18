@@ -145,11 +145,11 @@ static BYTE pat_loops[MAXSMP];
 /**************************************************************************
 **************************************************************************/
 
-static  int IsAlpha(const char c) {
+static SDL_INLINE int IsAlpha(const char c) {
     return ( ((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')) );
 }
 
-static  int IsBlank(const char c) {
+static SDL_INLINE int IsBlank(const char c) {
     return ( (c == ' ') || (c == '\t') );
 }
 
@@ -168,7 +168,7 @@ static void pat_message(const char *s1, const char *s2)
 	char txt[256];
 	if( SDL_strlen(s1) + SDL_strlen(s2) > 255 ) return;
 	SDL_snprintf(txt, sizeof (txt), s1, s2);
-//	SDL_LogInfo(SDL_LOG_CATEGORY_AUDIO, "load_pat > %s\n", txt);
+	SDL_LogInfo(SDL_LOG_CATEGORY_AUDIO, "load_pat > %s\n", txt);
 }
 
 void pat_resetsmp(void)

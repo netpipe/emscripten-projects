@@ -346,7 +346,7 @@ static Sound_Sample *alloc_sample(SDL_RWops *rw, Sound_AudioInfo *desired,
 
 
 #if (defined DEBUG_CHATTER)
-static  const char *fmt_to_str(Uint16 fmt)
+static SDL_INLINE const char *fmt_to_str(Uint16 fmt)
 {
     switch(fmt)
     {

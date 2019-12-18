@@ -44,7 +44,7 @@ typedef struct vocstuff {
 } vs_t;
 
 
-/* Size field */
+/* Size field */ 
 /* SJB: note that the 1st 3 are sometimes used as sizeof(type) */
 #define ST_SIZE_BYTE     1
 #define ST_SIZE_8BIT     1
@@ -89,7 +89,7 @@ static void VOC_quit(void)
 } /* VOC_quit */
 
 
-static  int voc_readbytes(SDL_RWops *src, vs_t *v, void *p, int size)
+static SDL_INLINE int voc_readbytes(SDL_RWops *src, vs_t *v, void *p, int size)
 {
     if (SDL_RWread(src, p, size, 1) != 1)
     {
@@ -101,7 +101,7 @@ static  int voc_readbytes(SDL_RWops *src, vs_t *v, void *p, int size)
 } /* voc_readbytes */
 
 
-static  int voc_check_header(SDL_RWops *src)
+static SDL_INLINE int voc_check_header(SDL_RWops *src)
 {
     /* VOC magic header */
     Uint8  signature[20];  /* "Creative Voice File\032" */
@@ -157,7 +157,7 @@ static int voc_get_block(Sound_Sample *sample, vs_t *v)
 
         if (SDL_RWread(src, bits24, sizeof (bits24), 1) != 1)
             return 1;  /* assume that's the end of the file. */
-
+        
         /* Size is an 24-bit value. Ugh. */
         sblen = ( (bits24[0]) | (bits24[1] << 8) | (bits24[2] << 16) );
 
@@ -457,7 +457,7 @@ static Uint32 VOC_read(Sound_Sample *sample)
         Uint32 rc = voc_read_waveform(sample, 1, internal->buffer_size);
         if (rc == 0)
         {
-            sample->flags |= (v->error) ?
+            sample->flags |= (v->error) ? 
                                  SOUND_SAMPLEFLAG_ERROR :
                                  SOUND_SAMPLEFLAG_EOF;
             break;
@@ -465,7 +465,7 @@ static Uint32 VOC_read(Sound_Sample *sample)
 
         if (!voc_get_block(sample, v))
         {
-            sample->flags |= (v->error) ?
+            sample->flags |= (v->error) ? 
                                  SOUND_SAMPLEFLAG_ERROR :
                                  SOUND_SAMPLEFLAG_EOF;
             break;
