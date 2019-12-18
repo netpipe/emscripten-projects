@@ -159,7 +159,7 @@ int debug = 0;
 
 
 
-int main2(int argc, char **argv)
+int PlayFromArgs(int argc, char **argv)
 {
     int i;
     int phonetic = 0;
@@ -286,7 +286,7 @@ int main2(int argc, char **argv)
 
 
 
-int main3(){
+int PlayString(){
 	    int i;
     int phonetic = 0;
 
@@ -301,7 +301,7 @@ int main3(){
     for(i=0; i<256; i++) input[i] = 0;
 
 //strncat(input, "testing 1 2 3 4 5", 255);
-            strncat(input, "testing1234", 255);
+            strncat(input, "this is emscripten sound test using SDL_sound and sam the phonetic speech synthesizer", 255);
             strncat(input, " ", 255);
 
 
@@ -342,25 +342,35 @@ int main3(){
         WriteWav(wavfilename, GetBuffer(), GetBufferLength()/50);
     else
         OutputSound();
-	}
+}
+
+
 void main_loop(){
 //	char *argv1[]={"app","-debug","thistest12345"};//rectangular_BFS
 //	int argc1 = sizeof(argv1) / sizeof(char*) - 1;
-//
-//	main2(argc1, argv1);
-main3();
+
+
 }
+
 int main(int argc, char **argv)
 {
-	char *argv2={"Pong","testing"};//rectangular_BFS
-	argv1=argv2;
-	argc1 = argc ;//sizeof(argv1) / sizeof(char*) - 1;
+//	char *argv2={"Pong","testing"};//rectangular_BFS
+//	argv1=argv2;
+//	argc1 = argc ;//sizeof(argv1) / sizeof(char*) - 1;
+int count = 0;
+while(argv[++count] != NULL);
+
+if ( count>1 ) {
+	PlayFromArgs(argc, argv);
+	}else{
+	    PlayString();
+	    }
 
 	#ifdef __EMSCRIPTEN__
 	emscripten_set_main_loop(main_loop,0,1);
     #else
-    //    main2(argc, argv);
+       // main2(argc, argv);
       //  main2(argc1, argv1);
-      main3();
+    //  main3();
     #endif
 }
