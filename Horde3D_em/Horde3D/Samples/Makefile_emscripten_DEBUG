@@ -1,0 +1,65 @@
+CC = emcc
+
+all: ../Source/Horde3DEngine/egAnimatables.cpp \
+../Source/Horde3DEngine/egAnimation.cpp \
+../Source/Horde3DEngine/egCamera.cpp \
+../Source/Horde3DEngine/egCom.cpp \
+../Source/Horde3DEngine/egExtensions.cpp \
+../Source/Horde3DEngine/egGeometry.cpp \
+../Source/Horde3DEngine/egLight.cpp \
+../Source/Horde3DEngine/egMain.cpp \
+../Source/Horde3DEngine/egMaterial.cpp \
+../Source/Horde3DEngine/egModel.cpp \
+../Source/Horde3DEngine/egModules.cpp \
+../Source/Horde3DEngine/egParticle.cpp \
+../Source/Horde3DEngine/egPipeline.cpp  \
+../Source/Horde3DEngine/egPrimitives.cpp \
+../Source/Horde3DEngine/egRenderer.cpp \
+../Source/Horde3DEngine/egRendererBase.cpp \
+../Source/Horde3DEngine/egResource.cpp \
+../Source/Horde3DEngine/egScene.cpp \
+../Source/Horde3DEngine/egSceneGraphRes.cpp \
+../Source/Horde3DEngine/egShader.cpp \
+../Source/Horde3DEngine/egTexture.cpp \
+../Source/Horde3DEngine/utImage.cpp \
+../Source/Horde3DEngine/utTexture.cpp \
+../Source/Horde3DEngine/GLES2/egRendererBaseGLES2.cpp \
+../Source/Horde3DEngine/GLES2/utOpenGLES2.cpp \
+../../Extensions/Terrain/Source/extension.cpp \
+../../Extensions/Terrain/Source/terrain.cpp \
+../Source/Horde3DUtils/main.cpp \
+Test_1.cpp
+
+	$(CC) ../Source/Horde3DEngine/egAnimatables.cpp \
+	../Source/Horde3DEngine/egAnimation.cpp \
+	../Source/Horde3DEngine/egCamera.cpp \
+	../Source/Horde3DEngine/egCom.cpp \
+	../Source/Horde3DEngine/egExtensions.cpp \
+	../Source/Horde3DEngine/egGeometry.cpp \
+	../Source/Horde3DEngine/egLight.cpp \
+	../Source/Horde3DEngine/egMain.cpp \
+	../Source/Horde3DEngine/egMaterial.cpp \
+	../Source/Horde3DEngine/egModel.cpp \
+	../Source/Horde3DEngine/egModules.cpp \
+	../Source/Horde3DEngine/egParticle.cpp \
+	../Source/Horde3DEngine/egPipeline.cpp  \
+	../Source/Horde3DEngine/egPrimitives.cpp \
+	../Source/Horde3DEngine/egRenderer.cpp \
+	../Source/Horde3DEngine/egRendererBase.cpp \
+	../Source/Horde3DEngine/egResource.cpp \
+	../Source/Horde3DEngine/egScene.cpp \
+	../Source/Horde3DEngine/egSceneGraphRes.cpp \
+	../Source/Horde3DEngine/egShader.cpp \
+	../Source/Horde3DEngine/egTexture.cpp \
+	../Source/Horde3DEngine/utImage.cpp \
+	../Source/Horde3DEngine/utTexture.cpp \
+	../Source/Horde3DEngine/GLES2/egRendererBaseGLES2.cpp \
+	../Source/Horde3DEngine/GLES2/utOpenGLES2.cpp \
+	../../Extensions/Terrain/Source/extension.cpp \
+	../../Extensions/Terrain/Source/terrain.cpp \
+	../Source/Horde3DUtils/main.cpp \
+	Test_1.cpp \
+	-I. -I../Source/Horde3DEngine -I../../Extensions -I../Source/Shared -I../Bindings/C++ \
+	-O0 -s USE_SDL=2 -s WASM=0 -s ALLOW_MEMORY_GROWTH=1 -DFORCE_H3D_RENDERER_GLES2=1      \
+	--preload-file Content \
+	-o h3d_test.js
