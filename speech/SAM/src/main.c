@@ -12,6 +12,13 @@
 #include <SDL/SDL_audio.h>
 #endif
 
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
+
+	char *argv1;//rectangular_BFS
+	int argc1;
+
 void WriteWav(char* filename, char* buffer, int bufferlength)
 {
     FILE *file = fopen(filename, "wb");
@@ -148,7 +155,11 @@ void OutputSound() {}
 
 int debug = 0;
 
-int main(int argc, char **argv)
+//int main2(int argc, char **argv);
+
+
+
+int main2(int argc, char **argv)
 {
     int i;
     int phonetic = 0;
@@ -165,6 +176,7 @@ int main(int argc, char **argv)
 
     if (argc <= 1)
     {
+
         PrintUsage();
         return 1;
     }
@@ -262,7 +274,93 @@ int main(int argc, char **argv)
     else
         OutputSound();
 
-
+//	#ifdef __EMSCRIPTEN__
+//	emscripten_set_main_loop(main_loop,0,1);
+//#else
+//
+//#endif
     return 0;
 
+}
+
+
+
+
+int main3(){
+	    int i;
+    int phonetic = 0;
+
+    char* wavfilename = NULL;
+    char input[256];
+
+#ifdef USESDL
+        freopen("CON", "w", stdout);
+        freopen("CON", "w", stderr);
+#endif
+
+    for(i=0; i<256; i++) input[i] = 0;
+
+//strncat(input, "testing 1 2 3 4 5", 255);
+            strncat(input, "testing1234", 255);
+            strncat(input, " ", 255);
+
+
+    for(i=0; input[i] != 0; i++)
+        input[i] = toupper((int)input[i]);
+
+    if (debug)
+    {
+        if (phonetic) printf("phonetic input: %s\n", input);
+        else printf("text input: %s\n", input);
+    }
+
+    if (!phonetic)
+    {
+        strncat(input, "[", 256);
+        if (!TextToPhonemes((unsigned char *)input)) return 1;
+        if (debug)
+            printf("phonetic input: %s\n", input);
+    } else strncat(input, "\x9b", 256);
+
+#ifdef USESDL
+    if ( SDL_Init(SDL_INIT_AUDIO) < 0 )
+    {
+        printf("Unable to init SDL: %s\n", SDL_GetError());
+        exit(1);
+    }
+    atexit(SDL_Quit);
+#endif
+
+    SetInput(input);
+    if (!SAMMain())
+    {
+        PrintUsage();
+        return 1;
+    }
+
+    if (wavfilename != NULL)
+        WriteWav(wavfilename, GetBuffer(), GetBufferLength()/50);
+    else
+        OutputSound();
+	}
+void main_loop(){
+//	char *argv1[]={"app","-debug","thistest12345"};//rectangular_BFS
+//	int argc1 = sizeof(argv1) / sizeof(char*) - 1;
+//
+//	main2(argc1, argv1);
+main3();
+}
+int main(int argc, char **argv)
+{
+	char *argv2={"Pong","testing"};//rectangular_BFS
+	argv1=argv2;
+	argc1 = argc ;//sizeof(argv1) / sizeof(char*) - 1;
+
+	#ifdef __EMSCRIPTEN__
+	emscripten_set_main_loop(main_loop,0,1);
+    #else
+    //    main2(argc, argv);
+      //  main2(argc1, argv1);
+      main3();
+    #endif
 }
