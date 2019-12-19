@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1573365838 source:/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/speak.js/src/speak.cpp
+	"StdAfx.h"
+	"speech.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fcntl.h>
+	<io.h>
+	<windows.h>
+	<winreg.h>
+	<unistd.h>
+	<getopt.h>
+	<time.h>
+	<signal.h>
+	<locale.h>
+	<sys/stat.h>
+	"speak_lib.h"
+	"phoneme.h"
+	"synthesize.h"
+	"voice.h"
+	"translate.h"
+
+1573365838 /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/speak.js/src/StdAfx.h
+
+1573365838 /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/speak.js/src/speech.h
+	<sys/types.h>
+
+1573365838 /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/speak.js/src/speak_lib.h
+	<stdio.h>
+	<stddef.h>
+
+1573365838 /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/speak.js/src/phoneme.h
+
+1573365838 /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/speak.js/src/synthesize.h
+
+1573365838 /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/speak.js/src/voice.h
+
+1573365838 /home/netpipe/Desktop/EMScripten-AddonBundle/Projects/speak.js/src/translate.h
+
