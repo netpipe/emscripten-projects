@@ -1,11 +1,12 @@
 #!/bin/bash
 
-
+rm src/gentables/CMakeCache.txt
 #rm cmakecache
 mkdir build
 cd build
 emcmake cmake .. -DBUILD_SHARED_LIBS=false
 #make -j4
+
 
 mkdir src
 cd src

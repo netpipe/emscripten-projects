@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_SOURCE_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_BINARY_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # Include any dependencies generated for this target.
 include examples/OpenGL/CMakeFiles/OpenGLExample.dir/depend.make
@@ -58,17 +58,18 @@ include examples/OpenGL/CMakeFiles/OpenGLExample.dir/progress.make
 include examples/OpenGL/CMakeFiles/OpenGLExample.dir/flags.make
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/flags.make
+examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/includes_CXX.rsp
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o: examples/OpenGL/glew/glew.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/glew/glew.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/glew/glew.cpp
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLExample.dir/glew/glew.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/glew/glew.cpp > CMakeFiles/OpenGLExample.dir/glew/glew.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/glew/glew.cpp > CMakeFiles/OpenGLExample.dir/glew/glew.cpp.i
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLExample.dir/glew/glew.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/glew/glew.cpp -o CMakeFiles/OpenGLExample.dir/glew/glew.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/glew/glew.cpp -o CMakeFiles/OpenGLExample.dir/glew/glew.cpp.s
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o.requires:
 
@@ -82,17 +83,18 @@ examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o.provides.build: exa
 
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/flags.make
+examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/includes_CXX.rsp
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o: examples/OpenGL/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/main.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/main.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/main.cpp
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLExample.dir/main.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/main.cpp > CMakeFiles/OpenGLExample.dir/main.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/main.cpp > CMakeFiles/OpenGLExample.dir/main.cpp.i
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLExample.dir/main.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/main.cpp -o CMakeFiles/OpenGLExample.dir/main.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/main.cpp -o CMakeFiles/OpenGLExample.dir/main.cpp.s
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o.requires:
 
@@ -106,17 +108,18 @@ examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o.provides.build: examples
 
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/flags.make
+examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/includes_CXX.rsp
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o: examples/OpenGL/OpenGLImmediateModeSupport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLImmediateModeSupport.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLImmediateModeSupport.cpp
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLImmediateModeSupport.cpp > CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLImmediateModeSupport.cpp > CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.i
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLImmediateModeSupport.cpp -o CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLImmediateModeSupport.cpp -o CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.s
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o.requires:
 
@@ -130,17 +133,18 @@ examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o.pr
 
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/flags.make
+examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/includes_CXX.rsp
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o: examples/OpenGL/OpenGLSupport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLSupport.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLSupport.cpp
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLSupport.cpp > CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLSupport.cpp > CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.i
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLSupport.cpp -o CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLSupport.cpp -o CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.s
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o.requires:
 
@@ -154,17 +158,18 @@ examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o.provides.build:
 
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/flags.make
+examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/includes_CXX.rsp
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o: examples/OpenGL/OpenGLVertexBufferObjectSupport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLVertexBufferObjectSupport.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLVertexBufferObjectSupport.cpp
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLVertexBufferObjectSupport.cpp > CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLVertexBufferObjectSupport.cpp > CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.i
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLVertexBufferObjectSupport.cpp -o CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLVertexBufferObjectSupport.cpp -o CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.s
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o.requires:
 
@@ -178,17 +183,18 @@ examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp
 
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/flags.make
+examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/includes_CXX.rsp
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o: examples/OpenGL/OpenGLWidget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLWidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLWidget.cpp
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLWidget.cpp > CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLWidget.cpp > CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.i
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/OpenGLWidget.cpp -o CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/OpenGLWidget.cpp -o CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.s
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o.requires:
 
@@ -202,17 +208,18 @@ examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o.provides.build: 
 
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/flags.make
+examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.o: examples/OpenGL/CMakeFiles/OpenGLExample.dir/includes_CXX.rsp
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.o: examples/OpenGL/Shapes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/Shapes.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/Shapes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLExample.dir/Shapes.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/Shapes.cpp
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLExample.dir/Shapes.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/Shapes.cpp > CMakeFiles/OpenGLExample.dir/Shapes.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/Shapes.cpp > CMakeFiles/OpenGLExample.dir/Shapes.cpp.i
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLExample.dir/Shapes.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/Shapes.cpp -o CMakeFiles/OpenGLExample.dir/Shapes.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/Shapes.cpp -o CMakeFiles/OpenGLExample.dir/Shapes.cpp.s
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.o.requires:
 
@@ -238,26 +245,22 @@ OpenGLExample_OBJECTS = \
 # External object files for target OpenGLExample
 OpenGLExample_EXTERNAL_OBJECTS =
 
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.o
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/build.make
-examples/OpenGL/OpenGLExample: /usr/lib64/libQtOpenGL.so
-examples/OpenGL/OpenGLExample: /usr/lib64/libQtGui.so
-examples/OpenGL/OpenGLExample: /usr/lib64/libQtTest.so
-examples/OpenGL/OpenGLExample: /usr/lib64/libQtCore.so
-examples/OpenGL/OpenGLExample: /usr/lib64/libGL.so
-examples/OpenGL/OpenGLExample: /usr/lib64/libGLU.so
-examples/OpenGL/OpenGLExample: examples/OpenGL/CMakeFiles/OpenGLExample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable OpenGLExample"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGLExample.dir/link.txt --verbose=$(VERBOSE)
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/glew/glew.cpp.o
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/main.cpp.o
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLImmediateModeSupport.cpp.o
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLSupport.cpp.o
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLVertexBufferObjectSupport.cpp.o
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/Shapes.cpp.o
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/build.make
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/linklibs.rsp
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/objects1.rsp
+examples/OpenGL/OpenGLExample.js: examples/OpenGL/CMakeFiles/OpenGLExample.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable OpenGLExample.js"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGLExample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/OpenGL/CMakeFiles/OpenGLExample.dir/build: examples/OpenGL/OpenGLExample
+examples/OpenGL/CMakeFiles/OpenGLExample.dir/build: examples/OpenGL/OpenGLExample.js
 
 .PHONY : examples/OpenGL/CMakeFiles/OpenGLExample.dir/build
 
@@ -272,10 +275,10 @@ examples/OpenGL/CMakeFiles/OpenGLExample.dir/requires: examples/OpenGL/CMakeFile
 .PHONY : examples/OpenGL/CMakeFiles/OpenGLExample.dir/requires
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/clean:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL && $(CMAKE_COMMAND) -P CMakeFiles/OpenGLExample.dir/cmake_clean.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL && $(CMAKE_COMMAND) -P CMakeFiles/OpenGLExample.dir/cmake_clean.cmake
 .PHONY : examples/OpenGL/CMakeFiles/OpenGLExample.dir/clean
 
 examples/OpenGL/CMakeFiles/OpenGLExample.dir/depend:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/OpenGL/CMakeFiles/OpenGLExample.dir/DependInfo.cmake --color=$(COLOR)
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/OpenGL/CMakeFiles/OpenGLExample.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/OpenGL/CMakeFiles/OpenGLExample.dir/depend
 

@@ -16,9 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o"
   "CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o"
   "libPolyVoxCore.pdb"
-  "libPolyVoxCore.so.0.1.0"
-  "libPolyVoxCore.so"
-  "libPolyVoxCore.so.0"
+  "libPolyVoxCore.a"
 )
 
 # Per-language clean rules from dependency scanning.

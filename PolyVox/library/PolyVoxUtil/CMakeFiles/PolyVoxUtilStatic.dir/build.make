@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_SOURCE_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_BINARY_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # Include any dependencies generated for this target.
 include library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/depend.make
@@ -58,17 +58,18 @@ include library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/progress.make
 include library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/flags.make
 
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o: library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/flags.make
+library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o: library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/includes_CXX.rsp
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o: library/PolyVoxUtil/source/Dummy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil/source/Dummy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil/source/Dummy.cpp
 
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil/source/Dummy.cpp > CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil/source/Dummy.cpp > CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.i
 
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil/source/Dummy.cpp -o CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil/source/Dummy.cpp -o CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.s
 
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o.requires:
 
@@ -90,10 +91,11 @@ PolyVoxUtilStatic_EXTERNAL_OBJECTS =
 
 library/PolyVoxUtil/libPolyVoxUtil.a: library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o
 library/PolyVoxUtil/libPolyVoxUtil.a: library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make
+library/PolyVoxUtil/libPolyVoxUtil.a: library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/objects1.rsp
 library/PolyVoxUtil/libPolyVoxUtil.a: library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libPolyVoxUtil.a"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil && $(CMAKE_COMMAND) -P CMakeFiles/PolyVoxUtilStatic.dir/cmake_clean_target.cmake
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PolyVoxUtilStatic.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libPolyVoxUtil.a"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil && $(CMAKE_COMMAND) -P CMakeFiles/PolyVoxUtilStatic.dir/cmake_clean_target.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PolyVoxUtilStatic.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build: library/PolyVoxUtil/libPolyVoxUtil.a
@@ -105,10 +107,10 @@ library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/requires: library/PolyVoxUt
 .PHONY : library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/requires
 
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/clean:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil && $(CMAKE_COMMAND) -P CMakeFiles/PolyVoxUtilStatic.dir/cmake_clean.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil && $(CMAKE_COMMAND) -P CMakeFiles/PolyVoxUtilStatic.dir/cmake_clean.cmake
 .PHONY : library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/clean
 
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/depend:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/DependInfo.cmake --color=$(COLOR)
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/depend
 

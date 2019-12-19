@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_SOURCE_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_BINARY_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # Include any dependencies generated for this target.
 include library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/depend.make
@@ -58,17 +58,18 @@ include library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/progress.make
 include library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o: library/PolyVoxCore/source/ArraySizes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/ArraySizes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/ArraySizes.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/ArraySizes.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/ArraySizes.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/ArraySizes.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/ArraySizes.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o.requires:
 
@@ -82,17 +83,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o.pr
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o: library/PolyVoxCore/source/AStarPathfinder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/AStarPathfinder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/AStarPathfinder.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/AStarPathfinder.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/AStarPathfinder.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/AStarPathfinder.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/AStarPathfinder.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o.requires:
 
@@ -106,17 +108,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o: library/PolyVoxCore/source/Density.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Density.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Density.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Density.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Density.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Density.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Density.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o.requires:
 
@@ -130,17 +133,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o.provi
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o: library/PolyVoxCore/source/GradientEstimators.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/GradientEstimators.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/GradientEstimators.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/GradientEstimators.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/GradientEstimators.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/GradientEstimators.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/GradientEstimators.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o.requires:
 
@@ -154,17 +158,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o: library/PolyVoxCore/source/Log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Log.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Log.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Log.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Log.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Log.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o.requires:
 
@@ -178,17 +183,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o.provides.
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o: library/PolyVoxCore/source/Material.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Material.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Material.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Material.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Material.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Material.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o.requires:
 
@@ -202,17 +208,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o.prov
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o: library/PolyVoxCore/source/MaterialDensityPair.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/MaterialDensityPair.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/MaterialDensityPair.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/MaterialDensityPair.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/MaterialDensityPair.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/MaterialDensityPair.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/MaterialDensityPair.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o.requires:
 
@@ -226,17 +233,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o: library/PolyVoxCore/source/MeshDecimator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/MeshDecimator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/MeshDecimator.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/MeshDecimator.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/MeshDecimator.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/MeshDecimator.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/MeshDecimator.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o.requires:
 
@@ -250,17 +258,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o: library/PolyVoxCore/source/Region.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Region.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Region.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Region.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Region.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/Region.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Region.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o.requires:
 
@@ -274,17 +283,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o.provid
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o: library/PolyVoxCore/source/SimpleInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/SimpleInterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/SimpleInterface.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/SimpleInterface.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/SimpleInterface.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/SimpleInterface.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/SimpleInterface.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o.requires:
 
@@ -298,17 +308,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o: library/PolyVoxCore/source/VertexTypes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/VertexTypes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/VertexTypes.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/VertexTypes.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/VertexTypes.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/VertexTypes.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/VertexTypes.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o.requires:
 
@@ -322,17 +333,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o.p
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o: library/PolyVoxCore/source/VoxelFilters.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/VoxelFilters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/VoxelFilters.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/VoxelFilters.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/VoxelFilters.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/VoxelFilters.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/VoxelFilters.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o.requires:
 
@@ -346,17 +358,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o.
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o: library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o.requires:
 
@@ -370,17 +383,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Marchin
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o: library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o.requires:
 
@@ -394,17 +408,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomU
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o: library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o.requires:
 
@@ -418,17 +433,18 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomV
 
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/flags.make
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/includes_CXX.rsp
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o: library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp > CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.i
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp -o CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.s
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o.requires:
 
@@ -463,36 +479,31 @@ PolyVoxCoreDynamic_OBJECTS = \
 # External object files for target PolyVoxCoreDynamic
 PolyVoxCoreDynamic_EXTERNAL_OBJECTS =
 
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/build.make
-library/PolyVoxCore/libPolyVoxCore.so.0.1.0: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library libPolyVoxCore.so"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PolyVoxCoreDynamic.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && $(CMAKE_COMMAND) -E cmake_symlink_library libPolyVoxCore.so.0.1.0 libPolyVoxCore.so.0 libPolyVoxCore.so
-
-library/PolyVoxCore/libPolyVoxCore.so.0: library/PolyVoxCore/libPolyVoxCore.so.0.1.0
-	@$(CMAKE_COMMAND) -E touch_nocreate library/PolyVoxCore/libPolyVoxCore.so.0
-
-library/PolyVoxCore/libPolyVoxCore.so: library/PolyVoxCore/libPolyVoxCore.so.0.1.0
-	@$(CMAKE_COMMAND) -E touch_nocreate library/PolyVoxCore/libPolyVoxCore.so
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/ArraySizes.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/AStarPathfinder.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Density.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/GradientEstimators.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Log.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Material.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MaterialDensityPair.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/MeshDecimator.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/Region.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/SimpleInterface.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VertexTypes.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/VoxelFilters.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/MarchingCubesTables.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomUnitVectors.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/RandomVectors.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/source/PolyVoxImpl/Utility.cpp.o
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/build.make
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/objects1.rsp
+library/PolyVoxCore/libPolyVoxCore.a: library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library libPolyVoxCore.a"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && $(CMAKE_COMMAND) -P CMakeFiles/PolyVoxCoreDynamic.dir/cmake_clean_target.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PolyVoxCoreDynamic.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/build: library/PolyVoxCore/libPolyVoxCore.so
+library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/build: library/PolyVoxCore/libPolyVoxCore.a
 
 .PHONY : library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/build
 
@@ -516,10 +527,10 @@ library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/requires: library/PolyVoxC
 .PHONY : library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/requires
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/clean:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore && $(CMAKE_COMMAND) -P CMakeFiles/PolyVoxCoreDynamic.dir/cmake_clean.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore && $(CMAKE_COMMAND) -P CMakeFiles/PolyVoxCoreDynamic.dir/cmake_clean.cmake
 .PHONY : library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/clean
 
 library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/depend:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/DependInfo.cmake --color=$(COLOR)
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : library/PolyVoxCore/CMakeFiles/PolyVoxCoreDynamic.dir/depend
 

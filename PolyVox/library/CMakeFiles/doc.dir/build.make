@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_SOURCE_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_BINARY_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # Utility rule file for doc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
 include library/CMakeFiles/doc.dir/progress.make
 
 library/CMakeFiles/doc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building documentation"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library && /usr/bin/doxygen
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building documentation"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library && /usr/bin/doxygen
 
 doc: library/CMakeFiles/doc
 doc: library/CMakeFiles/doc.dir/build.make
@@ -68,10 +68,10 @@ library/CMakeFiles/doc.dir/build: doc
 .PHONY : library/CMakeFiles/doc.dir/build
 
 library/CMakeFiles/doc.dir/clean:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/library && $(CMAKE_COMMAND) -P CMakeFiles/doc.dir/cmake_clean.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library && $(CMAKE_COMMAND) -P CMakeFiles/doc.dir/cmake_clean.cmake
 .PHONY : library/CMakeFiles/doc.dir/clean
 
 library/CMakeFiles/doc.dir/depend:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/library /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/library /home/netpipe/Desktop/emscripten-projects/PolyVox/library/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : library/CMakeFiles/doc.dir/depend
 

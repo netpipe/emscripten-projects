@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_SOURCE_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_BINARY_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # Include any dependencies generated for this target.
 include examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/depend.make
@@ -58,17 +58,18 @@ include examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/progress.make
 include examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/flags.make
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/flags.make
+examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/includes_CXX.rsp
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o: examples/SmoothLOD/glew/glew.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/glew/glew.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/glew/glew.cpp
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/glew/glew.cpp > CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/glew/glew.cpp > CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.i
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/glew/glew.cpp -o CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/glew/glew.cpp -o CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.s
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o.requires:
 
@@ -82,17 +83,18 @@ examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o.provides.buil
 
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/flags.make
+examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/includes_CXX.rsp
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o: examples/SmoothLOD/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SmoothLODExample.dir/main.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SmoothLODExample.dir/main.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/main.cpp
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SmoothLODExample.dir/main.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/main.cpp > CMakeFiles/SmoothLODExample.dir/main.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/main.cpp > CMakeFiles/SmoothLODExample.dir/main.cpp.i
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SmoothLODExample.dir/main.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/main.cpp -o CMakeFiles/SmoothLODExample.dir/main.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/main.cpp -o CMakeFiles/SmoothLODExample.dir/main.cpp.s
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o.requires:
 
@@ -106,17 +108,18 @@ examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o.provides.build: ex
 
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/flags.make
+examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/includes_CXX.rsp
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o: examples/SmoothLOD/OpenGLWidget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o -c /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/OpenGLWidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o -c /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/OpenGLWidget.cpp
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.i"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/OpenGLWidget.cpp > CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/OpenGLWidget.cpp > CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.i
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.s"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/OpenGLWidget.cpp -o CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/OpenGLWidget.cpp -o CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.s
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o.requires:
 
@@ -138,22 +141,18 @@ SmoothLODExample_OBJECTS = \
 # External object files for target SmoothLODExample
 SmoothLODExample_EXTERNAL_OBJECTS =
 
-examples/SmoothLOD/SmoothLODExample: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o
-examples/SmoothLOD/SmoothLODExample: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o
-examples/SmoothLOD/SmoothLODExample: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o
-examples/SmoothLOD/SmoothLODExample: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/build.make
-examples/SmoothLOD/SmoothLODExample: /usr/lib64/libQtOpenGL.so
-examples/SmoothLOD/SmoothLODExample: /usr/lib64/libQtGui.so
-examples/SmoothLOD/SmoothLODExample: /usr/lib64/libQtTest.so
-examples/SmoothLOD/SmoothLODExample: /usr/lib64/libQtCore.so
-examples/SmoothLOD/SmoothLODExample: /usr/lib64/libGL.so
-examples/SmoothLOD/SmoothLODExample: /usr/lib64/libGLU.so
-examples/SmoothLOD/SmoothLODExample: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SmoothLODExample"
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SmoothLODExample.dir/link.txt --verbose=$(VERBOSE)
+examples/SmoothLOD/SmoothLODExample.js: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/glew/glew.cpp.o
+examples/SmoothLOD/SmoothLODExample.js: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/main.cpp.o
+examples/SmoothLOD/SmoothLODExample.js: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o
+examples/SmoothLOD/SmoothLODExample.js: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/build.make
+examples/SmoothLOD/SmoothLODExample.js: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/linklibs.rsp
+examples/SmoothLOD/SmoothLODExample.js: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/objects1.rsp
+examples/SmoothLOD/SmoothLODExample.js: examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SmoothLODExample.js"
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SmoothLODExample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/build: examples/SmoothLOD/SmoothLODExample
+examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/build: examples/SmoothLOD/SmoothLODExample.js
 
 .PHONY : examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/build
 
@@ -164,10 +163,10 @@ examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/requires: examples/SmoothLOD/
 .PHONY : examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/requires
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/clean:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD && $(CMAKE_COMMAND) -P CMakeFiles/SmoothLODExample.dir/cmake_clean.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD && $(CMAKE_COMMAND) -P CMakeFiles/SmoothLODExample.dir/cmake_clean.cmake
 .PHONY : examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/clean
 
 examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/depend:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD /home/netpipe/Desktop/emscripten-projects/PolyVox /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD /home/netpipe/Desktop/emscripten-projects/PolyVox/examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/DependInfo.cmake --color=$(COLOR)
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/SmoothLOD/CMakeFiles/SmoothLODExample.dir/depend
 

@@ -7,7 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLExample.dir/OpenGLWidget.cpp.o"
   "CMakeFiles/OpenGLExample.dir/Shapes.cpp.o"
   "OpenGLExample.pdb"
-  "OpenGLExample"
+  "OpenGLExample.js"
 )
 
 # Per-language clean rules from dependency scanning.

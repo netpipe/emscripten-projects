@@ -70,11 +70,11 @@
 					<Add option="-O3" />
 					<Add option="-O" />
 					<Add option="-W" />
-					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/include" />
+					<Add directory="../../../irrlicht-ogl-es-2019dec/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/lib/Linux" />
+					<Add directory="../../../irrlicht-ogl-es-2019dec/lib/Linux" />
 				</Linker>
 			</Target>
 		</Build>
@@ -85,10 +85,6 @@
 			<Add library="Irrlicht" />
 		</Linker>
 		<Unit filename="SPK_IRR_ALL.cpp" />
-		<Extensions>
-			<code_completion />
-			<debugger />
-			<envvars />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

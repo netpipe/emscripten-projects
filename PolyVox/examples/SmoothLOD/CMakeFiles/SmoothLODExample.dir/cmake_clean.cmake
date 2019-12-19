@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SmoothLODExample.dir/main.cpp.o"
   "CMakeFiles/SmoothLODExample.dir/OpenGLWidget.cpp.o"
   "SmoothLODExample.pdb"
-  "SmoothLODExample"
+  "SmoothLODExample.js"
 )
 
 # Per-language clean rules from dependency scanning.

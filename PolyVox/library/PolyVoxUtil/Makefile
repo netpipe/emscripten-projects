@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_SOURCE_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/netpipe/Desktop/emscripten-projects/PolyVox
+CMAKE_BINARY_DIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -79,17 +91,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -104,7 +105,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -115,36 +116,13 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/netpipe/Desktop/emscripten-projects/PolyVox/CPackSourceConfig.cmake
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && /usr/bin/cpack --config ./CPackSourceConfig.cmake /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
 package_source/fast: package_source
 
 .PHONY : package_source/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -157,16 +135,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_progress_start /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles /home/netpipe/Desktop/emscripten-projects/PolyVox/library/PolyVoxUtil/CMakeFiles/progress.marks
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/netpipe/Desktop/emscripten-projects/PolyVox/CMakeFiles 0
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -E cmake_progress_start /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxUtil/CMakeFiles/progress.marks
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/clean
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +165,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/preinstall
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/preinstall
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/rule:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/rule
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/rule
 .PHONY : library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/rule
 
 # Convenience name for target.
@@ -201,12 +190,12 @@ PolyVoxUtilDynamic: library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/rule
 
 # fast build rule for target.
 PolyVoxUtilDynamic/fast:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build
 .PHONY : PolyVoxUtilDynamic/fast
 
 # Convenience name for target.
 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/rule:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/rule
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f CMakeFiles/Makefile2 library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/rule
 .PHONY : library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/rule
 
 # Convenience name for target.
@@ -216,7 +205,7 @@ PolyVoxUtilStatic: library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/rule
 
 # fast build rule for target.
 PolyVoxUtilStatic/fast:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build
 .PHONY : PolyVoxUtilStatic/fast
 
 source/Dummy.o: source/Dummy.cpp.o
@@ -225,8 +214,8 @@ source/Dummy.o: source/Dummy.cpp.o
 
 # target to build an object file
 source/Dummy.cpp.o:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/source/Dummy.cpp.o
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/source/Dummy.cpp.o
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.o
 .PHONY : source/Dummy.cpp.o
 
 source/Dummy.i: source/Dummy.cpp.i
@@ -235,8 +224,8 @@ source/Dummy.i: source/Dummy.cpp.i
 
 # target to preprocess a source file
 source/Dummy.cpp.i:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/source/Dummy.cpp.i
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/source/Dummy.cpp.i
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.i
 .PHONY : source/Dummy.cpp.i
 
 source/Dummy.s: source/Dummy.cpp.s
@@ -245,8 +234,8 @@ source/Dummy.s: source/Dummy.cpp.s
 
 # target to generate assembly for a file
 source/Dummy.cpp.s:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/source/Dummy.cpp.s
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilDynamic.dir/source/Dummy.cpp.s
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(MAKE) -f library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/build.make library/PolyVoxUtil/CMakeFiles/PolyVoxUtilStatic.dir/source/Dummy.cpp.s
 .PHONY : source/Dummy.cpp.s
 
 # Help Target
@@ -256,16 +245,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... install"
-	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... PolyVoxUtilDynamic"
 	@echo "... PolyVoxUtilStatic"
 	@echo "... package"
 	@echo "... package_source"
-	@echo "... install/local"
-	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... source/Dummy.o"
 	@echo "... source/Dummy.i"
 	@echo "... source/Dummy.s"
@@ -280,6 +268,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/netpipe/Desktop/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

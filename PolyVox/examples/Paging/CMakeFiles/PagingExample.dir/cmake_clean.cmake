@@ -4,7 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PagingExample.dir/OpenGLWidget.cpp.o"
   "CMakeFiles/PagingExample.dir/Perlin.cpp.o"
   "PagingExample.pdb"
-  "PagingExample"
+  "PagingExample.js"
 )
 
 # Per-language clean rules from dependency scanning.

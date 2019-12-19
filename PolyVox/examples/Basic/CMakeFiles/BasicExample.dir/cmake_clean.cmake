@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/BasicExample.dir/main.cpp.o"
   "CMakeFiles/BasicExample.dir/OpenGLWidget.cpp.o"
   "BasicExample.pdb"
-  "BasicExample"
+  "BasicExample.js"
 )
 
 # Per-language clean rules from dependency scanning.

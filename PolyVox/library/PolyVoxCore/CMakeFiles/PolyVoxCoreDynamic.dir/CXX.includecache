@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,83 +6,83 @@
 
 #IncludeRegexTransform: 
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/AStarPathfinder.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/AStarPathfinder.cpp
 PolyVoxCore/AStarPathfinder.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/AStarPathfinder.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/AStarPathfinder.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/ArraySizes.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/ArraySizes.cpp
 PolyVoxCore/ArraySizes.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/ArraySizes.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/ArraySizes.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/Density.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Density.cpp
 PolyVoxCore/Density.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Density.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Density.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/GradientEstimators.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/GradientEstimators.cpp
 PolyVoxImpl/TypeDef.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/TypeDef.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/TypeDef.h
 PolyVoxCore/GradientEstimators.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/GradientEstimators.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/GradientEstimators.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/Log.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Log.cpp
 PolyVoxCore/Log.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Log.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Log.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/Material.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Material.cpp
 PolyVoxCore/Material.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Material.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Material.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/MaterialDensityPair.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/MaterialDensityPair.cpp
 PolyVoxCore/MaterialDensityPair.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/MaterialDensityPair.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/MaterialDensityPair.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/MeshDecimator.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/MeshDecimator.cpp
 PolyVoxCore/MeshDecimator.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/MeshDecimator.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/MeshDecimator.h
 PolyVoxCore/SurfaceMesh.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/SurfaceMesh.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/SurfaceMesh.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/MarchingCubesTables.cpp
 PolyVoxImpl/MarchingCubesTables.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/PolyVoxImpl/MarchingCubesTables.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/PolyVoxImpl/MarchingCubesTables.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomUnitVectors.cpp
 PolyVoxImpl/RandomUnitVectors.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/PolyVoxImpl/RandomUnitVectors.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/PolyVoxImpl/RandomUnitVectors.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/RandomVectors.cpp
 PolyVoxImpl/RandomVectors.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/PolyVoxImpl/RandomVectors.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/PolyVoxImpl/RandomVectors.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/Utility.cpp
 PolyVoxImpl/Utility.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/PolyVoxImpl/Utility.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxImpl/PolyVoxImpl/Utility.h
 cassert
 -
 stdexcept
 -
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/Region.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/Region.cpp
 PolyVoxCore/Region.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Region.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Region.h
 limits
 -
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/SimpleInterface.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/SimpleInterface.cpp
 PolyVoxCore/SimpleInterface.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/SimpleInterface.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/SimpleInterface.h
 PolyVoxCore/Density.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Density.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/Density.h
 PolyVoxCore/MaterialDensityPair.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/MaterialDensityPair.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/MaterialDensityPair.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/VertexTypes.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/VertexTypes.cpp
 PolyVoxCore/VertexTypes.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/VertexTypes.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/VertexTypes.h
 
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/VoxelFilters.cpp
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/VoxelFilters.cpp
 PolyVoxCore/VoxelFilters.h
-/home/Dev/libs/game/PolyVox/library/PolyVoxCore/source/PolyVoxCore/VoxelFilters.h
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/PolyVox/library/PolyVoxCore/source/PolyVoxCore/VoxelFilters.h
 
 library/PolyVoxCore/include/PolyVoxCore/AStarPathfinder.h
 PolyVoxImpl/AStarPathfinderImpl.h
