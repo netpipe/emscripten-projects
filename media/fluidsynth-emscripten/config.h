@@ -2,7 +2,7 @@
 #define CONFIG_H
 
 /* Define to enable ALSA driver */
-/* #undef ALSA_SUPPORT */
+#define ALSA_SUPPORT 1
 
 /* Define to activate sound output to files */
 #define AUFILE_SUPPORT 1
@@ -20,7 +20,7 @@
 /* #undef DARWIN */
 
 /* Define if D-Bus support is enabled */
-/* #undef DBUS_SUPPORT */
+#define DBUS_SUPPORT  1
 
 /* Soundfont to load automatically in some use cases */
 #define DEFAULT_SOUNDFONT "/usr/local/share/soundfonts/default.sf2"
@@ -77,10 +77,10 @@
 #define HAVE_NETINET_TCP_H 1
 
 /* Define if compiling the mixer with multi-thread support */
-/* #undef ENABLE_MIXER_THREADS */
+#define ENABLE_MIXER_THREADS 1
 
 /* Define if compiling with openMP to enable parallel audio rendering */
-/* #undef HAVE_OPENMP */
+#define HAVE_OPENMP 1
 
 /* Define to 1 if you have the <pthread.h> header file. */
 #define HAVE_PTHREAD_H 1
@@ -116,7 +116,7 @@
 #define HAVE_SYS_SOCKET_H 1
 
 /* Define to 1 if you have the <sys/soundcard.h> header file. */
-/* #undef HAVE_SYS_SOUNDCARD_H */
+#define HAVE_SYS_SOUNDCARD_H 1
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
@@ -140,22 +140,22 @@
 #define HAVE_INETNTOP 1
 
 /* Define to enable JACK driver */
-/* #undef JACK_SUPPORT */
+#define JACK_SUPPORT 1
 
 /* Include the LADSPA Fx unit */
-/* #undef LADSPA */
+#define LADSPA 1
 
 /* Define to enable IPV6 support */
 #define IPV6_SUPPORT 1
 
 /* Define to enable network support */
-/* #undef NETWORK_SUPPORT */
+#define NETWORK_SUPPORT 1
 
 /* libsndfile has ogg vorbis support */
-/* #undef LIBSNDFILE_HASVORBIS */
+#define LIBSNDFILE_HASVORBIS 1
 
 /* Define to enable libsndfile support */
-/* #undef LIBSNDFILE_SUPPORT */
+#define LIBSNDFILE_SUPPORT 1
 
 /* Define to enable MidiShare driver */
 /* #undef MIDISHARE_SUPPORT */
@@ -167,7 +167,7 @@
 /* #undef NO_MINUS_C_MINUS_O */
 
 /* Define to enable OSS driver */
-/* #undef OSS_SUPPORT */
+#define OSS_SUPPORT TRUE
 
 /* Name of package */
 #define PACKAGE "fluidsynth"
@@ -191,7 +191,7 @@
 /* #undef PORTAUDIO_SUPPORT */
 
 /* Define to enable PulseAudio driver */
-/* #undef PULSE_SUPPORT */
+#define PULSE_SUPPORT 1
 
 /* Define to enable DirectSound driver */
 /* #undef DSOUND_SUPPORT */
@@ -218,7 +218,7 @@
 /* #undef WITH_PROFILING */
 
 /* Define to use the readline library for line editing */
-/* #undef WITH_READLINE */
+#define WITH_READLINE 1
 
 /* Define if the compiler supports VLA */ 
 #define SUPPORTS_VLA 1 
