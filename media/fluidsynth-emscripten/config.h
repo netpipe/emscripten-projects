@@ -203,10 +203,10 @@
 #define STDC_HEADERS 1
 
 /* Soundfont to load for unit testing */
-#define TEST_SOUNDFONT "/home/netpipe/Desktop/EMScripten-AddonBundle/emscripten-projects/media/fluidsynth-emscripten/sf2/VintageDreamsWaves-v2.sf2"
+#define TEST_SOUNDFONT "/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/fluidsynth-emscripten/sf2/VintageDreamsWaves-v2.sf2"
 
 /* SF3 Soundfont to load for unit testing */
-#define TEST_SOUNDFONT_SF3 "/home/netpipe/Desktop/EMScripten-AddonBundle/emscripten-projects/media/fluidsynth-emscripten/sf2/VintageDreamsWaves-v2.sf3"
+#define TEST_SOUNDFONT_SF3 "/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/fluidsynth-emscripten/sf2/VintageDreamsWaves-v2.sf3"
 
 /* Define to enable SIGFPE assertions */
 /* #undef TRAP_ON_FPE */
