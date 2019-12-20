@@ -38,12 +38,11 @@
 				<Option compiler="msvc8" />
 				<Option use_console_runner="0" />
 				<Compiler>
-					<Add option="/Zi /D_DEBUG" />
+					<Add option="-O2" />
 				</Compiler>
 				<Linker>
-					<Add option="/DEBUG" />
-					<Add library="cAudio_d.lib" />
-					<Add directory="../../bin/win32-visual" />
+					<Add option="-s" />
+					<Add library="cAudio" />
 				</Linker>
 			</Target>
 			<Target title="Release Visual">
@@ -76,6 +75,40 @@
 					<Add directory="../../bin/gcc" />
 				</Linker>
 			</Target>
+			<Target title="emscripten">
+				<Option output="../../bin/gcc/Tutorial1_2DSound.html" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="emscripten" />
+				<Option use_console_runner="0" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-D_IRR_STATIC_LIB_" />
+					<Add option="-D_IRR_EMSCRIPTEN_PLATFORM_" />
+					<Add option="-D__EMSCRIPTEN__" />
+					<Add directory="../../../Ogg/include/ogg" />
+					<Add directory="../../../Vorbis/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-s ALLOW_MEMORY_GROWTH=1" />
+					<Add option="--preload-file media/" />
+					<Add option="-s FULL_ES2=1" />
+					<Add option="-s DISABLE_EXCEPTION_CATCHING=0" />
+					<Add option="-s NO_EXIT_RUNTIME=1" />
+					<Add library="cAudio" />
+					<Add library="ogg" />
+					<Add library="vorbisfile" />
+					<Add library="vorbis" />
+					<Add library="openal" />
+					<Add directory="../../bin/gcc" />
+					<Add directory="../../../Ogg/include" />
+					<Add directory="../../../Vorbis/" />
+				</Linker>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
@@ -84,9 +117,6 @@
 			<Add directory="../../bin/win32-gcc" />
 		</Linker>
 		<Unit filename="main.cpp" />
-		<Extensions>
-			<code_completion />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

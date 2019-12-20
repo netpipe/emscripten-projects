@@ -8,10 +8,13 @@
 
 //Include cAudio.h so we can work wtih cAudio
 #include "../../include/cAudio.h"
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
 
 using namespace std;
 
-int main(int argc, char* argv[])
+int main()
 {
     //Some fancy text
     cout << "cAudio 2.0.0 Tutorial 1: Basic 2D Audio. \n \n";
@@ -36,14 +39,14 @@ int main(int argc, char* argv[])
 		cout << std::endl;
 		cout << "Choose a device by number: ";
 		unsigned int deviceSelection = 0;
-		cin >> deviceSelection;
+		//cin >> deviceSelection;
 		cout << std::endl;
 
 		//Initialize the manager with the user settings
 		manager->initialize(manager->getAvailableDeviceName(deviceSelection));
 
 		//Create a IAudio object and load a sound from a file
-		cAudio::IAudioSource* mysound = manager->create("bling","../../media/cAudioTheme1.ogg",true);
+		cAudio::IAudioSource* mysound = manager->create("bling","./media/cAudioTheme1.ogg",true);
 
 		if(mysound)
 		{
