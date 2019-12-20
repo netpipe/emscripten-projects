@@ -14,19 +14,52 @@
 				<Option compiler="gcc" />
 				<Option projectResourceIncludeDirsRelation="1" />
 			</Target>
-			<Target title="Linux">
+			<Target title="Linux64">
 				<Option output="../bin/IRRBasicDemo" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="../bin" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option projectResourceIncludeDirsRelation="1" />
 			</Target>
+			<Target title="emscripten">
+				<Option output="../bin/IRRBasicDemo.html" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="../bin" />
+				<Option type="1" />
+				<Option compiler="emscripten" />
+				<Option projectCompilerOptionsRelation="1" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="1" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Compiler>
+					<Add option="-D_IRR_STATIC_LIB_" />
+					<Add option="-D_IRR_EMSCRIPTEN_PLATFORM_" />
+					<Add option="-D__EMSCRIPTEN__" />
+					<Add directory="../../../irrlicht-ogl-es/irrlicht/include" />
+					<Add directory="../../include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s ALLOW_MEMORY_GROWTH=1" />
+					<Add option="--preload-file media/" />
+					<Add option="-s FULL_ES2=1" />
+					<Add option="-s DISABLE_EXCEPTION_CATCHING=0" />
+					<Add option="-s NO_EXIT_RUNTIME=1" />
+					<Add library="GL" />
+					<Add library="Irrlicht" />
+					<Add library="SPARK" />
+					<Add library="SPARK_IRR" />
+					<Add library="SDL" />
+					<Add library="freetype" />
+					<Add library="GLESv2" />
+					<Add directory="../../../irrlicht-ogl-es/irrlicht/lib/Linux" />
+					<Add directory="../../lib/emscripten/static" />
+				</Linker>
+			</Target>
 		</Build>
 		<VirtualTargets>
 			<Add alias="All" targets="Win32;" />
 		</VirtualTargets>
 		<Compiler>
-			<Add directory="/home/Dev/libs/game/irrlicht/irrlicht-1.6/include" />
 			<Add directory="../../include" />
 			<Add directory="/home/Dev/libs/gui/freetype-2.3.9/include" />
 		</Compiler>
@@ -48,10 +81,6 @@
 			<Add directory="/home/Dev/libs/gui/freetype-2.3.9/objs/.libs" />
 		</Linker>
 		<Unit filename="IRRBasicDemo.cpp" />
-		<Extensions>
-			<code_completion />
-			<debugger />
-			<envvars />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

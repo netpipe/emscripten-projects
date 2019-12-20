@@ -6,19 +6,6 @@
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
-		<Folding>
-			<Collapse line="25" />
-			<Collapse line="33" />
-			<Collapse line="38" />
-			<Collapse line="43" />
-			<Collapse line="48" />
-			<Collapse line="60" />
-			<Collapse line="65" />
-			<Collapse line="79" />
-			<Collapse line="127" />
-			<Collapse line="133" />
-			<Collapse line="139" />
-		</Folding>
 	</File>
-	<EditorTabsLayout layout="03e417505dfb8bbb00158c9b00000002=0;BulletSoftBody:../../../../src/BulletSoftBody/btDefaultSoftBodySolver.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=328;besth=326;minw=328;minh=326;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=03e417505dfb8bbb00158c9b00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+	<EditorTabsLayout layout="0356f8b05dfc36090015d45a00000002=0;BulletSoftBody:../../../../src/BulletSoftBody/btDefaultSoftBodySolver.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=758;besth=296;minw=758;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=0356f8b05dfc36090015d45a00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>
