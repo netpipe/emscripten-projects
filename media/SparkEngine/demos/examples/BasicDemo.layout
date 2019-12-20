@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
-	<ActiveTarget name="All" />
-	<EditorTabsLayout layout="@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=328;besth=326;minw=328;minh=326;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+	<ActiveTarget name="emscripten" />
+	<File name="BasicDemo.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1563" topLine="26" />
+		</Cursor>
+		<Folding>
+			<Collapse line="73" />
+			<Collapse line="81" />
+			<Collapse line="146" />
+			<Collapse line="196" />
+			<Collapse line="204" />
+			<Collapse line="245" />
+		</Folding>
+	</File>
+	<EditorTabsLayout layout="042e34005dfc373f0012375f00000002=*7;BasicDemo:BasicDemo.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=452;besth=296;minw=452;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=042e34005dfc373f0012375f00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,0,0)=202|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>

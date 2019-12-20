@@ -1,0 +1,367 @@
+# depslib dependency file v1.0
+1266640672 source:/home/tecan/Desktop/cAudio2.0.0-Source/Examples/Tutorial1_2DSound/main.cpp
+	<iostream>
+	<string>
+	"../../include/cAudio.h"
+
+1266546306 /home/tecan/Desktop/cAudio2.0.0-Source/include/cAudio.h
+	"cAudioDefines.h"
+	"cAudioPlatform.h"
+	"cAudioSleep.h"
+	"EAudioFormats.h"
+	"IAudioSource.h"
+	"IAudioCapture.h"
+	"IAudioDecoder.h"
+	"IAudioDecoderFactory.h"
+	"IAudioEffects.h"
+	"IAudioManager.h"
+	"IDataSource.h"
+	"IEffect.h"
+	"IEffectParameters.h"
+	"IFilter.h"
+	"IListener.h"
+	"ILogger.h"
+	"ILogReceiver.h"
+	"IPluginManager.h"
+	"IRefCounted.h"
+
+1266726972 /home/tecan/Desktop/cAudio2.0.0-Source/include/cAudioDefines.h
+	"cAudioPlatform.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/cAudioPlatform.h
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/cAudioSleep.h
+	"cAudioDefines.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/EAudioFormats.h
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IAudioSource.h
+	"cAudioDefines.h"
+	"IRefCounted.h"
+	"IAudioDecoder.h"
+	"cVector3.h"
+	"IEffect.h"
+	"IFilter.h"
+	"ISourceEventHandler.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IRefCounted.h
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IAudioDecoder.h
+	"IRefCounted.h"
+	"IDataSource.h"
+	"EAudioFormats.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IDataSource.h
+	"IRefCounted.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/cVector3.h
+	<math.h>
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IEffect.h
+	"IRefCounted.h"
+	"IFilter.h"
+	"IEffectParameters.h"
+	"cAudioDefines.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IFilter.h
+	"IRefCounted.h"
+	"cAudioDefines.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IEffectParameters.h
+	"cVector3.h"
+	"cAudioDefines.h"
+
+1266546306 /home/tecan/Desktop/cAudio2.0.0-Source/include/ISourceEventHandler.h
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IAudioCapture.h
+	"EAudioFormats.h"
+	"cAudioDefines.h"
+	"ICaptureEventHandler.h"
+
+1266546306 /home/tecan/Desktop/cAudio2.0.0-Source/include/ICaptureEventHandler.h
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IAudioDecoderFactory.h
+	"IAudioDecoder.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IAudioEffects.h
+	"IEffect.h"
+	"IFilter.h"
+	"cAudioDefines.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IAudioManager.h
+	"IListener.h"
+	"cAudioDefines.h"
+	"EAudioFormats.h"
+	"IAudioEffects.h"
+	"IDataSourceFactory.h"
+	"IManagerEventHandler.h"
+	<string>
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IListener.h
+	"cVector3.h"
+	"cAudioDefines.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IDataSourceFactory.h
+	"IDataSource.h"
+
+1266546306 /home/tecan/Desktop/cAudio2.0.0-Source/include/IManagerEventHandler.h
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/ILogger.h
+	"ILogReceiver.h"
+	"cAudioDefines.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/ILogReceiver.h
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IPluginManager.h
+	"IAudioPlugin.h"
+
+1266546304 /home/tecan/Desktop/cAudio2.0.0-Source/include/IAudioPlugin.h
+	"IRefCounted.h"
+	"IAudioManager.h"
+	"IAudioCapture.h"
+	"ILogger.h"
+
+1266640672 source:/home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/Examples/Tutorial1_2DSound/main.cpp
+	<iostream>
+	<string>
+	"../../include/cAudio.h"
+
+1266546306 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/cAudio.h
+	"cAudioDefines.h"
+	"cAudioPlatform.h"
+	"cAudioSleep.h"
+	"EAudioFormats.h"
+	"IAudioSource.h"
+	"IAudioCapture.h"
+	"IAudioDecoder.h"
+	"IAudioDecoderFactory.h"
+	"IAudioEffects.h"
+	"IAudioManager.h"
+	"IDataSource.h"
+	"IEffect.h"
+	"IEffectParameters.h"
+	"IFilter.h"
+	"IListener.h"
+	"ILogger.h"
+	"ILogReceiver.h"
+	"IPluginManager.h"
+	"IRefCounted.h"
+
+1266726972 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/cAudioDefines.h
+	"cAudioPlatform.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/cAudioPlatform.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/cAudioSleep.h
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/EAudioFormats.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IAudioSource.h
+	"cAudioDefines.h"
+	"IRefCounted.h"
+	"IAudioDecoder.h"
+	"cVector3.h"
+	"IEffect.h"
+	"IFilter.h"
+	"ISourceEventHandler.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IRefCounted.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IAudioDecoder.h
+	"IRefCounted.h"
+	"IDataSource.h"
+	"EAudioFormats.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IDataSource.h
+	"IRefCounted.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/cVector3.h
+	<math.h>
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IEffect.h
+	"IRefCounted.h"
+	"IFilter.h"
+	"IEffectParameters.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IFilter.h
+	"IRefCounted.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IEffectParameters.h
+	"cVector3.h"
+	"cAudioDefines.h"
+
+1266546306 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/ISourceEventHandler.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IAudioCapture.h
+	"EAudioFormats.h"
+	"cAudioDefines.h"
+	"ICaptureEventHandler.h"
+
+1266546306 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/ICaptureEventHandler.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IAudioDecoderFactory.h
+	"IAudioDecoder.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IAudioEffects.h
+	"IEffect.h"
+	"IFilter.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IAudioManager.h
+	"IListener.h"
+	"cAudioDefines.h"
+	"EAudioFormats.h"
+	"IAudioEffects.h"
+	"IDataSourceFactory.h"
+	"IManagerEventHandler.h"
+	<string>
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IListener.h
+	"cVector3.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IDataSourceFactory.h
+	"IDataSource.h"
+
+1266546306 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IManagerEventHandler.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/ILogger.h
+	"ILogReceiver.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/ILogReceiver.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IPluginManager.h
+	"IAudioPlugin.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2.0.0-Source/include/IAudioPlugin.h
+	"IRefCounted.h"
+	"IAudioManager.h"
+	"IAudioCapture.h"
+	"ILogger.h"
+
+1266640672 source:/home/Dev/Agnostic-SF/libs/cAudio2/Examples/Tutorial1_2DSound/main.cpp
+	<iostream>
+	<string>
+	"../../include/cAudio.h"
+
+1266546306 /home/Dev/Agnostic-SF/libs/cAudio2/include/cAudio.h
+	"cAudioDefines.h"
+	"cAudioPlatform.h"
+	"cAudioSleep.h"
+	"EAudioFormats.h"
+	"IAudioSource.h"
+	"IAudioCapture.h"
+	"IAudioDecoder.h"
+	"IAudioDecoderFactory.h"
+	"IAudioEffects.h"
+	"IAudioManager.h"
+	"IDataSource.h"
+	"IEffect.h"
+	"IEffectParameters.h"
+	"IFilter.h"
+	"IListener.h"
+	"ILogger.h"
+	"ILogReceiver.h"
+	"IPluginManager.h"
+	"IRefCounted.h"
+
+1266726972 /home/Dev/Agnostic-SF/libs/cAudio2/include/cAudioDefines.h
+	"cAudioPlatform.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/cAudioPlatform.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/cAudioSleep.h
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/EAudioFormats.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IAudioSource.h
+	"cAudioDefines.h"
+	"IRefCounted.h"
+	"IAudioDecoder.h"
+	"cVector3.h"
+	"IEffect.h"
+	"IFilter.h"
+	"ISourceEventHandler.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IRefCounted.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IAudioDecoder.h
+	"IRefCounted.h"
+	"IDataSource.h"
+	"EAudioFormats.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IDataSource.h
+	"IRefCounted.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/cVector3.h
+	<math.h>
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IEffect.h
+	"IRefCounted.h"
+	"IFilter.h"
+	"IEffectParameters.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IFilter.h
+	"IRefCounted.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IEffectParameters.h
+	"cVector3.h"
+	"cAudioDefines.h"
+
+1266546306 /home/Dev/Agnostic-SF/libs/cAudio2/include/ISourceEventHandler.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IAudioCapture.h
+	"EAudioFormats.h"
+	"cAudioDefines.h"
+	"ICaptureEventHandler.h"
+
+1266546306 /home/Dev/Agnostic-SF/libs/cAudio2/include/ICaptureEventHandler.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IAudioDecoderFactory.h
+	"IAudioDecoder.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IAudioEffects.h
+	"IEffect.h"
+	"IFilter.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IAudioManager.h
+	"IListener.h"
+	"cAudioDefines.h"
+	"EAudioFormats.h"
+	"IAudioEffects.h"
+	"IDataSourceFactory.h"
+	"IManagerEventHandler.h"
+	<string>
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IListener.h
+	"cVector3.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IDataSourceFactory.h
+	"IDataSource.h"
+
+1266546306 /home/Dev/Agnostic-SF/libs/cAudio2/include/IManagerEventHandler.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/ILogger.h
+	"ILogReceiver.h"
+	"cAudioDefines.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/ILogReceiver.h
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IPluginManager.h
+	"IAudioPlugin.h"
+
+1266546304 /home/Dev/Agnostic-SF/libs/cAudio2/include/IAudioPlugin.h
+	"IRefCounted.h"
+	"IAudioManager.h"
+	"IAudioCapture.h"
+	"ILogger.h"
+

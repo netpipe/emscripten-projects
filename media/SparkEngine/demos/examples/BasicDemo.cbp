@@ -18,6 +18,12 @@
 				<Option compiler="gcc" />
 				<Option projectResourceIncludeDirsRelation="1" />
 			</Target>
+			<Target title="emscripten">
+				<Option output="../bin/BasicDemo" prefix_auto="0" extension_auto="0" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
 		</Build>
 		<VirtualTargets>
 			<Add alias="All" targets="Linux;" />
@@ -41,9 +47,6 @@
 			<Add directory="/home/Dev/libs/gui/freetype-2.3.9/objs/.libs" />
 		</Linker>
 		<Unit filename="BasicDemo.cpp" />
-		<Extensions>
-			<code_completion />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

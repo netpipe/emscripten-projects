@@ -6,16 +6,6 @@
 		<Cursor>
 			<Cursor1 position="19489" topLine="42" />
 		</Cursor>
-		<Folding>
-			<Collapse line="84" />
-			<Collapse line="92" />
-			<Collapse line="157" />
-			<Collapse line="208" />
-			<Collapse line="430" />
-			<Collapse line="438" />
-			<Collapse line="506" />
-			<Collapse line="529" />
-		</Folding>
 	</File>
-	<EditorTabsLayout layout="03872c005dfb933f0014433f00000002=*0;FountainDemo:FountainDemo.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=328;besth=326;minw=328;minh=326;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=03872c005dfb933f0014433f00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+	<EditorTabsLayout layout="042e34005dfc373f0012375f00000002=*0;FountainDemo:FountainDemo.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=452;besth=296;minw=452;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=042e34005dfc373f0012375f00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>
