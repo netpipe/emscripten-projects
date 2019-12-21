@@ -18,7 +18,7 @@
 #  include <signal.h>
 #endif
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include "SDL_sound.h"
 
 #define DEFAULT_DECODEBUF 16384
