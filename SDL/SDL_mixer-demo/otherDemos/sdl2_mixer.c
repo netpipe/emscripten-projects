@@ -2,7 +2,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_mixer.h>
 
-#define OGG_PATH "/sound.ogg"
+#define OGG_PATH "./media/bling.ogg"
 
 Mix_Chunk *wave = NULL;
 
@@ -15,7 +15,7 @@ void sound_loop_then_quit() {
 
     emscripten_cancel_main_loop();
     printf("Shutting down\n");
-    REPORT_RESULT(1);
+//    REPORT_RESULT(1);
 }
 
 int main(int argc, char* argv[]){

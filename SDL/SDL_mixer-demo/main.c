@@ -50,7 +50,7 @@ int main(int argc, char** argv)
 	Mix_AllocateChannels(MIX_CHANNELS);
 
 	speed = 1.0;
-	chunk = Mix_LoadWAV("./media/test.wav");
+	chunk = Mix_LoadWAV("./media/bling.wav");
 
 	#ifdef __EMSCRIPTEN__
 		emscripten_set_main_loop(main_loop,0,1);
