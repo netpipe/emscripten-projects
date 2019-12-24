@@ -46,6 +46,42 @@
     return blob;
   }
 
+  function send(url, name, opts) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    xhr.responseType = 'blob';
+
+    xhr.onload = function () {
+      saveAs(xhr.response, name, opts);
+    };
+
+    xhr.onerror = function () {
+      console.error('could not download file');
+    };
+
+    xhr.send();
+  }
+
+function sendForm(url, opts) {
+	var http = new XMLHttpRequest();
+	//var url = 'get_data.php';
+	var url = url
+	//var params = 'orem=ipsum&name=binny';
+	//var params = opts
+	http.open('POST', url, true);
+
+	//Send the proper header information along with the request
+	http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+	http.onreadystatechange = function() {//Call a function when the state changes.
+		if(http.readyState == 4 && http.status == 200) {
+		    alert(http.responseText);
+		}
+	}
+	http.send(opts);
+}
+
+
   function download(url, name, opts) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url);
