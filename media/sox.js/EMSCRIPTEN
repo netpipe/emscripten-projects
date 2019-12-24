@@ -1,0 +1,22 @@
+this build has been modified to output regular library for use in projects.
+
+to build run the build_sox.sh script in scripts directory
+
+include library then add this to main code see test openal for usage.
+ 
+
+extern "C"
+{
+
+int mainSOX(int argc, char **argv);
+ }
+
+
+then use like
+
+
+	char *argv1[]={"appname","-v" ,"0.8","/media/audio.wav","out.wav","pitch","-800","test"};
+	int argc1 = sizeof(argv1) / sizeof(char*) - 1;
+
+	mainSOX(argc1,argv1);
+
