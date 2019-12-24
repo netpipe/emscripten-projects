@@ -150,12 +150,12 @@ int main() {
 
 
 
-	char *argv1[]={"appname","-v" ,"0.8","/media/audio.wav","out.wav","pitch","-800","test"};
+	char *argv1[]={"appname","-v" ,"0.8","/media/audio2.wav","out.wav","pitch","-800","test"};
 	int argc1 = sizeof(argv1) / sizeof(char*) - 1;
 
 	mainSOX(argc1,argv1);
 
-
+//SDL_delay(30);
 
 
 
