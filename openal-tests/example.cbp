@@ -17,6 +17,9 @@
 				<Option type="1" />
 				<Option compiler="emscripten" />
 				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-DTEST_LOOPED_PLAYBACK" />
+				</Compiler>
 			</Target>
 		</Build>
 		<VirtualTargets>
@@ -28,10 +31,10 @@
 			<Add option="-D__EMSCRIPTEN__" />
 			<Add directory="/home/Dev/libs/Scripting/emsdk/emscripten-projects/irrlicht-ogl-es/irrlicht/include" />
 			<Add directory="src" />
-			<Add directory="../../libs/media/theora/include" />
-			<Add directory="../../libs/media/libtheoraplayer/include" />
+			<Add directory="../media/theora/include" />
+			<Add directory="../media/libtheoraplayer/include" />
 			<Add directory="/usr/include/AL" />
-			<Add directory="../../libs/media/Ogg/include" />
+			<Add directory="../media/Ogg/include" />
 		</Compiler>
 		<Linker>
 			<Add option="-s ALLOW_MEMORY_GROWTH=1" />
@@ -39,21 +42,15 @@
 			<Add option="-s FULL_ES2=1" />
 			<Add option="-s DISABLE_EXCEPTION_CATCHING=0" />
 			<Add option="-s NO_EXIT_RUNTIME=1" />
-			<Add library="Irrlicht" />
-			<Add library="GLESv2" />
-			<Add library="GL" />
 			<Add library="ogg" />
 			<Add library="vorbis" />
 			<Add library="vorbisfile" />
-			<Add library="theora" />
-			<Add library="theoraplayer" />
-			<Add library="SDL" />
 			<Add library="openal" />
 			<Add directory="/home/Dev/libs/Scripting/emsdk/emscripten-projects/irrlicht-ogl-es/irrlicht/lib/Linux" />
-			<Add directory="../../libs/media/libtheoraplayer" />
-			<Add directory="../../libs/media/theora/" />
-			<Add directory="../../libs/media/Ogg" />
-			<Add directory="../../libs/media/Vorbis" />
+			<Add directory="../media/libtheoraplayer" />
+			<Add directory="../media/theora/" />
+			<Add directory="../media/Ogg" />
+			<Add directory="../media/Vorbis" />
 		</Linker>
 		<Unit filename="openal_playback.cpp" />
 		<Extensions />

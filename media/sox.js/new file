@@ -1,0 +1,1 @@
+emconfigure ./configure CC="emcc" --with-distro="sox.js - emscripten - http://github.com/skratchdot/sox.js" --without-png --without-ladspa --disable-symlinks

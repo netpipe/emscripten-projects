@@ -27,7 +27,7 @@ void main_loop(){
 		// set pitch effect on the channel where the chunk is being played
 		Custom_Mix_RegisterPlaybackSpeedEffect(channel, chunk, &speed, 1);
 
-		const int secs = 8;
+		const int secs = 1;
 		printf("Looping for %d seconds, changing the pitch dynamically...\n", secs);
 
 		// loop for 'secs' seconds, changing the pitch dynamically
@@ -74,6 +74,7 @@ int main(int argc, char** argv)
 			speed = 1 + 0.25*sin(0.001*SDL_GetTicks());
 		}
 		puts("Finished.");
+		//SDL_Delay(5);
 	}
 	else
 		puts("No data.");

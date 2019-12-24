@@ -2,7 +2,11 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_mixer.h>
 
-#define OGG_PATH "./media/bling.ogg"
+#define OGG_PATH "./media/bling.wav"
+
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
 
 Mix_Chunk *wave = NULL;
 

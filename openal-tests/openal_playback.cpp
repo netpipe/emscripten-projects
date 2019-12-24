@@ -143,7 +143,8 @@ int main() {
   alGenBuffers(1, buffers);
 
 #ifdef __EMSCRIPTEN__
-  FILE* source = fopen("media/bling.wav", "rb");
+ // FILE* source = fopen("media/bling.wav", "rb");
+  FILE* source = fopen("media/test.wav", "rb");
 #else
   FILE* source = fopen("sounds/audio.wav", "rb");
 #endif
@@ -258,7 +259,7 @@ int main() {
   alSourcei(sources[0], 0x1214 /* AL_SOURCE_SPATIALIZE_SOFT */, AL_FALSE);
   printf("You should hear a continuously looping clip of the 1902 piano song \"The Entertainer\" centered at the listener. If it is panning, then the test failed. Press OK when confirmed.\n");
 #else
-  alSourcef(sources[0], AL_PITCH, 1.5f);
+  alSourcef(sources[0], AL_PITCH, 0.18f);
   printf("You should hear a continuously looping clip of the 1902 piano song \"The Entertainer\" played back at a high playback rate (high pitch). Press OK when confirmed.\n");
 #endif
   EM_ASM(
@@ -271,6 +272,7 @@ int main() {
     document.body.appendChild(btn);
   );
 #else
+  alSourcef(sources[0], AL_PITCH, -800.0f);
   printf("You should hear a short audio clip playing back.\n");
 #endif
 
