@@ -437,7 +437,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/netpipe/Desktop/audio/sox.js/sox-14.4.1'
+ac_pwd='/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/usr/bin/mkdir -p'
@@ -1023,12 +1023,12 @@ S["mkdir_p"]="$(MKDIR_P)"
 S["MKDIR_P"]="/usr/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="strip"
-S["install_sh"]="${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/install-sh"
-S["MAKEINFO"]="${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run autoheader"
-S["AUTOMAKE"]="${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run automake-1.12"
-S["AUTOCONF"]="${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run autoconf"
-S["ACLOCAL"]="${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run aclocal-1.12"
+S["install_sh"]="${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/install-sh"
+S["MAKEINFO"]="${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run makeinfo"
+S["AUTOHEADER"]="${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run autoheader"
+S["AUTOMAKE"]="${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run automake-1.12"
+S["AUTOCONF"]="${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run autoconf"
+S["ACLOCAL"]="${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run aclocal-1.12"
 S["VERSION"]="14.4.1"
 S["PACKAGE"]="sox"
 S["CYGPATH_W"]="echo"

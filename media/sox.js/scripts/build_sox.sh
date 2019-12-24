@@ -41,7 +41,9 @@ emcc -O2 src/sox.o src/.libs/*.so src/.libs/*.a ./libgsm/.libs/*.a ./lpc10/.libs
 
 emcc -O2 src/sox.o src/.libs/*.so src/.libs/*.a ./libgsm/.libs/*.a ./lpc10/.libs/*.a -o sox.bc
 
-emcc -O2 src/sox.o src/.libs/*.so src/.libs/*.a ./libgsm/.libs/*.a ./lpc10/.libs/*.a -o sox.html
+emcc -O2 src/sox.o src/.libs/*.so src/.libs/*.a ./libgsm/.libs/*.a ./lpc10/.libs/*.a  -o sox.a
+
+emcc -O2 src/sox.o src/.libs/*.so src/.libs/*.a ./libgsm/.libs/*.a ./lpc10/.libs/*.a --preload-file ../test/media -o sox.html
 
 
 ##############

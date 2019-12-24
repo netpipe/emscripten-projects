@@ -431,7 +431,7 @@ configure:11487: emcc -o conftest -g -O2   conftest.c  >&5
 error: undefined symbol: shl_load
 warning: To disable errors for undefined symbols use `-s ERROR_ON_UNDEFINED_SYMBOLS=0`
 Error: Aborting compilation due to previous errors
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/node/12.9.1_64bit/bin/node /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpvKzhjg.txt' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/node/12.9.1_64bit/bin/node /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpB3lbwC.txt' failed (1)
 configure:11487: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -498,7 +498,7 @@ configure:11487: result: no
 configure:11491: checking for shl_load in -ldld
 configure:11516: emcc -o conftest -g -O2   conftest.c -ldld   >&5
 wasm-ld: error: unable to find library -ldld
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp__XNOaB/conftest.wasm --allow-undefined --lto-O0 /tmp/emscripten_temp__XNOaB/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib -ldld -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_VmIQSl/conftest.wasm --allow-undefined --lto-O0 /tmp/emscripten_temp_VmIQSl/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib -ldld -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
 configure:11516: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -758,7 +758,7 @@ char strcasecmp ();
 conftest.c:58:6: note: 'strcasecmp' is a builtin with type 'int (const char *, const char *)'
 2 warnings generated.
 wasm-ld: warning: function signature mismatch: strcasecmp
->>> defined as () -> i32 in /tmp/emscripten_temp_sTBz36/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_sL5a8Z/conftest_0.o
 >>> defined as (i32, i32) -> i32 in /home/netpipe/.emscripten_cache/wasm-obj/libc.a(strcasecmp_f4c23fb3.c.o)
 configure:12687: $? = 0
 configure:12687: result: yes
@@ -776,7 +776,7 @@ char strdup ();
 conftest.c:59:6: note: 'strdup' is a builtin with type 'char *(const char *)'
 2 warnings generated.
 wasm-ld: warning: function signature mismatch: strdup
->>> defined as () -> i32 in /tmp/emscripten_temp_0D6g3N/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp__FHtmh/conftest_0.o
 >>> defined as (i32) -> i32 in /home/netpipe/.emscripten_cache/wasm-obj/libc.a(strdup_7a79421c.c.o)
 configure:12687: $? = 0
 configure:12687: result: yes
@@ -792,7 +792,7 @@ char popen ();
 error: undefined symbol: popen
 warning: To disable errors for undefined symbols use `-s ERROR_ON_UNDEFINED_SYMBOLS=0`
 Error: Aborting compilation due to previous errors
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/node/12.9.1_64bit/bin/node /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpOcbOoH.txt' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/node/12.9.1_64bit/bin/node /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpF6dzyV.txt' failed (1)
 configure:12687: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -884,7 +884,7 @@ char vsnprintf ();
 conftest.c:60:6: note: 'vsnprintf' is a builtin with type 'int (char *, unsigned long, const char *, __builtin_va_list)'
 2 warnings generated.
 wasm-ld: warning: function signature mismatch: vsnprintf
->>> defined as () -> i32 in /tmp/emscripten_temp_j7JrkS/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_tkqqsk/conftest_0.o
 >>> defined as (i32, i32, i32, i32) -> i32 in /home/netpipe/.emscripten_cache/wasm-obj/libc.a(vsnprintf_5709351d.c.o)
 configure:12687: $? = 0
 configure:12687: result: yes
@@ -909,7 +909,7 @@ char mkstemp ();
               void
 1 warning generated.
 wasm-ld: warning: function signature mismatch: mkstemp
->>> defined as () -> i32 in /tmp/emscripten_temp_TnFnjK/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_1JpK_G/conftest_0.o
 >>> defined as (i32) -> i32 in /home/netpipe/.emscripten_cache/wasm-obj/libc.a(mkstemp_d53d8f28.c.o)
 configure:12687: $? = 0
 configure:12687: result: yes
@@ -923,7 +923,7 @@ char fmemopen ();
                void
 1 warning generated.
 wasm-ld: warning: function signature mismatch: fmemopen
->>> defined as () -> i32 in /tmp/emscripten_temp_o0WqnM/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_i4nuD8/conftest_0.o
 >>> defined as (i32, i32, i32) -> i32 in /home/netpipe/.emscripten_cache/wasm-obj/libc.a(fmemopen_68d1a450.c.o)
 configure:12687: $? = 0
 configure:12687: result: yes
@@ -941,7 +941,7 @@ char pow ();
 conftest.c:64:6: note: 'pow' is a builtin with type 'double (double, double)'
 2 warnings generated.
 wasm-ld: warning: function signature mismatch: pow
->>> defined as () -> i32 in /tmp/emscripten_temp_E8FlyZ/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_Nk_9aA/conftest_0.o
 >>> defined as (f64, f64) -> f64 in /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a(pow_6902d3dd.c.o)
 configure:12697: $? = 0
 configure:12697: result: yes
@@ -1801,7 +1801,7 @@ char mad_stream_buffer ();
                         void
 1 warning generated.
 wasm-ld: error: unable to find library -lmad
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_gPMK9p/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_gPMK9p/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -lmad -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_8YUzTl/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_8YUzTl/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -lmad -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
 configure:13527: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -2287,7 +2287,7 @@ char lame_get_lametag_frame ();
                              void
 1 warning generated.
 wasm-ld: error: unable to find library -lmp3lame
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_dTMsIQ/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_dTMsIQ/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -lmp3lame -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_GEnRPi/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_GEnRPi/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -lmp3lame -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
 configure:13714: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -2357,7 +2357,7 @@ char id3tag_set_fieldvalue ();
                             void
 1 warning generated.
 wasm-ld: error: unable to find library -lmp3lame
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_l0MYMS/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_l0MYMS/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -lmp3lame -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_d_BX3o/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_d_BX3o/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -lmp3lame -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
 configure:13756: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -2567,7 +2567,7 @@ char twolame_init ();
                    void
 1 warning generated.
 wasm-ld: error: unable to find library -ltwolame
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_SRvC2J/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_SRvC2J/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -ltwolame -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp__hARl2/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp__hARl2/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -ltwolame -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
 configure:13852: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -2913,7 +2913,7 @@ char gsm_create ();
                  void
 1 warning generated.
 wasm-ld: error: unable to find library -lgsm
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_ux4T9Z/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_ux4T9Z/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -lgsm -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_HmgnSZ/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_HmgnSZ/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -lgsm -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
 configure:13932: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -3123,7 +3123,7 @@ char create_lpc10_encoder_state ();
                                  void
 1 warning generated.
 wasm-ld: error: unable to find library -llpc10
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_ptIRQH/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_ptIRQH/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -llpc10 -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
+shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/wasm-ld -o /tmp/emscripten_temp_ir8bd4/conftest.wasm --allow-undefined --lto-O0 -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/lib /tmp/emscripten_temp_ir8bd4/conftest_0.o -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib -llpc10 -L/home/netpipe/.emscripten_cache/wasm-obj /home/netpipe/.emscripten_cache/wasm-obj/libc.a /home/netpipe/.emscripten_cache/wasm-obj/libcompiler_rt.a /home/netpipe/.emscripten_cache/wasm-obj/libc-wasm.a /home/netpipe/.emscripten_cache/wasm-obj/libdlmalloc-debug.a /home/netpipe/.emscripten_cache/wasm-obj/libpthread_stub.a /home/netpipe/.emscripten_cache/wasm-obj/libc_rt_wasm.a --import-memory --import-table -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --export __wasm_call_ctors --export __data_end --export main --export malloc --export free --export setThrew --export __errno_location --export fflush -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (1)
 configure:14022: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -6109,7 +6109,7 @@ lt_cv_to_tool_file_cmd=func_convert_file_noop
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run aclocal-1.12'
+ACLOCAL='${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run aclocal-1.12'
 ALSA_CFLAGS=''
 ALSA_LIBS=''
 AMDEPBACKSLASH='\'
@@ -6125,9 +6125,9 @@ AO_LIBS=''
 APP_LDFLAGS=''
 AR='/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/emar'
 AS=''
-AUTOCONF='${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run autoconf'
-AUTOHEADER='${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run autoheader'
-AUTOMAKE='${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run automake-1.12'
+AUTOCONF='${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run autoconf'
+AUTOHEADER='${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run autoheader'
+AUTOMAKE='${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run automake-1.12'
 AWK='gawk'
 CC='emcc'
 CCDEPMODE='depmode=gcc3'
@@ -6236,7 +6236,7 @@ LPC10_CFLAGS=''
 LPC10_LIBS=''
 LTLIBOBJS=''
 MAGIC_LIBS=''
-MAKEINFO='${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/missing --run makeinfo'
+MAKEINFO='${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/missing --run makeinfo'
 MANIFEST_TOOL=':'
 MKDIR_P='/usr/bin/mkdir -p'
 MP3_CFLAGS=''
@@ -6357,7 +6357,7 @@ host_vendor='unknown'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/netpipe/Desktop/audio/sox.js/sox-14.4.1/install-sh'
+install_sh='${SHELL} /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/media/sox.js/sox-14.4.1/install-sh'
 libdir='${exec_prefix}/lib64'
 libexecdir='${exec_prefix}/lib'
 localedir='${datarootdir}/locale'

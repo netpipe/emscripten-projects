@@ -2827,8 +2827,14 @@ static sox_bool cmp_comment_text(char const * c1, char const * c2)
   return c1 && c2 && !strcasecmp(c1, c2);
 }
 
-int main(int argc, char **argv)
+int mainSOX(int argc, char **argv)
 {
+	char **argv1[]={"appname","-v" ,"0.8","/test/audio.wav","out.wav","pitch","-800","test"};
+	int argc1 = sizeof(argv1) / sizeof(char*) - 1;
+
+//argc=argc1;
+//argv=argv1;
+
   size_t i;
   char mybase[6];
 
@@ -3029,3 +3035,5 @@ int main(int argc, char **argv)
 
   return 0;
 }
+
+
