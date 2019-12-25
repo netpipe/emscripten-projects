@@ -6,7 +6,6 @@ attribute vec3 inVertexPosition;
 attribute vec3 inVertexNormal;
 attribute vec4 inVertexColor;
 attribute vec2 inTexCoord0;
-attribute vec2 inTexCoord1;
 
 /* Uniforms */
 
@@ -14,7 +13,6 @@ uniform mat4 uWVPMatrix;
 uniform mat4 uWVMatrix;
 uniform mat4 uNMatrix;
 uniform mat4 uTMatrix0;
-uniform mat4 uTMatrix1;
 
 uniform vec4 uGlobalAmbient;
 uniform vec4 uMaterialAmbient;
@@ -37,7 +35,6 @@ uniform float uThickness;
 /* Varyings */
 
 varying vec2 vTextureCoord0;
-varying vec2 vTextureCoord1;
 varying vec4 vVertexColor;
 varying vec4 vSpecularColor;
 varying float vFogCoord;
@@ -102,9 +99,6 @@ void main()
 	vec4 TextureCoord0 = vec4(inTexCoord0.x, inTexCoord0.y, 1.0, 1.0);
 	vTextureCoord0 = vec4(uTMatrix0 * TextureCoord0).xy;
 
-	vec4 TextureCoord1 = vec4(inTexCoord1.x, inTexCoord1.y, 1.0, 1.0);
-	vTextureCoord1 = vec4(uTMatrix1 * TextureCoord1).xy;
-
 	vVertexColor = inVertexColor.bgra;
 	vSpecularColor = vec4(0.0, 0.0, 0.0, 0.0);
 
@@ -117,44 +111,29 @@ void main()
 		vec4 Ambient = vec4(0.0, 0.0, 0.0, 0.0);
 		vec4 Diffuse = vec4(0.0, 0.0, 0.0, 0.0);
 
-        for (int x = 0; x < MAX_LIGHTS; x++)
-        {
-            if (x < uLightCount)
-            {
-                if (uLightType[x] == 0)
-                {
-                    pointLight(x, Position, Normal, Ambient, Diffuse, vSpecularColor);
-                }
+		for (int i = 0; i < int(MAX_LIGHTS); i++)
+		{
+			if( i >= uLightCount )	// can't use uniform as loop-counter directly in glsl 
+				break;
+			if (uLightType[i] == 0)
+				pointLight(i, Position, Normal, Ambient, Diffuse, vSpecularColor);
+		}
 
-                if (uLightType[x] == 1)
-                {
-                    spotLight(x, Position, Normal, Ambient, Diffuse, vSpecularColor);
-                }
+		for (int i = 0; i < int(MAX_LIGHTS); i++)
+		{
+			if( i >= uLightCount )	
+				break;
+			if (uLightType[i] == 1)
+				spotLight(i, Position, Normal, Ambient, Diffuse, vSpecularColor);
+		}
 
-                if (uLightType[x] == 2)
-                {
-                     dirLight(x, Position, Normal, Ambient, Diffuse, vSpecularColor);
-                }
-            }
-        }
-
-		//for (const int i = 0; i < int(uLightCount); i++)
-		//{
-		//	if (uLightType[i] == 0)
-		//		pointLight(i, Position, Normal, Ambient, Diffuse, vSpecularColor);
-		//}
-//
-//		for (const int i = 0; i < int(uLightCount); i++)
-//		{
-//			if (uLightType[i] == 1)
-//				spotLight(i, Position, Normal, Ambient, Diffuse, vSpecularColor);
-//		}
-//
-//		for (const int i = 0; i < int(uLightCount); i++)
-//		{
-//			if (uLightType[i] == 2)
-////				dirLight(i, Position, Normal, Ambient, Diffuse, vSpecularColor);
-//		}
+		for (int i = 0; i < int(MAX_LIGHTS); i++)
+		{
+			if( i >= uLightCount )	
+				break;
+			if (uLightType[i] == 2)
+				dirLight(i, Position, Normal, Ambient, Diffuse, vSpecularColor);
+		}
 
 		vec4 LightColor = Ambient * uMaterialAmbient + Diffuse * uMaterialDiffuse;
 		LightColor = clamp(LightColor, 0.0, 1.0);

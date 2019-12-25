@@ -34,6 +34,11 @@
 #include <windows.h>
 #endif
 
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
+
+
 using namespace std;
 using namespace irr;
 using namespace SPK;
@@ -61,7 +66,19 @@ System* particleSystem = NULL;
 IrrlichtDevice* device = NULL;
 scene::ICameraSceneNode* cam = NULL;
 
+scene::IMeshBuffer* buff;
+
 bool smokeEnabled = true;
+
+	float time2;
+	float oldtime;
+	float step;
+	float lastLightTime;
+
+	    video::IVideoDriver* driver;
+    scene::ISceneManager* smgr;
+    gui::IGUIEnvironment* guienv;
+
 
 // Input Receiver
 class MyEventReceiver : public IEventReceiver
@@ -91,11 +108,6 @@ class MyEventReceiver : public IEventReceiver
                     particleSystem->empty();
                     return true;
                 }
-				if(event.KeyInput.Key == KEY_KEY_V && event.KeyInput.PressedDown==false)
-				{
-					IRRBuffer::activateVBOHint(!IRRBuffer::isVBOHintActivated());
-					return true;
-				}
             }
             else if(event.EventType == EET_MOUSE_INPUT_EVENT)
             {
@@ -103,7 +115,7 @@ class MyEventReceiver : public IEventReceiver
 				{
 					angleX += (oldMouseX - event.MouseInput.X)*0.1f;
 					angleY += (oldMouseY - event.MouseInput.Y)*0.1f;
-                    
+
 					if(angleY < 1.0f) angleY=1.0f;
 					if(angleY > 70.0f) angleY=70.0f;
 					camPosZ -= event.MouseInput.Wheel;
@@ -127,22 +139,89 @@ class MyEventReceiver : public IEventReceiver
         int oldMouseX,oldMouseY;
 
 	private :
-	
+
 		bool init;
 };
 
+MyEventReceiver* evtrcv;
+
+
+int rendermain(){
+	device->run();
+//	{
+		oldtime = time2;
+        time2 = (f32)device->getTimer()->getTime() / 1000.0f;
+        deltaTime = time2 - oldtime;
+
+		// lightmap effect
+        if(time2 - lastLightTime >= 0.05f)
+        {
+            float decal = SPK::random(0.95f,1.05f);
+            for(int y=0; y<2; y++)
+                for(int x=0; x<2; x++)
+                    ((video::S3DVertex2TCoords*)(buff->getVertices()))[x+2*y].TCoords2 = core::vector2df((x-0.5f)*decal+0.5f,(y-0.5f)*decal+0.5f);
+            lastLightTime = time2;
+        }
+
+		driver->beginScene(true, true, video::SColor(0,0,0,0));
+
+		// Renders scene
+		smgr->drawAll();
+
+	//	core::stringw infos; infos+="FPS: "; infos+=driver->getFPS(); infos+=" - Nb Particles: "; infos+=particleSystem->getNbParticles();
+        //guienv->getBuiltInFont()->draw(infos.c_str(),core::rect<s32>(0,0,170,20),video::SColor(255,255,255,255));
+
+		driver->endScene();
+
+		// clip mouse
+        if(device->getCursorControl()->getPosition().X < 20)
+        {
+            device->getCursorControl()->setPosition(620,device->getCursorControl()->getPosition().Y);
+            evtrcv->oldMouseX = 620;
+        }
+        if(device->getCursorControl()->getPosition().X > 620)
+        {
+            device->getCursorControl()->setPosition(20,device->getCursorControl()->getPosition().Y);
+            evtrcv->oldMouseX = 20;
+        }
+        if(device->getCursorControl()->getPosition().Y < 20)
+        {
+            device->getCursorControl()->setPosition(device->getCursorControl()->getPosition().X,460);
+            evtrcv->oldMouseY = 460;
+        }
+        if(device->getCursorControl()->getPosition().Y > 460)
+        {
+            device->getCursorControl()->setPosition(device->getCursorControl()->getPosition().X,20);
+            evtrcv->oldMouseY = 20;
+        }
+device->sleep(25,0);
+	//}
+
+	}
+
+void main_loop(){
+	device->run();
+rendermain();
+
+}
 // Main function
 int main(int argc, char *argv[])
 {
+	#ifdef __EMSCRIPTEN__
 	//!IRRLICHT
+	    video::E_DRIVER_TYPE chosenDriver = video::EDT_OGLES2;
+
+
+    #else
     video::E_DRIVER_TYPE chosenDriver = video::EDT_OPENGL;
+    #endif
 #ifdef _WIN32
 	if(MessageBoxA(0,"Do you want to use DirectX 9 ?","SPARK Fire Demo using Irrlicht",MB_YESNO) == 6)
         chosenDriver = video::EDT_DIRECT3D9;
 #endif
 
     //!IRRLICHT
-	MyEventReceiver* evtrcv = new MyEventReceiver;
+	evtrcv = new MyEventReceiver;
 	device = createDevice(chosenDriver,
 		core::dimension2d<u32>(640,480),
 		32,
@@ -151,9 +230,9 @@ int main(int argc, char *argv[])
 		false,
 		evtrcv);
 
-    video::IVideoDriver* driver = device->getVideoDriver();
-    scene::ISceneManager* smgr = device->getSceneManager();
-    gui::IGUIEnvironment* guienv = device->getGUIEnvironment();
+     driver = device->getVideoDriver();
+    smgr = device->getSceneManager();
+     guienv = device->getGUIEnvironment();
 
     device->setWindowCaption(L"SPARK Fire Demo using Irrlicht");
 	device->getCursorControl()->setVisible(false);
@@ -162,22 +241,34 @@ int main(int argc, char *argv[])
         core::vector3df());
     cam->setNearValue(0.05f);
 
-	scene::IMesh* sceneryMesh = smgr->getMesh("res/SceneFireCamp.obj");
-	scene::ISceneNode* sceneryNode = smgr->addMeshSceneNode(sceneryMesh);
-	sceneryNode->setPosition(core::vector3df(0.0f,-1.5f,0.0f));
-	sceneryNode->setScale(core::vector3df(0.01f,0.01f,0.01f));
-
-	smgr->setAmbientLight(video::SColorf(0.15f,0.15f,0.25f));
-
-	scene::ILightSceneNode* lightNode = smgr->addLightSceneNode();
-	lightNode->setLightType(video::ELT_SPOT);
-	video::SLight& lightData = lightNode->getLightData();
-	lightData.AmbientColor = video::SColorf(0.0f,0.0f,0.0f);
-	lightData.DiffuseColor = video::SColorf(1.0f,0.75f,0.25f);
-	lightData.InnerCone = 180.0f;
-	lightData.OuterCone = 180.0f;
-	lightData.Attenuation.X = 0.0f;
-	lightData.Attenuation.Y = 0.0f;
+	// plane
+    core::array<video::S3DVertex2TCoords> pVertices;
+    pVertices.set_used(4);
+    core::array<u16> pIndices;
+    pIndices.set_used(6);
+    for(int y=0; y<2; y++){
+    for(int x=0; x<2; x++){
+        pVertices[x+2*y].Pos = core::vector3df((x*2-1)*5.0f,-1.2f,(y*2-1)*5.0f);
+        pVertices[x+2*y].Normal = core::vector3df(0,1,0);
+        pVertices[x+2*y].TCoords = core::vector2df((x*2-1)*5.0f,(y*2-1)*5.0f);
+        pVertices[x+2*y].TCoords2 = core::vector2df((f32)x,(f32)y);
+        pVertices[x+2*y].Color = video::SColor(255,255,255,255);
+    }
+    }
+    pIndices[0] = 0;
+    pIndices[1] = 2;
+    pIndices[2] = 1;
+    pIndices[3] = 2;
+    pIndices[4] = 3;
+    pIndices[5] = 1;
+     buff = new scene::CMeshBuffer<video::S3DVertex2TCoords>;
+    buff->append(pVertices.pointer(),4,pIndices.pointer(),6);
+    buff->getMaterial().MaterialType = video::EMT_LIGHTMAP;
+    buff->getMaterial().TextureLayer[0].Texture = driver->getTexture("media/res/grass.bmp");
+    buff->getMaterial().TextureLayer[1].Texture = driver->getTexture("media/res/lightmap3.bmp");
+    buff->getMaterial().Lighting = false;
+    scene::SMesh* mesh = new scene::SMesh; mesh->addMeshBuffer(buff);
+    scene::IMeshSceneNode* plane = smgr->addMeshSceneNode(mesh);
 
 	// random seed
 	randomSeed = device->getTimer()->getRealTime();
@@ -190,7 +281,7 @@ int main(int argc, char *argv[])
 	// Renderers
 	IRRQuadRenderer* fireRenderer = IRRQuadRenderer::create(device);
 	fireRenderer->setScale(0.3f,0.3f);
-	fireRenderer->setTexture(driver->getTexture("res\\fire2.bmp"));
+	fireRenderer->setTexture(driver->getTexture("media/res/fire2.bmp"));
 	fireRenderer->setTexturingMode(TEXTURE_2D);
 	fireRenderer->setBlending(BLENDING_ADD);
 	fireRenderer->enableRenderingHint(DEPTH_WRITE,false);
@@ -198,7 +289,7 @@ int main(int argc, char *argv[])
 
 	IRRQuadRenderer* smokeRenderer = IRRQuadRenderer::create(device);
 	smokeRenderer->setScale(0.3f,0.3f);
-	smokeRenderer->setTexture(driver->getTexture("res\\explosion.png"));
+	smokeRenderer->setTexture(driver->getTexture("media/res/explosion.png"));
 	smokeRenderer->setTexturingMode(TEXTURE_2D);
 	smokeRenderer->setBlending(BLENDING_ALPHA);
 	smokeRenderer->enableRenderingHint(DEPTH_WRITE,false);
@@ -287,7 +378,7 @@ int main(int argc, char *argv[])
 	smokeGroup->setRenderer(smokeRenderer);
 	smokeGroup->setGravity(Vector3D(0.0f,0.4f,0.0f));
 	smokeGroup->enableAABBComputing(true);
-	
+
 	// System
 	particleSystem = IRRSystem::create(smgr->getRootSceneNode(),smgr);
 	particleSystem->addGroup(smokeGroup);
@@ -297,60 +388,20 @@ int main(int argc, char *argv[])
 	// setup some useful variables
 	float time=(f32)device->getTimer()->getTime() / 1000.0f,oldtime,deltaTime;
 	float step = 0.0f;
+	float lastLightTime = 0;
 
 	cout << "\nSPARK FACTORY AFTER INIT :" << endl;
 	SPKFactory::getInstance().traceAll();
 
-	float lightTime = 0.05f;
+#ifdef __EMSCRIPTEN__
+	emscripten_set_main_loop(main_loop,0,1);
+#else
 
 	while(device->run())
 	{
-		oldtime = time;
-        time = (f32)device->getTimer()->getTime() / 1000.0f;
-        deltaTime = time - oldtime;
-
-		lightTime += deltaTime;
-		if (lightTime >= 0.05f)
-		{
-			float lightIntensity = 1.0f - (random(0.0f,0.05f) * 5.0f);
-			lightTime -= lightTime;
-			lightNode->setPosition(core::vector3df(random(-0.5f,0.5f),0.5f + random(-0.5f,0.5f),random(-0.5f,0.5f)));
-			lightNode->getLightData().Attenuation.Z = 15.0f / lightIntensity;
-		}
-
-		driver->beginScene(true, true, video::SColor(0,0,0,0));
-
-		// Renders scene
-		smgr->drawAll();
-
-		core::stringw infos; infos+="FPS: "; infos+=driver->getFPS(); infos+=" - Nb Particles: "; infos+=particleSystem->getNbParticles();
-		infos+=" - VBO: "; infos+=(IRRBuffer::isVBOHintActivated() ? "true" : "false");
-        guienv->getBuiltInFont()->draw(infos.c_str(),core::rect<s32>(0,0,170,20),video::SColor(255,255,255,255));
-
-		driver->endScene();
-
-		// clip mouse
-        if(device->getCursorControl()->getPosition().X < 20)
-        {
-            device->getCursorControl()->setPosition(620,device->getCursorControl()->getPosition().Y);
-            evtrcv->oldMouseX = 620;
-        }
-        if(device->getCursorControl()->getPosition().X > 620)
-        {
-            device->getCursorControl()->setPosition(20,device->getCursorControl()->getPosition().Y);
-            evtrcv->oldMouseX = 20;
-        }
-        if(device->getCursorControl()->getPosition().Y < 20)
-        {
-            device->getCursorControl()->setPosition(device->getCursorControl()->getPosition().X,460);
-            evtrcv->oldMouseY = 460;
-        }
-        if(device->getCursorControl()->getPosition().Y > 460)
-        {
-            device->getCursorControl()->setPosition(device->getCursorControl()->getPosition().X,20);
-            evtrcv->oldMouseY = 20;
-        }
+		rendermain();
 	}
+#endif
 
 	cout << "\nSPARK FACTORY BEFORE DESTRUCTION :" << endl;
 	SPKFactory::getInstance().traceAll();

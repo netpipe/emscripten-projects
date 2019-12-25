@@ -39,10 +39,11 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s ALLOW_MEMORY_GROWTH=1" />
-					<Add option="--preload-file res/" />
+					<Add option="--preload-file media/" />
 					<Add option="-s FULL_ES2=1" />
 					<Add option="-s DISABLE_EXCEPTION_CATCHING=0" />
 					<Add option="-s NO_EXIT_RUNTIME=1" />
+					<Add option="-s ASYNCIFY=1" />
 					<Add library="Irrlicht" />
 					<Add library="SPARK" />
 					<Add library="SPARK_IRR" />
