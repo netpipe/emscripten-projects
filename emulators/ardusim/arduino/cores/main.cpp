@@ -32,6 +32,8 @@ int main(void)
 
 	for (;;) {
 		loop();
+		//update gui here
+
 		//if (serialEventRun) serialEventRun();
 		fprintf(stderr, "Loop %d\r", ++loopcount);
 		usleep(50000);
