@@ -4,7 +4,7 @@
 // Revision 1.25
 //
 // This work is licensed under the MIT License. See included LICENSE.TXT.
-#define NO_GRAPHICS
+//#define NO_GRAPHICS
 #include <time.h>
 #include <sys/timeb.h>
 #include <memory.h>

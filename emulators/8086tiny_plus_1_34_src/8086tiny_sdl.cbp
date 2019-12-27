@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="8086tiny_sdl" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug32">
+				<Option output="./8086tiny_sdl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/SDL_Debug32/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release32">
+				<Option output="bin/Release32/8086tiny_sdl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/SDL_Release32/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-fno-strict-aliasing" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="linux">
+				<Option output="8086tiny_sdl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/SDL_Debug32/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Environment>
+				<Variable name="SDL_DIR" value="C:/mingw_32_x86_4.80/SDL2-2.0.3" />
+				<Variable name="SDL_DIRA" value="C:/Data/mingw32_4.80/SDL2-2.0.3" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-D__SDL__" />
+			<Add directory="$(SDL_DIR)/include" />
+			<Add directory="." />
+			<Add directory="shared" />
+			<Add directory="sdl" />
+			<Add directory="sdl/utils" />
+		</Compiler>
+		<Linker>
+			<Add library="SDL2" />
+			<Add directory="$(SDL_DIR)/i686-w64-mingw32/lib" />
+		</Linker>
+		<Unit filename="8086tiny_interface.h" />
+		<Unit filename="8086tiny_new.cpp" />
+		<Unit filename="sdl/sdl_8086tiny_interface.cpp" />
+		<Unit filename="sdl/sdl_cga.cpp" />
+		<Unit filename="sdl/sdl_cga.h" />
+		<Unit filename="sdl/sdl_cpu_speed_dialog.cpp" />
+		<Unit filename="sdl/sdl_cpu_speed_dialog.h" />
+		<Unit filename="sdl/sdl_debug.cpp" />
+		<Unit filename="sdl/sdl_debug.h" />
+		<Unit filename="sdl/sdl_file_dialog.cpp" />
+		<Unit filename="sdl/sdl_serial_cfg_dialog.cpp" />
+		<Unit filename="sdl/sdl_serial_cfg_dialog.h" />
+		<Unit filename="sdl/sdl_sound_cfg.cpp" />
+		<Unit filename="sdl/sdl_sound_cfg.h" />
+		<Unit filename="sdl/utils/sdl_button.cpp" />
+		<Unit filename="sdl/utils/sdl_button.h" />
+		<Unit filename="sdl/utils/sdl_checkbox.cpp" />
+		<Unit filename="sdl/utils/sdl_checkbox.h" />
+		<Unit filename="sdl/utils/sdl_control.cpp" />
+		<Unit filename="sdl/utils/sdl_control.h" />
+		<Unit filename="sdl/utils/sdl_control_list.cpp" />
+		<Unit filename="sdl/utils/sdl_control_list.h" />
+		<Unit filename="sdl/utils/sdl_edit.cpp" />
+		<Unit filename="sdl/utils/sdl_edit.h" />
+		<Unit filename="sdl/utils/sdl_hscroll.cpp" />
+		<Unit filename="sdl/utils/sdl_hscroll.h" />
+		<Unit filename="sdl/utils/sdl_listbox.cpp" />
+		<Unit filename="sdl/utils/sdl_listbox.h" />
+		<Unit filename="sdl/utils/sdl_simple_menu.cpp" />
+		<Unit filename="sdl/utils/sdl_simple_menu.h" />
+		<Unit filename="sdl/utils/sdl_simple_text.cpp" />
+		<Unit filename="sdl/utils/sdl_simple_text.h" />
+		<Unit filename="sdl/utils/sdl_slider.cpp" />
+		<Unit filename="sdl/utils/sdl_slider.h" />
+		<Unit filename="sdl/utils/sdl_vscroll.cpp" />
+		<Unit filename="sdl/utils/sdl_vscroll.h" />
+		<Unit filename="shared/cga_glyphs.cpp" />
+		<Unit filename="shared/cga_glyphs.h" />
+		<Unit filename="shared/debug_disasm.cpp" />
+		<Unit filename="shared/debug_disasm.h" />
+		<Unit filename="shared/file_dialog.h" />
+		<Unit filename="shared/serial_emulation.cpp" />
+		<Unit filename="shared/serial_emulation.h" />
+		<Unit filename="shared/serial_hw.h" />
+		<Unit filename="shared/vga_glyphs.cpp" />
+		<Unit filename="shared/vga_glyphs.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
