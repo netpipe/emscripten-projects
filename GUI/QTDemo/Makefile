@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = widgets_wiggly.js1.0.0
-DISTDIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/.tmp/widgets_wiggly.js1.0.0
+DISTDIR = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/.tmp/widgets_wiggly.js1.0.0
 LINK          = /home/Dev/libs/Scripting/emsdk/upstream/emscripten/em++
 LFLAGS        = -s WASM=1 -s FULL_ES2=1 -s USE_WEBGL2=1 -s NO_EXIT_RUNTIME=0 -s ERROR_ON_UNDEFINED_SYMBOLS=1 --bind -O3 -s ALLOW_MEMORY_GROWTH=1 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libqtfreetype.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libqtlibpng.a
 LIBS          = $(SUBLIBS) /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/plugins/platforms/libqwasm.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libQt5EventDispatcherSupport.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libQt5FontDatabaseSupport.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libqtfreetype.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libQt5EglSupport.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/plugins/imageformats/libqgif.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/plugins/imageformats/libqico.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/plugins/imageformats/libqjpeg.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libQt5Widgets.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libQt5Gui.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libqtlibpng.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libqtharfbuzz.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libQt5Core.a /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/lib/libqtpcre2.a   
@@ -55,7 +55,7 @@ OBJECTS_DIR   = ./
 SOURCES       = wigglywidget.cpp \
 		dialog.cpp \
 		main.cpp \
-		mainwindow.cpp /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/widgets_wiggly.js_plugin_import.cpp \
+		mainwindow.cpp /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/widgets_wiggly.js_plugin_import.cpp \
 		moc_wigglywidget.cpp \
 		moc_dialog.cpp \
 		moc_mainwindow.cpp
@@ -116,6 +116,9 @@ DIST          = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_printsupport.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_service_support_private.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_service_support_private.pri \
+		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_sql.pri \
+		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_sql_private.pri \
+		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_sql.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_testlib.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_testlib_private.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_testlib.pri \
@@ -156,7 +159,6 @@ DIST          = /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/qt_config.prf \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten/qmake.conf \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/exclusive_builds.prf \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/toolchain.prf \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/default_pre.prf \
@@ -241,6 +243,9 @@ Makefile: widgets_wiggly.pro /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578da
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_printsupport.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_service_support_private.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_service_support_private.pri \
+		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_sql.pri \
+		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_sql_private.pri \
+		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_sql.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_testlib.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_testlib_private.pri \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_testlib.pri \
@@ -281,7 +286,6 @@ Makefile: widgets_wiggly.pro /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578da
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/qt_config.prf \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten/qmake.conf \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/exclusive_builds.prf \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/toolchain.prf \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/default_pre.prf \
@@ -358,6 +362,9 @@ Makefile: widgets_wiggly.pro /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578da
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_printsupport.pri:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_service_support_private.pri:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_service_support_private.pri:
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_sql.pri:
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_sql_private.pri:
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_sql.pri:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_testlib.pri:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules-inst/qt_lib_testlib_private.pri:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/modules/qt_lib_testlib.pri:
@@ -398,7 +405,6 @@ Makefile: widgets_wiggly.pro /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578da
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/qt_config.prf:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten/qmake.conf:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/exclusive_builds.prf:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/toolchain.prf:
 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/default_pre.prf:
@@ -452,20 +458,20 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
-	-$(DEL_FILE) *.html *.js *.wasm /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/widgets_wiggly.js_plugin_import.cpp .qmake.stash
+	-$(DEL_FILE) *.html *.js *.wasm /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/widgets_wiggly.js_plugin_import.cpp .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
 ####### Sub-libraries
 
 apphtml: /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/wasm_shell.html
-	sed -e s/@APPNAME@/widgets_wiggly/g /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/wasm_shell.html > /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/widgets_wiggly.html
+	sed -e s/@APPNAME@/widgets_wiggly/g /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/wasm_shell.html > /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/widgets_wiggly.html
 
 appjs: /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/qtloader.js
-	cp -f /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/qtloader.js /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly
+	cp -f /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/qtloader.js /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo
 
 appsvg: /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/qtlogo.svg
-	cp -f /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/qtlogo.svg /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly
+	cp -f /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/features/wasm/../../../src/plugins/platforms/wasm/qtlogo.svg /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo
 
 shellfiles: apphtml appjs appsvg
 
@@ -710,7 +716,7 @@ moc_wigglywidget.cpp: wigglywidget.h \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/src/gui/kernel/qtouchdevice.h \
 		moc_predefs.h \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc
-	/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc $(DEFINES) --include /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/moc_predefs.h -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtWidgets -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtGui -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtCore wigglywidget.h -o moc_wigglywidget.cpp
+	/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc $(DEFINES) --include /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/moc_predefs.h -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtWidgets -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtGui -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtCore wigglywidget.h -o moc_wigglywidget.cpp
 
 moc_dialog.cpp: dialog.h \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtWidgets/QDialog \
@@ -924,7 +930,7 @@ moc_dialog.cpp: dialog.h \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/src/gui/kernel/qtouchdevice.h \
 		moc_predefs.h \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc
-	/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc $(DEFINES) --include /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/moc_predefs.h -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtWidgets -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtGui -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtCore dialog.h -o moc_dialog.cpp
+	/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc $(DEFINES) --include /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/moc_predefs.h -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtWidgets -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtGui -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtCore dialog.h -o moc_dialog.cpp
 
 moc_mainwindow.cpp: mainwindow.h \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtWidgets/QMainWindow \
@@ -1142,7 +1148,7 @@ moc_mainwindow.cpp: mainwindow.h \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/src/gui/image/qicon.h \
 		moc_predefs.h \
 		/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc
-	/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc $(DEFINES) --include /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/moc_predefs.h -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtWidgets -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtGui -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtCore mainwindow.h -o moc_mainwindow.cpp
+	/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/bin/moc $(DEFINES) --include /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/moc_predefs.h -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/mkspecs/wasm-emscripten -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtWidgets -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtGui -I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/GUI/qtbase/include/QtCore mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -2752,8 +2758,8 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
-widgets_wiggly.js_plugin_import.o: /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/widgets_wiggly.js_plugin_import.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o widgets_wiggly.js_plugin_import.o /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/widgets_wiggly.js_plugin_import.cpp
+widgets_wiggly.js_plugin_import.o: /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/widgets_wiggly.js_plugin_import.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o widgets_wiggly.js_plugin_import.o /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/widgets_wiggly.js_plugin_import.cpp
 
 moc_wigglywidget.o: moc_wigglywidget.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_wigglywidget.o moc_wigglywidget.cpp
@@ -2767,12 +2773,12 @@ moc_mainwindow.o: moc_mainwindow.cpp
 ####### Install
 
 install_js_file: first FORCE
-	@test -d $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/./ || mkdir -p $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/./
-	$(QINSTALL_PROGRAM) /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/widgets_wiggly.js $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/./widgets_wiggly.js
+	@test -d $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/./ || mkdir -p $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/./
+	$(QINSTALL_PROGRAM) /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/widgets_wiggly.js $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/./widgets_wiggly.js
 
 uninstall_js_file: FORCE
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/./widgets_wiggly.js
-	-$(DEL_DIR) $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/IrrlichtDemos-git/FeatureDemos/emscripten/widgets_wiggly/./ 
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/./widgets_wiggly.js
+	-$(DEL_DIR) $(INSTALL_ROOT)/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/GUI/QTDemo/./ 
 
 
 install: install_js_file  FORCE
