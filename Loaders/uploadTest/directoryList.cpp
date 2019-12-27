@@ -1,7 +1,13 @@
 #include <iostream>
 #include <fstream>
-
+       #include <sys/stat.h>
+       #include <sys/types.h>
+ #include <dirent.h>
+ #include <fcntl.h> 
 //emcc directoryList.cpp -o test.html
+
+
+using namespace std;
 
 static void list_dir(const char *path)
 {
@@ -22,10 +28,10 @@ static void list_dir(const char *path)
 int main()
 {
 
-	if((f_trans != stdout) && (f_trans != stderr))
-		fclose(f_trans);  // needed for WinCe
+	//if((f_trans != stdout) && (f_trans != stderr))
+	//	fclose(f_trans);  // needed for WinCe
 
-mkdir("/test");
+mkdir("./test",1);
 
 //    fstream fs;
 //    fs.open("/test", ios::out);
