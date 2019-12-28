@@ -31,6 +31,20 @@ int main()
 	//if((f_trans != stdout) && (f_trans != stderr))
 	//	fclose(f_trans);  // needed for WinCe
 
+EM_ASM(
+var btn = document.createElement('input');
+btn.type = 'button';
+btn.name
+= btn.value = 'OK';
+btn.onclick = function() {
+saveAs(blob, "test", 1);
+};
+document.body.appendChild(btn);
+);
+
+
+
+
 mkdir("./test",1);
 
 //    fstream fs;
