@@ -1,4 +1,7 @@
-emcc 8086tiny.c tmt.c -D__EMSCRIPTEN__ -DUSE_TMT -DNO_GRAPHICS -o 8086tiny.html -fsigned-char -O1 --embed-file bios --embed-file fd.img
+emcc 8086tiny.c tmt.c -D__EMSCRIPTEN__ -DNO_AUDIO -DUSE_TMT -o 8086tiny.html -fsigned-char -O1 --embed-file bios --embed-file fd.img -s USE_SDL=1
+
+
+not used anymore to enable keyboard -DNO_GRAPHICS  
 
 node 8086tiny.js bios fd.img
 
