@@ -4,7 +4,7 @@
 // Revision 1.25
 //
 // This work is licensed under the MIT License. See included LICENSE.TXT.
-#define NO_GRAPHICS
+
 #include <time.h>
 #include <sys/timeb.h>
 #include <memory.h>
@@ -14,9 +14,20 @@
 #include <fcntl.h>
 #endif
 
+#ifdef USE_TMT
+#include "tmt.h"
+#endif
+
 #ifndef NO_GRAPHICS
 #include "SDL.h"
 #endif
+
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
+
+// For using standard library functions for file io
+#include <stdio.h>
 
 // Emulator system constants
 #define IO_PORT_COUNT 0x10000
@@ -88,6 +99,32 @@
 #define FLAGS_UPDATE_AO_ARITH 2
 #define FLAGS_UPDATE_OC_LOGIC 4
 
+// Default values of GRAPHICS_* used to create keyboard listening window in text mode when vterm does not use sdl rendering
+#define GRAPHICS_X_DEFAULT 50
+#define GRAPHICS_Y_DEFAULT 50
+
+// Emscripten port related
+#define EMSCRIPTEN_MAIN_LOOP_FRAMERATE 100
+#define EMSCRIPTEN_INSTRUCTIONS_PER_FRAME 100000
+// Use hd.img file
+//#define EMSCRIPTEN_USE_HD
+#define EMSCRIPTEN_BIOS_FILE "bios"
+#define EMSCRIPTEN_FD_FILE "fd.img"
+#define EMSCRIPTEN_HD_FILE "hd.img"
+
+// Virtual terminal related
+#ifdef USE_TMT
+#ifdef __EMSCRIPTEN__
+#define VTERM_BLANK_LINES 0
+#define VTERM_LINES 10
+#define VTERM_COLS 80
+#else
+#define VTERM_BLANK_LINES 200
+#define VTERM_LINES 50
+#define VTERM_COLS 80
+#endif
+#endif
+
 // Helper macros
 
 // Decode mod, r_m and reg fields in instruction
@@ -147,27 +184,33 @@
 #define KEYBOARD_DRIVER read(0, mem + 0x4A6, 1) && (int8_asap = (mem[0x4A6] == 0x1B), pc_interrupt(7))
 #endif
 
-// Keyboard driver for SDL
-#ifdef NO_GRAPHICS
-#define SDL_KEYBOARD_DRIVER KEYBOARD_DRIVER
-#else
-#define SDL_KEYBOARD_DRIVER sdl_screen ? SDL_PollEvent(&sdl_event) && (sdl_event.type == SDL_KEYDOWN || sdl_event.type == SDL_KEYUP) && (scratch_uint = sdl_event.key.keysym.unicode, scratch2_uint = sdl_event.key.keysym.mod, CAST(short)mem[0x4A6] = 0x400 + 0x800*!!(scratch2_uint & KMOD_ALT) + 0x1000*!!(scratch2_uint & KMOD_SHIFT) + 0x2000*!!(scratch2_uint & KMOD_CTRL) + 0x4000*(sdl_event.type == SDL_KEYUP) + ((!scratch_uint || scratch_uint > 0x7F) ? sdl_event.key.keysym.sym : scratch_uint), pc_interrupt(7)) : (KEYBOARD_DRIVER)
-#endif
-
 // Global variable definitions
 unsigned char mem[RAM_SIZE], io_ports[IO_PORT_COUNT], *opcode_stream, *regs8, i_rm, i_w, i_reg, i_mod, i_mod_size, i_d, i_reg4bit, raw_opcode_id, xlat_opcode_id, extra, rep_mode, seg_override_en, rep_override_en, trap_flag, int8_asap, scratch_uchar, io_hi_lo, *vid_mem_base, spkr_en, bios_table_lookup[20][256];
 unsigned short *regs16, reg_ip, seg_override, file_index, wave_counter;
-unsigned int op_source, op_dest, rm_addr, op_to_addr, op_from_addr, i_data0, i_data1, i_data2, scratch_uint, scratch2_uint, inst_counter, set_flags_type, GRAPHICS_X, GRAPHICS_Y, pixel_colors[16], vmem_ctr;
-int op_result, disk[3], scratch_int;
+unsigned int op_source, op_dest, rm_addr, op_to_addr, op_from_addr, i_data0, i_data1, i_data2, scratch_uint, scratch2_uint, scratch3_uint, inst_counter, set_flags_type, GRAPHICS_X, GRAPHICS_Y, pixel_colors[16], vmem_ctr;
+int op_result, disk_size, scratch_int;
 time_t clock_buf;
 struct timeb ms_clock;
+FILE* disk[3];
 
 #ifndef NO_GRAPHICS
+#ifndef NO_AUDIO
 SDL_AudioSpec sdl_audio = {44100, AUDIO_U8, 1, 0, 128};
+#endif
 SDL_Surface *sdl_screen;
+int is_display_init;
 SDL_Event sdl_event;
 unsigned short vid_addr_lookup[VIDEO_RAM_SIZE], cga_colors[4] = {0 /* Black */, 0x1F1F /* Cyan */, 0xE3E3 /* Magenta */, 0xFFFF /* White */};
 #endif
+
+// Virtual terminal via tmt
+#ifdef USE_TMT
+TMT* vterm;
+int vterm_needs_draw;
+#endif
+
+// Should main loop continue
+int cont_main_loop;
 
 // Helper functions
 
@@ -245,6 +288,7 @@ int AAA_AAS(char which_operation)
 	return (regs16[REG_AX] += 262 * which_operation*set_AF(set_CF(((regs8[REG_AL] & 0x0F) > 9) || regs8[FLAG_AF])), regs8[REG_AL] &= 0x0F);
 }
 
+#ifndef NO_AUDIO
 #ifndef NO_GRAPHICS
 void audio_callback(void *data, unsigned char *stream, int len)
 {
@@ -254,18 +298,172 @@ void audio_callback(void *data, unsigned char *stream, int len)
 	spkr_en = io_ports[0x61] & 3;
 }
 #endif
+#endif
 
-// Emulator entry point
-int main(int argc, char **argv)
+// Callback for tmt
+#ifdef USE_TMT
+void tmt_callback(tmt_msg_t m, TMT* vt, void const *a, void *p)
 {
+}
+#endif
+
+// Translates SDLKey to ASCII. Keysyms match ASCII only if SDL on the platform defines it that way.
 #ifndef NO_GRAPHICS
+unsigned int sdl_key_to_ascii(SDLKey sdl_key)
+{
+    switch(sdl_key)
+    {
+        case SDLK_BACKSPACE:        return 8;   break;
+        case SDLK_TAB:              return 9;   break;
+        case SDLK_CLEAR:		    return 12;  break;
+        case SDLK_RETURN:           return 13;  break;
+        case SDLK_PAUSE:            return 19;  break;
+        case SDLK_ESCAPE:           return 27;  break;
+        case SDLK_SPACE:		    return 32;  break;
+        case SDLK_EXCLAIM:		    return 33;  break;
+        case SDLK_QUOTEDBL:		    return 34;  break;
+        case SDLK_HASH:             return 35;  break;
+        case SDLK_DOLLAR:		    return 36;  break;
+        case SDLK_AMPERSAND:		return 38;  break;
+        case SDLK_QUOTE:		    return 39;  break;
+        case SDLK_LEFTPAREN:        return 40;  break;
+        case SDLK_RIGHTPAREN:       return 41;  break;
+        case SDLK_ASTERISK:         return 42;  break;
+        case SDLK_PLUS:             return 43;  break;
+        case SDLK_COMMA:            return 44;  break;
+        case SDLK_MINUS:            return 45;  break;
+        case SDLK_PERIOD:           return 46;  break;
+        case SDLK_SLASH:            return 47;  break;
+        case SDLK_0:                return 48;  break;
+        case SDLK_1:                return 49;  break;
+        case SDLK_2:                return 50;  break;
+        case SDLK_3:                return 51;  break;
+        case SDLK_4:                return 52;  break;
+        case SDLK_5:                return 53;  break;
+        case SDLK_6:                return 54;  break;
+        case SDLK_7:                return 55;  break;
+        case SDLK_8:                return 56;  break;
+        case SDLK_9:                return 57;  break;
+        case SDLK_COLON:            return 58;  break;
+        case SDLK_SEMICOLON:        return 59;  break;
+        case SDLK_LESS:             return 60;  break;
+        case SDLK_EQUALS:           return 61;  break;
+        case SDLK_GREATER:          return 62;  break;
+        case SDLK_QUESTION:         return 63;  break;
+        case SDLK_AT:               return 64;  break;
+        case SDLK_LEFTBRACKET:      return 91;  break;
+        case SDLK_BACKSLASH:        return 92;  break;
+        case SDLK_RIGHTBRACKET:     return 93;  break;
+        case SDLK_CARET:            return 94;  break;
+        case SDLK_UNDERSCORE:       return 95;  break;
+        case SDLK_BACKQUOTE:        return 96;  break;
+        case SDLK_a:                return 97;  break;
+        case SDLK_b:                return 98;  break;
+        case SDLK_c:                return 99;  break;
+        case SDLK_d:                return 100; break;
+        case SDLK_e:                return 101; break;
+        case SDLK_f:                return 102; break;
+        case SDLK_g:                return 103; break;
+        case SDLK_h:                return 104; break;
+        case SDLK_i:                return 105; break;
+        case SDLK_j:                return 106; break;
+        case SDLK_k:                return 107; break;
+        case SDLK_l:                return 108; break;
+        case SDLK_m:                return 109; break;
+        case SDLK_n:                return 110; break;
+        case SDLK_o:                return 111; break;
+        case SDLK_p:                return 112; break;
+        case SDLK_q:                return 113; break;
+        case SDLK_r:                return 114; break;
+        case SDLK_s:                return 115; break;
+        case SDLK_t:                return 116; break;
+        case SDLK_u:                return 117; break;
+        case SDLK_v:                return 118; break;
+        case SDLK_w:                return 119; break;
+        case SDLK_x:                return 120; break;
+        case SDLK_y:                return 121; break;
+        case SDLK_z:                return 122; break;
+        case SDLK_DELETE:           return 127; break;
+        case SDLK_KP0:              return 256; break;
+        case SDLK_KP1:		        return 257; break;
+        case SDLK_KP2:		        return 258; break;
+        case SDLK_KP3:		        return 259; break;
+        case SDLK_KP4:		        return 260; break;
+        case SDLK_KP5:		        return 261; break;
+        case SDLK_KP6:		        return 262; break;
+        case SDLK_KP7:		        return 263; break;
+        case SDLK_KP8:		        return 264; break;
+        case SDLK_KP9:		        return 265; break;
+        case SDLK_KP_PERIOD:	    return 266; break;
+        case SDLK_KP_DIVIDE:	    return 267; break;
+        case SDLK_KP_MULTIPLY:	    return 268; break;
+        case SDLK_KP_MINUS:		    return 269; break;
+        case SDLK_KP_PLUS:		    return 270; break;
+        case SDLK_KP_ENTER:		    return 271; break;
+        case SDLK_KP_EQUALS:	    return 272; break;
+        case SDLK_UP:			    return 273; break;
+        case SDLK_DOWN:		        return 274; break;
+        case SDLK_RIGHT:	        return 275; break;
+        case SDLK_LEFT:		        return 276; break;
+        case SDLK_INSERT:		    return 277; break;
+        case SDLK_HOME:		        return 278; break;
+        case SDLK_END:		        return 279; break;
+        case SDLK_PAGEUP:		    return 280; break;
+        case SDLK_PAGEDOWN:		    return 281; break;
+        case SDLK_F1:			    return 282; break;
+        case SDLK_F2:			    return 283; break;
+        case SDLK_F3:			    return 284; break;
+        case SDLK_F4:			    return 285; break;
+        case SDLK_F5:			    return 286; break;
+        case SDLK_F6:			    return 287; break;
+        case SDLK_F7:			    return 288; break;
+        case SDLK_F8:			    return 289; break;
+        case SDLK_F9:			    return 290; break;
+        case SDLK_F10:		        return 291; break;
+        case SDLK_F11:		        return 292; break;
+        case SDLK_F12:		        return 293; break;
+        case SDLK_F13:		        return 294; break;
+        case SDLK_F14:		        return 295; break;
+        case SDLK_F15:		        return 296; break;
+        case SDLK_NUMLOCK:		    return 300; break;
+        case SDLK_CAPSLOCK:		    return 301; break;
+        case SDLK_SCROLLOCK:	    return 302; break;
+        case SDLK_RSHIFT:		    return 303; break;
+        case SDLK_LSHIFT:		    return 304; break;
+        case SDLK_RCTRL:	        return 305; break;
+        case SDLK_LCTRL:	        return 306; break;
+        case SDLK_RALT:		        return 307; break;
+        case SDLK_LALT:		        return 308; break;
+        default:                    return 0;   break;
+    }
+}
+#endif
+
+void init(int argc, char** argv)
+{
 	// Initialise SDL
-	SDL_Init(SDL_INIT_AUDIO);
+#ifndef NO_GRAPHICS
+	if(SDL_Init(SDL_INIT_VIDEO) != 0) printf("%s",SDL_GetError());
+    sdl_screen = SDL_SetVideoMode(GRAPHICS_X_DEFAULT, GRAPHICS_Y_DEFAULT, 8, 0);
+    is_display_init = 0;
+    SDL_EnableUNICODE(1);
+    SDL_EnableKeyRepeat(500, 30);
+    // Initialize audio
+#ifndef NO_AUDIO
+    SDL_InitSubSystem(SDL_INIT_AUDIO);
 	sdl_audio.callback = audio_callback;
 #ifdef _WIN32
 	sdl_audio.samples = 512;
 #endif
 	SDL_OpenAudio(&sdl_audio, 0);
+#endif
+    // Initialize SDL_ttf for rendering vterm
+#endif
+
+    // Initialize TMT virtual terminal
+#ifdef USE_TMT
+    vterm = tmt_open(VTERM_LINES, VTERM_COLS, tmt_callback, NULL, NULL);
+    vterm_needs_draw = 1;
 #endif
 
 	// regs16 and reg8 point to F000:0, the start of memory-mapped registers. CS is initialised to F000
@@ -281,22 +479,52 @@ int main(int argc, char **argv)
 
 	// Open BIOS (file id disk[2]), floppy disk image (disk[1]), and hard disk image (disk[0]) if specified
 	for (file_index = 3; file_index;)
-		disk[--file_index] = *++argv ? open(*argv, 32898) : 0;
+        disk[--file_index] = (*++argv) ? fopen(*argv, "rb") : NULL;
+        //disk[--file_index] = (*++argv) ? open(*argv, 32898) : 0;
 
 	// Set CX:AX equal to the hard disk image size, if present
-	CAST(unsigned)regs16[REG_AX] = *disk ? lseek(*disk, 0, 2) >> 9 : 0;
+	CAST(unsigned)regs16[REG_AX] = *disk ? fseek(*disk, 0, SEEK_END) >> 9 : 0;
 
 	// Load BIOS image into F000:0100, and set IP to 0100
-	read(disk[2], regs8 + (reg_ip = 0x100), 0xFF00);
+	fread(regs8 + (reg_ip = 0x100), 1, 0xFF00, disk[2]);
+    //read(disk[2], regs8 + (reg_ip = 0x100), 0xFF00);
 
 	// Load instruction decoding helper table
 	for (int i = 0; i < 20; i++)
 		for (int j = 0; j < 256; j++)
 			bios_table_lookup[i][j] = regs8[regs16[0x81 + i] + j];
 
-	// Instruction execution loop. Terminates if CS:IP = 0:0
-	for (; opcode_stream = mem + 16 * regs16[REG_CS] + reg_ip, opcode_stream != mem;)
+    // Set main loop to continue
+    cont_main_loop = 1;
+}
+
+void quit()
+{
+#ifdef USE_TMT
+    tmt_close(vterm);
+#endif
+#ifndef NO_GRAPHICS
+	SDL_Quit();
+#endif
+}
+
+
+void main_loop()
+{
+    // Instruction execution loop. Loops for EMSCRIPTEN_INSTRUCTIONS_PER_FRAME. Terminates if CS:IP = 0:0
+	for (int i = 0; i < EMSCRIPTEN_INSTRUCTIONS_PER_FRAME && cont_main_loop == 1; i++)
 	{
+
+        if(!((opcode_stream = mem + 16 * regs16[REG_CS] + reg_ip) && (opcode_stream != mem)))
+        {
+            // Quit logic
+#ifdef __EMSCRIPTEN__
+            emscripten_cancel_main_loop();
+            quit();
+#endif
+            cont_main_loop = 0;
+            break;
+        }
 		// Set up variables to prepare for decoding an opcode
 		set_opcode(*opcode_stream);
 
@@ -336,7 +564,7 @@ int main(int argc, char **argv)
 		switch (xlat_opcode_id)
 		{
 			OPCODE_CHAIN 0: // Conditional jump (JAE, JNAE, etc.)
-				// i_w is the invert flag, e.g. i_w == 1 means JNAE, whereas i_w == 0 means JAE
+				// i_w is the invert flag, e.g. i_w == 1 means JNAE, whereas i_w == 0 means JAE 
 				scratch_uchar = raw_opcode_id / 2 & 7;
 				reg_ip += (char)i_data0 * (i_w ^ (regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_A][scratch_uchar]] || regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_B][scratch_uchar]] || regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_C][scratch_uchar]] ^ regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_D][scratch_uchar]]))
 			OPCODE 1: // MOV reg, imm
@@ -584,8 +812,10 @@ int main(int argc, char **argv)
 				R_M_OP(io_ports[scratch_uint], =, regs8[REG_AL]);
 				scratch_uint == 0x61 && (io_hi_lo = 0, spkr_en |= regs8[REG_AL] & 3); // Speaker control
 				(scratch_uint == 0x40 || scratch_uint == 0x42) && (io_ports[0x43] & 6) && (mem[0x469 + scratch_uint - (io_hi_lo ^= 1)] = regs8[REG_AL]); // PIT rate programming
+#ifndef NO_AUDIO
 #ifndef NO_GRAPHICS
 				scratch_uint == 0x43 && (io_hi_lo = 0, regs8[REG_AL] >> 6 == 2) && (SDL_PauseAudio((regs8[REG_AL] & 0xF7) != 0xB6), 0); // Speaker enable
+#endif
 #endif
 				scratch_uint == 0x3D5 && (io_ports[0x3D4] >> 1 == 6) && (mem[0x4AD + !(io_ports[0x3D4] & 1)] = regs8[REG_AL]); // CRT video RAM start offset
 				scratch_uint == 0x3D5 && (io_ports[0x3D4] >> 1 == 7) && (scratch2_uint = ((mem[0x49E]*80 + mem[0x49D] + CAST(short)mem[0x4AD]) & (io_ports[0x3D4] & 1 ? 0xFF00 : 0xFF)) + (regs8[REG_AL] << (io_ports[0x3D4] & 1 ? 0 : 8)) - CAST(short)mem[0x4AD], mem[0x49D] = scratch2_uint % 80, mem[0x49E] = scratch2_uint / 80); // CRT cursor position
@@ -662,10 +892,19 @@ int main(int argc, char **argv)
 			OPCODE 47: // TEST AL/AX, immed
 				R_M_OP(regs8[REG_AL], &, i_data0)
 			OPCODE 48: // Emulator-specific 0F xx opcodes
+           
 				switch ((char)i_data0)
 				{
+                    
 					OPCODE_CHAIN 0: // PUTCHAR_AL
-						write(1, regs8, 1)
+						//write(1, regs8, 1);
+#ifdef USE_TMT
+                        tmt_write(vterm, regs8, 1);
+                        vterm_needs_draw = 1;
+#else
+                        putchar(*regs8);
+                        fflush(stdout);
+#endif
 					OPCODE 1: // GET_RTC
 						time(&clock_buf);
 						ftime(&ms_clock);
@@ -673,10 +912,13 @@ int main(int argc, char **argv)
 						CAST(short)mem[SEGREG(REG_ES, REG_BX, 36+)] = ms_clock.millitm;
 					OPCODE 2: // DISK_READ
 					OPCODE_CHAIN 3: // DISK_WRITE
-						regs8[REG_AL] = ~lseek(disk[regs8[REG_DL]], CAST(unsigned)regs16[REG_BP] << 9, 0)
-							? ((char)i_data0 == 3 ? (int(*)())write : (int(*)())read)(disk[regs8[REG_DL]], mem + SEGREG(REG_ES, REG_BX,), regs16[REG_AX])
+						regs8[REG_AL] = ~fseek(disk[regs8[REG_DL]], CAST(unsigned)regs16[REG_BP] << 9, 0)
+							? ((char)i_data0 == 3 ? (int(*)())fwrite : (int(*)())fread)(mem + SEGREG(REG_ES, REG_BX,), 1, regs16[REG_AX], disk[regs8[REG_DL]])
+							//? ((char)i_data0 == 3 ? (int(*)())write : (int(*)())read)(disk[regs8[REG_DL]], mem + SEGREG(REG_ES, REG_BX,), regs16[REG_AX])
 							: 0;
+                            
 				}
+                
 		}
 
 		// Increment instruction pointer by computed instruction length. Tables in the BIOS binary
@@ -701,46 +943,6 @@ int main(int argc, char **argv)
 		if (!(++inst_counter % KEYBOARD_TIMER_UPDATE_DELAY))
 			int8_asap = 1;
 
-#ifndef NO_GRAPHICS
-		// Update the video graphics display every GRAPHICS_UPDATE_DELAY instructions
-		if (!(inst_counter % GRAPHICS_UPDATE_DELAY))
-		{
-			// Video card in graphics mode?
-			if (io_ports[0x3B8] & 2)
-			{
-				// If we don't already have an SDL window open, set it up and compute color and video memory translation tables
-				if (!sdl_screen)
-				{
-					for (int i = 0; i < 16; i++)
-						pixel_colors[i] = mem[0x4AC] ? // CGA?
-							cga_colors[(i & 12) >> 2] + (cga_colors[i & 3] << 16) // CGA -> RGB332
-							: 0xFF*(((i & 1) << 24) + ((i & 2) << 15) + ((i & 4) << 6) + ((i & 8) >> 3)); // Hercules -> RGB332
-
-					for (int i = 0; i < GRAPHICS_X * GRAPHICS_Y / 4; i++)
-						vid_addr_lookup[i] = i / GRAPHICS_X * (GRAPHICS_X / 8) + (i / 2) % (GRAPHICS_X / 8) + 0x2000*(mem[0x4AC] ? (2 * i / GRAPHICS_X) % 2 : (4 * i / GRAPHICS_X) % 4);
-
-					SDL_Init(SDL_INIT_VIDEO);
-					sdl_screen = SDL_SetVideoMode(GRAPHICS_X, GRAPHICS_Y, 8, 0);
-					SDL_EnableUNICODE(1);
-					SDL_EnableKeyRepeat(500, 30);
-				}
-
-				// Refresh SDL display from emulated graphics card video RAM
-				vid_mem_base = mem + 0xB0000 + 0x8000*(mem[0x4AC] ? 1 : io_ports[0x3B8] >> 7); // B800:0 for CGA/Hercules bank 2, B000:0 for Hercules bank 1
-				for (int i = 0; i < GRAPHICS_X * GRAPHICS_Y / 4; i++)
-					((unsigned *)sdl_screen->pixels)[i] = pixel_colors[15 & (vid_mem_base[vid_addr_lookup[i]] >> 4*!(i & 1))];
-
-				SDL_Flip(sdl_screen);
-			}
-			else if (sdl_screen) // Application has gone back to text mode, so close the SDL window
-			{
-				SDL_QuitSubSystem(SDL_INIT_VIDEO);
-				sdl_screen = 0;
-			}
-			SDL_PumpEvents();
-		}
-#endif
-
 		// Application has set trap flag, so fire INT 1
 		if (trap_flag)
 			pc_interrupt(1);
@@ -750,11 +952,108 @@ int main(int argc, char **argv)
 		// If a timer tick is pending, interrupts are enabled, and no overrides/REP are active,
 		// then process the tick and check for new keystrokes
 		if (int8_asap && !seg_override_en && !rep_override_en && regs8[FLAG_IF] && !regs8[FLAG_TF])
-			pc_interrupt(0xA), int8_asap = 0, SDL_KEYBOARD_DRIVER;
+        {
+			pc_interrupt(0xA);
+            int8_asap = 0; 
+#ifndef NO_GRAPHICS
+            while(SDL_PollEvent(&sdl_event))
+                if(sdl_event.type == SDL_KEYDOWN || sdl_event.type == SDL_KEYUP)
+                {
+                    scratch_uint = sdl_event.key.keysym.unicode;
+                    scratch2_uint = sdl_event.key.keysym.mod;
+                    scratch3_uint = sdl_key_to_ascii(sdl_event.key.keysym.sym); 
+                    CAST(short)mem[0x4A6] = 0x400 + 0x800*!!(scratch2_uint & KMOD_ALT) + 0x1000*!!(scratch2_uint & KMOD_SHIFT) + 0x2000*!!(scratch2_uint & KMOD_CTRL) + 0x4000*(sdl_event.type == SDL_KEYUP) + ((!(scratch_uint) || scratch_uint > 0x7F) ? scratch3_uint : scratch_uint);
+                    pc_interrupt(7);
+                }
+#else
+            KEYBOARD_DRIVER;
+#endif
+        }
 	}
+    // Draw virtual terminal
+#ifdef USE_TMT
+    if(vterm_needs_draw)
+    {
+        TMTSCREEN const *s = tmt_screen(vterm);
+        for(size_t i = 0; i < VTERM_BLANK_LINES; i++)
+            putchar('\n');
+        for(size_t r = 0; r < s->nline; ++r)
+        {
+            for(size_t c = 0; c < s->ncol; ++c)
+                if(!(s->lines[r]->chars[c].c & 0x80)) putchar(s->lines[r]->chars[c].c);
+            putchar('\n');
+        }
+        vterm_needs_draw = 0;
+        tmt_clean(vterm);
+    }
+#endif
 
 #ifndef NO_GRAPHICS
-	SDL_Quit();
+    // Update the video graphics display every GRAPHICS_UPDATE_DELAY instructions
+    if (!(inst_counter % GRAPHICS_UPDATE_DELAY))
+    {
+        // Video card in graphics mode?
+        if (io_ports[0x3B8] & 2)
+        {
+            // If we don't already have an SDL window open, set it up and compute color and video memory translation tables
+            if (is_display_init != 1)
+            {
+                is_display_init = 1;
+                for (int i = 0; i < 16; i++)
+                    pixel_colors[i] = mem[0x4AC] ? // CGA?
+                        cga_colors[(i & 12) >> 2] + (cga_colors[i & 3] << 16) // CGA -> RGB332
+                        : 0xFF*(((i & 1) << 24) + ((i & 2) << 15) + ((i & 4) << 6) + ((i & 8) >> 3)); // Hercules -> RGB332
+
+                for (int i = 0; i < GRAPHICS_X * GRAPHICS_Y / 4; i++)
+                    vid_addr_lookup[i] = i / GRAPHICS_X * (GRAPHICS_X / 8) + (i / 2) % (GRAPHICS_X / 8) + 0x2000*(mem[0x4AC] ? (2 * i / GRAPHICS_X) % 2 : (4 * i / GRAPHICS_X) % 4);
+
+                SDL_QuitSubSystem(SDL_INIT_VIDEO);
+                SDL_Init(SDL_INIT_VIDEO);
+                sdl_screen = SDL_SetVideoMode(GRAPHICS_X, GRAPHICS_Y, 8, 0);
+            }
+
+            // Refresh SDL display from emulated graphics card video RAM
+            vid_mem_base = mem + 0xB0000 + 0x8000*(mem[0x4AC] ? 1 : io_ports[0x3B8] >> 7); // B800:0 for CGA/Hercules bank 2, B000:0 for Hercules bank 1
+            for (int i = 0; i < GRAPHICS_X * GRAPHICS_Y / 4; i++)
+                ((unsigned *)sdl_screen->pixels)[i] = pixel_colors[15 & (vid_mem_base[vid_addr_lookup[i]] >> 4*!(i & 1))];
+
+        }
+        else
+        { 
+            if (is_display_init == 1) // Application has gone back to text mode, so return the SDL window to defaults
+            {
+                SDL_QuitSubSystem(SDL_INIT_VIDEO);
+                SDL_Init(SDL_INIT_VIDEO);
+                sdl_screen = SDL_SetVideoMode(GRAPHICS_X_DEFAULT, GRAPHICS_Y_DEFAULT, 8, 0);
+            }
+       }
+        SDL_Flip(sdl_screen);
+        SDL_PumpEvents();
+    }
 #endif
-	return 0;
+}
+
+int main(int argc, char** argv)
+{
+    // Simulate command line args for emscripten
+#ifdef __EMSCRIPTEN__
+#ifdef EMSCRIPTEN_USE_HD
+    char* arg[] = {"", EMSCRIPTEN_BIOS_FILE, EMSCRIPTEN_FD_FILE, EMSCRIPTEN_HD_FILE};
+    argc = 4
+#else
+    char* arg[] = {"", EMSCRIPTEN_BIOS_FILE, EMSCRIPTEN_FD_FILE};
+    argc = 3;
+#endif
+    argv = arg;
+#endif
+
+    init(argc, argv);
+#ifdef __EMSCRIPTEN__
+    emscripten_set_main_loop(main_loop, EMSCRIPTEN_MAIN_LOOP_FRAMERATE, 1);
+#else
+    while(cont_main_loop == 1) main_loop();
+#endif
+#ifndef __EMSCRIPTEN__
+    quit();
+#endif
 }
