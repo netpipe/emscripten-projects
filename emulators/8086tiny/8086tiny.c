@@ -19,7 +19,7 @@
 #endif
 
 #ifndef NO_GRAPHICS
-#include "SDL.h"
+#include "SDL/SDL.h"
 #endif
 
 #ifdef __EMSCRIPTEN__
@@ -564,7 +564,7 @@ void main_loop()
 		switch (xlat_opcode_id)
 		{
 			OPCODE_CHAIN 0: // Conditional jump (JAE, JNAE, etc.)
-				// i_w is the invert flag, e.g. i_w == 1 means JNAE, whereas i_w == 0 means JAE 
+				// i_w is the invert flag, e.g. i_w == 1 means JNAE, whereas i_w == 0 means JAE
 				scratch_uchar = raw_opcode_id / 2 & 7;
 				reg_ip += (char)i_data0 * (i_w ^ (regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_A][scratch_uchar]] || regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_B][scratch_uchar]] || regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_C][scratch_uchar]] ^ regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_D][scratch_uchar]]))
 			OPCODE 1: // MOV reg, imm
@@ -892,10 +892,10 @@ void main_loop()
 			OPCODE 47: // TEST AL/AX, immed
 				R_M_OP(regs8[REG_AL], &, i_data0)
 			OPCODE 48: // Emulator-specific 0F xx opcodes
-           
+
 				switch ((char)i_data0)
 				{
-                    
+
 					OPCODE_CHAIN 0: // PUTCHAR_AL
 						//write(1, regs8, 1);
 #ifdef USE_TMT
@@ -916,9 +916,9 @@ void main_loop()
 							? ((char)i_data0 == 3 ? (int(*)())fwrite : (int(*)())fread)(mem + SEGREG(REG_ES, REG_BX,), 1, regs16[REG_AX], disk[regs8[REG_DL]])
 							//? ((char)i_data0 == 3 ? (int(*)())write : (int(*)())read)(disk[regs8[REG_DL]], mem + SEGREG(REG_ES, REG_BX,), regs16[REG_AX])
 							: 0;
-                            
+
 				}
-                
+
 		}
 
 		// Increment instruction pointer by computed instruction length. Tables in the BIOS binary
@@ -954,14 +954,14 @@ void main_loop()
 		if (int8_asap && !seg_override_en && !rep_override_en && regs8[FLAG_IF] && !regs8[FLAG_TF])
         {
 			pc_interrupt(0xA);
-            int8_asap = 0; 
+            int8_asap = 0;
 #ifndef NO_GRAPHICS
             while(SDL_PollEvent(&sdl_event))
                 if(sdl_event.type == SDL_KEYDOWN || sdl_event.type == SDL_KEYUP)
                 {
                     scratch_uint = sdl_event.key.keysym.unicode;
                     scratch2_uint = sdl_event.key.keysym.mod;
-                    scratch3_uint = sdl_key_to_ascii(sdl_event.key.keysym.sym); 
+                    scratch3_uint = sdl_key_to_ascii(sdl_event.key.keysym.sym);
                     CAST(short)mem[0x4A6] = 0x400 + 0x800*!!(scratch2_uint & KMOD_ALT) + 0x1000*!!(scratch2_uint & KMOD_SHIFT) + 0x2000*!!(scratch2_uint & KMOD_CTRL) + 0x4000*(sdl_event.type == SDL_KEYUP) + ((!(scratch_uint) || scratch_uint > 0x7F) ? scratch3_uint : scratch_uint);
                     pc_interrupt(7);
                 }
@@ -1019,7 +1019,7 @@ void main_loop()
 
         }
         else
-        { 
+        {
             if (is_display_init == 1) // Application has gone back to text mode, so return the SDL window to defaults
             {
                 SDL_QuitSubSystem(SDL_INIT_VIDEO);

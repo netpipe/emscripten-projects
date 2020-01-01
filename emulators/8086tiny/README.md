@@ -1,10 +1,16 @@
 8086tiny
 ========
 
+emcc 8086tiny.c tmt.c -D__EMSCRIPTEN__ -DNO_AUDIO -DUSE_TMT -o 8086tiny.html -fsigned-char -O1 --embed-file bios --embed-file fd.img -s USE_SDL=1
 
+http://extradio.sourceforge.net/extmodem.html
+this could be an alternate way to do networking
+
+
+old
 emcc 8086tiny.c -DNO_GRAPHICS -o 8086tiny.html -fsigned-char -O1 --embed-file bios --embed-file fd.img
 
-jode 8086tiny.js
+node 8086tiny.js
 
 
 8086tiny is a completely free (MIT License) open source PC XT-compatible emulator/virtual machine written in C. It is, we believe, the smallest of its kind (the fully-commented source is under 25K). Despite its size, 8086tiny provides a highly accurate 8086 CPU emulation, together with support for PC peripherals including XT-style keyboard, floppy/hard disk, clock, audio, and Hercules/CGA graphics. 8086tiny is powerful enough to run software like AutoCAD, Windows 3.0, and legacy PC games: the 8086tiny distribution includes Alley Cat, the author's favorite PC game of all time.
