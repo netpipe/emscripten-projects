@@ -1,0 +1,535 @@
+# Danish translation of ISO Master
+# This file is distributed under the same license as the ISO Master package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ISO Master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-05 22:40-0500\n"
+"PO-Revision-Date: 2009-08-24 07:35+0200\n"
+"Last-Translator: Henrik Kristiansen <henrik.g.kristiansen@gmail.com>\n"
+"Language-Team: Danish < >\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../window.c:417
+msgid "      Estimated ISO Size: "
+msgstr "    Beregnet ISO størelse"
+
+#: ../isobrowser.c:1504
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+"Do you wish to continue?"
+msgstr ""
+"%s\n"
+"\n"
+"Ønsker du at fortsætte?"
+
+#: ../editfile.c:272 ../editfile.c:368 ../editfile.c:601 ../editfile.c:696
+#, c-format
+msgid "'%s' is not a regular file"
+msgstr "'%s' er ikke en billede fil"
+
+#: ../isobrowser.c:142 ../isobrowser.c:1312
+msgid "(scanning for duplicate files)"
+msgstr "(skanning for dobbelte filer"
+
+#: ../window.c:403
+msgid "Add"
+msgstr "Tilføj"
+
+#: ../isobrowser.c:1742
+msgid "Add extension automatically"
+msgstr "Tilføj efternavn automatisk"
+
+#: ../window.c:403
+msgid "Add to the ISO"
+msgstr "Tilføj til ISO billedet"
+
+#: ../isobrowser.c:1443 ../isobrowser.c:1739
+msgid "All files"
+msgstr "Alle filer"
+
+#: ../boot.c:334
+msgid "Boot Record Information"
+msgstr "Boot Record Information"
+
+#: ../boot.c:122
+msgid "Boot record deleted"
+msgstr "Boot record er slettet"
+
+#: ../boot.c:350
+#, c-format
+msgid "Boot record type: 1200KiB Floppy"
+msgstr "Boot record type: 1200KiB Diskette"
+
+#: ../boot.c:352
+#, c-format
+msgid "Boot record type: 1440KiB Floppy"
+msgstr "Boot record type: 1440KiB Diskette"
+
+#: ../boot.c:354
+#, c-format
+msgid "Boot record type: 2880KiB Floppy"
+msgstr "Boot record type: 2880KiB Diskette"
+
+#: ../boot.c:348
+#, c-format
+msgid "Boot record type: No Emulation"
+msgstr "Boot record type: Ingen Emulation"
+
+#: ../isobrowser.c:267 ../isobrowser.c:1918
+msgid "Change permissions"
+msgstr "Ændre tilladelser"
+
+#: ../boot.c:40
+msgid "Choose Boot Record File"
+msgstr "Ændre Boot Record fil"
+
+#: ../window.c:399
+msgid "Create new directory on the ISO"
+msgstr "Opret nyt bibliotek i ISO billede"
+
+#: ../window.c:62
+msgid "Create new directory on the filesystem"
+msgstr "Opret nyt bibliotek i filsystemet"
+
+#: ../settings.c:79
+msgid "Creation time:"
+msgstr "Oprettelse tidspunkt"
+
+#: ../window.c:413
+msgid "Delete from the ISO"
+msgstr "Slet fra ISO billedet"
+
+#: ../fsbrowser.c:590 ../isobrowser.c:1911
+msgid "Edit"
+msgstr "Rediger"
+
+#: ../editfile.c:82
+msgid "Edit failed, please check Options/Editor"
+msgstr "Redigeringen mislykkedes, Check Indstillinger/Redigerings program"
+
+#: ../settings.c:723
+msgid "Editor"
+msgstr "Redigerings program"
+
+#: ../isobrowser.c:1583
+msgid "Enter a new name:"
+msgstr "Indtast nyt navn"
+
+#: ../browser.c:71
+msgid "Enter name for new directory"
+msgstr "Intast navn på nyt bibliotek"
+
+#: ../window.c:408
+msgid "Extract"
+msgstr "Udpak"
+
+#: ../window.c:408
+msgid "Extract from the ISO"
+msgstr "Udpak fra ISO billedet"
+
+#: ../editfile.c:473 ../isobrowser.c:215
+#, c-format
+msgid "Failed to add '%s': '%s'"
+msgstr "Det lykkedes ikke at tilføje '%s': '%s'"
+
+#: ../boot.c:79
+#, c-format
+msgid "Failed to add boot record: '%s'"
+msgstr "Det lykkedes ikke at tilføje til Boot Record: '%s'"
+
+#: ../isobrowser.c:555
+#, c-format
+msgid "Failed to change directory: '%s'"
+msgstr "Det lykkedes ikke at ændre biblioteket: '%s'"
+
+#: ../browser.c:112
+#, c-format
+msgid "Failed to create directory %s"
+msgstr "Det lykkedes ikke at oprette bibliotek %s"
+
+#: ../browser.c:135
+#, c-format
+msgid "Failed to create directory %s: '%s'"
+msgstr "Det lykkedes ikke at oprette bibliotek '%s': '%s'"
+
+#: ../editfile.c:447 ../isobrowser.c:850
+#, c-format
+msgid "Failed to delete '%s': '%s'"
+msgstr "Det lykkedes ikke at slette '%s': '%s'"
+
+#: ../editfile.c:412 ../editfile.c:740 ../isobrowser.c:963
+#, c-format
+msgid "Failed to extract '%s': '%s'"
+msgstr "Det lykkedes ikke at udpakke '%s': '%s'"
+
+#: ../boot.c:202
+#, c-format
+msgid "Failed to extract boot record: '%s'"
+msgstr "Det lykkedes ikke at udpakke boot record: '%s'"
+
+#: ../isobrowser.c:1146 ../isobrowser.c:1248
+#, c-format
+msgid "Failed to initialise bkisofs: '%s'"
+msgstr "Det lykkedes ikke at finde bkisofs: '%s'"
+
+#: ../fsbrowser.c:229
+#, c-format
+msgid "Failed to open directory '%s', error %d"
+msgstr "Det lykkedes ikke at åbne bibliotekket '%s', error %d"
+
+#: ../isobrowser.c:1267
+#, c-format
+msgid "Failed to open iso file for reading: '%s'"
+msgstr "Det lykkedes ikke at åbne ISO billedet for læsning: '%s'"
+
+#: ../isobrowser.c:1342
+#, c-format
+msgid "Failed to read directory tree: '%s'"
+msgstr "Det lykkedes ikke at læse biblioteks træet: '%s'"
+
+#: ../isobrowser.c:1282
+#, c-format
+msgid "Failed to read volume info: '%s'"
+msgstr "Det lykkedes ikke at læse volume info: '%s'"
+
+#: ../isobrowser.c:1612
+#, c-format
+msgid "Failed to rename '%s': %s"
+msgstr "Det lykkedes ikke at ændre navnet '%s': %s"
+
+#: ../boot.c:296
+#, c-format
+msgid "Failed to set %s as boot record: '%s'"
+msgstr "Det lykkedes ikke at sætte %s som boot record: '%s'"
+
+#: ../isobrowser.c:1685
+#, c-format
+msgid "Failed to write image to '%s': '%s'"
+msgstr "Det lykkedes ikke at skrive billedet til '%s': '%s'"
+
+#: ../settings.c:123
+msgid "Filename types (both recommended):"
+msgstr "Filnavn type (begge anbefales)"
+
+#: ../settings.c:713
+msgid "Follow symbolic links"
+msgstr "Følg symbol links"
+
+#: ../window.c:326
+msgid "From file: 1200KiB floppy"
+msgstr "Fra fil: 1200KiB Diskette"
+
+#: ../window.c:332
+msgid "From file: 1440KiB floppy"
+msgstr "Fra fil: 1440KiB Diskette"
+
+#: ../window.c:338
+msgid "From file: 2880KiB floppy"
+msgstr "Fra fil: 2880KiB Diskette"
+
+#: ../window.c:320
+msgid "From file: no emulation"
+msgstr "Fra fil: ingen emulation"
+
+#: ../isobrowser.c:868
+msgid ""
+"GUI error, deleting anything other than files and directories doesn't work"
+msgstr "GUI fejl, sletter alt andet end filer og biblioteker der ikke virker"
+
+#: ../window.c:55 ../window.c:392
+msgid "Go back"
+msgstr "Tilbage"
+
+#: ../window.c:393
+msgid "Go back up one directory on the ISO"
+msgstr "Et bibliotek tilbage i ISO billedet"
+
+#: ../window.c:56
+msgid "Go back up one directory on the filesystem"
+msgstr "Et bibliotek tilbage i fil systemet"
+
+#: ../isobrowser.c:1428 ../isobrowser.c:1734
+msgid "ISO Images"
+msgstr "ISO billede"
+
+#: ../about.c:385
+msgid "ISO Master Help"
+msgstr "ISO Master hjælp"
+
+#: ../settings.c:63
+msgid "Image Information"
+msgstr "Billede information"
+
+#: ../settings.c:158
+#, c-format
+msgid "Invalid publisher '%s': '%s'"
+msgstr "Invalid udgiver '%s': '%s'"
+
+#: ../settings.c:174
+#, c-format
+msgid "Invalid volume name '%s': '%s'"
+msgstr "Invalid volume navn '%s': '%s'"
+
+#: ../boot.c:391
+#, c-format
+msgid "Is not visible on image"
+msgstr "Er ikke synlig i billedet"
+
+#: ../boot.c:389
+#, c-format
+msgid "Is visible on image as '%s'"
+msgstr "Er synligt i billedet som '%s'"
+
+#: ../isobrowser.c:770
+msgid ""
+"It seems that you have made changes to the ISO but haven't saved them. Are "
+"you sure you want to close it?"
+msgstr ""
+"Det ser ud til, at du har lavet ændringer i ISO billedet uden at gemme dem. "
+"Erdu sikker på at du vil afslutte?"
+
+#: ../boot.c:271
+msgid "Item selected is not a regular file and cannot be used as a boot record"
+msgstr ""
+"Det valgte emne er ikke rigtige format og kan ikke bruges som boot record"
+
+#: ../boot.c:373 ../boot.c:380
+#, c-format
+msgid "Location: on original image at 0x%llX"
+msgstr "Destination: på orginal billede på Ox%llx"
+
+#: ../boot.c:375 ../boot.c:382
+#, c-format
+msgid "Location: to be added from '%s'"
+msgstr "Destination: bliver tilføjet fra '%s'"
+
+#: ../isobrowser.c:1438
+msgid "MDF Images"
+msgstr "MDF billede"
+
+#: ../isobrowser.c:1433
+msgid "NRG Images"
+msgstr "NRG billede"
+
+#: ../fsbrowser.c:121 ../isobrowser.c:482
+msgid "Name"
+msgstr "Navn"
+
+#: ../window.c:61 ../window.c:398
+msgid "New Directory"
+msgstr "Nyt bibliotek"
+
+#: ../boot.c:149 ../boot.c:327
+msgid "No boot record read from original or set on image"
+msgstr "Ingen boot record læst fra orginal billede"
+
+#: ../boot.c:108
+msgid "No boot to delete"
+msgstr "Ingen boot at slette"
+
+#: ../window.c:168
+msgid "Open Recent"
+msgstr "Åben Nyeste"
+
+#: ../settings.c:688
+msgid "Options"
+msgstr "Indstillinger"
+
+#: ../boot.c:229
+msgid "Please select a file in the ISO browser to use as the boot record"
+msgstr "Vælg en fil i ISO browseren som boot record"
+
+#: ../boot.c:243
+msgid "Please select no more than one file in the ISO browser"
+msgstr "Vælg en eller flere filer i ISO browserne"
+
+#: ../isobrowser.c:136
+msgid "Please wait while I'm adding the selected items..."
+msgstr "Vent venligst men jeg tilføjer de valgte emner"
+
+#: ../isobrowser.c:905
+msgid "Please wait while I'm extracting the selected files..."
+msgstr "Vent venligst mens jeg udpakker de valgte filer"
+
+#: ../isobrowser.c:1306
+msgid "Please wait while I'm reading the image..."
+msgstr "Vent venligst mens jeg læser billedet"
+
+#: ../isobrowser.c:1657
+msgid "Please wait while I'm saving the new image to disk..."
+msgstr "Vent venligst men jeg gemmer det nye billede på disken"
+
+#: ../isobrowser.c:129 ../isobrowser.c:897 ../isobrowser.c:1299
+#: ../isobrowser.c:1647
+msgid "Progress"
+msgstr "Progress"
+
+#: ../settings.c:107
+msgid "Publisher:"
+msgstr "Udgiver:"
+
+#: ../window.c:413
+msgid "Remove"
+msgstr "Fjern"
+
+#: ../isobrowser.c:1895
+msgid "Rename"
+msgstr "Ændre navn"
+
+#: ../isobrowser.c:1723
+msgid "Save File"
+msgstr "Gem fil"
+
+#: ../boot.c:156
+msgid "Save a copy of the boot record"
+msgstr "Gem en kopi af boot record"
+
+#: ../settings.c:700
+msgid "Scan for duplicate files (slow)"
+msgstr "Skan for dobbelt filer (langsom)"
+
+#: ../window.c:242
+msgid "Show _hidden files"
+msgstr "Vis _gemte filer"
+
+#: ../fsbrowser.c:142 ../isobrowser.c:505
+msgid "Size"
+msgstr "Størrelse"
+
+#: ../boot.c:363
+#, c-format
+msgid "Size: %d bytes"
+msgstr "Størrelse: %d bytes"
+
+#: ../fsbrowser.c:280
+msgid ""
+"Skipping directory entry because cannot handle filename longer than 256 chars"
+msgstr ""
+"Skipper biblioteks indtastningen, da programmet ikke kan behandle filnavne "
+"over 256 karakterer"
+
+#: ../fsbrowser.c:299
+#, c-format
+msgid "Skipping directory entry because stat(%s) failed with %d"
+msgstr "Skipper biblioteks intastningen fordi stat(%s) fejlede med %d"
+
+#: ../window.c:262
+msgid "Sort is _case sensitive"
+msgstr "Sorteringe er _case sensitive"
+
+#: ../settings.c:746 ../settings.c:750
+msgid "Temporary directory"
+msgstr "Midlertidig bibliotek"
+
+#: ../about.c:323
+msgid ""
+"The ISO Master window is split in 2 parts:\n"
+" - The top file browser shows files and directories on your machine.\n"
+" - The bottom file browser shows files and directories on the ISO image.\n"
+"\n"
+"To open an existing ISO file click on 'File' and 'Open'. To create a new\n"
+"ISO file click on 'File' and 'New'.\n"
+"\n"
+"To add one or more files or directories to the ISO select them in the top\n"
+"file browser and click the 'Add to the ISO' button in the middle toolbar.\n"
+"\n"
+"To extract one or more files or directories from the ISO select them in\n"
+"the bottom file browser and click the 'Extract from ISO' button in the\n"
+"middle toolbar.\n"
+"\n"
+"You can also delete files or directories from the ISO and create new\n"
+"directories both on the ISO and your local filesystem.\n"
+"\n"
+"If you select something in the bottom file browser and right-click on it,\n"
+"there are several more options available.\n"
+"\n"
+"Once you made all the changes to the new ISO image, click on 'File' and\n"
+"'Save As'. You cannot overwrite the original ISO.\n"
+msgstr ""
+"ISO Master er delt op i 2 vinduer:\n"
+" - I det øverste vindue vises biblioteker og filer på din computer.\n"
+" - I det nederste vindue vises biblioteker og filer i ISO billedet.\n"
+"\n"
+"For at åbne en eksisterende ISO fil, klik på 'Fil' og 'Åben'. For at oprette "
+"en ny\n"
+"ISO fil, klik på 'Fil' og 'Ny'.\n"
+"For at tilføje filer og biblioteker til ISO billedet, vælg dem i det "
+"øverste\n"
+"vindue og klik på 'Tilføj til ISO billedet' i den middeste værtøjslinie.\n"
+"\n"
+"for at udpakke filer og biblioteker fra ISO billedet, vælg dem i\n"
+"det nederste vindue og klik på 'Udpak fra ISO billede i den midterste "
+"værktøjslinie.\n"
+"\n"
+"Du kan også slette filer og biblioteker fra ISO billedet og oprette nye\n"
+"biblioteker både i ISO billedet og på din computer\n"
+"\n"
+"Hvis du vælger en fil eller bibliotek i det nederste vindue og højre-klikker "
+"på det,\n"
+"er der flere valg muligheder.\n"
+"\n"
+"Når du har lavet alle ændringerne til det nye ISO billede, klik på 'Fil' og\n"
+"'Gem som'. Du kan overskrive det eksisterende ISO billede.\n"
+
+#: ../window.c:314
+msgid "Use selected file on image (no emulation)"
+msgstr "Brug de valgte filer til ISO billedet (ingen emulation)"
+
+#: ../fsbrowser.c:583 ../isobrowser.c:1904
+msgid "View"
+msgstr "Vis"
+
+#: ../editfile.c:102
+msgid "View failed, please check Options/Viewer"
+msgstr "Vis fejlede, check Indstiller/Program til visning"
+
+#: ../settings.c:735
+msgid "Viewer"
+msgstr "Program til visning"
+
+#: ../settings.c:95
+msgid "Volume name:"
+msgstr "Volume navn"
+
+#: ../settings.c:674
+msgid ""
+"You will have to close and reopen the ISO for this change to take effect"
+msgstr "Du skal lukke og genåbne ISO billedet for at ændringerne virker"
+
+#: ../window.c:282
+msgid "_Boot Record"
+msgstr "_Boot Record"
+
+#: ../window.c:143
+msgid "_File"
+msgstr "_Fil"
+
+#: ../window.c:354
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: ../window.c:346
+msgid "_Options"
+msgstr "_Indstillinger"
+
+#: ../window.c:363
+msgid "_Overview"
+msgstr "_Overblik"
+
+#: ../window.c:252
+msgid "_Sort directories first"
+msgstr "Sorter biblioteker først"
+
+#: ../window.c:274
+msgid "_Tools"
+msgstr "_Værktøj"
+
+#: ../window.c:227
+msgid "_View"
+msgstr "_Vis"

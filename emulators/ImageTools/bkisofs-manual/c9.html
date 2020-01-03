@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>bkisofs Overview</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="NEXT"
+TITLE="Return Codes"
+HREF="x23.html"></HEAD
+><BODY
+CLASS="CHAPTER"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="book1.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x23.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="CHAPTER"
+><H1
+><A
+NAME="AEN9"
+></A
+>bkisofs Overview</H1
+><P
+>bkisofs (I will often call it simply 'bk') is a simple and stable library for reading and writing ISO9660 files. It can also read NRG files, but not write them. It has support for the Joliet, RockRidge, and EL Torito extensions. It has been tested (with positive results) on many Linux versions and on some BSD versions.</P
+><P
+>Currently bk is used as the backbone of ISO Master - a graphical editor for ISO files, but I encourage you to add ISO support to your application if it is appropriate. Being a library, bk is much easier to use from your application then mkisofs.</P
+><P
+>Feel free to contact me using <A
+HREF="http://littlesvr.ca/misc/contactandrew.php"
+TARGET="_top"
+>this form</A
+> with questions, I will do all I can to help you get going. Also any suggestions about improving this manual (or the library itself) are welcome.</P
+><P
+>The only header file you need to include in your program is <TT
+CLASS="FILENAME"
+>bk.h</TT
+>. That has the definitions for all the public functions and the file/directory/volume structures you will have to work with. Do yourself a favour and don't use any other header files from the library - I will do my best to keep <TT
+CLASS="FILENAME"
+>bk.h</TT
+> consistent between versions but won't even bother trying with any other files.</P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN18"
+>Getting bkisofs</A
+></H1
+><P
+>The library is currently only distributed with ISO Master, it's under the <TT
+CLASS="LITERAL"
+>bk</TT
+> directory. You can download a stable release of ISO Master (so a stable version of bkisofs) or if you're interested you can get the most recent version from subversion using the following command: <TT
+CLASS="LITERAL"
+>svn co svn://littlesvr.ca/prog/isomaster/src/bk bkisofs</TT
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x23.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>bkisofs Usage and Reference Manual</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Return Codes</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,554 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: isomaster\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-05 22:40-0500\n"
+"PO-Revision-Date: 2010-12-27 22:45+0200\n"
+"Last-Translator: Muhammad Ali Makki <makkiabufaris@aol.com>\n"
+"Language-Team: Urdu <makkiabufaris@aol.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Urdu\n"
+"X-Poedit-Country: PAKISTAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../window.c:417
+msgid "      Estimated ISO Size: "
+msgstr "      آئی ایس او کا اندازاً حجم: "
+
+#: ../isobrowser.c:1504
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+"Do you wish to continue?"
+msgstr ""
+"%s\n"
+"\n"
+"کیا آپ آگے بڑھنا چاہتے ہیں؟"
+
+#: ../editfile.c:272 ../editfile.c:368 ../editfile.c:601 ../editfile.c:696
+#, c-format
+msgid "'%s' is not a regular file"
+msgstr "'%s' باضابطہ فائل نہیں ہے"
+
+#: ../isobrowser.c:142 ../isobrowser.c:1312
+msgid "(scanning for duplicate files)"
+msgstr "(مثنی فائلوں کے لیے سکین کیا جارہا ہے)"
+
+#: ../window.c:403
+msgid "Add"
+msgstr "شامل کریں"
+
+#: ../isobrowser.c:1742
+msgid "Add extension automatically"
+msgstr "لاحقہ خودکار شامل کریں"
+
+#: ../window.c:403
+msgid "Add to the ISO"
+msgstr "آئی ایس او میں شامل کریں"
+
+#: ../isobrowser.c:1443 ../isobrowser.c:1739
+msgid "All files"
+msgstr "تمام فائلیں"
+
+#: ../boot.c:334
+msgid "Boot Record Information"
+msgstr "بوٹ ریکارڈ کی معلومات"
+
+#: ../boot.c:122
+msgid "Boot record deleted"
+msgstr "بوٹ ریکارڈ حذف کردیا گیا ہے"
+
+#: ../boot.c:350
+#, c-format
+msgid "Boot record type: 1200KiB Floppy"
+msgstr "بوٹ ریکارڈ کی نوعیت: 1200KiB فلاپی"
+
+#: ../boot.c:352
+#, c-format
+msgid "Boot record type: 1440KiB Floppy"
+msgstr "بوٹ ریکارڈ کی نوعیت: 1440KiB فلاپی"
+
+#: ../boot.c:354
+#, c-format
+msgid "Boot record type: 2880KiB Floppy"
+msgstr "بوٹ ریکارڈ کی نوعیت: 2880KiB فلاپی"
+
+#: ../boot.c:348
+#, c-format
+msgid "Boot record type: No Emulation"
+msgstr "بوٹ ریکارڈ کی نوعیت: کوئی شبیہ سازی نہیں"
+
+#: ../isobrowser.c:267 ../isobrowser.c:1918
+msgid "Change permissions"
+msgstr "اجازے بدلیں"
+
+#: ../boot.c:40
+msgid "Choose Boot Record File"
+msgstr "بوٹ ریکارڈ کی فائل منتخب کریں"
+
+#: ../window.c:399
+msgid "Create new directory on the ISO"
+msgstr "آئی ایس او میں نئی ڈائریکٹری بنائیں"
+
+#: ../window.c:62
+msgid "Create new directory on the filesystem"
+msgstr "فائل نظام میں نئی ڈائریکٹری بنائیں"
+
+#: ../settings.c:79
+msgid "Creation time:"
+msgstr "بنانے کا وقت:"
+
+#: ../window.c:413
+msgid "Delete from the ISO"
+msgstr "آئی ایس او سے حذف کریں"
+
+#: ../fsbrowser.c:590 ../isobrowser.c:1911
+msgid "Edit"
+msgstr "تدوین"
+
+#: ../editfile.c:82
+msgid "Edit failed, please check Options/Editor"
+msgstr "تدوین ناکام، ازراہِ کرم اختیارات/مدون دیکھیں"
+
+#: ../settings.c:723
+msgid "Editor"
+msgstr "مدون"
+
+#: ../isobrowser.c:1583
+msgid "Enter a new name:"
+msgstr "نیا نام داخل کریں:"
+
+#: ../browser.c:71
+msgid "Enter name for new directory"
+msgstr "نئی ڈائریکٹری کے لیے نام داخل کریں"
+
+#: ../window.c:408
+msgid "Extract"
+msgstr "کشید کریں"
+
+#: ../window.c:408
+msgid "Extract from the ISO"
+msgstr "آئی ایس او سے کشید کریں"
+
+#: ../editfile.c:473 ../isobrowser.c:215
+#, c-format
+msgid "Failed to add '%s': '%s'"
+msgstr "شامل کرنے میں ناکامی '%s': '%s'"
+
+#: ../boot.c:79
+#, c-format
+msgid "Failed to add boot record: '%s'"
+msgstr "بوٹ ریکارڈ شامل کرنے میں ناکامی: '%s'"
+
+#: ../isobrowser.c:555
+#, c-format
+msgid "Failed to change directory: '%s'"
+msgstr "ڈائریکٹری بدلنے میں ناکامی: '%s'"
+
+#: ../browser.c:112
+#, c-format
+msgid "Failed to create directory %s"
+msgstr "ڈائریکٹری بنانے میں ناکامی %s"
+
+#: ../browser.c:135
+#, c-format
+msgid "Failed to create directory %s: '%s'"
+msgstr "ڈائریکٹری بنانے میں ناکامی %s: '%s'"
+
+#: ../editfile.c:447 ../isobrowser.c:850
+#, c-format
+msgid "Failed to delete '%s': '%s'"
+msgstr "حذف کرنے میں ناکامی '%s': '%s'"
+
+#: ../editfile.c:412 ../editfile.c:740 ../isobrowser.c:963
+#, c-format
+msgid "Failed to extract '%s': '%s'"
+msgstr "کشید کرنے میں ناکامی '%s': '%s'"
+
+#: ../boot.c:202
+#, c-format
+msgid "Failed to extract boot record: '%s'"
+msgstr "بوٹ ریکارڈ کشید کرنے میں ناکامی: '%s'"
+
+#: ../isobrowser.c:1146 ../isobrowser.c:1248
+#, c-format
+msgid "Failed to initialise bkisofs: '%s'"
+msgstr "bkisofs کی ابتداء کرنے میں ناکامی: '%s'"
+
+#: ../fsbrowser.c:229
+#, c-format
+msgid "Failed to open directory '%s', error %d"
+msgstr "ڈائریکٹری کھولنے میں غلطی '%s', غلطی %d"
+
+#: ../isobrowser.c:1267
+#, c-format
+msgid "Failed to open iso file for reading: '%s'"
+msgstr "پڑھنے کے لیے فائل کھولنے میں ناکامی: '%s'"
+
+#: ../isobrowser.c:1342
+#, c-format
+msgid "Failed to read directory tree: '%s'"
+msgstr "ڈائریکٹری کا شجرہ پڑھنے میں ناکامی: '%s'"
+
+#: ../isobrowser.c:1282
+#, c-format
+msgid "Failed to read volume info: '%s'"
+msgstr "حُجم کی معلومات پڑھنے میں ناکامی: '%s'"
+
+#: ../isobrowser.c:1612
+#, c-format
+msgid "Failed to rename '%s': %s"
+msgstr "نام بدلنے میں ناکامی '%s': %s"
+
+#: ../boot.c:296
+#, c-format
+msgid "Failed to set %s as boot record: '%s'"
+msgstr "ناکامی برائے تعیناتی %s کو بطور بوٹ ریکارڈ: '%s'"
+
+#: ../isobrowser.c:1685
+#, c-format
+msgid "Failed to write image to '%s': '%s'"
+msgstr "تصویر لکھنے میں ناکامی تا '%s': '%s'"
+
+#: ../settings.c:123
+msgid "Filename types (both recommended):"
+msgstr "فائل نام کی نوعیتیں (دونوں کی تجویز دی جاتی ہے):"
+
+#: ../settings.c:713
+msgid "Follow symbolic links"
+msgstr "علامتی روابط کا پیچھا کریں"
+
+#: ../window.c:326
+msgid "From file: 1200KiB floppy"
+msgstr "از فائل: 1200KiB فلاپی"
+
+#: ../window.c:332
+msgid "From file: 1440KiB floppy"
+msgstr "از فائل: 1440KiB فلاپی"
+
+#: ../window.c:338
+msgid "From file: 2880KiB floppy"
+msgstr "از فائل: 2880KiB فلاپی"
+
+#: ../window.c:320
+msgid "From file: no emulation"
+msgstr "از فائل: کوئی شبیہ سازی نہیں"
+
+#: ../isobrowser.c:868
+msgid ""
+"GUI error, deleting anything other than files and directories doesn't work"
+msgstr ""
+"مواجہ غلطی: فائلوں اور ڈائریکٹریوں کے علاوہ کچھ بھی حذف کرنا کام نہیں کرے گا"
+
+#: ../window.c:55 ../window.c:392
+msgid "Go back"
+msgstr "پیچھے جائیں"
+
+#: ../window.c:393
+msgid "Go back up one directory on the ISO"
+msgstr "آئی ایس او میں ایک ڈائریکٹری پیچھے جائیں"
+
+#: ../window.c:56
+msgid "Go back up one directory on the filesystem"
+msgstr "فائل نظام میں ایک ڈائریکٹری پیچھے جائیں"
+
+#: ../isobrowser.c:1428 ../isobrowser.c:1734
+msgid "ISO Images"
+msgstr "آئی ایس او تصاویر"
+
+#: ../about.c:385
+msgid "ISO Master Help"
+msgstr "آئی ایس او ماسٹر کی ہدایات"
+
+#: ../settings.c:63
+msgid "Image Information"
+msgstr "تصویر کی معلومات"
+
+#: ../settings.c:158
+#, c-format
+msgid "Invalid publisher '%s': '%s'"
+msgstr "ناموزوں ناشر '%s': '%s'"
+
+#: ../settings.c:174
+#, c-format
+msgid "Invalid volume name '%s': '%s'"
+msgstr "ناموزوں حُجم نام '%s': '%s'"
+
+#: ../boot.c:391
+#, c-format
+msgid "Is not visible on image"
+msgstr "تصویر میں رویت پذیر نہیں"
+
+#: ../boot.c:389
+#, c-format
+msgid "Is visible on image as '%s'"
+msgstr "تصویر میں بطور '%s' رویت پذیر ہے"
+
+#: ../isobrowser.c:770
+msgid ""
+"It seems that you have made changes to the ISO but haven't saved them. Are "
+"you sure you want to close it?"
+msgstr ""
+"معلوم ہوتا ہے کہ آپ نے آئی ایس او میں تبدیلیاں کی ہیں مگر انہیں محفوظ نہیں "
+"کیا. کیا آپ واقعی اسے بند کرنا چاہتے ہیں؟"
+
+#: ../boot.c:271
+msgid "Item selected is not a regular file and cannot be used as a boot record"
+msgstr ""
+"منتخب کردہ عنصر باضابطہ فائل نہیں ہے اور بوٹ ریکارڈ کے طور پر استعمال نہیں "
+"کی جاسکتی"
+
+#: ../boot.c:373 ../boot.c:380
+#, c-format
+msgid "Location: on original image at 0x%llX"
+msgstr "مقام: اصل تصویر میں بر 0x%llX"
+
+#: ../boot.c:375 ../boot.c:382
+#, c-format
+msgid "Location: to be added from '%s'"
+msgstr "مقام: شامل کی جائے گی از '%s'"
+
+#: ../isobrowser.c:1438
+msgid "MDF Images"
+msgstr "MDF تصاویر"
+
+#: ../isobrowser.c:1433
+msgid "NRG Images"
+msgstr "NRG تصاویر"
+
+#: ../fsbrowser.c:121 ../isobrowser.c:482
+msgid "Name"
+msgstr "نام"
+
+#: ../window.c:61 ../window.c:398
+msgid "New Directory"
+msgstr "نئی ڈائریکٹری"
+
+#: ../boot.c:149 ../boot.c:327
+msgid "No boot record read from original or set on image"
+msgstr "اصل سے کوئی بوٹ ریکارڈ نہیں پڑھا گیا یا تصویر میں متعین نہیں کیا گیا"
+
+#: ../boot.c:108
+msgid "No boot to delete"
+msgstr "حذف کرنے کے لیے کوئی بوٹ نہیں"
+
+#: ../window.c:168
+msgid "Open Recent"
+msgstr "حالیہ کھولیں"
+
+#: ../settings.c:688
+msgid "Options"
+msgstr "اختیارات"
+
+#: ../boot.c:229
+msgid "Please select a file in the ISO browser to use as the boot record"
+msgstr ""
+"بوٹ ریکارڈ کے طور پر استعمال کرنے کے لیے آئی ایس او براؤزر میں فائل منتخب "
+"کریں"
+
+#: ../boot.c:243
+msgid "Please select no more than one file in the ISO browser"
+msgstr "ازراہِ کرم فائل براؤزر میں ایک فائل منتخب کریں"
+
+#: ../isobrowser.c:136
+msgid "Please wait while I'm adding the selected items..."
+msgstr "ازراہِ کرم جب تک میں منتخب کردہ عناصر شامل کروں تب تک انتظار فرمائیں..."
+
+#: ../isobrowser.c:905
+msgid "Please wait while I'm extracting the selected files..."
+msgstr ""
+"ازراہِ کرم جب تک میں منتخب کردہ فائلیں کشید نہ کر لوں تب تک انتظار فرمائیں..."
+
+#: ../isobrowser.c:1306
+msgid "Please wait while I'm reading the image..."
+msgstr "ازراہِ کرم جب تک میں تصویر کو پڑھ نہ لو تب تک انتظار فرمائیں..."
+
+#: ../isobrowser.c:1657
+msgid "Please wait while I'm saving the new image to disk..."
+msgstr ""
+"ازراہِ کرم جب تک میں نئی تصویر کو ڈسک پر محفوظ نہ کر لوں تب تک انتظار "
+"فرمائیں..."
+
+#: ../isobrowser.c:129 ../isobrowser.c:897 ../isobrowser.c:1299
+#: ../isobrowser.c:1647
+msgid "Progress"
+msgstr "پیش رفت"
+
+#: ../settings.c:107
+msgid "Publisher:"
+msgstr "ناشر:"
+
+#: ../window.c:413
+msgid "Remove"
+msgstr "حذف کریں"
+
+#: ../isobrowser.c:1895
+msgid "Rename"
+msgstr "نام بدلیں"
+
+#: ../isobrowser.c:1723
+msgid "Save File"
+msgstr "فائل محفوظ کریں"
+
+#: ../boot.c:156
+msgid "Save a copy of the boot record"
+msgstr "بوٹ ریکارڈ کی ایک کاپی محفوظ کریں"
+
+#: ../settings.c:700
+msgid "Scan for duplicate files (slow)"
+msgstr "مثنی فائلوں کے لیے تلاش کریں (سست)"
+
+#: ../window.c:242
+msgid "Show _hidden files"
+msgstr "_پوشیدہ فائلیں دکھائیں"
+
+#: ../fsbrowser.c:142 ../isobrowser.c:505
+msgid "Size"
+msgstr "حجم"
+
+#: ../boot.c:363
+#, c-format
+msgid "Size: %d bytes"
+msgstr "حجم: %d بائٹس"
+
+#: ../fsbrowser.c:280
+msgid ""
+"Skipping directory entry because cannot handle filename longer than 256 chars"
+msgstr ""
+"ڈائریکٹری کی انٹری پھلانگی جارہی ہے کیونکہ 256 حروف سے زیادہ کے فائل نام کو "
+"ہینڈل نہیں کیا جاسکتا"
+
+#: ../fsbrowser.c:299
+#, c-format
+msgid "Skipping directory entry because stat(%s) failed with %d"
+msgstr "ڈائریکٹری کی انٹری پھلانگی جارہی ہے کیونکہ حالت(%s) ناکام ہوگئی بمع %d"
+
+#: ../window.c:262
+msgid "Sort is _case sensitive"
+msgstr "چھانٹنا _حساس ہے"
+
+#: ../settings.c:746 ../settings.c:750
+msgid "Temporary directory"
+msgstr "عارضی ڈائریکٹری"
+
+#: ../about.c:323
+msgid ""
+"The ISO Master window is split in 2 parts:\n"
+" - The top file browser shows files and directories on your machine.\n"
+" - The bottom file browser shows files and directories on the ISO image.\n"
+"\n"
+"To open an existing ISO file click on 'File' and 'Open'. To create a new\n"
+"ISO file click on 'File' and 'New'.\n"
+"\n"
+"To add one or more files or directories to the ISO select them in the top\n"
+"file browser and click the 'Add to the ISO' button in the middle toolbar.\n"
+"\n"
+"To extract one or more files or directories from the ISO select them in\n"
+"the bottom file browser and click the 'Extract from ISO' button in the\n"
+"middle toolbar.\n"
+"\n"
+"You can also delete files or directories from the ISO and create new\n"
+"directories both on the ISO and your local filesystem.\n"
+"\n"
+"If you select something in the bottom file browser and right-click on it,\n"
+"there are several more options available.\n"
+"\n"
+"Once you made all the changes to the new ISO image, click on 'File' and\n"
+"'Save As'. You cannot overwrite the original ISO.\n"
+msgstr ""
+"آئی ایس او ماسٹر کا دریچہ دو حصوں میں منقسم ہے:\n"
+" - اوپر کا فائل براؤزر آپ کے کمپیوٹر کی ڈائریکٹریاں اور فائلیں دکھاتا ہے.\n"
+" - نیچے کا فائل براؤزر آئی ایس او تصویر کی ڈائریکٹریاں اور فائلیں دکھاتا "
+"ہے.\n"
+"\n"
+"کوئی سابقہ آئی ایس او کھولنے کے لیے 'فائل' پھر 'کھولیں' پر کلک کریں\n"
+"نئی آئی ایس او فائل بنانے کے لیے 'فائل' پھر 'نیا' پر کلک کریں.\n"
+"\n"
+"آئی ایس او میں ایک یا زیادہ فائلیں یا ڈائریکٹریاں شامل کرنے کے لیے انہیں "
+"اوپر کے فائل\n"
+"براؤزر میں منتخب کریں اور درمیانی اوزار پٹی میں 'شامل کریں' کے بٹن پر کلک "
+"کریں.\n"
+"\n"
+"آئی ایس اور سے ایک یا زیادہ فائلیں یا ڈائریکٹریاں کشید کرنے کے لیے انہیں "
+"نیچے کے فائل\n"
+"براؤزر میں منتخب کریں اور درمیان کی اوزار پٹی میں 'کشید کریں' کے بٹن پر کلک "
+"کریں.\n"
+"\n"
+"آپ آئی ایس او میں اور اپنے فائل نظام میں فائلیں اور ڈائریکٹریاں بھی حذف "
+"کرسکتے ہیں\n"
+"\n"
+"اگر آپ نیچے کے فائل براؤزر پر کچھ منتخب کر کے اس پر دایاں کلک کریں گے تو آپ "
+"کے لیے\n"
+"کچھ مزید اختیارات دستیاب ہوں گے.\n"
+"\n"
+"جب آپ آئی ایس او تصویر میں تمام تبدیلیاں کر لیں تو 'فائل' سے 'محفوظ بنام' "
+"منتخب کریں.\n"
+"آپ اصل آئی ایس او کے اوپر نہیں لکھ سکتے.\n"
+
+#: ../window.c:314
+msgid "Use selected file on image (no emulation)"
+msgstr "تصویر میں منتخب کردہ فائل استعمال کریں (کوئی شبیہ سازی نہیں)"
+
+#: ../fsbrowser.c:583 ../isobrowser.c:1904
+msgid "View"
+msgstr "منظر"
+
+#: ../editfile.c:102
+msgid "View failed, please check Options/Viewer"
+msgstr "منظر ناکام، ازراہِ کرم اختیارات/ناظر دیکھیں"
+
+#: ../settings.c:735
+msgid "Viewer"
+msgstr "ناظر"
+
+#: ../settings.c:95
+msgid "Volume name:"
+msgstr "حُجم کا نام:"
+
+#: ../settings.c:674
+msgid ""
+"You will have to close and reopen the ISO for this change to take effect"
+msgstr ""
+"اس تبدیلی کو اثر پذیر ہونے کے لیے آپ کو چاہیے کہ آئی ایس او کو بند کر کے "
+"دوبارہ کھولیں"
+
+#: ../window.c:282
+msgid "_Boot Record"
+msgstr "_بوٹ ریکارڈ"
+
+#: ../window.c:143
+msgid "_File"
+msgstr "_فائل"
+
+#: ../window.c:354
+msgid "_Help"
+msgstr "_ہدایات"
+
+#: ../window.c:346
+msgid "_Options"
+msgstr "_اختیارات"
+
+#: ../window.c:363
+msgid "_Overview"
+msgstr "_عمومی جائزہ"
+
+#: ../window.c:252
+msgid "_Sort directories first"
+msgstr "پہلے ڈائریکٹریاں _چھانٹیں"
+
+#: ../window.c:274
+msgid "_Tools"
+msgstr "_اوزار"
+
+#: ../window.c:227
+msgid "_View"
+msgstr "_منظر"

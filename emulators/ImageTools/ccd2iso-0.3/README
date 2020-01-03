@@ -1,0 +1,71 @@
+CCD2ISO
+-------
+
+Wheeew... finally, after looking for quite sometime... this hack is done.
+
+Okay... for those of you who might wonder what this utility for, CCD2ISO is a CloneCD image file to ISO image file converter. As I now move to Linux entirely, I still need some migration, specially for my existing CloneCD images, I want to use them in Linux, and I can't find any converter to convert them to ISO to be mountable by Linux, so I try to make one...
+
+Well... this is my first Linux Project, so don't be expecting much from me... I'm trying to make NRG2ISO (Nero image to ISO) converter, but still I have some difficulty to get the .nrg file format, hopefully someone out there can help me out...
+
+NOTE ABOUT NRG2ISO:
+sometime ago... I can't remember when and who, since I lost all of my e-mail archive in harddrive crash, someone told me that I can mount .nrg files only by specifying mount options like:
+
+   # mount myimage.nrg /mnt/iso -o loop,offset=307200
+
+it looks like .nrg files is simpler than clonecd files... if you want to convert .nrg to .iso, just do:
+
+   # dd if=myimage.nrg of=myimage.iso bs=2048 skip=150
+
+technically, you can throw away the first 307200 bytes from .nrg file, and the rest of it is a valid .iso file, as long as the image is created from valid ISO CD... so don't expect to get .iso from audio cd (CDDA) or VCD image...
+
+
+Hopefully this will be so much usefull for someone out there as much as I do...
+
+Please feel free to give any feedback to danny_kurniawan@users.sourceforge.net
+
+
+HOW TO USE
+----------
+
+Easy... normally you would have 3 file from CloneCD image, they are .ccd, .img, and .sub, just type:
+
+	ccd2iso <.img filename> <.iso filename>
+
+for example:
+
+	ccd2iso myimage.img myimage.iso
+
+
+COMPILING
+---------
+
+Just follow normal procedure:
+
+	./configure
+	make
+	make install
+
+
+TECHNICAL EXPLANATION
+---------------------
+
+After some strange hacking through CloneCD's image file, I found that CloneCD is only dumping CD's raw data, thus together with 12 byte synchronization, 4 byte header, ECC, and EDC...
+
+For now, only single session image supported, if multiple session image found, then the program will dump the first session only with an "Unrecognized sector mode" error... but the resulting file, will be mounted quite fine.
+
+
+TO DO
+-----
+
+ * Better support for multisession image. (Hopefully this task is possible)
+ * Add ISO Image compatible validation.
+ * Create GUI Front-end.
+
+
+THANKS
+------
+Special Thanks to:
+
+ * Kerry Harris <tomatoe-source@users.sourceforge.net>
+   for a couple sanity checks before the file opened
+

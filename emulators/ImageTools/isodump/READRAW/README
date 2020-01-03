@@ -1,0 +1,67 @@
+1999-11-14
+==========
+
+There seems to be a bug in drivers/block/ide-cd.c...
+The user writes:
+
+struct cdrom_read arg;
+u_char buf[CD_FRAMESIZE_RAW];
+int blk= 0;			/* block of cd to read raw */
+
+arg.cdread_bufaddr= buf;
+arg.cdread_buflen= CD_FRAMESIZE_RAW;
+
+arg.cdread_lba= blk;
+ioctl(,CDROMREADRAW,&arg);
+write(STDOUT_FILENO,buf,CD_FRAMESIZE_RAW);
+
+
+but ide_cdrom_dev_ioctl() of ide-cd.c takes the argument as struct cdrom_msf.
+The function copy_from_user_ret() called by ide_cdrom_dev_ioctl() seems just
+to return the lba value specified in arg.cdread_lba and not msf.
+
+
+The program readraw.c only works with the patch ide-cd.c-v4.54.diff:
+-------------------------------------------------------------------------------
+2113a2114
+> /*
+2114a2116
+> */
+2126a2129
+> /*
+2131a2135,2139
+> 
+>               lba= *( (int*)&msf );
+> */
+> 
+>               copy_from_user_ret(&lba, (void *)arg, sizeof (lba), -EFAULT);
+-------------------------------------------------------------------------------
+
+But, regarding unreadable blocks, dumping raw data is just as sensible as with
+isodump.c which only reads /dev/cdrom by read().
+
+This ioctl(CDROMREADRAW) can be used for reading data tracks not beeing the
+first track of the cd. Perhaps I should use CDROMREADMODE1 for this, but
+the problem with ide-cd.c will be the same, i.e the call of
+ide_cdrom_dev_ioctl().
+
+
+1999-11-17
+==========
+mail from Jens Axboe <axboe@image.dk>, Linux CD-ROM Maintainer: 
+data CDROMREAD* ioctl takes arg buffer_address where a struct msf has
+been copied to (in contrast to linux/cdrom.h), i.e
+
+unsigned char buf[CD_FRAMESIZE_RAW];
+struct cdrom_msf msf;
+msf.cdmsf_min0= 0;	/* set up mfs */
+memcpy( buf, &msf, sizeof(msf) );
+ioctl( , CDROMREADRAW, buf );
+
+Will not put such code to isodump.c for different reasons:
+- isodump is based on read(2) and not on ioctl(2)
+- even CDROMREADMODE1 does not apply the ECC code -- I hope that read(2)
+  does (but I'm not shure)
+- raw reading belongs rather to cdda than to data (see ECC)
+
+Perhaps experiences with multisession data cds (not CD+) will change my mind...

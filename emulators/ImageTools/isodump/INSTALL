@@ -1,0 +1,9 @@
+First run a
+  ./configure
+then a
+  make
+for compilation of or/and a
+  make install
+for compilation and installation (the last requires beeing root) of the binary
+and the manual page. Edit the Makefile entries (for instance INSTALLDIR_???)
+if neccessary.

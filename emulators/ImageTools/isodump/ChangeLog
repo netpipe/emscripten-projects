@@ -1,0 +1,66 @@
+isodump
+
+v0.10 1998/06/15
+- personal initial release
+
+v0.20 1999/01/16
+- initial release
+
+v0.21 1999/01/28
+- otion -H (hash marks) added
++ mkman added to package
+
+v0.22 1999/02/13
+- plural correction (MByte/MBytes) when using -v option
+- new email address (absinth.net)
+
+v0.30 1999/06/16
+- unexpected EOF trapped (prev. nbr<nbw)
+- man page improved
++ configure mkmkman added to package
+
+v0.04.01 1999-11-12
+- basename() added
+- skipping of unreadable blocks implemented
+- padding implemented (not optional)
+- hash marks now relative
+- verbosity decreased (skip)
+
+v0.04.02 1999-11-12
+- minor fixes
+
+v0.04.03 2001-04-17
+- readraw example directory added
+- link to cddaread(1) added for reading tracks # > 1
+- hash mark bug fixed (79 instead of 80 marks)
+- speed measurement added
+- image size info in msf added
+
+v0.04.04 2001-07-17
+- space output error fixed
+- small image size bugs fixed
+
+v0.04.06 2001-10-03
+- sizes now long long (DVDs)
+
+v0.05.00 2002-10-11
+- uninitialized-tnbr-tnbw-bug fixed
+- output file support
+- conversion support for form 1 images (mode 1 & 2) of 2352 bytes per block
+
+v0.05.01 2003-07-15
+- fix: uhb print bug
+- add: info on single trailing bytes
+- add: more info if image too small
+- includes fixed
+
+v0.05.02 2003-07-17
+- add: padding
+
+v0.05.03 2007-12-01
+- add: man page hints on padding
+- add: large file support (dvds)
+
+v0.06.00 2008-01-30
+- add: conversion support for Nero NRG images (skip first 150 blocks)
+- mod: stripping (install) removed

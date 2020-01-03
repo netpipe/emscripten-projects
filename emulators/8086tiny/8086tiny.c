@@ -19,7 +19,7 @@
 #endif
 
 #ifndef NO_GRAPHICS
-#include "SDL/SDL.h"
+#include "SDL.h"
 #endif
 
 #ifdef __EMSCRIPTEN__
@@ -104,26 +104,38 @@
 #define GRAPHICS_Y_DEFAULT 50
 
 // Emscripten port related
-#define EMSCRIPTEN_MAIN_LOOP_FRAMERATE 100
-#define EMSCRIPTEN_INSTRUCTIONS_PER_FRAME 100000
+#define EMSCRIPTEN_MAIN_LOOP_FRAMERATE 1000
+#ifdef __EMSCRIPTEN__
+#define EMSCRIPTEN_INSTRUCTIONS_PER_FRAME 10000
+#else
+#define EMSCRIPTEN_INSTRUCTIONS_PER_FRAME 1
+#endif
 // Use hd.img file
 //#define EMSCRIPTEN_USE_HD
 #define EMSCRIPTEN_BIOS_FILE "bios"
 #define EMSCRIPTEN_FD_FILE "fd.img"
+//#define EMSCRIPTEN_FD_FILE "tcl.img"
 #define EMSCRIPTEN_HD_FILE "hd.img"
 
 // Virtual terminal related
 #ifdef USE_TMT
 #ifdef __EMSCRIPTEN__
-#define VTERM_BLANK_LINES 0
-#define VTERM_LINES 10
-#define VTERM_COLS 80
+#define VTERM_BLANK_LINES 0         // Number of blank lines printed before printing virtual terminal contents
+#define VTERM_LINES 9               // Number of lines in virtual terminal
+#define VTERM_COLS 80               // Number of columns in virtual terminal
 #else
 #define VTERM_BLANK_LINES 200
-#define VTERM_LINES 50
+#define VTERM_LINES 45
 #define VTERM_COLS 80
 #endif
 #endif
+
+// SDL_PumpEvents and display refreshing can iether be done in every main loop iteration or can be done after a set number of instructions
+#ifdef __EMSCRIPTEN__
+#define PUMP_EVENTS_EVERY_FRAME
+#define REFRESH_DISPLAY_EVERY_FRAME
+#endif
+
 
 // Helper macros
 
@@ -200,6 +212,7 @@ SDL_AudioSpec sdl_audio = {44100, AUDIO_U8, 1, 0, 128};
 SDL_Surface *sdl_screen;
 int is_display_init;
 SDL_Event sdl_event;
+SDL_PixelFormat* sdl_fmt;
 unsigned short vid_addr_lookup[VIDEO_RAM_SIZE], cga_colors[4] = {0 /* Black */, 0x1F1F /* Cyan */, 0xE3E3 /* Magenta */, 0xFFFF /* White */};
 #endif
 
@@ -439,12 +452,18 @@ unsigned int sdl_key_to_ascii(SDLKey sdl_key)
 }
 #endif
 
+void set_video_mode()
+{
+    SDL_Init(SDL_INIT_VIDEO);
+    sdl_screen = SDL_SetVideoMode(GRAPHICS_X, GRAPHICS_Y, 32, SDL_SWSURFACE);
+    sdl_fmt = sdl_screen->format;
+}
+
 void init(int argc, char** argv)
 {
 	// Initialise SDL
 #ifndef NO_GRAPHICS
-	if(SDL_Init(SDL_INIT_VIDEO) != 0) printf("%s",SDL_GetError());
-    sdl_screen = SDL_SetVideoMode(GRAPHICS_X_DEFAULT, GRAPHICS_Y_DEFAULT, 8, 0);
+    GRAPHICS_X = GRAPHICS_X_DEFAULT; GRAPHICS_Y = GRAPHICS_Y_DEFAULT; set_video_mode();
     is_display_init = 0;
     SDL_EnableUNICODE(1);
     SDL_EnableKeyRepeat(500, 30);
@@ -452,9 +471,9 @@ void init(int argc, char** argv)
 #ifndef NO_AUDIO
     SDL_InitSubSystem(SDL_INIT_AUDIO);
 	sdl_audio.callback = audio_callback;
-#ifdef _WIN32
+//#ifdef _WIN32
 	sdl_audio.samples = 512;
-#endif
+//#endif
 	SDL_OpenAudio(&sdl_audio, 0);
 #endif
     // Initialize SDL_ttf for rendering vterm
@@ -914,7 +933,6 @@ void main_loop()
 					OPCODE_CHAIN 3: // DISK_WRITE
 						regs8[REG_AL] = ~fseek(disk[regs8[REG_DL]], CAST(unsigned)regs16[REG_BP] << 9, 0)
 							? ((char)i_data0 == 3 ? (int(*)())fwrite : (int(*)())fread)(mem + SEGREG(REG_ES, REG_BX,), 1, regs16[REG_AX], disk[regs8[REG_DL]])
-							//? ((char)i_data0 == 3 ? (int(*)())write : (int(*)())read)(disk[regs8[REG_DL]], mem + SEGREG(REG_ES, REG_BX,), regs16[REG_AX])
 							: 0;
 
 				}
@@ -989,9 +1007,11 @@ void main_loop()
 #endif
 
 #ifndef NO_GRAPHICS
+#ifndef REFRESH_DISPLAY_EVERY_FRAME
     // Update the video graphics display every GRAPHICS_UPDATE_DELAY instructions
     if (!(inst_counter % GRAPHICS_UPDATE_DELAY))
     {
+#endif
         // Video card in graphics mode?
         if (io_ports[0x3B8] & 2)
         {
@@ -1008,14 +1028,25 @@ void main_loop()
                     vid_addr_lookup[i] = i / GRAPHICS_X * (GRAPHICS_X / 8) + (i / 2) % (GRAPHICS_X / 8) + 0x2000*(mem[0x4AC] ? (2 * i / GRAPHICS_X) % 2 : (4 * i / GRAPHICS_X) % 4);
 
                 SDL_QuitSubSystem(SDL_INIT_VIDEO);
-                SDL_Init(SDL_INIT_VIDEO);
-                sdl_screen = SDL_SetVideoMode(GRAPHICS_X, GRAPHICS_Y, 8, 0);
+                set_video_mode();
             }
 
             // Refresh SDL display from emulated graphics card video RAM
             vid_mem_base = mem + 0xB0000 + 0x8000*(mem[0x4AC] ? 1 : io_ports[0x3B8] >> 7); // B800:0 for CGA/Hercules bank 2, B000:0 for Hercules bank 1
+            if(SDL_MUSTLOCK(sdl_screen)) SDL_LockSurface(sdl_screen);
             for (int i = 0; i < GRAPHICS_X * GRAPHICS_Y / 4; i++)
-                ((unsigned *)sdl_screen->pixels)[i] = pixel_colors[15 & (vid_mem_base[vid_addr_lookup[i]] >> 4*!(i & 1))];
+            {
+                unsigned int col_4_pack = pixel_colors[15 & (vid_mem_base[vid_addr_lookup[i]] >> 4*!(i & 1))];
+                int x = (i % (GRAPHICS_X / 4)) * 4;
+                int y = i / (GRAPHICS_X / 4);
+                for(int j = 0; j < 4; ++j)
+                {
+                    *((uint32_t*)sdl_screen->pixels + x + j + (y * GRAPHICS_X)) = SDL_MapRGBA(sdl_fmt, col_4_pack & 0xE0, (col_4_pack & 0x1C) << 3, (col_4_pack & 0x02) << 6, 255);
+                    col_4_pack >>= 8;
+                }
+            }
+            if(SDL_MUSTLOCK(sdl_screen)) SDL_UnlockSurface(sdl_screen);
+            SDL_Flip(sdl_screen);
 
         }
         else
@@ -1023,13 +1054,17 @@ void main_loop()
             if (is_display_init == 1) // Application has gone back to text mode, so return the SDL window to defaults
             {
                 SDL_QuitSubSystem(SDL_INIT_VIDEO);
-                SDL_Init(SDL_INIT_VIDEO);
-                sdl_screen = SDL_SetVideoMode(GRAPHICS_X_DEFAULT, GRAPHICS_Y_DEFAULT, 8, 0);
+                GRAPHICS_X = GRAPHICS_X_DEFAULT; GRAPHICS_Y = GRAPHICS_Y_DEFAULT; set_video_mode();
             }
-       }
-        SDL_Flip(sdl_screen);
+        }
         SDL_PumpEvents();
+#ifndef REFRESH_DISPLAY_EVERY_FRAME
     }
+#endif
+#ifndef PUMP_EVENTS_EVERY_FRAME
+    if (!(inst_counter % GRAPHICS_UPDATE_DELAY))
+#endif
+        SDL_PumpEvents();
 #endif
 }
 

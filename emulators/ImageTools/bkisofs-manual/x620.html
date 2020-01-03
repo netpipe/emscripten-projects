@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>BkFile</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Data Structures"
+HREF="c589.html"><LINK
+REL="PREVIOUS"
+TITLE="BkDir"
+HREF="x613.html"><LINK
+REL="NEXT"
+TITLE="BkSymLink"
+HREF="x634.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x613.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Data Structures</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x634.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN620"
+><CODE
+CLASS="CLASSNAME"
+>BkFile</CODE
+></A
+></H1
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>typedef struct BkFile
+{
+    BkFileBase base; /* intended to be accessed using a cast */
+    
+    unsigned size; /* in bytes, don't need off_t because it's stored 
+                   * in a 32bit unsigned int on the iso */
+    BkHardLink* location; /* basically a copy of the following variables */
+    bool onImage;
+    off_t position; /* if on image, in bytes */
+    char* pathAndName; /* if on filesystem, full path + filename
+                       * is to be freed whenever the File is freed */
+    
+} BkFile;</PRE
+></TD
+></TR
+></TABLE
+></P
+><P
+><TT
+CLASS="LITERAL"
+>size</TT
+> is the exact size of the file, whether it is from an original ISO or to be added from the filesystem.</P
+><P
+><TT
+CLASS="LITERAL"
+>onImage</TT
+> is true if the file contents are on the original ISO. It's false if the file is to be added from the regular filesystem.</P
+><P
+><TT
+CLASS="LITERAL"
+>position</TT
+> and <TT
+CLASS="LITERAL"
+>pathAndName</TT
+> are unlikely to be interesting to you, but you can read them if you like - they record how exactly to access the file for reading. They are set in the reading or adding function.</P
+><P
+><TT
+CLASS="LITERAL"
+>location</TT
+> is definitely not interesting to you, it's used internally to work with hard links.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x613.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x634.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><CODE
+CLASS="CLASSNAME"
+>BkDir</CODE
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c589.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><CODE
+CLASS="CLASSNAME"
+>BkSymLink</CODE
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

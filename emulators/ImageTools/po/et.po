@@ -1,0 +1,542 @@
+# Estonian translation of ISO Master
+# This file is distributed under the same license as the ISO Master package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ISO Master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-05 22:40-0500\n"
+"PO-Revision-Date: 2007-12-23 12:41-0500\n"
+"Last-Translator: Edmund Laugasson <edmund.laugasson@eesti.ee>\n"
+"Language-Team: Edmund Laugasson <edmund.laugasson@eesti.ee>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Estonian\n"
+"X-Poedit-Country: ESTONIA\n"
+
+#: ../window.c:417
+msgid "      Estimated ISO Size: "
+msgstr "      Ennustatav ISO suurus: "
+
+#: ../isobrowser.c:1504
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+"Do you wish to continue?"
+msgstr ""
+"%s\n"
+"\n"
+"Kas Sa soovid jätkata?"
+
+#: ../editfile.c:272 ../editfile.c:368 ../editfile.c:601 ../editfile.c:696
+#, c-format
+msgid "'%s' is not a regular file"
+msgstr "'%s' ei ole tavaline fail"
+
+#: ../isobrowser.c:142 ../isobrowser.c:1312
+msgid "(scanning for duplicate files)"
+msgstr "(otsin sama nimega faile)"
+
+#: ../window.c:403
+msgid "Add"
+msgstr "Lisa"
+
+#: ../isobrowser.c:1742
+msgid "Add extension automatically"
+msgstr "Lisa faililaiend automaatselt"
+
+#: ../window.c:403
+msgid "Add to the ISO"
+msgstr "Lisa ISO-faili sisse"
+
+#: ../isobrowser.c:1443 ../isobrowser.c:1739
+msgid "All files"
+msgstr "Kõik failid"
+
+#: ../boot.c:334
+msgid "Boot Record Information"
+msgstr "Alglaadimissektori info"
+
+#: ../boot.c:122
+msgid "Boot record deleted"
+msgstr "Alglaadimissektor kustutatud"
+
+#: ../boot.c:350
+#, c-format
+msgid "Boot record type: 1200KiB Floppy"
+msgstr "Alglaadimissektori tüüp: 1200KiB diskett"
+
+#: ../boot.c:352
+#, c-format
+msgid "Boot record type: 1440KiB Floppy"
+msgstr "Alglaadimissektori tüüp: 1440KiB diskett"
+
+#: ../boot.c:354
+#, c-format
+msgid "Boot record type: 2880KiB Floppy"
+msgstr "Alglaadimissektori tüüp: 2880KiB diskett"
+
+#: ../boot.c:348
+#, c-format
+msgid "Boot record type: No Emulation"
+msgstr "Alglaadimissektori tüüp: Ei jäljendata"
+
+#: ../isobrowser.c:267 ../isobrowser.c:1918
+msgid "Change permissions"
+msgstr "Muuda õigusi"
+
+#: ../boot.c:40
+msgid "Choose Boot Record File"
+msgstr "Vali alglaadimisektori fail"
+
+#: ../window.c:399
+msgid "Create new directory on the ISO"
+msgstr "Loo uus kataloog ISO faili sisse"
+
+#: ../window.c:62
+msgid "Create new directory on the filesystem"
+msgstr "Loo uus kataloog oma arvutis olevasse failisüsteemi"
+
+#: ../settings.c:79
+msgid "Creation time:"
+msgstr "Loomise aeg:"
+
+#: ../window.c:413
+msgid "Delete from the ISO"
+msgstr "Kustuta ISO faili seest"
+
+#: ../fsbrowser.c:590 ../isobrowser.c:1911
+msgid "Edit"
+msgstr "Redigeeri"
+
+#: ../editfile.c:82
+msgid "Edit failed, please check Options/Editor"
+msgstr "Redigeerimine ebaõnnestus, palun vaata Seaded/Redaktor"
+
+#: ../settings.c:723
+msgid "Editor"
+msgstr "Redaktor"
+
+#: ../isobrowser.c:1583
+msgid "Enter a new name:"
+msgstr "Sisesta uus nimi:"
+
+#: ../browser.c:71
+msgid "Enter name for new directory"
+msgstr "Pane uuele kataloogile nimi"
+
+#: ../window.c:408
+msgid "Extract"
+msgstr "Paki lahti"
+
+#: ../window.c:408
+msgid "Extract from the ISO"
+msgstr "Paki ISO faili seest lahti"
+
+#: ../editfile.c:473 ../isobrowser.c:215
+#, c-format
+msgid "Failed to add '%s': '%s'"
+msgstr "Ei õnnestunud lisada '%s': '%s'"
+
+#: ../boot.c:79
+#, c-format
+msgid "Failed to add boot record: '%s'"
+msgstr "Ei õnnestunud lisada alglaadimissektorit: '%s'"
+
+#: ../isobrowser.c:555
+#, c-format
+msgid "Failed to change directory: '%s'"
+msgstr "Ei õnnestunud muuta asukohta: '%s'"
+
+#: ../browser.c:112
+#, c-format
+msgid "Failed to create directory %s"
+msgstr "Ei õnnestunud luua kataloogi %s"
+
+#: ../browser.c:135
+#, c-format
+msgid "Failed to create directory %s: '%s'"
+msgstr "Ei õnnestunud luua kataloogi %s: '%s'"
+
+#: ../editfile.c:447 ../isobrowser.c:850
+#, c-format
+msgid "Failed to delete '%s': '%s'"
+msgstr "Ei õnnestunud kustutada '%s': '%s'"
+
+#: ../editfile.c:412 ../editfile.c:740 ../isobrowser.c:963
+#, c-format
+msgid "Failed to extract '%s': '%s'"
+msgstr "Ei õnnestunud lahti pakkida '%s': '%s'"
+
+#: ../boot.c:202
+#, c-format
+msgid "Failed to extract boot record: '%s'"
+msgstr "Ei õnnestunud alglaadimissektorit lahti pakkida: '%s'"
+
+#: ../isobrowser.c:1146 ../isobrowser.c:1248
+#, c-format
+msgid "Failed to initialise bkisofs: '%s'"
+msgstr "Ei õnnestunud lähtestada bkisofs: '%s'"
+
+#: ../fsbrowser.c:229
+#, c-format
+msgid "Failed to open directory '%s', error %d"
+msgstr "Ei õnnestunud avada kataloogi '%s', viga %d"
+
+#: ../isobrowser.c:1267
+#, c-format
+msgid "Failed to open iso file for reading: '%s'"
+msgstr "Ei õnnestunud avada ISO faili lugemiseks: '%s'"
+
+#: ../isobrowser.c:1342
+#, c-format
+msgid "Failed to read directory tree: '%s'"
+msgstr "Ei õnnestunud lugeda kataloogipuud: '%s'"
+
+#: ../isobrowser.c:1282
+#, c-format
+msgid "Failed to read volume info: '%s'"
+msgstr "Ei õnnestunud lugeda andmekandja infot: '%s'"
+
+#: ../isobrowser.c:1612
+#, c-format
+msgid "Failed to rename '%s': %s"
+msgstr "Ei õnnestunud ümber nimetada '%s': %s"
+
+#: ../boot.c:296
+#, c-format
+msgid "Failed to set %s as boot record: '%s'"
+msgstr "Ei õnnestunud määrata %s alglaadimissektoriks: '%s'"
+
+#: ../isobrowser.c:1685
+#, c-format
+msgid "Failed to write image to '%s': '%s'"
+msgstr "Ei õnnestunud kirjutada tõmmisfaili '%s': '%s'"
+
+#: ../settings.c:123
+msgid "Filename types (both recommended):"
+msgstr "Failitüübid (mõlemad on soovitavad):"
+
+#: ../settings.c:713
+msgid "Follow symbolic links"
+msgstr "Järgi sümbolviiteid"
+
+#: ../window.c:326
+msgid "From file: 1200KiB floppy"
+msgstr "Failist: 1200KiB diskett"
+
+#: ../window.c:332
+msgid "From file: 1440KiB floppy"
+msgstr "Failist: 1440KiB diskett"
+
+#: ../window.c:338
+msgid "From file: 2880KiB floppy"
+msgstr "Failist: 2880KiB diskett"
+
+#: ../window.c:320
+msgid "From file: no emulation"
+msgstr "Failist: ei jäljendata"
+
+#: ../isobrowser.c:868
+msgid ""
+"GUI error, deleting anything other than files and directories doesn't work"
+msgstr ""
+"Graafilise liidese viga, miski muu peale failide ja kataloogide kustutamise "
+"ei tööta"
+
+#: ../window.c:55 ../window.c:392
+msgid "Go back"
+msgstr "Tagasi"
+
+#: ../window.c:393
+msgid "Go back up one directory on the ISO"
+msgstr "Mine ISO faili sees olevas kataloogipuus üks tase üles"
+
+#: ../window.c:56
+msgid "Go back up one directory on the filesystem"
+msgstr "Mine oma arvutis olevas kataloogipuus üks tase üles"
+
+#: ../isobrowser.c:1428 ../isobrowser.c:1734
+msgid "ISO Images"
+msgstr "ISO tõmmisfailid"
+
+#: ../about.c:385
+msgid "ISO Master Help"
+msgstr "ISO Master abi"
+
+#: ../settings.c:63
+msgid "Image Information"
+msgstr "Tõmmisfaili info"
+
+#: ../settings.c:158
+#, c-format
+msgid "Invalid publisher '%s': '%s'"
+msgstr "Vigane kirjastaja '%s': '%s'"
+
+#: ../settings.c:174
+#, c-format
+msgid "Invalid volume name '%s': '%s'"
+msgstr "Vigane andmekandja nimi '%s': '%s'"
+
+#: ../boot.c:391
+#, c-format
+msgid "Is not visible on image"
+msgstr "Ei ole tõmmisfaili sees nähtav"
+
+#: ../boot.c:389
+#, c-format
+msgid "Is visible on image as '%s'"
+msgstr "On tõmmisfaili sees nähtav kui '%s'"
+
+#: ../isobrowser.c:770
+msgid ""
+"It seems that you have made changes to the ISO but haven't saved them. Are "
+"you sure you want to close it?"
+msgstr ""
+"Paistab, et oled teinud muudatusi ISO faili sees kuid ei ole neid "
+"salvestanud. Kas oled kindel, et ei soovi muudatusi salvestada?"
+
+#: ../boot.c:271
+msgid "Item selected is not a regular file and cannot be used as a boot record"
+msgstr ""
+"Valitud fail ei ole tavaline fail ja ei saa seetõttu kasutada "
+"alglaadimissektorina"
+
+#: ../boot.c:373 ../boot.c:380
+#, c-format
+msgid "Location: on original image at 0x%llX"
+msgstr "Asukoht: esialgses tõmmisfailis kohal 0x%llX"
+
+#: ../boot.c:375 ../boot.c:382
+#, c-format
+msgid "Location: to be added from '%s'"
+msgstr "Asukoht: lisatakse siit - '%s'"
+
+#: ../isobrowser.c:1438
+msgid "MDF Images"
+msgstr "MDF tõmmisfailid"
+
+#: ../isobrowser.c:1433
+msgid "NRG Images"
+msgstr "NRG tõmmisfailid"
+
+#: ../fsbrowser.c:121 ../isobrowser.c:482
+msgid "Name"
+msgstr "Nimi"
+
+#: ../window.c:61 ../window.c:398
+msgid "New Directory"
+msgstr "Uus kataloog"
+
+#: ../boot.c:149 ../boot.c:327
+msgid "No boot record read from original or set on image"
+msgstr ""
+"Ühtki alglaadimissektorit ei loetud algsest failist ja ei määratud "
+"tõmmisfailile"
+
+#: ../boot.c:108
+msgid "No boot to delete"
+msgstr "Pole alglaadimissektorit, mida kustutada"
+
+#: ../window.c:168
+msgid "Open Recent"
+msgstr ""
+
+#: ../settings.c:688
+msgid "Options"
+msgstr "Seaded"
+
+#: ../boot.c:229
+msgid "Please select a file in the ISO browser to use as the boot record"
+msgstr "Palun vali fail ISO lehitsejas, mida kasutada alglaadimissektorina"
+
+#: ../boot.c:243
+msgid "Please select no more than one file in the ISO browser"
+msgstr "Palun vali mitte rohkem kui üks fail ISO lehitsejas"
+
+#: ../isobrowser.c:136
+msgid "Please wait while I'm adding the selected items..."
+msgstr "Palun oota kuni ma lisan valitud failid ja/või kataloogid ..."
+
+#: ../isobrowser.c:905
+msgid "Please wait while I'm extracting the selected files..."
+msgstr "Palun oota kuni ma pakin valitud failid lahti ..."
+
+#: ../isobrowser.c:1306
+msgid "Please wait while I'm reading the image..."
+msgstr "Palun oota kuni ma loen tõmmisfaili ..."
+
+#: ../isobrowser.c:1657
+msgid "Please wait while I'm saving the new image to disk..."
+msgstr "Palun oota kuni ma kirjutan uut tõmmisfaili kettale ..."
+
+#: ../isobrowser.c:129 ../isobrowser.c:897 ../isobrowser.c:1299
+#: ../isobrowser.c:1647
+msgid "Progress"
+msgstr "Edenemine"
+
+#: ../settings.c:107
+msgid "Publisher:"
+msgstr "Kirjastaja:"
+
+#: ../window.c:413
+msgid "Remove"
+msgstr "Eemalda"
+
+#: ../isobrowser.c:1895
+msgid "Rename"
+msgstr "Nimeta ümber"
+
+#: ../isobrowser.c:1723
+msgid "Save File"
+msgstr "Salvesta fail"
+
+#: ../boot.c:156
+msgid "Save a copy of the boot record"
+msgstr "Salvesta alglaadimissektorist koopia"
+
+#: ../settings.c:700
+msgid "Scan for duplicate files (slow)"
+msgstr "Otsi koopiafaile (aeglane)"
+
+#: ../window.c:242
+msgid "Show _hidden files"
+msgstr "Otsi _peidetud faile"
+
+#: ../fsbrowser.c:142 ../isobrowser.c:505
+msgid "Size"
+msgstr "Suurus"
+
+#: ../boot.c:363
+#, c-format
+msgid "Size: %d bytes"
+msgstr "Suurus: %d baiti"
+
+#: ../fsbrowser.c:280
+msgid ""
+"Skipping directory entry because cannot handle filename longer than 256 chars"
+msgstr ""
+"Jätan kataloogi kirje vahele kuna ei suuda hallata rohkem kui 256 sümbolit"
+
+#: ../fsbrowser.c:299
+#, c-format
+msgid "Skipping directory entry because stat(%s) failed with %d"
+msgstr "Jätan kataloogi kirje vahele kuna stat(%s) ebaõnnestus %d-ga"
+
+#: ../window.c:262
+msgid "Sort is _case sensitive"
+msgstr "_Sorteerimine on tõstutundlik"
+
+#: ../settings.c:746 ../settings.c:750
+msgid "Temporary directory"
+msgstr "Ajutine kataloog"
+
+#: ../about.c:323
+msgid ""
+"The ISO Master window is split in 2 parts:\n"
+" - The top file browser shows files and directories on your machine.\n"
+" - The bottom file browser shows files and directories on the ISO image.\n"
+"\n"
+"To open an existing ISO file click on 'File' and 'Open'. To create a new\n"
+"ISO file click on 'File' and 'New'.\n"
+"\n"
+"To add one or more files or directories to the ISO select them in the top\n"
+"file browser and click the 'Add to the ISO' button in the middle toolbar.\n"
+"\n"
+"To extract one or more files or directories from the ISO select them in\n"
+"the bottom file browser and click the 'Extract from ISO' button in the\n"
+"middle toolbar.\n"
+"\n"
+"You can also delete files or directories from the ISO and create new\n"
+"directories both on the ISO and your local filesystem.\n"
+"\n"
+"If you select something in the bottom file browser and right-click on it,\n"
+"there are several more options available.\n"
+"\n"
+"Once you made all the changes to the new ISO image, click on 'File' and\n"
+"'Save As'. You cannot overwrite the original ISO.\n"
+msgstr ""
+"ISO Master-i aken jaguneb kahte ossa:\n"
+" - Ülemine faililehitseja näitab faile ja katalooge arvutis.\n"
+" - Alumine faililehitseja näitab faile ja katalooge ISO faili seest.\n"
+"\n"
+"Et avada olemasolevat ISO faili, vali 'Fail' -> 'Ava'. Et luua uut\n"
+"ISO faili, vali 'Fail' -> 'Uus'.\n"
+"\n"
+"Ühe või rohkema faili/kataloogi lisamiseks ISO faili vali need ülemises\n"
+"faililehitsejas ja vajuta 'Lisa ISO faili sisse' nupule keskel asuval "
+"tööriistaribal.\n"
+"\n"
+"Et lahti pakkida üks või rohkem faili/kataloogi ISO faili seest, vali need\n"
+"alumises faililehitsejas ja seejärel vajuta 'Paki ISO seest lahti' nupule\n"
+"keskel asuval tööriistaribal.\n"
+"\n"
+"Sa võid ka kustutada faile/katalooge ISO faili seest ja luua uusi\n"
+"katalooge nii ISO faili sees kui ka arvutis olevas failisüsteemis.\n"
+"\n"
+"Kui valid midagi alumises faililehitsejas ja klõpsad hiire paremklahviga "
+"sellel\n"
+"siis seal on mitmeid lisavõimalusi.\n"
+"\n"
+"Kui oled teinud kõik soovitud muudatused oma uue ISO faili tarbeks siis vali "
+"'Tõmmis' ->\n"
+"'Salvesta kui'. Sa ei saa algset ISO faili üle kirjutada.\n"
+
+#: ../window.c:314
+msgid "Use selected file on image (no emulation)"
+msgstr "Kasuta valitud faili tõmmises (ei jäljendata)"
+
+#: ../fsbrowser.c:583 ../isobrowser.c:1904
+msgid "View"
+msgstr "Vaade"
+
+#: ../editfile.c:102
+msgid "View failed, please check Options/Viewer"
+msgstr "vaatamine ebaõnnestus, palun kontrolli Seaded/Vaataja"
+
+#: ../settings.c:735
+msgid "Viewer"
+msgstr "Vaataja"
+
+#: ../settings.c:95
+msgid "Volume name:"
+msgstr "Andmekandja nimi:"
+
+#: ../settings.c:674
+msgid ""
+"You will have to close and reopen the ISO for this change to take effect"
+msgstr "Muudatuste jõustumiseks tuleb ISO fail sulgeda ja uuesti avada"
+
+#: ../window.c:282
+msgid "_Boot Record"
+msgstr "_Alglaadimissektor"
+
+#: ../window.c:143
+msgid "_File"
+msgstr "_Fail"
+
+#: ../window.c:354
+msgid "_Help"
+msgstr "_Abi"
+
+#: ../window.c:346
+msgid "_Options"
+msgstr "_Seaded"
+
+#: ../window.c:363
+msgid "_Overview"
+msgstr "_Ülevaade"
+
+#: ../window.c:252
+msgid "_Sort directories first"
+msgstr "_Sorteeri kataloogid ettepoole"
+
+#: ../window.c:274
+msgid "_Tools"
+msgstr "_Tööriistad"
+
+#: ../window.c:227
+msgid "_View"
+msgstr "_Vaade"

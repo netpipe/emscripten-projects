@@ -1,0 +1,540 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ISO Master Hebrew\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-05 22:40-0500\n"
+"PO-Revision-Date: 2007-12-03 16:49-0500\n"
+"Last-Translator: \n"
+"Language-Team: Fima Kachinski <xrayon@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: CANADA\n"
+
+#: ../window.c:417
+msgid "      Estimated ISO Size: "
+msgstr "גודל דמות ISO משוערת:"
+
+#: ../isobrowser.c:1504
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+"Do you wish to continue?"
+msgstr ""
+"%s\n"
+"\n"
+"האם אתה רוצה להמשיך?"
+
+#: ../editfile.c:272 ../editfile.c:368 ../editfile.c:601 ../editfile.c:696
+#, c-format
+msgid "'%s' is not a regular file"
+msgstr "'%s' הוא לא קובץ רגיל"
+
+#: ../isobrowser.c:142 ../isobrowser.c:1312
+msgid "(scanning for duplicate files)"
+msgstr "(סורק אחר קבצים זהים)"
+
+#: ../window.c:403
+msgid "Add"
+msgstr "הוסף"
+
+#: ../isobrowser.c:1742
+msgid "Add extension automatically"
+msgstr "הוסף סיומת מתאימה אוטומטית"
+
+#: ../window.c:403
+msgid "Add to the ISO"
+msgstr "הוסף לדמות הISO"
+
+#: ../isobrowser.c:1443 ../isobrowser.c:1739
+msgid "All files"
+msgstr "הוסף קבצים"
+
+#: ../boot.c:334
+msgid "Boot Record Information"
+msgstr "מידע על אזור האתחול"
+
+#: ../boot.c:122
+msgid "Boot record deleted"
+msgstr "אזור האתחול נמחק בהצלחה"
+
+#: ../boot.c:350
+#, c-format
+msgid "Boot record type: 1200KiB Floppy"
+msgstr "סוג של אזור אתחול: 1200KB דיסקט"
+
+#: ../boot.c:352
+#, c-format
+msgid "Boot record type: 1440KiB Floppy"
+msgstr "סוג של אזור אתחול: 1440KB דיסקט"
+
+#: ../boot.c:354
+#, c-format
+msgid "Boot record type: 2880KiB Floppy"
+msgstr "סוג של אזור אתחול: 2880KB דיסקט"
+
+#: ../boot.c:348
+#, c-format
+msgid "Boot record type: No Emulation"
+msgstr "סוג של אזור אתחול: ללא הדמיה"
+
+#: ../isobrowser.c:267 ../isobrowser.c:1918
+msgid "Change permissions"
+msgstr "שנה הרשאות"
+
+#: ../boot.c:40
+msgid "Choose Boot Record File"
+msgstr "בחר קובץ לאזור האתחול"
+
+#: ../window.c:399
+msgid "Create new directory on the ISO"
+msgstr "תיצור תיקיה חדשה  בתוך דמות הISO"
+
+#: ../window.c:62
+msgid "Create new directory on the filesystem"
+msgstr "תיצור תיקיה חדשה  בתוך מערכת הקבצים"
+
+#: ../settings.c:79
+msgid "Creation time:"
+msgstr "זמן היצירה:"
+
+#: ../window.c:413
+msgid "Delete from the ISO"
+msgstr "מחוק מדמות הISO"
+
+#: ../fsbrowser.c:590 ../isobrowser.c:1911
+msgid "Edit"
+msgstr "עריכה"
+
+#: ../editfile.c:82
+msgid "Edit failed, please check Options/Editor"
+msgstr "העריכה נכשלה, יש לבדוק את הפרטים בתפריט הגדרות\\עורך"
+
+#: ../settings.c:723
+msgid "Editor"
+msgstr "עורך"
+
+#: ../isobrowser.c:1583
+msgid "Enter a new name:"
+msgstr "הכנס שם חדש:"
+
+#: ../browser.c:71
+msgid "Enter name for new directory"
+msgstr "הכנס שם לתיקיה החדשה"
+
+#: ../window.c:408
+msgid "Extract"
+msgstr "פרוס"
+
+#: ../window.c:408
+msgid "Extract from the ISO"
+msgstr "פרוס מדמות הISO"
+
+#: ../editfile.c:473 ../isobrowser.c:215
+#, c-format
+msgid "Failed to add '%s': '%s'"
+msgstr "ההוספה של '%s' נכשלה: '%s'"
+
+#: ../boot.c:79
+#, c-format
+msgid "Failed to add boot record: '%s'"
+msgstr "הוספת אזור אתחול נכשלה: '%s'"
+
+#: ../isobrowser.c:555
+#, c-format
+msgid "Failed to change directory: '%s'"
+msgstr "שינוי תיקיה נכשל: '%s'"
+
+#: ../browser.c:112
+#, c-format
+msgid "Failed to create directory %s"
+msgstr "יצירת התיקייה %s נכשלה "
+
+#: ../browser.c:135
+#, c-format
+msgid "Failed to create directory %s: '%s'"
+msgstr "יצירת התיקייה %s נכשלה:  '%s'"
+
+#: ../editfile.c:447 ../isobrowser.c:850
+#, c-format
+msgid "Failed to delete '%s': '%s'"
+msgstr "המחיקה של '%s' נכשלה: '%s' "
+
+#: ../editfile.c:412 ../editfile.c:740 ../isobrowser.c:963
+#, c-format
+msgid "Failed to extract '%s': '%s'"
+msgstr "הפריסה של '%s' נכשלה: '%s' "
+
+#: ../boot.c:202
+#, c-format
+msgid "Failed to extract boot record: '%s'"
+msgstr "פריסת אזור האתחול נכשלה: '%s'"
+
+#: ../isobrowser.c:1146 ../isobrowser.c:1248
+#, c-format
+msgid "Failed to initialise bkisofs: '%s'"
+msgstr "אתחול ספריית BKISOFS נכשלה:  '%s'"
+
+#: ../fsbrowser.c:229
+#, c-format
+msgid "Failed to open directory '%s', error %d"
+msgstr "פתיחת התיקייה '%s' נכשלה, שגיאה %d"
+
+#: ../isobrowser.c:1267
+#, c-format
+msgid "Failed to open iso file for reading: '%s'"
+msgstr "פתיחת דמות הISO לקריאה נכשלה: '%s'"
+
+#: ../isobrowser.c:1342
+#, c-format
+msgid "Failed to read directory tree: '%s'"
+msgstr "קריאת מבנה עץ התיקיות נכשלה: '%s'"
+
+#: ../isobrowser.c:1282
+#, c-format
+msgid "Failed to read volume info: '%s'"
+msgstr "קריאת הנתונים של הכרך נכשלה: '%s'"
+
+#: ../isobrowser.c:1612
+#, c-format
+msgid "Failed to rename '%s': %s"
+msgstr "שינוי השם של '%s' נכשל: %s "
+
+#: ../boot.c:296
+#, c-format
+msgid "Failed to set %s as boot record: '%s'"
+msgstr "קביעת %s כאזור האתחול נכשל: '%s'"
+
+#: ../isobrowser.c:1685
+#, c-format
+msgid "Failed to write image to '%s': '%s'"
+msgstr "כתיבת הדמות ל '%s' נכשלה: '%s'"
+
+#: ../settings.c:123
+msgid "Filename types (both recommended):"
+msgstr "סוג של ספק השמות לקבצים (שניהם מומלצים):"
+
+#: ../settings.c:713
+msgid "Follow symbolic links"
+msgstr "עקוב אחר קישורים סמליים "
+
+#: ../window.c:326
+msgid "From file: 1200KiB floppy"
+msgstr "מקובץ: 1200KB"
+
+#: ../window.c:332
+msgid "From file: 1440KiB floppy"
+msgstr "מקובץ: 1440KB"
+
+#: ../window.c:338
+msgid "From file: 2880KiB floppy"
+msgstr "מקובץ: 2880KB"
+
+#: ../window.c:320
+msgid "From file: no emulation"
+msgstr "מקובץ: ללא הדמיה"
+
+#: ../isobrowser.c:868
+msgid ""
+"GUI error, deleting anything other than files and directories doesn't work"
+msgstr "שגיאת ממשק גרפי, מחיקה אפשרית רק עם קבצים או תיקיות "
+
+#: ../window.c:55 ../window.c:392
+msgid "Go back"
+msgstr "לך אחורה"
+
+#: ../window.c:393
+msgid "Go back up one directory on the ISO"
+msgstr "שוטט תיקייה אחת אחורה בדמות הISO"
+
+#: ../window.c:56
+msgid "Go back up one directory on the filesystem"
+msgstr "שוטט תיקייה אחת אחורה בכונן הקשיח"
+
+#: ../isobrowser.c:1428 ../isobrowser.c:1734
+msgid "ISO Images"
+msgstr "דמויות ISO"
+
+#: ../about.c:385
+msgid "ISO Master Help"
+msgstr "עזרה לISO MASTER"
+
+#: ../settings.c:63
+msgid "Image Information"
+msgstr "מידע על הדמות"
+
+#: ../settings.c:158
+#, c-format
+msgid "Invalid publisher '%s': '%s'"
+msgstr "השם '%s' הוא לא שם מוציא אור חוקי: '%s'"
+
+#: ../settings.c:174
+#, c-format
+msgid "Invalid volume name '%s': '%s'"
+msgstr "השם '%s' הוא לא שם כרך חוקי: '%s'"
+
+#: ../boot.c:391
+#, c-format
+msgid "Is not visible on image"
+msgstr "לא גלוי על הדמות"
+
+#: ../boot.c:389
+#, c-format
+msgid "Is visible on image as '%s'"
+msgstr "גלוי על הדמות כ'%s'"
+
+#: ../isobrowser.c:770
+msgid ""
+"It seems that you have made changes to the ISO but haven't saved them. Are "
+"you sure you want to close it?"
+msgstr ""
+"משהוא על דמות הISO השתנה אבל שינויים אלו לא נשמרו. האם אתה בטוח שאתה רוצה "
+"לסגור את הדמות?"
+
+#: ../boot.c:271
+msgid "Item selected is not a regular file and cannot be used as a boot record"
+msgstr "הפריט שנבכר הוא לא קובץ רגיל ולא יוחל לשמש כאזור אתחול"
+
+#: ../boot.c:373 ../boot.c:380
+#, c-format
+msgid "Location: on original image at 0x%llX"
+msgstr "מיקום: על הדמות המקורית ב0x%llX"
+
+#: ../boot.c:375 ../boot.c:382
+#, c-format
+msgid "Location: to be added from '%s'"
+msgstr "מיקום: מקור ההוספה מ'%s'"
+
+#: ../isobrowser.c:1438
+msgid "MDF Images"
+msgstr "דמויות MDF"
+
+#: ../isobrowser.c:1433
+msgid "NRG Images"
+msgstr "דמויות NRG"
+
+#: ../fsbrowser.c:121 ../isobrowser.c:482
+msgid "Name"
+msgstr "שם"
+
+#: ../window.c:61 ../window.c:398
+msgid "New Directory"
+msgstr "תיקיה חדשה"
+
+#: ../boot.c:149 ../boot.c:327
+msgid "No boot record read from original or set on image"
+msgstr "אזור האתחול לא נקרא מהקובץ המקורי ולא נמצע על הדמות "
+
+#: ../boot.c:108
+msgid "No boot to delete"
+msgstr "לא נמצע אזור אתחול למחוק"
+
+#: ../window.c:168
+msgid "Open Recent"
+msgstr ""
+
+#: ../settings.c:688
+msgid "Options"
+msgstr "הגדרות"
+
+#: ../boot.c:229
+msgid "Please select a file in the ISO browser to use as the boot record"
+msgstr "בבקשה תבחר\\י את הקובץ ממעיין הISO שישמש כאזור האתחול "
+
+#: ../boot.c:243
+msgid "Please select no more than one file in the ISO browser"
+msgstr "אין לבחור יותר מקובץ אחד ממעיין הISO"
+
+#: ../isobrowser.c:136
+msgid "Please wait while I'm adding the selected items..."
+msgstr "נא להמתין בזמן שהתכנה מוסיפה את הקבצים שבחרתם..."
+
+#: ../isobrowser.c:905
+msgid "Please wait while I'm extracting the selected files..."
+msgstr "נא להמתין בזמן שהתכנה פורסת את הקבצים שבחרתם..."
+
+#: ../isobrowser.c:1306
+msgid "Please wait while I'm reading the image..."
+msgstr "נא להמתין בזמן שהתכנה קוראת מהדמות..."
+
+#: ../isobrowser.c:1657
+msgid "Please wait while I'm saving the new image to disk..."
+msgstr "נא להמתין בזמן שהתכנה שומרת את הדמות החדשה לכונן הקשיח..."
+
+#: ../isobrowser.c:129 ../isobrowser.c:897 ../isobrowser.c:1299
+#: ../isobrowser.c:1647
+msgid "Progress"
+msgstr "קדמה"
+
+#: ../settings.c:107
+msgid "Publisher:"
+msgstr "מוציא לאור:"
+
+#: ../window.c:413
+msgid "Remove"
+msgstr "הסר"
+
+#: ../isobrowser.c:1895
+msgid "Rename"
+msgstr "שנה שם"
+
+#: ../isobrowser.c:1723
+msgid "Save File"
+msgstr "שמור קובץ"
+
+#: ../boot.c:156
+msgid "Save a copy of the boot record"
+msgstr "שמור עותק של אזור האתחול"
+
+#: ../settings.c:700
+msgid "Scan for duplicate files (slow)"
+msgstr "תסרוק אחר קבצים זהים (סריקה אטית)"
+
+#: ../window.c:242
+msgid "Show _hidden files"
+msgstr "הראה קבצים נסתרים"
+
+#: ../fsbrowser.c:142 ../isobrowser.c:505
+msgid "Size"
+msgstr "גודל"
+
+#: ../boot.c:363
+#, c-format
+msgid "Size: %d bytes"
+msgstr "גודל: %d bytes"
+
+#: ../fsbrowser.c:280
+#, fuzzy
+msgid ""
+"Skipping directory entry because cannot handle filename longer than 256 chars"
+msgstr ""
+"מדלג על הכניסה לתיקיה משום שהתכנה לא מזהה קבצים עם אורך שם גדול יותר מ256 "
+"תווים   "
+
+#: ../fsbrowser.c:299
+#, fuzzy, c-format
+msgid "Skipping directory entry because stat(%s) failed with %d"
+msgstr "מדלג על הכניסה לתיקיה משום שstat(%s) נכשל עם %d"
+
+#: ../window.c:262
+#, fuzzy
+msgid "Sort is _case sensitive"
+msgstr "המיון רגיש להבדל בין אותיות קטנות וגדולות באנגלית"
+
+#: ../settings.c:746 ../settings.c:750
+msgid "Temporary directory"
+msgstr "תיקיה זמנית"
+
+#: ../about.c:323
+#, fuzzy
+msgid ""
+"The ISO Master window is split in 2 parts:\n"
+" - The top file browser shows files and directories on your machine.\n"
+" - The bottom file browser shows files and directories on the ISO image.\n"
+"\n"
+"To open an existing ISO file click on 'File' and 'Open'. To create a new\n"
+"ISO file click on 'File' and 'New'.\n"
+"\n"
+"To add one or more files or directories to the ISO select them in the top\n"
+"file browser and click the 'Add to the ISO' button in the middle toolbar.\n"
+"\n"
+"To extract one or more files or directories from the ISO select them in\n"
+"the bottom file browser and click the 'Extract from ISO' button in the\n"
+"middle toolbar.\n"
+"\n"
+"You can also delete files or directories from the ISO and create new\n"
+"directories both on the ISO and your local filesystem.\n"
+"\n"
+"If you select something in the bottom file browser and right-click on it,\n"
+"there are several more options available.\n"
+"\n"
+"Once you made all the changes to the new ISO image, click on 'File' and\n"
+"'Save As'. You cannot overwrite the original ISO.\n"
+msgstr ""
+"חלון הISO MASTER מפוצל לשתי חלקים: \n"
+"-במעיין הקבצים העליון תראה קבצים ותיקיות שנמצאים על הכונן הקשיח.\n"
+"-במעיין הקבצים התחתון תראה קבצים ותיקיות שנמצאים על דמות הISO. \n"
+"\n"
+"כדי לפתוח דמות ISO קיימת, לחץ על \"דמות\" ו\"פתח דמות\". כדי ליצור\n"
+" דמות ISO חדשה, לחץ על \"דמות\" ו\"דמות חדשה\". \n"
+"\n"
+"כדי להוסיף תיקייה או קובץ אחד או יותר לדמות הISO בחר בקבצים הדרושים\n"
+" במעיין הקבצים העליון ולחץ על על \"הוסף לדמות הISO\" בסרגל הכלים שבאמצע.\n"
+"\n"
+"כדי לפרוס תיקייה או קובץ אחד או יותר מדמות הISO בחר בקבצים הדרושים\n"
+" במעיין הקבצים התחתון ולחץ על על \"פרוס מדמות הISO\" בסרגל הכלים שבאמצע.\n"
+"\n"
+"יש לכם גם את האפשרות למחוק קבצים ותיקיות מדמות הISO וכמו כן ליצור תיקיות "
+"חדשות\n"
+"בדמות הISO וגם על הכונן הקשיח.\n"
+"\n"
+"אם בחרתם בקובץ\\קבצים או בתיקייה\\תיקיות במעיין הקבצים התחתון, תוכלו לבחור\n"
+" במספר אפשרויות נוספות כשתלחצו עליהם עם המקש הימני של העכבר\n"
+" \n"
+"לאחר שסיימתה לעבוד עם הדמות החדשה, בחר ב\"דמות\"\n"
+" ו\"שמור כ...\". התכנה לא תאפשר לכתוב מעל דמות הISO המקורית.\n"
+
+#: ../window.c:314
+msgid "Use selected file on image (no emulation)"
+msgstr "תשתמש בקובץ שנבחר על הדמות (ללא הדמיה)"
+
+#: ../fsbrowser.c:583 ../isobrowser.c:1904
+msgid "View"
+msgstr "הצג"
+
+#: ../editfile.c:102
+msgid "View failed, please check Options/Viewer"
+msgstr "ההצגה נכשלה, נא לבדוק הגדרות\\מציג "
+
+#: ../settings.c:735
+msgid "Viewer"
+msgstr "מציג"
+
+#: ../settings.c:95
+msgid "Volume name:"
+msgstr "שם כרך:"
+
+#: ../settings.c:674
+msgid ""
+"You will have to close and reopen the ISO for this change to take effect"
+msgstr "בשביל שהשינויים יכנסו לתוקף, דמות הISO צריכה להיסגר ולהיפתח מחדש"
+
+#: ../window.c:282
+msgid "_Boot Record"
+msgstr "אזור האתחול"
+
+#: ../window.c:143
+msgid "_File"
+msgstr "קובץ"
+
+#: ../window.c:354
+msgid "_Help"
+msgstr "עזרה"
+
+#: ../window.c:346
+msgid "_Options"
+msgstr "הגדרות"
+
+#: ../window.c:363
+msgid "_Overview"
+msgstr "כללי "
+
+#: ../window.c:252
+msgid "_Sort directories first"
+msgstr "מיין תיקיות בראש הרשימה "
+
+#: ../window.c:274
+msgid "_Tools"
+msgstr "כלים"
+
+#: ../window.c:227
+msgid "_View"
+msgstr "תצוגה"
+
+#~ msgid "_Image"
+#~ msgstr "דמות"
+
+#~ msgid "_Settings"
+#~ msgstr "הגדרות"

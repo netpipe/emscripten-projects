@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Inheritance</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Data Structures"
+HREF="c589.html"><LINK
+REL="PREVIOUS"
+TITLE="BkSymLink"
+HREF="x634.html"><LINK
+REL="NEXT"
+TITLE="Detecting the type of a BkFileBase"
+HREF="x653.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x634.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Data Structures</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x653.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN641"
+>Inheritance</A
+></H1
+><P
+>Directories, files, and symbolic links, though certainly different, have something in common - they all have a name and possibly a set of permissions. To save a lot of code duplication bk has a simple inheritance tree: <CODE
+CLASS="CLASSNAME"
+>BkDir</CODE
+>, <CODE
+CLASS="CLASSNAME"
+>BkFile</CODE
+>, and <CODE
+CLASS="CLASSNAME"
+>BkSymLink</CODE
+> all inherit from <CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+>.</P
+><P
+>This is relevant for you when, for example, you look at the contents of a directory and want to figure out whether an item is a directory, so you could give it a special icon.</P
+><P
+>You can cast one type from another. It is always safe to cast down (to <CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+>) but it is only sometimes safe to cast up (e.g. to <CODE
+CLASS="CLASSNAME"
+>BkDir</CODE
+>). The next section explains how to detect the type of a <CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+> and the section after that explains how to convert from one type to another.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x634.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x653.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><CODE
+CLASS="CLASSNAME"
+>BkSymLink</CODE
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c589.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Detecting the type of a <CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

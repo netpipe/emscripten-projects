@@ -1,0 +1,522 @@
+# Biełaruski pierakład ISO Master.
+# Copyright (C) 2008 Ihar Hrachyshka
+# This file is distributed under the same license as the isomaster package.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: isomaster\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-05 22:40-0500\n"
+"PO-Revision-Date: 2008-01-06 01:33+0200\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"Language-Team: i18n@mova.org <i18n@mova.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Belarusian latin\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../window.c:417
+msgid "      Estimated ISO Size: "
+msgstr "      Astatny pamier ISO: "
+
+#: ../isobrowser.c:1504
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+"Do you wish to continue?"
+msgstr ""
+"%s\n"
+"\n"
+"Chočaš praciahnuć?"
+
+#: ../editfile.c:272 ../editfile.c:368 ../editfile.c:601 ../editfile.c:696
+#, c-format
+msgid "'%s' is not a regular file"
+msgstr "\"%s\" nie źjaŭlajecca zvyčajnym fajłam"
+
+#: ../isobrowser.c:142 ../isobrowser.c:1312
+msgid "(scanning for duplicate files)"
+msgstr "(pošuk paŭtornych fajłaŭ)"
+
+#: ../window.c:403
+msgid "Add"
+msgstr "Dadaj"
+
+#: ../isobrowser.c:1742
+msgid "Add extension automatically"
+msgstr "Aŭtamatyčna dadavaj pašyreńnie"
+
+#: ../window.c:403
+msgid "Add to the ISO"
+msgstr "Dadaj da vyjavy ISO"
+
+#: ../isobrowser.c:1443 ../isobrowser.c:1739
+msgid "All files"
+msgstr "Usie fajły"
+
+#: ../boot.c:334
+msgid "Boot Record Information"
+msgstr "Źviestki ab zahruzačnym zapisie"
+
+#: ../boot.c:122
+msgid "Boot record deleted"
+msgstr "Zaruzačny zapis vydaleny"
+
+#: ../boot.c:350
+#, c-format
+msgid "Boot record type: 1200KiB Floppy"
+msgstr "Typ zahruzačnaha zapisu: dyskieta 1200KiB"
+
+#: ../boot.c:352
+#, c-format
+msgid "Boot record type: 1440KiB Floppy"
+msgstr "Typ zahruzačnaha zapisu: dyskieta 1440KiB"
+
+#: ../boot.c:354
+#, c-format
+msgid "Boot record type: 2880KiB Floppy"
+msgstr "Typ zahruzačnaha zapisu: dyskieta 2880KiB"
+
+#: ../boot.c:348
+#, c-format
+msgid "Boot record type: No Emulation"
+msgstr "Typ zahruzačnaha zapisu: biez emulacyi"
+
+#: ../isobrowser.c:267 ../isobrowser.c:1918
+msgid "Change permissions"
+msgstr "Źmiani pravy"
+
+#: ../boot.c:40
+msgid "Choose Boot Record File"
+msgstr "Abiary fajł z zahruzačnym zapisam"
+
+#: ../window.c:399
+msgid "Create new directory on the ISO"
+msgstr "Stvary novy kataloh u vyjavie ISO"
+
+#: ../window.c:62
+msgid "Create new directory on the filesystem"
+msgstr "Stvary novy kataloh na fajłavaj systemie"
+
+#: ../settings.c:79
+msgid "Creation time:"
+msgstr "Čas stvareńnia:"
+
+#: ../window.c:413
+msgid "Delete from the ISO"
+msgstr "Vydal z vyjavy ISO"
+
+#: ../fsbrowser.c:590 ../isobrowser.c:1911
+msgid "Edit"
+msgstr "Redahuj"
+
+#: ../editfile.c:82
+msgid "Edit failed, please check Options/Editor"
+msgstr "Niaŭdałaje redahavańnie, pravier Opcyi/Redaktar"
+
+#: ../settings.c:723
+msgid "Editor"
+msgstr "Redaktar"
+
+#: ../isobrowser.c:1583
+msgid "Enter a new name:"
+msgstr "Uviadzi novuju nazvu:"
+
+#: ../browser.c:71
+msgid "Enter name for new directory"
+msgstr "Uviadzi nazvu novaha katalohu"
+
+#: ../window.c:408
+msgid "Extract"
+msgstr "Vyjmi"
+
+#: ../window.c:408
+msgid "Extract from the ISO"
+msgstr "Vyjmi z vyjavy ISO"
+
+#: ../editfile.c:473 ../isobrowser.c:215
+#, c-format
+msgid "Failed to add '%s': '%s'"
+msgstr "Pamyłka dadańnia \"%s\": \"%s\""
+
+#: ../boot.c:79
+#, c-format
+msgid "Failed to add boot record: '%s'"
+msgstr "Niaŭdałaje dadańnie zahruzačnaha zapisu: \"%s\""
+
+#: ../isobrowser.c:555
+#, c-format
+msgid "Failed to change directory: '%s'"
+msgstr "Niaŭdałaja źmiena katalohu: \"%s\""
+
+#: ../browser.c:112
+#, c-format
+msgid "Failed to create directory %s"
+msgstr "Niaŭdałaje stvareńnie katalohu %s"
+
+#: ../browser.c:135
+#, c-format
+msgid "Failed to create directory %s: '%s'"
+msgstr "Niaŭdałaje stvareńnie katalohu %s: \"%s\""
+
+#: ../editfile.c:447 ../isobrowser.c:850
+#, c-format
+msgid "Failed to delete '%s': '%s'"
+msgstr "Niaŭdałaje vydaleńnie \"%s\": \"%s\""
+
+#: ../editfile.c:412 ../editfile.c:740 ../isobrowser.c:963
+#, c-format
+msgid "Failed to extract '%s': '%s'"
+msgstr "Niaŭdałaje vyjmańnie \"%s\": \"%s\""
+
+#: ../boot.c:202
+#, c-format
+msgid "Failed to extract boot record: '%s'"
+msgstr "Niaŭdałaje vyjmańnie zahruzačnaha zapisu: \"%s\""
+
+#: ../isobrowser.c:1146 ../isobrowser.c:1248
+#, c-format
+msgid "Failed to initialise bkisofs: '%s'"
+msgstr "Niaŭdałaja inicyjalizacyja bkisofs: \"%s\""
+
+#: ../fsbrowser.c:229
+#, c-format
+msgid "Failed to open directory '%s', error %d"
+msgstr "Niaŭdałaje adčynieńnie katalohu \"%s\", pamyłka %d"
+
+#: ../isobrowser.c:1267
+#, c-format
+msgid "Failed to open iso file for reading: '%s'"
+msgstr "Niaŭdałaje adčynieńnie vyjavy ISO, kab pračytać: \"%s\""
+
+#: ../isobrowser.c:1342
+#, c-format
+msgid "Failed to read directory tree: '%s'"
+msgstr "Niaŭdałaje adčytańnie dreva katalohaŭ: \"%s\""
+
+#: ../isobrowser.c:1282
+#, c-format
+msgid "Failed to read volume info: '%s'"
+msgstr "Niaŭdałaje adčytańnie źviestak ab masivie: \"%s\""
+
+#: ../isobrowser.c:1612
+#, c-format
+msgid "Failed to rename '%s': %s"
+msgstr "Niaŭdałaja źmiena nazvy \"%s\": %s"
+
+#: ../boot.c:296
+#, c-format
+msgid "Failed to set %s as boot record: '%s'"
+msgstr "Pamyłka akreśleńnia %s jak zahruzačnaha zapisu: \"%s\""
+
+#: ../isobrowser.c:1685
+#, c-format
+msgid "Failed to write image to '%s': '%s'"
+msgstr "Niaŭdały zapis vyjavy ŭ \"%s\": \"%s\""
+
+#: ../settings.c:123
+msgid "Filename types (both recommended):"
+msgstr "Typy nazvaŭ fajłaŭ (abodva rekamendavanyja):"
+
+#: ../settings.c:713
+msgid "Follow symbolic links"
+msgstr "Pierachodź pa symbalnych spasyłkach"
+
+#: ../window.c:326
+msgid "From file: 1200KiB floppy"
+msgstr "Z fajłu: dyskieta 1200KiB"
+
+#: ../window.c:332
+msgid "From file: 1440KiB floppy"
+msgstr "Z fajłu: dyskieta 1440KiB"
+
+#: ../window.c:338
+msgid "From file: 2880KiB floppy"
+msgstr "Z fajłu: dyskieta 2880KiB"
+
+#: ../window.c:320
+msgid "From file: no emulation"
+msgstr "Z fajłu: biez emulacyi"
+
+#: ../isobrowser.c:868
+msgid ""
+"GUI error, deleting anything other than files and directories doesn't work"
+msgstr ""
+"Pamyłka hrafičnaha interfejsu, nielha vydalić štości, akramia fajłaŭ i "
+"katalohaŭ"
+
+#: ../window.c:55 ../window.c:392
+msgid "Go back"
+msgstr "Viarnisia"
+
+#: ../window.c:393
+msgid "Go back up one directory on the ISO"
+msgstr "Viarnisia na ŭzrovień vyšej u vyjavie ISO"
+
+#: ../window.c:56
+msgid "Go back up one directory on the filesystem"
+msgstr "Viarnisia na ŭzrovień vyšej na fajłavaj systemie"
+
+#: ../isobrowser.c:1428 ../isobrowser.c:1734
+msgid "ISO Images"
+msgstr "Vyjavy ISO"
+
+#: ../about.c:385
+msgid "ISO Master Help"
+msgstr "Daviedka dla Majstra ISO"
+
+#: ../settings.c:63
+msgid "Image Information"
+msgstr "Źviestki ab vyjavie"
+
+#: ../settings.c:158
+#, c-format
+msgid "Invalid publisher '%s': '%s'"
+msgstr "Niapravilny vydaviec \"%s\": \"%s\""
+
+#: ../settings.c:174
+#, c-format
+msgid "Invalid volume name '%s': '%s'"
+msgstr "Niapravilnaja nazva masiva \"%s\": \"%s\""
+
+#: ../boot.c:391
+#, c-format
+msgid "Is not visible on image"
+msgstr "Niabačna na vyjavie"
+
+#: ../boot.c:389
+#, c-format
+msgid "Is visible on image as '%s'"
+msgstr "Bačna na vyjavie jak \"%s\""
+
+#: ../isobrowser.c:770
+msgid ""
+"It seems that you have made changes to the ISO but haven't saved them. Are "
+"you sure you want to close it?"
+msgstr ""
+"Ty źmianiŭ vyjavu ISO, ale nie zapisaŭ novuju versiju. Ty sapraŭdy chočaš "
+"začynić jaje?"
+
+#: ../boot.c:271
+msgid "Item selected is not a regular file and cannot be used as a boot record"
+msgstr ""
+"Vybrany element nie źjaŭlajecca zvyčajnym fajłam, i jaho nielha vykarystać "
+"jak zahruzačny zapis"
+
+#: ../boot.c:373 ../boot.c:380
+#, c-format
+msgid "Location: on original image at 0x%llX"
+msgstr "Pałažeńnie: na aryhinalnaj vyjavie u 0x%llX"
+
+#: ../boot.c:375 ../boot.c:382
+#, c-format
+msgid "Location: to be added from '%s'"
+msgstr "Pałažeńnie: dadać z \"%s\""
+
+#: ../isobrowser.c:1438
+msgid "MDF Images"
+msgstr "Vyjavy MDF"
+
+#: ../isobrowser.c:1433
+msgid "NRG Images"
+msgstr "Vyjavy NRG"
+
+#: ../fsbrowser.c:121 ../isobrowser.c:482
+msgid "Name"
+msgstr "Nazva"
+
+#: ../window.c:61 ../window.c:398
+msgid "New Directory"
+msgstr "Novy kataloh"
+
+#: ../boot.c:149 ../boot.c:327
+msgid "No boot record read from original or set on image"
+msgstr ""
+"Z aryhinału niemahčyma pračytać zahruzačny zapis, a taksama akreślić jaho "
+"dla vyjavy"
+
+#: ../boot.c:108
+msgid "No boot to delete"
+msgstr "Niama zahruzačnaha zapisu, jaki možna było b vydalić"
+
+#: ../window.c:168
+msgid "Open Recent"
+msgstr ""
+
+#: ../settings.c:688
+msgid "Options"
+msgstr "Opcyi"
+
+#: ../boot.c:229
+msgid "Please select a file in the ISO browser to use as the boot record"
+msgstr ""
+"Zaznač fajł u prahladalniku ISO, jaki treba vykarystać jak zahruzačny zapis"
+
+#: ../boot.c:243
+msgid "Please select no more than one file in the ISO browser"
+msgstr "Zaznač nia bolš za adzin fajł u prahladalniku ISO"
+
+#: ../isobrowser.c:136
+msgid "Please wait while I'm adding the selected items..."
+msgstr "Kali łaska, pačakaj, pakul ja dadam zaznačanyja elementy..."
+
+#: ../isobrowser.c:905
+msgid "Please wait while I'm extracting the selected files..."
+msgstr "Kali łaska, pačakaj, pakul ja vyjmu zaznačanyja fajły..."
+
+#: ../isobrowser.c:1306
+msgid "Please wait while I'm reading the image..."
+msgstr "Kali łaska, pačakaj, pakul ja čytaju vyjavu..."
+
+#: ../isobrowser.c:1657
+msgid "Please wait while I'm saving the new image to disk..."
+msgstr "Kali łaska, pačakaj, pakul ja zapisvaju novuju vyjavu na dysku..."
+
+#: ../isobrowser.c:129 ../isobrowser.c:897 ../isobrowser.c:1299
+#: ../isobrowser.c:1647
+msgid "Progress"
+msgstr "Prahres"
+
+#: ../settings.c:107
+msgid "Publisher:"
+msgstr "Vydaviec:"
+
+#: ../window.c:413
+msgid "Remove"
+msgstr "Vydal"
+
+#: ../isobrowser.c:1895
+msgid "Rename"
+msgstr "Źmiani nazvu"
+
+#: ../isobrowser.c:1723
+msgid "Save File"
+msgstr "Zapišy fajł"
+
+#: ../boot.c:156
+msgid "Save a copy of the boot record"
+msgstr "Zapišy kopiju zahruzačnaha zapisu"
+
+#: ../settings.c:700
+msgid "Scan for duplicate files (slow)"
+msgstr "Šukaj paŭtornyja fajły (marudna)"
+
+#: ../window.c:242
+msgid "Show _hidden files"
+msgstr "Pakažy _schavanyja fajły"
+
+#: ../fsbrowser.c:142 ../isobrowser.c:505
+msgid "Size"
+msgstr "Pamier"
+
+#: ../boot.c:363
+#, c-format
+msgid "Size: %d bytes"
+msgstr "Pamier: %d bajtaŭ"
+
+#: ../fsbrowser.c:280
+msgid ""
+"Skipping directory entry because cannot handle filename longer than 256 chars"
+msgstr ""
+"Abminajecca kataloh, bo niemahčyma pracavać z nazvami fajłaŭ, bolšymi za 256 "
+"znakaŭ"
+
+#: ../fsbrowser.c:299
+#, c-format
+msgid "Skipping directory entry because stat(%s) failed with %d"
+msgstr "Abminajecca kataloh, bo funkcyja stat(%s) viarnuła pamyłku %d"
+
+#: ../window.c:262
+msgid "Sort is _case sensitive"
+msgstr "Paradak, jaki _ŭličvaje rehistar"
+
+#: ../settings.c:746 ../settings.c:750
+msgid "Temporary directory"
+msgstr "Časovy kataloh"
+
+#: ../about.c:323
+msgid ""
+"The ISO Master window is split in 2 parts:\n"
+" - The top file browser shows files and directories on your machine.\n"
+" - The bottom file browser shows files and directories on the ISO image.\n"
+"\n"
+"To open an existing ISO file click on 'File' and 'Open'. To create a new\n"
+"ISO file click on 'File' and 'New'.\n"
+"\n"
+"To add one or more files or directories to the ISO select them in the top\n"
+"file browser and click the 'Add to the ISO' button in the middle toolbar.\n"
+"\n"
+"To extract one or more files or directories from the ISO select them in\n"
+"the bottom file browser and click the 'Extract from ISO' button in the\n"
+"middle toolbar.\n"
+"\n"
+"You can also delete files or directories from the ISO and create new\n"
+"directories both on the ISO and your local filesystem.\n"
+"\n"
+"If you select something in the bottom file browser and right-click on it,\n"
+"there are several more options available.\n"
+"\n"
+"Once you made all the changes to the new ISO image, click on 'File' and\n"
+"'Save As'. You cannot overwrite the original ISO.\n"
+msgstr ""
+
+#: ../window.c:314
+msgid "Use selected file on image (no emulation)"
+msgstr "Užyj zaznačany fajł dla vyjavy (biez emulacyi)"
+
+#: ../fsbrowser.c:583 ../isobrowser.c:1904
+msgid "View"
+msgstr "Pakažy"
+
+#: ../editfile.c:102
+msgid "View failed, please check Options/Viewer"
+msgstr "Niaŭdały prahlad. Pravier Opcyi/Prahladalnik"
+
+#: ../settings.c:735
+msgid "Viewer"
+msgstr "Prahladalnik"
+
+#: ../settings.c:95
+msgid "Volume name:"
+msgstr "Nazva masiva:"
+
+#: ../settings.c:674
+msgid ""
+"You will have to close and reopen the ISO for this change to take effect"
+msgstr "Kab hetaja źmiena zapracavała, treba začynić i znoŭ adčynić vyjavu ISO"
+
+#: ../window.c:282
+msgid "_Boot Record"
+msgstr "_Zahruzačny zapis"
+
+#: ../window.c:143
+msgid "_File"
+msgstr "_Fajł"
+
+#: ../window.c:354
+msgid "_Help"
+msgstr "_Dapamoha"
+
+#: ../window.c:346
+msgid "_Options"
+msgstr "_Opcyi"
+
+#: ../window.c:363
+msgid "_Overview"
+msgstr "_Ahlad"
+
+#: ../window.c:252
+msgid "_Sort directories first"
+msgstr "_Paradkuj, kab katalohi byli pieršymi"
+
+#: ../window.c:274
+msgid "_Tools"
+msgstr "_Pryładździe"
+
+#: ../window.c:227
+msgid "_View"
+msgstr "_Pakažy"

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Deleting</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Function Reference"
+HREF="c73.html"><LINK
+REL="PREVIOUS"
+TITLE="Extracting"
+HREF="x240.html"><LINK
+REL="NEXT"
+TITLE="Writing"
+HREF="x343.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x240.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Function Reference</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x343.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN313"
+>Deleting</A
+></H1
+><P
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN316"
+><TT
+CLASS="FUNCTION"
+>bk_delete()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN319"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_delete</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>pathAndName</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Deletes the file or directory from the ISO, and frees all the memory associated with those items. If <TT
+CLASS="PARAMETER"
+><I
+>pathAndName</I
+></TT
+> points to a directory, all the contents of the directory are also deleted.</P
+><P
+>I'm sure I already mentioned somewhere in the manual that the original ISO isn't modified. But I'll reinforce that now - <TT
+CLASS="FUNCTION"
+>bk_delete()</TT
+> will delete from the representation of the ISO in memory, not from the ISO itself. When you write the new ISO, the deleted files won't be there.</P
+><P
+>Files and directories added to the ISO can also be deleted the same way (from the representation of the new ISO in memory, not from the filesystem).</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN332"
+><TT
+CLASS="FUNCTION"
+>bk_delete_boot_record()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN335"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>void <TT
+CLASS="FUNCTION"
+>bk_delete_boot_record</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Deletes the boot record from the ISO. See the notes from <TT
+CLASS="FUNCTION"
+>bk_delete()</TT
+> about how none of the original data is deleted.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x240.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x343.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Extracting</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c73.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Writing</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

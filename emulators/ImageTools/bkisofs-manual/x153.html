@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Adding</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Function Reference"
+HREF="c73.html"><LINK
+REL="PREVIOUS"
+TITLE="Reading"
+HREF="x95.html"><LINK
+REL="NEXT"
+TITLE="Extracting"
+HREF="x240.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x95.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Function Reference</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x240.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN153"
+>Adding</A
+></H1
+><P
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN156"
+><TT
+CLASS="FUNCTION"
+>bk_add()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN159"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_add</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>destPathStr</I
+></TT
+>, void(*<TT
+CLASS="PARAMETER"
+><I
+>progressFunction</I
+></TT
+>)(VolInfo*));</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Add the file or the directory <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+> to <TT
+CLASS="PARAMETER"
+><I
+>destPathStr</I
+></TT
+>. The destination is a full path, relative to the root of the ISO. For example, to add <TT
+CLASS="LITERAL"
+>/etc/fstab</TT
+> to the (existing) <TT
+CLASS="LITERAL"
+>KNOPPIX</TT
+> directory on the ISO, pass <TT
+CLASS="LITERAL"
+>/KNOPPIX/</TT
+> as the <TT
+CLASS="PARAMETER"
+><I
+>destPathStr</I
+></TT
+>.</P
+><P
+><TT
+CLASS="PARAMETER"
+><I
+>progressFunction</I
+></TT
+> is a pointer to a function that takes a <CODE
+CLASS="CLASSNAME"
+>VolInfo*</CODE
+> as a parameter and returns <CODE
+CLASS="CLASSNAME"
+>void</CODE
+>. bk will call this function every 1 second or so. You can pass in NULL if you like but in that case control won't be returned to your code until <TT
+CLASS="FUNCTION"
+>bk_add()</TT
+> is finished doing what it has to do so you can't update a progress bar or cancel adding.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN183"
+><TT
+CLASS="FUNCTION"
+>bk_add()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN186"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_add_as</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>destPathStr</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>nameToUse</I
+></TT
+>, void(*<TT
+CLASS="PARAMETER"
+><I
+>progressFunction</I
+></TT
+>)(VolInfo*));</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Same as <TT
+CLASS="FUNCTION"
+>bk_add()</TT
+> but with the extra <TT
+CLASS="PARAMETER"
+><I
+>nameToUse</I
+></TT
+> parameter. If this is not null, the file will be added with the name in <TT
+CLASS="PARAMETER"
+><I
+>nameToUse</I
+></TT
+> rather than the same name as it had in the source.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN204"
+><TT
+CLASS="FUNCTION"
+>bk_create_dir()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN207"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_create_dir</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>destPathStr</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>newDirName</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Create the directory <TT
+CLASS="PARAMETER"
+><I
+>newDirName</I
+></TT
+> in the directory <TT
+CLASS="PARAMETER"
+><I
+>destPathStr</I
+></TT
+> on the ISO.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN220"
+><TT
+CLASS="FUNCTION"
+>bk_add_boot_record()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN223"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_add_boot_record</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+>, int <TT
+CLASS="PARAMETER"
+><I
+>bootMediaType</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Set the boot record for the ISO to be a file from the regular filesystem. This file will end up being a hidden file on the ISO. The parameter <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+> has to be a string (with or without the path) pointing to a file that is an image of a boot record, e.g. <TT
+CLASS="LITERAL"
+>/home/andrew/dosboot.raw</TT
+>. These images are created using various tools. ISO Master can extract the bootable image from CDs. It's a complex topic and I must assume you understand what a boot record is.</P
+><P
+>The <TT
+CLASS="PARAMETER"
+><I
+>bootMediaType</I
+></TT
+> parameter is one of the constants described in the 'Constants' section of this manual. For floppy emulation boot record types the size of the file pointed to by <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+> must match the size assumed by <TT
+CLASS="PARAMETER"
+><I
+>bootMediaType</I
+></TT
+>.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x95.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x240.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Reading</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c73.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Extracting</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

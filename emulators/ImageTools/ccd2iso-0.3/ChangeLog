@@ -1,0 +1,17 @@
+0.3
+---
+ * A couple sanity checks from Kerry <tomatoe-source@users.sourceforge.net>
+ * Update the source to work with Automake 1.9
+
+
+0.2
+---
+ * Completely fix file handling... a better understanding about CD data
+   structure really fix a lot errors... previous version sometime gives you
+   invalid bytes at the beginning of the resulting .iso, it caused by
+   my misunderstanding about the difference between Mode 1 and Mode 2 CD
+
+0.1
+---
+ * First release...
+ 

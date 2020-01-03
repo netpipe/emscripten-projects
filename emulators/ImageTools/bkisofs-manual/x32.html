@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Constants</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="bkisofs Overview"
+HREF="c9.html"><LINK
+REL="PREVIOUS"
+TITLE="Return Codes"
+HREF="x23.html"><LINK
+REL="NEXT"
+TITLE="Missing Features"
+HREF="x69.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x23.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>bkisofs Overview</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x69.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN32"
+>Constants</A
+></H1
+><P
+>This section has a list of constants from bk.h that you may find useful when programming an application with bk.</P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN35"
+>FNTYPE_*</A
+></H2
+><P
+>The constants <TT
+CLASS="LITERAL"
+>FNTYPE_9660</TT
+>, <TT
+CLASS="LITERAL"
+>FNTYPE_ROCKRIDGE</TT
+> and <TT
+CLASS="LITERAL"
+>FNTYPE_JOLIET</TT
+> are used to tell bk what type of ISO extensions to use.</P
+><P
+>Some bk functions take only one of these, some can take a combination. If a combination is desired you can bitwise or them together. For example to have all three of them: <TT
+CLASS="LITERAL"
+>FNTYPE_9660 | FNTYPE_ROCKRIDGE | FNTYPE_JOLIET</TT
+></P
+><P
+>In case you don't already know: ISO9660 filenames are limited to 8.3 length and really are only still used for backwards compatibility, but they are required for any written ISO. RockRidge is an extension alowing for longer filenames, permissions, and special files (of the special files only symbolic links are supported in bk). Any Linux/Unix can read RockRidge extensions, but none of the Windowses as far as I know. Joliet is the Microsoft specification for extending ISO9660 - it supports longer filenames and also unicode (UCS2) characters. bk does not support unicode filenames for now.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN44"
+>NCHARS_FILE_ID_MAX_STORE</A
+></H2
+><P
+>This is the maximum length of a file or directory name that bk will accept (including the NULL byte). As far as I know there is no filesystem that will allow for filenames longer than this (it is set to 255+1 characters), but in case you find one be aware that adding such a file to the ISO won't work.</P
+><P
+>You might want to use <TT
+CLASS="LITERAL"
+>NCHARS_FILE_ID_MAX_STORE</TT
+> to set the length of your own variables storing filenames.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN49"
+>NCHARS_SYMLINK_TARGET_MAX</A
+></H2
+><P
+>You probably won't need to use this one but I included it in the manual so you're aware of the limitation.</P
+><P
+>Symbolic links have a string target. You can see this target when you do <TT
+CLASS="LITERAL"
+>ls</TT
+>. For example here <TT
+CLASS="LITERAL"
+>mylink -&#62; ../../realfile</TT
+> the target of the link <TT
+CLASS="LITERAL"
+>mylink</TT
+> is <TT
+CLASS="LITERAL"
+>../../realfile</TT
+></P
+><P
+>The maximum length of a symbolic link's target is different on different platforms. In bk it is currently set to 250+1. If bk is set to not follow symbolic links, adding one with a target longer than NCHARS_SYMLINK_TARGET_MAX-1 won't work.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN58"
+>BOOT_MEDIA_*</A
+></H2
+><P
+>A boot record can be one of several types: no emulation (e.g. isolinux, Windows CDs), floppy emulation (usually DOS), and hard disk emulation (I don't know of any examples for this). When using bk to add a boot record to an ISO, you have to specify the type of the boot record. There is no way to programatically determine the type of boot record by looking at the file, the only way to pick the type that you want is to ask the user to choose.</P
+><P
+>You won't need to understand boot records if your application doesn't support adding/replacing boot records. Opening a bootable ISO with bk, modifying it and saving it will preserve the boot record.</P
+><P
+>The constants are: <TT
+CLASS="LITERAL"
+>BOOT_MEDIA_NONE</TT
+>, <TT
+CLASS="LITERAL"
+>BOOT_MEDIA_NO_EMULATION</TT
+>, <TT
+CLASS="LITERAL"
+>BOOT_MEDIA_1_2_FLOPPY</TT
+>, <TT
+CLASS="LITERAL"
+>BOOT_MEDIA_1_44_FLOPPY</TT
+>, <TT
+CLASS="LITERAL"
+>BOOT_MEDIA_2_88_FLOPPY</TT
+>, and <TT
+CLASS="LITERAL"
+>BOOT_MEDIA_HARD_DISK</TT
+>. The floppy boot record files must be of a certain size, respectively: 1228800 bytes, 1474560 bytes, and 2949120 bytes.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x23.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x69.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Return Codes</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c9.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Missing Features</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

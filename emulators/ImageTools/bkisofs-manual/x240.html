@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Extracting</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Function Reference"
+HREF="c73.html"><LINK
+REL="PREVIOUS"
+TITLE="Adding"
+HREF="x153.html"><LINK
+REL="NEXT"
+TITLE="Deleting"
+HREF="x313.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x153.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Function Reference</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x313.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN240"
+>Extracting</A
+></H1
+><P
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN243"
+><TT
+CLASS="FUNCTION"
+>bk_extract()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN246"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_extract</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>destDir</I
+></TT
+>, bool <TT
+CLASS="PARAMETER"
+><I
+>keepPermissions</I
+></TT
+>, void(*<TT
+CLASS="PARAMETER"
+><I
+>progressFunction</I
+></TT
+>)(VolInfo*));</CODE
+></P
+><P
+></P
+></DIV
+><P
+>This function will extract the file or directory <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+> on the ISO to the directory <TT
+CLASS="PARAMETER"
+><I
+>destDir</I
+></TT
+> on the regular filesystem.</P
+><P
+>If the ISO has the RockRidge extension and you passed <TT
+CLASS="LITERAL"
+>FNTYPE_ROCKRIDGE</TT
+> to <TT
+CLASS="FUNCTION"
+>bk_read_dir_tree()</TT
+>, and you pass true for <TT
+CLASS="PARAMETER"
+><I
+>keepPermissions</I
+></TT
+> then the files and directories extracted to the filesystem will have the same permissions as they did on the ISO.</P
+><P
+>Note that you cannot extract <TT
+CLASS="LITERAL"
+>/</TT
+></P
+><P
+>Also note that there is no way to make bk overwrite files on the filesystem.</P
+><P
+><TT
+CLASS="PARAMETER"
+><I
+>progressFunction</I
+></TT
+> is a pointer to a function that takes a <CODE
+CLASS="CLASSNAME"
+>VolInfo*</CODE
+> as a parameter and returns <CODE
+CLASS="CLASSNAME"
+>void</CODE
+>. bk will call this function every 1 second or so. You can pass in NULL if you like but in that case control won't be returned to your code until <TT
+CLASS="FUNCTION"
+>bk_extract()</TT
+> is finished doing what it has to do so you can't update a progress bar or cancel extracting.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN275"
+><TT
+CLASS="FUNCTION"
+>bk_extract_as()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN278"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_extract</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>destDir</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>nameToUse</I
+></TT
+>, bool <TT
+CLASS="PARAMETER"
+><I
+>keepPermissions</I
+></TT
+>, void(*<TT
+CLASS="PARAMETER"
+><I
+>progressFunction</I
+></TT
+>)(VolInfo*));</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Same as <TT
+CLASS="FUNCTION"
+>bk_extract()</TT
+> but with the extra <TT
+CLASS="PARAMETER"
+><I
+>nameToUse</I
+></TT
+> parameter. If this is not null it will be used as the name of the destination file, rather than the name of the source on the ISO.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN297"
+><TT
+CLASS="FUNCTION"
+>bk_extract_boot_record()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN300"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_extract_boot_record</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>destPathAndName</I
+></TT
+>, unsigned <TT
+CLASS="PARAMETER"
+><I
+>destFilePerms</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Extracts the boot record from the ISO to the file <TT
+CLASS="PARAMETER"
+><I
+>destPathAndName</I
+></TT
+>. The <TT
+CLASS="PARAMETER"
+><I
+>destFilePerms</I
+></TT
+> parameters is permission to be set for the resulting file.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x153.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x313.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Adding</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c73.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Deleting</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

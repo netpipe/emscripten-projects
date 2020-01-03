@@ -1,0 +1,498 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Getters</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Function Reference"
+HREF="c73.html"><LINK
+REL="PREVIOUS"
+TITLE="Cleanup"
+HREF="x377.html"><LINK
+REL="NEXT"
+TITLE="Setters"
+HREF="x492.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x377.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Function Reference</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x492.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN390"
+>Getters</A
+></H1
+><P
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN393"
+><TT
+CLASS="FUNCTION"
+>bk_estimate_iso_size()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN396"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>off_t <TT
+CLASS="FUNCTION"
+>bk_estimate_iso_size</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, int <TT
+CLASS="PARAMETER"
+><I
+>filenameTypes</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Call this to get an estimate of how much space the resulting ISO would use if it were written now. It is only an estimate, though usually pretty accurate.</P
+><P
+>The <TT
+CLASS="PARAMETER"
+><I
+>filenameTypes</I
+></TT
+> parameter should be the same as the one you would pass to <TT
+CLASS="FUNCTION"
+>bk_write_image()</TT
+>.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN408"
+><TT
+CLASS="FUNCTION"
+>bk_get_creation_time()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN411"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>time_t <TT
+CLASS="FUNCTION"
+>bk_get_creation_time</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Returns the creation time of the ISO if one was opened for reading. If no ISO was opened the return is 0.</P
+><P
+>The return is in the same format as that given by the system's <TT
+CLASS="FUNCTION"
+>time()</TT
+> function: the  time  since  the  Epoch (00:00:00 UTC, 1st of January, 1970), measured in seconds.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN420"
+><TT
+CLASS="FUNCTION"
+>bk_get_permissions()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN423"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>time_t <TT
+CLASS="FUNCTION"
+>bk_get_permissions</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>pathAndName</I
+></TT
+>, mode_t* <TT
+CLASS="PARAMETER"
+><I
+>permissions</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Gets the permissions (not all of the posix info) for an item (file, dir, etc.) and puts them into <TT
+CLASS="PARAMETER"
+><I
+>permissions</I
+></TT
+> (normally just a variable passed in by address).</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN435"
+><TT
+CLASS="FUNCTION"
+>bk_get_publisher()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN438"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>const char* <TT
+CLASS="FUNCTION"
+>bk_get_publisher</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Returns a pointer to a NULL-terminated string with the name of the publisher - either read from an ISO or perhaps set by you using <TT
+CLASS="FUNCTION"
+>bk_set_publisher()</TT
+>.</P
+><P
+>Do not modify or free this string. Make a copy if you need more than read-only access.</P
+><P
+>The maximum length of the publisher string is 128+1 bytes.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN448"
+><TT
+CLASS="FUNCTION"
+>bk_get_volume_name()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN451"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>const char* <TT
+CLASS="FUNCTION"
+>bk_get_volume_name</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Returns a pointer to a NULL-terminated string with the name of the volume - either read from an ISO or perhaps set by you using <TT
+CLASS="FUNCTION"
+>bk_set_vol_name()</TT
+>.</P
+><P
+>Do not modify or free this string. Make a copy if you need more than read-only access.</P
+><P
+>The maximum length of the volume name string is 32+1 bytes.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN461"
+><TT
+CLASS="FUNCTION"
+>bk_get_error_string()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN464"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>const char* <TT
+CLASS="FUNCTION"
+>bk_get_error_string</TT
+></CODE
+>(int <TT
+CLASS="PARAMETER"
+><I
+>errorId</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Any bk function that fails returns a negative <CODE
+CLASS="CLASSNAME"
+>int</CODE
+>. That number is an error code, and to get the meaning of it pass it to <TT
+CLASS="FUNCTION"
+>bk_get_error_string()</TT
+>. It will return a string with an error message.</P
+><P
+>The error string won't have the details about what exactly bk tried to do that failed. For example one error is <TT
+CLASS="LITERAL"
+>Failed to open file on the filesystem for writing</TT
+>. This does not tell you what file bk tried to open or why it failed. But still, it's better than giving -1012 to the user as an explanation for failure.</P
+><P
+>Do not modify or free this string. Make a copy if you need more than read-only access.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN476"
+><TT
+CLASS="FUNCTION"
+>bk_get_dir_from_string()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN479"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_get_dir_from_string</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>pathStr</I
+></TT
+>, BkDir** <TT
+CLASS="PARAMETER"
+><I
+>dirFoundPtr</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>This one is useful if you want random access to directories - meaning you can get access to any directory on the ISO using a path string, instead of traversing the entire tree from the root.</P
+><P
+>The parameter <TT
+CLASS="PARAMETER"
+><I
+>pathStr</I
+></TT
+> is a full path on the ISO.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x377.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x492.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Cleanup</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c73.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Setters</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

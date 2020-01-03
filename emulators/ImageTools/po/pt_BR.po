@@ -1,0 +1,549 @@
+# translation of pt_BR.po to Brazilian Portuguese
+# Brazilian Portuguese translation of ISO Master
+# This file is distributed under the same license as the ISO Master package.
+#
+#
+# Alexandre Marques <marquesc@oi.com.br>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: pt_BR\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-05 22:40-0500\n"
+"PO-Revision-Date: 2009-08-28 11:38-0300\n"
+"Last-Translator: Alexandre Marques <marquesc@oi.com.br>\n"
+"Language-Team: Brazilian Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: BRASIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../window.c:417
+msgid "      Estimated ISO Size: "
+msgstr "      Tamanho estimado do ISO: "
+
+#: ../isobrowser.c:1504
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+"Do you wish to continue?"
+msgstr ""
+"%s\n"
+"\n"
+"Deseja continuar?"
+
+#: ../editfile.c:272 ../editfile.c:368 ../editfile.c:601 ../editfile.c:696
+#, c-format
+msgid "'%s' is not a regular file"
+msgstr "'%s' isso não é um arquivo normal"
+
+#: ../isobrowser.c:142 ../isobrowser.c:1312
+msgid "(scanning for duplicate files)"
+msgstr "(procurando arquivos duplicados)"
+
+#: ../window.c:403
+msgid "Add"
+msgstr "Adicionar"
+
+#: ../isobrowser.c:1742
+msgid "Add extension automatically"
+msgstr "Adicionar extensão automaticamente"
+
+#: ../window.c:403
+msgid "Add to the ISO"
+msgstr "Adicionar ao ISO"
+
+#: ../isobrowser.c:1443 ../isobrowser.c:1739
+msgid "All files"
+msgstr "Todos os arquivos"
+
+#: ../boot.c:334
+msgid "Boot Record Information"
+msgstr "Informação da Gravação de Boot"
+
+#: ../boot.c:122
+msgid "Boot record deleted"
+msgstr "Gravação de boot deletada"
+
+#: ../boot.c:350
+#, c-format
+msgid "Boot record type: 1200KiB Floppy"
+msgstr "Tipo do disco de boot: Disquete 1200 kB"
+
+#: ../boot.c:352
+#, c-format
+msgid "Boot record type: 1440KiB Floppy"
+msgstr "Tipo do disco de boot: Disquete 1440 kB"
+
+#: ../boot.c:354
+#, c-format
+msgid "Boot record type: 2880KiB Floppy"
+msgstr "Tipo do disco de boot: Disquete 2880 kB"
+
+#: ../boot.c:348
+#, c-format
+msgid "Boot record type: No Emulation"
+msgstr "Tipo do disco de boot: Sem Emulação"
+
+#: ../isobrowser.c:267 ../isobrowser.c:1918
+msgid "Change permissions"
+msgstr "Mudar permissões"
+
+#: ../boot.c:40
+msgid "Choose Boot Record File"
+msgstr "Escolher Arquivo de Gravação de Boot"
+
+#: ../window.c:399
+msgid "Create new directory on the ISO"
+msgstr "Criar novo diretório no ISO"
+
+#: ../window.c:62
+msgid "Create new directory on the filesystem"
+msgstr "Criar novo diretório no sistema de arquivos"
+
+#: ../settings.c:79
+msgid "Creation time:"
+msgstr "Data de criação:"
+
+#: ../window.c:413
+msgid "Delete from the ISO"
+msgstr "Deletar do ISO"
+
+#: ../fsbrowser.c:590 ../isobrowser.c:1911
+msgid "Edit"
+msgstr "Editar"
+
+#: ../editfile.c:82
+msgid "Edit failed, please check Options/Editor"
+msgstr "Erro ao editar, por favor consulte Opções/Editor"
+
+#: ../settings.c:723
+msgid "Editor"
+msgstr "Editor"
+
+#: ../isobrowser.c:1583
+msgid "Enter a new name:"
+msgstr "Digite um novo nome:"
+
+#: ../browser.c:71
+msgid "Enter name for new directory"
+msgstr "Digite o nome do novo diretório"
+
+#: ../window.c:408
+msgid "Extract"
+msgstr "Extrair"
+
+#: ../window.c:408
+msgid "Extract from the ISO"
+msgstr "Extrair do ISO"
+
+#: ../editfile.c:473 ../isobrowser.c:215
+#, c-format
+msgid "Failed to add '%s': '%s'"
+msgstr "Erro ao adicionar '%s': '%s'"
+
+#: ../boot.c:79
+#, c-format
+msgid "Failed to add boot record: '%s'"
+msgstr "Erro ao adicionar gravação de boot: '%s'"
+
+#: ../isobrowser.c:555
+#, c-format
+msgid "Failed to change directory: '%s'"
+msgstr "Erro ao modificar diretório: '%s'"
+
+#: ../browser.c:112
+#, c-format
+msgid "Failed to create directory %s"
+msgstr "Erro ao criar diretório %s"
+
+#: ../browser.c:135
+#, c-format
+msgid "Failed to create directory %s: '%s'"
+msgstr "Erro ao criar diretório %s: '%s'"
+
+#: ../editfile.c:447 ../isobrowser.c:850
+#, c-format
+msgid "Failed to delete '%s': '%s'"
+msgstr "Erro ao deletar '%s': '%s'"
+
+#: ../editfile.c:412 ../editfile.c:740 ../isobrowser.c:963
+#, c-format
+msgid "Failed to extract '%s': '%s'"
+msgstr "Erro ao extrair '%s': '%s'"
+
+#: ../boot.c:202
+#, c-format
+msgid "Failed to extract boot record: '%s'"
+msgstr "Erro ao extrair gravação de boot: '%s'"
+
+#: ../isobrowser.c:1146 ../isobrowser.c:1248
+#, c-format
+msgid "Failed to initialise bkisofs: '%s'"
+msgstr "Erro ao iniciar bkisofs: '%s'"
+
+#: ../fsbrowser.c:229
+#, c-format
+msgid "Failed to open directory '%s', error %d"
+msgstr "Erro ao abrir diretório '%s', erro %d"
+
+#: ../isobrowser.c:1267
+#, c-format
+msgid "Failed to open iso file for reading: '%s'"
+msgstr "Erro ao abrir arquivo iso para leitura: '%s'"
+
+#: ../isobrowser.c:1342
+#, c-format
+msgid "Failed to read directory tree: '%s'"
+msgstr "Erro de leitura da árvore de diretórios: '%s'"
+
+#: ../isobrowser.c:1282
+#, c-format
+msgid "Failed to read volume info: '%s'"
+msgstr "Erro de leitura da informação do volume: '%s'"
+
+#: ../isobrowser.c:1612
+#, c-format
+msgid "Failed to rename '%s': %s"
+msgstr "Erro ao renomear '%s': %s"
+
+#: ../boot.c:296
+#, c-format
+msgid "Failed to set %s as boot record: '%s'"
+msgstr "Erro ao selecionar %s como disco de boot: '%s'"
+
+#: ../isobrowser.c:1685
+#, c-format
+msgid "Failed to write image to '%s': '%s'"
+msgstr "Erro ao salvar imagem para '%s': '%s'"
+
+#: ../settings.c:123
+msgid "Filename types (both recommended):"
+msgstr "Sistema de arquivos (recomendado ambos):"
+
+#: ../settings.c:713
+msgid "Follow symbolic links"
+msgstr "Seguir links simbólicos"
+
+#: ../window.c:326
+msgid "From file: 1200KiB floppy"
+msgstr "Do arquivo: Disquete 1200 kB"
+
+#: ../window.c:332
+msgid "From file: 1440KiB floppy"
+msgstr "Do arquivo: Disquete 1440 kB"
+
+#: ../window.c:338
+msgid "From file: 2880KiB floppy"
+msgstr "Do arquivo: Disquete 2880 kB"
+
+#: ../window.c:320
+msgid "From file: no emulation"
+msgstr "Do arquivo: sem emulação"
+
+#: ../isobrowser.c:868
+msgid ""
+"GUI error, deleting anything other than files and directories doesn't work"
+msgstr ""
+"Erro de Interface, não é possível apagar nada mais do que arquivos e "
+"diretórios"
+
+#: ../window.c:55 ../window.c:392
+msgid "Go back"
+msgstr "Voltar"
+
+#: ../window.c:393
+msgid "Go back up one directory on the ISO"
+msgstr "Voltar um diretório no ISO"
+
+#: ../window.c:56
+msgid "Go back up one directory on the filesystem"
+msgstr "Voltar um diretório no sistema de arquivos"
+
+#: ../isobrowser.c:1428 ../isobrowser.c:1734
+msgid "ISO Images"
+msgstr "Imagens ISO"
+
+#: ../about.c:385
+msgid "ISO Master Help"
+msgstr "Ajuda do ISO Master"
+
+#: ../settings.c:63
+msgid "Image Information"
+msgstr "Informação da Imagem"
+
+#: ../settings.c:158
+#, c-format
+msgid "Invalid publisher '%s': '%s'"
+msgstr "Editor inválido '%s': '%s'"
+
+#: ../settings.c:174
+#, c-format
+msgid "Invalid volume name '%s': '%s'"
+msgstr "Nome de volume inválido '%s': %s"
+
+#: ../boot.c:391
+#, c-format
+msgid "Is not visible on image"
+msgstr "Invisível na imagem"
+
+#: ../boot.c:389
+#, c-format
+msgid "Is visible on image as '%s'"
+msgstr "Visível na imagem como '%s'"
+
+#: ../isobrowser.c:770
+msgid ""
+"It seems that you have made changes to the ISO but haven't saved them. Are "
+"you sure you want to close it?"
+msgstr ""
+"Parece que foram feitas modificações no arquivo ISO mas não foram salvas. "
+"Tem certeza que quer fechar?"
+
+#: ../boot.c:271
+msgid "Item selected is not a regular file and cannot be used as a boot record"
+msgstr ""
+"O item selecionado não é um arquivo apropriado e não pode ser usado como "
+"gravação de boot"
+
+#: ../boot.c:373 ../boot.c:380
+#, c-format
+msgid "Location: on original image at 0x%llX"
+msgstr "Localização: na imagem original em 0x%llX"
+
+#: ../boot.c:375 ../boot.c:382
+#, c-format
+msgid "Location: to be added from '%s'"
+msgstr "Localização: adicionar de '%s'"
+
+#: ../isobrowser.c:1438
+msgid "MDF Images"
+msgstr "Imagens MDF"
+
+#: ../isobrowser.c:1433
+msgid "NRG Images"
+msgstr "Imagens NRG"
+
+#: ../fsbrowser.c:121 ../isobrowser.c:482
+msgid "Name"
+msgstr "Nome"
+
+#: ../window.c:61 ../window.c:398
+msgid "New Directory"
+msgstr "Novo Diretório"
+
+#: ../boot.c:149 ../boot.c:327
+msgid "No boot record read from original or set on image"
+msgstr "Nenhuma gravação de boot lida no original nem selecionada na imagem"
+
+#: ../boot.c:108
+msgid "No boot to delete"
+msgstr "Nenhum boot para deletar"
+
+#: ../window.c:168
+msgid "Open Recent"
+msgstr "Abrir recente"
+
+#: ../settings.c:688
+msgid "Options"
+msgstr "Opções"
+
+#: ../boot.c:229
+msgid "Please select a file in the ISO browser to use as the boot record"
+msgstr ""
+"Por favor selecione um arquivo no painel do ISO para usar como gravação de "
+"boot"
+
+#: ../boot.c:243
+msgid "Please select no more than one file in the ISO browser"
+msgstr "Por favor selecione apenas um arquivo no painel do ISO"
+
+#: ../isobrowser.c:136
+msgid "Please wait while I'm adding the selected items..."
+msgstr "Por favor aguarde enquanto os arquivos são adicionados..."
+
+#: ../isobrowser.c:905
+msgid "Please wait while I'm extracting the selected files..."
+msgstr "Por favor aguarde enquanto os arquivos são extraídos..."
+
+#: ../isobrowser.c:1306
+msgid "Please wait while I'm reading the image..."
+msgstr "Por favor aguarde enquanto a imagem está sendo lida..."
+
+#: ../isobrowser.c:1657
+msgid "Please wait while I'm saving the new image to disk..."
+msgstr "Por favor aguarde enquanto a nova imagem está sendo salva no disco..."
+
+#: ../isobrowser.c:129 ../isobrowser.c:897 ../isobrowser.c:1299
+#: ../isobrowser.c:1647
+msgid "Progress"
+msgstr "Progresso"
+
+#: ../settings.c:107
+msgid "Publisher:"
+msgstr "Editor:"
+
+#: ../window.c:413
+msgid "Remove"
+msgstr "Remover"
+
+#: ../isobrowser.c:1895
+msgid "Rename"
+msgstr "Renomear"
+
+#: ../isobrowser.c:1723
+msgid "Save File"
+msgstr "Salvar arquivo"
+
+#: ../boot.c:156
+msgid "Save a copy of the boot record"
+msgstr "Salvar cópia da gravação de boot"
+
+#: ../settings.c:700
+msgid "Scan for duplicate files (slow)"
+msgstr "Procurar arquivos duplicados (Lento)"
+
+#: ../window.c:242
+msgid "Show _hidden files"
+msgstr "Mostrar _arquivos ocultos"
+
+#: ../fsbrowser.c:142 ../isobrowser.c:505
+msgid "Size"
+msgstr "Tamanho"
+
+#: ../boot.c:363
+#, c-format
+msgid "Size: %d bytes"
+msgstr "Tamanho: %d bytes"
+
+#: ../fsbrowser.c:280
+msgid ""
+"Skipping directory entry because cannot handle filename longer than 256 chars"
+msgstr ""
+"Pulando diretório, nomes de arquivos com mais de 256 caracteres não são "
+"suportados"
+
+#: ../fsbrowser.c:299
+#, c-format
+msgid "Skipping directory entry because stat(%s) failed with %d"
+msgstr "Pulando diretório por que identificação(%s) falhou com %d"
+
+#: ../window.c:262
+msgid "Sort is _case sensitive"
+msgstr "Ordenar _diferenciando Maiús/Minús."
+
+#: ../settings.c:746 ../settings.c:750
+msgid "Temporary directory"
+msgstr "Diretório temporário"
+
+# !! this translation is incomplete
+#: ../about.c:323
+msgid ""
+"The ISO Master window is split in 2 parts:\n"
+" - The top file browser shows files and directories on your machine.\n"
+" - The bottom file browser shows files and directories on the ISO image.\n"
+"\n"
+"To open an existing ISO file click on 'File' and 'Open'. To create a new\n"
+"ISO file click on 'File' and 'New'.\n"
+"\n"
+"To add one or more files or directories to the ISO select them in the top\n"
+"file browser and click the 'Add to the ISO' button in the middle toolbar.\n"
+"\n"
+"To extract one or more files or directories from the ISO select them in\n"
+"the bottom file browser and click the 'Extract from ISO' button in the\n"
+"middle toolbar.\n"
+"\n"
+"You can also delete files or directories from the ISO and create new\n"
+"directories both on the ISO and your local filesystem.\n"
+"\n"
+"If you select something in the bottom file browser and right-click on it,\n"
+"there are several more options available.\n"
+"\n"
+"Once you made all the changes to the new ISO image, click on 'File' and\n"
+"'Save As'. You cannot overwrite the original ISO.\n"
+msgstr ""
+"A janela do ISO Master está dividida em dois painéis:\n"
+"- O painel de arquivos de cima mostra os arquivos e diretórios\n"
+"existentes no seu computador.\n"
+"- O painel de arquivos de baixo mostra os arquivos e diretórios\n"
+"existentes na imagem ISO.\n"
+"\n"
+"Para abrir um arquivo ISO existente, clique em 'Arquivo' e em 'Abrir'.\n"
+"Para criar um arquivo ISO novo, clique em 'Arquivo' e em 'Novo'.\n"
+"\n"
+"Para adicionar um ou mais arquivos ou diretórios ao ISO, selecione\n"
+"no painel de cima e clique em 'Adicionar ao ISO' na barra\n"
+"de ferramentas do meio.\n"
+"\n"
+"Para extrair um ou mais arquivos ou diretórios do ISO, selecione no\n"
+"painel de baixo e clique em 'Extrair do ISO' na barra de\n"
+"ferramentas do meio.\n"
+"\n"
+"Você também pode apagar arquivos e/ou diretórios do ISO\n"
+"e criar novos diretórios na imagem ISO ou no seu sistema de arquivos\n"
+"local.\n"
+"\n"
+"Se você selecionar alguma coisa no painel de baixo e clicar com o botão "
+"direito do mouse vai ver várias outras opções disponíveis\n"
+"\n"
+"Depois de efetuar todas as alterações na nova imagem ISO, clique em\n"
+"'Arquivo' e em 'Salvar como'. Você não pode sobrescrever o ISO original.\n"
+
+#: ../window.c:314
+msgid "Use selected file on image (no emulation)"
+msgstr "Usar arquivo selecionado na imagem (sem emulação)"
+
+#: ../fsbrowser.c:583 ../isobrowser.c:1904
+msgid "View"
+msgstr "Visualizar"
+
+#: ../editfile.c:102
+msgid "View failed, please check Options/Viewer"
+msgstr "Erro ao visualizar, por favor consulte Opções/Visualizador"
+
+#: ../settings.c:735
+msgid "Viewer"
+msgstr "Visualizador"
+
+#: ../settings.c:95
+msgid "Volume name:"
+msgstr "Nome do volume:"
+
+#: ../settings.c:674
+msgid ""
+"You will have to close and reopen the ISO for this change to take effect"
+msgstr "Você deve fechar e reabrir o ISO para que as alterações tenham efeito"
+
+#: ../window.c:282
+msgid "_Boot Record"
+msgstr "_Gravação de boot"
+
+#: ../window.c:143
+msgid "_File"
+msgstr "_Arquivo"
+
+#: ../window.c:354
+msgid "_Help"
+msgstr "Aj_uda"
+
+#: ../window.c:346
+msgid "_Options"
+msgstr "_Opções"
+
+#: ../window.c:363
+msgid "_Overview"
+msgstr "_Visão geral"
+
+#: ../window.c:252
+msgid "_Sort directories first"
+msgstr "_Ordenar diretórios primeiro"
+
+#: ../window.c:274
+msgid "_Tools"
+msgstr "_Ferramentas"
+
+#: ../window.c:227
+msgid "_View"
+msgstr "_Visualizar"

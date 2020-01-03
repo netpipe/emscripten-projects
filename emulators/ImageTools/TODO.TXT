@@ -1,0 +1,67 @@
+ui:
+- drop-down list to select track - can do multitrack
+- check out thunar translators
+- translate .desktop file
+
+bk:
+- dos doesn't like names to start with underscores
+- add path tables, boot record to size estimate
+- need a bk_set_warning_foo()
+- fedora7 dvd takes forever to remangle. try either fix the algorithm or allow longer 9660 names.
+- sorting 9660/joliet can also be slow
+- why never checking the return from seekset?
+- images to support:
+ - bin/cue
+ - multitrack mdf
+ - uif
+
+
+tests to run before a release:
+- open iso from command-line
+- create blank, see if it mounts (try norock, nojoliet)
+- make a bootable windows (also add, delete some files)
+ - see if it mounts (try norock, nojoliet)
+ - see if it boots
+- edit a linux disk and save without rock, without joliet, without any
+- make a dos bootable cd, see if it boots
+ - from scratch
+ - starting with an existing no emulation bootable disk
+- delete config file, make sure it still works
+- add a bunch of files to an iso, delete all the files, add some more, save
+- edit some text and binary files, make sure they extract and write properly
+- add a 3 gig file, make sure image saves and can extract it afterwords
+- make an iso with some 3G files in it, open it, save it, make sure the files are not corrupted
+
+to make a fedora package:
+- install rpmdevtools (via yum)
+- fedora-buildrpmtree (as *your* user)
+- Check if there is a file ~/.rpmmacros (if not create it).
+- Make sure there is a line:
+ - %dist   .fc7
+- Download my SRPMS [1] to ~/rpmbuild/SRPMS
+- Call: rpmbuild --rebuild isomaster-1.0-1.src.rpm
+- Wait a moment and look for a built RPM in ~/rpmbuild/RPMS/i386
+
+to package a release:
+- cd po && ./updateall.sh
+- cp sr\@latin.po sr\@Latn.po
+- update VERSION in the makefile
+- update version in man page
+- remove -g and -DDEBUG from Makefile and bk/Makefile
+- update changelog.txt
+- update credits and credits.txt
+- check readme.txt
+- build bkisofs-manual
+
+ISOMASTER_VERSION=1.3.6
+svn export src releases/isomaster-$ISOMASTER_VERSION
+rm releases/isomaster-$ISOMASTER_VERSION/bkisofs-manual
+svn export doc/byme/bkisofs-manual/ releases/isomaster-$ISOMASTER_VERSION/bkisofs-manual
+cp doc/byme/bkisofs-manual/*html releases/isomaster-$ISOMASTER_VERSION/bkisofs-manual
+rm -r releases/isomaster-$ISOMASTER_VERSION/icons/originals
+cd releases
+tar cvjf isomaster-$ISOMASTER_VERSION.tar.bz2 isomaster-$ISOMASTER_VERSION/
+cd ..
+
+fonts:
+- 'the ultimate...' Mukti Narrow Bold or Nimbus Sans L Bold

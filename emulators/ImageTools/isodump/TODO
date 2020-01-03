@@ -1,0 +1,3 @@
+2002-10-11
+	- softly handle read errors (?)
+	- pad output if input too small (?) --> done

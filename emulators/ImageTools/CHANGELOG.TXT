@@ -1,0 +1,184 @@
+5 Jan 2011 - 1.3.8
+==================
+- Added Japanese and Urdu translations
+- Fixed a bug that would cause an abort if compiled with -02 -Wp,-D_FORTIFY_SOURCE=2
+
+4 Jan 2010 - 1.3.7
+==================
+- Fixed a bug where the duplicate scan would cause a corrupted image if files of the same size were added from the filesystem
+- Fixed two minor errors that most people probably have never seen
+
+1 Sep 2009 - 1.3.6
+==================
+- Added an 'open recent' function.
+- Added Latvian translation.
+- Fixed some error messages (unknown error was displayed before).
+- Target of dead symbolic links is no longer overwritten without a prompt.
+- Documentation for bkisofs is now installed together with the program.
+
+30 Dec 2008 - 1.3.5
+===================
+- Updated Danish and Chinese (Taiwan) translations.
+- Updated .desktop file to be compatible with current spec.
+- Fixed some error messages (unknown error was displayed before).
+- Target of dead symbolic links is no longer overwritten without a prompt.
+- Documentation for bkisofs is now installed together with the program.
+- Added the 'Recently opened' function.
+
+29 Nov 2008 - 1.3.4
+===================
+- Updated Italian, Portuguese, Serbian Latin, and Spanish translations.
+- Added arabic translation.
+
+30 Jun 2008 - 1.3.3
+===================
+- Added Portuguese (Brasil) translation.
+
+28 Jun 2008 - 1.3.2
+===================
+- Updated Catalan, Italian, Dutch, and Faroese translations.
+- Added Danish translation.
+- Fixed about window to show the program name and version properly.
+- Added a dummy configure script.
+- Fixed bug where filenames would have ';1' terminators when only ISO9660 filenames were on the original ISO.
+
+03 Feb 2008 - 1.3.1
+===================
+- Added Belarusian and Estonian translations.
+- Fixed a bug where the boot media type for floppies was read wrong.
+- Fixed bug where a file extracted from a very large image would sometimes be corrupt.
+
+17 Dec 2007 - 1.3
+=================
+- Added Hebrew and Indonesian translations.
+- A few usability improvements.
+- Sorting no longer has to be case-sensitive.
+- Fixed bug where a false positive isolinux detection would cause some ISOs to not be bootable anyy more.
+- Can now view and edit files on the regular filesystem, not just on the image.
+
+27 Oct 2007 - 1.2
+=================
+- Added Faroese, Slovenian, Hungarian translations.
+- Fixed bug where El Torito boot records with size not divisible by 4 were not allowed.
+- Progress bars are now much smoother.
+- Name of the open file is now in the title ofthe window.
+- If the viewer or editor fails to start, an error message is now displayed.
+
+27 Aug 2007 - 1.1
+=================
+- Added Serbian/Latin, and Turkish translations.
+- Fixed memory leak when a directory is reloaded, very serious if the directory has many children.
+- Can now view files with an app the user can set.
+- Can now edit files with an app the user can set.
+- Some MDF files can now be read.
+- Several small usability improvements.
+- Showing the contents of a directory now takes much less time.
+- Fixed bug where the symlinks written would be interpreted as invalid by some systems.
+- Improved sorting by size (directories always first now works).
+- Fixed some typos in the GUI.
+- Added right-click > rename menu.
+- Mapped F3 to view, F4 to edit, and F5 to refresh.
+- Can now change the permissions of files and directories.
+- Sort column is now remembered between sessions.
+- Canceling an operation now works even if several rows are selected.
+
+01 Jun 2007 - 1.0
+=================
+- Fixed bug where extract button generated gtk error when no rows selected.
+- Creating or adding "." and ".." no longer allowed.
+- Added Ukrainian, Serbian, Croation, Catalan, Swedish, Norwegian (Bokmal and Nynorsk), Finnish, Czech, and Greek translations.
+- Added checkbox to append an extension to a saved filename automatically.
+- Now less memory/CPU is used when saving an image.
+- Can now compile on distros with older GTK versions.
+- Can now rename files and directories on the iso.
+- Small usability improvements.
+- Fixed bug where a saved image with symbolic links would end up having some corrupted files.
+
+17 Mar 2007 - 0.8
+=================
+- Added 3 more icons by kearone for a consistent look.
+- Tested on big-endian machine, confirmed everything works as it should.
+- Fixed allignment problem on some strange CPUs.
+- Added Spanish, Italian, Slovak, Simplified Chineese, Romanian, Dutch, Portuguese translations.
+- Added isomaster.desktop file (used as a shortcut in desktop environments).
+- Added support for symbolic links (both on the ISO and the filesystem).
+- Added support for duplicate files (a.k.a. hard links).
+- Several usability improvements.
+
+11 Jan 2007 - 0.7
+=================
+- Fixed the double warning message when adding directories.
+- Changed bkisofs to make it ready for links and get rid of a lot of duplicate code.
+- Added Bulgarian, Chinese, Russian, German, French, Polish and Albanian translations.
+- Fixed 'bug' that images with a broken root directory identifier would fail to open.
+- Writing and extracting operations can now be canceled.
+- Minor usability improvements.
+- Can now open and read (but not write) .nrg images.
+- Writing progress bar now works in percentage mode instead of activity mode.
+- Images that failed to write fully are now deleted.
+- Added Help/Overview with a brief description of how to use the program.
+- Changed mangling so that winxp CDs would still boot.
+- Tested on a 64bit machine, confirmed everything works as it should.
+- Now remember the scroll offset for the browsers so adding/extracting/deleting something doesn't cause the browser to scroll to the top.
+
+09 Dec 2006 - 0.6
+=================
+- Replaced the Add and Extract icons with the two I got from kearone.
+- Added gettext() support so that can now make use of .po files.
+- Can now read, add, extract and write files with long directory names (up to 255 characters for RockRidge).
+- Am allowing more characters in filenames on the image.
+- Enter key now works in 'reate new directory' dialog.
+- Added button to refresh the filesystem and iso view.
+- Am now recording last location of file open/save dialogs.
+- Filesystem address bar is now editable.
+- Added confirmation dialog when closing unsaved image.
+- The backspace key now goes up the directory tree in the selected view.
+- Popup windows no longer have a taskbar entry.
+- Changed toolbar icon size to large
+
+30 Oct 2006 - 0.5
+=================
+- If only one file in a directory fails to add or extract, added a callback in bk and a dialog window in the GUI to allow the user to ignore that error.
+- Moved some structures away from bk.h (they weren't for public use).
+- Added keyboard shortcuts for new, open, save and quit.
+- Moved the responsibility for opening the iso file (for reading or writing) from the user to bk.
+- Added option (enabled by default) to sort directories first.
+- Added window to allow to set the disk label, publisher and the filename types for the new image.
+- Fixed bug that cause newly created images to have broken permissions (RockRidge) on the root directory.
+- Saving an iso now compares the inode of the new image with the old one rather than the name, so overwriting should not be possible now under any circumstnces.
+- Size is now stored in a 64bit size_t o avoid warnings and errors with the file browser looking at files > 4G.
+- Create new directory window now checks for blank filename, bk now refuses to accept a blank name new directory request.
+- Can now have an iso file as a command-line parameter, so can open iso files in ISO Master using a file manager.
+
+27 Sep 2006 - 0.4
+=================
+- Fixed a bug that caused a segmentation fault when starting to save the image.
+- Minor improvement to the makefile to facilitate customising.
+- Changed the 'failed to stat' error to a warning, for some reason people were getting it a lot.
+
+19 Sep 2006 - 0.3
+=================
+- Can now read and write no-emulation and floppy-emulation boot records.
+- Fixed bug where deleting the directory last viewed in the filesystem browser would cause strange things to happen.
+- Improved 9660 name mangling to only include the ~xxxx hash in case of conflicts, also significantly increased the number of times to try to remangle a name before giving up.
+- Can now create new directories both on the image and the filesystem.
+- Added fields to show location (path) on the image and the filesystem.
+- Added option to show hidden files on the filesystem.
+- Fixed bug where having a large directory tree would cause a corrupt path table.
+- Other small but technically interesting changes, see svn log r118-r126
+
+26 Aug 2006 - 0.2
+=================
+- Default is now to not keep the permissions from rockridge as some cds have 
+  directories with no write permissions and that makes them hard to write to.
+- Added application icon, got it from 
+  http://tango.freedesktop.org/Tango_Icon_Gallery
+- Added case insensitive *.ISO mask to file open/save dialogs
+- Can now remember window size, pane height and last fs directory visited, 
+  all stored in ~/.isomaster, config file parser/writer from 
+  http://ndevilla.free.fr/iniparser/
+- Can now create new image from scratch.
+
+23 Aug 2006 - 0.1
+=================
+- First public release

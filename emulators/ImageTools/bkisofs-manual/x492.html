@@ -1,0 +1,488 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Setters</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Function Reference"
+HREF="c73.html"><LINK
+REL="PREVIOUS"
+TITLE="Getters"
+HREF="x390.html"><LINK
+REL="NEXT"
+TITLE="Data Structures"
+HREF="c589.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x390.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Function Reference</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="c589.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN492"
+>Setters</A
+></H1
+><P
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN495"
+><TT
+CLASS="FUNCTION"
+>bk_rename()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN498"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_rename</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>newName</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Rename the file or directory at <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+> (full path on the ISO) to <TT
+CLASS="PARAMETER"
+><I
+>newName</I
+></TT
+> (just the name, without a path).</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN511"
+><TT
+CLASS="FUNCTION"
+>bk_set_permissions()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN514"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_set_permissions</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>pathAndName</I
+></TT
+>, mode_t <TT
+CLASS="PARAMETER"
+><I
+>permissions</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Set the permissions (not all of the posix info) for an item (file, dir, etc.). This obviously only has an observable effect if RockRidge records are written.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN525"
+><TT
+CLASS="FUNCTION"
+>bk_cancel_operation()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN528"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>void <TT
+CLASS="FUNCTION"
+>bk_cancel_operation</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>When one of the bk functions that takes a callback function pointer as a parameter calls the callback (wrap your mind around that), inside the callback is the only opportunity you get to cancel the operation.</P
+><P
+>The effect is not necessarily immediate, bk will stop what it's doing as soon as it can.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN536"
+><TT
+CLASS="FUNCTION"
+>bk_set_vol_name()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN539"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_set_vol_name</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>volName</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Set the volume name (an attribute of the ISO once it's written). The maximum length is 32 characters (plus NULL byte), the string you pass in will be truncated if it's too long.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN548"
+><TT
+CLASS="FUNCTION"
+>bk_set_publisher()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN551"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_set_publisher</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>publisher</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Set the publisher name (an attribute of the ISO once it's written). The maximum length is 128 characters (plus NULL byte), the string you pass in will be truncated if it's too long.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN560"
+><TT
+CLASS="FUNCTION"
+>bk_set_follow_symlinks()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN563"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>void <TT
+CLASS="FUNCTION"
+>bk_set_follow_symlinks</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, bool <TT
+CLASS="PARAMETER"
+><I
+>doFollow</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Whether bk will add the symbolic links themselves or their target to the ISO. Default is to not follow (i.e. add the links themselves).</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN572"
+><TT
+CLASS="FUNCTION"
+>bk_set_boot_file()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN575"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_set_boot_file</TT
+></CODE
+>(VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, const char* <TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+>);</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Sets one of the files on the ISO to be the boot file. This is different from <TT
+CLASS="FUNCTION"
+>bk_add_boot_record()</TT
+> which will set the boot file from a file on the normal filesystem.</P
+><P
+><TT
+CLASS="PARAMETER"
+><I
+>srcPathAndName</I
+></TT
+> is the full path and the name of the file on the ISO. Only a regular file can be used as a boot record.</P
+><P
+>Using this fuction the only type of boot record possible is BOOT_MEDIA_NO_EMULATION, that's why there is no <TT
+CLASS="PARAMETER"
+><I
+>bootMediaType</I
+></TT
+> parameter.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x390.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="c589.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Getters</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c73.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Data Structures</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

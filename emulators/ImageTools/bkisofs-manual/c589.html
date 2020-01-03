@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Data Structures</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Setters"
+HREF="x492.html"><LINK
+REL="NEXT"
+TITLE="BkDir"
+HREF="x613.html"></HEAD
+><BODY
+CLASS="CHAPTER"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x492.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x613.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="CHAPTER"
+><H1
+><A
+NAME="AEN589"
+></A
+>Data Structures</H1
+><P
+>This section describes the data structures used by bkisofs to store information about the ISO, directories and files. You shouldn't need to understand anything about <CODE
+CLASS="CLASSNAME"
+>VolInfo</CODE
+> because all its members are accessible using getters and setters. You do need to understand how to read <CODE
+CLASS="CLASSNAME"
+>BkDir</CODE
+>, <CODE
+CLASS="CLASSNAME"
+>BkFile</CODE
+>, and <CODE
+CLASS="CLASSNAME"
+>BkSymLink</CODE
+> because even though bk creates them and fills them in you will have to read their members yourself.</P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN596"
+><CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+></A
+></H1
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>typedef struct BkFileBase
+{
+    char original9660name[15]; /* 8.3 + ";1" max */
+    char name[NCHARS_FILE_ID_MAX_STORE]; /* '\0' terminated */
+    unsigned posixFileMode; /* file type and permissions */
+    
+    struct BkFileBase* next;
+    
+} BkFileBase;</PRE
+></TD
+></TR
+></TABLE
+></P
+><P
+>This is the base class for directories and any type of files, that is - a directory and any type of file can be cast to a <CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+> using <TT
+CLASS="FUNCTION"
+>BK_BASE_PTR()</TT
+>.</P
+><P
+><TT
+CLASS="LITERAL"
+>original9660name</TT
+> is probably not going to be useful for you, it's the filename as recorded on the original ISO in the ISO9660 directory tree. It is saved by bk so that when you edit an ISO, it tries to preserve the original ISO9660 names. This helps some bootable CDs to stay bootable. If you only read the ISO9660 directory tree, you can get those filenaes from <TT
+CLASS="LITERAL"
+>name</TT
+>.</P
+><P
+><TT
+CLASS="LITERAL"
+>name</TT
+> is holds the filename, read from whatever directory tree you requested when you called <TT
+CLASS="FUNCTION"
+>bk_read_dir_tree()</TT
+>.</P
+><P
+><TT
+CLASS="LITERAL"
+>posixFileMode</TT
+> holds the type of the file and the permissions. It can be passed directly to one of the <TT
+CLASS="FUNCTION"
+>IS_*()</TT
+> macros.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x492.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x613.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Setters</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><CODE
+CLASS="CLASSNAME"
+>BkDir</CODE
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

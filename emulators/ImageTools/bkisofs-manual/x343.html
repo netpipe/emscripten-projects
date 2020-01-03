@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Writing</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Function Reference"
+HREF="c73.html"><LINK
+REL="PREVIOUS"
+TITLE="Deleting"
+HREF="x313.html"><LINK
+REL="NEXT"
+TITLE="Cleanup"
+HREF="x377.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x313.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Function Reference</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x377.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN343"
+>Writing</A
+></H1
+><P
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN346"
+><TT
+CLASS="FUNCTION"
+>bk_write_image()</TT
+></A
+></H2
+><DIV
+CLASS="FUNCSYNOPSIS"
+><P
+></P
+><A
+NAME="AEN349"
+></A
+><P
+><CODE
+><CODE
+CLASS="FUNCDEF"
+>int <TT
+CLASS="FUNCTION"
+>bk_write_image</TT
+></CODE
+>(const char* <TT
+CLASS="PARAMETER"
+><I
+>newImagePathAndName</I
+></TT
+>, VolInfo* <TT
+CLASS="PARAMETER"
+><I
+>volInfo</I
+></TT
+>, time_t <TT
+CLASS="PARAMETER"
+><I
+>creationTime</I
+></TT
+>, int <TT
+CLASS="PARAMETER"
+><I
+>filenameTypes</I
+></TT
+>, void(*<TT
+CLASS="PARAMETER"
+><I
+>progressFunction</I
+></TT
+>)(VolInfo*, double));</CODE
+></P
+><P
+></P
+></DIV
+><P
+>Writes the ISO to <TT
+CLASS="PARAMETER"
+><I
+>newImagePathAndName</I
+></TT
+>.</P
+><P
+>If you don't care about the <TT
+CLASS="PARAMETER"
+><I
+>creationTime</I
+></TT
+> recorded on the new ISO (this is different from the creation time of the ISO file as recorded by the normal filesystem) just use <TT
+CLASS="LITERAL"
+>time(NULL)</TT
+> for the parameter, so the current time will be stored as the creation time on the new ISO.</P
+><P
+>The <TT
+CLASS="PARAMETER"
+><I
+>filenameTypes</I
+></TT
+> parameter is different from the one used when reading the directory tree (it doesn't have to be the same). This one tells bk which filename types will be used on the new image. It is recommended that you use all of them: <TT
+CLASS="LITERAL"
+>FNTYPE_9660 | FNTYPE_ROCKRIDGE | FNTYPE_JOLIET</TT
+>. Notice that to specify more than one type you | them together.</P
+><P
+><TT
+CLASS="PARAMETER"
+><I
+>progressFunction</I
+></TT
+> is a pointer to a function that takes a <CODE
+CLASS="CLASSNAME"
+>VolInfo*</CODE
+> and a <CODE
+CLASS="CLASSNAME"
+>double</CODE
+> as parameters and returns <CODE
+CLASS="CLASSNAME"
+>void</CODE
+>. bk will call this function every 1 second or so and the double will have a number between 0 and 100, which is a good approximation of how much has been written already. You can pass in NULL if you like but in that case control won't be returned to your code until <TT
+CLASS="FUNCTION"
+>bk_write_image()</TT
+> is finished doing what it has to do so you can't update a progress bar or cancel writing.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x313.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x377.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Deleting</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c73.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Cleanup</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

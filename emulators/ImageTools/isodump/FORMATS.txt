@@ -1,0 +1,64 @@
+Infos on image formats
+======================
+
+
+Nero
+====
+2002-10-17
+
+files
+-----
+nrg	image file
+
+image format
+------------
+(maybe not for all disk types)
+- 2048 bytes/block
+- leading and trailing zero-blocks included (from block 0 -> eof)
+- extra data at the end (toc info?), see examples
+
+examples
+--------
+Adobe Acrobat 5.0 German Nero Image.rar, 556767847 bytes,
+414c7216f1f0e595b77b121dd8e3934e md4
+-> acrobat5de.nrg, 667756660 bytes [(150+325751+152)*2048+116],
+   77b61972eaa555a067f842349c4aabf5 md4
+
+$ hxd -o 667756544 acrobat5de.nrg
+27cd2800: 43 55 45 53  00 00 00 20  41 00 00 00  00 00 00 00 | CUES... A.......
+27cd2810: 41 01 00 00  00 00 00 00  41 01 01 00  00 00 02 00 | A.......A.......
+27cd2820: 41 aa 01 00  00 72 27 28  44 41 4f 49  00 00 00 34 | Aª...r'(DAOI...4
+27cd2830: 00 00 00 34  00 00 00 00  00 00 00 00  00 00 00 00 | ...4............
+27cd2840: 00 00 00 01  01 01 00 00  00 00 00 00  00 00 00 00 | ................
+27cd2850: 00 00 08 00  00 00 00 01  00 00 00 00  00 04 b0 00 | ..............°.
+27cd2860: 27 cd 28 00  45 4e 44 21  00 00 00 00  4e 45 52 4f | 'Í(.END!....NERO
+27cd2870: 27 cd 28 00                                        | 'Í(.            
+
+
+CloneCD
+=======
+2002-10-17
+
+files
+-----
+CCD	image/cd info
+img	image file
+sub	? (subchannel data ?)
+
+image format
+------------
+(maybe not for all disk types)
+- 2352 bytes/block (possibly XA format)
+- trailing zero-blocks included
+
+examples
+--------
+Norton AntiVirus 2003 Professional German CloneCD Image.exe, 117383858 bytes,
+581ea565d6f9044e5d6ca7bf41a1d687 md4
+-> IMAGE.img, 156224544 bytes, [(0+66120+302)*2352+0]
+   a484788ba6d7d3c2286f6dc4ee235bbf md4
+   XA-Image (blockoffset= 24 bytes)
+-> IMAGE.CCD, 772 bytes,
+   95ec66fd5ea30089e1671695bdddbc48 md4
+-> IMAGE.sub, 6376512 bytes
+   9d49c16e30f63d47010bf05047d8ab2a md4

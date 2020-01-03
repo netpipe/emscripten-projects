@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Example</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Casting"
+HREF="x674.html"></HEAD
+><BODY
+CLASS="CHAPTER"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x674.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+>&nbsp;</TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="CHAPTER"
+><H1
+><A
+NAME="AEN713"
+></A
+>Example</H1
+><P
+>This section gives a small example for using bkisofs. All it does is open an ISO, add a file to it, print the contents, and save the modified ISO. It's working code so feel free to use it to experiment.</P
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>/******************************************************************************
+* example.c
+* Example for using bkisofs
+* Author: Andrew Smith
+* Compile with: cc example.c bk.a -o example
+* */
+
+#include &#60;stdio.h&#62;
+#include &#60;time.h&#62;
+
+/* need to include bk.h for access to bkisofs functions and structures */
+#include "bk.h"
+
+void addProgressUpdaterCbk(VolInfo* volInfo);
+void fatalError(const char* message);
+void printNameAndContents(BkFileBase* item, int numSpaces);
+void readProgressUpdaterCbk(VolInfo* volInfo);
+void writeProgressUpdaterCbk(VolInfo* volInfo, double percentComplete);
+
+int main( int argv, char** argc)
+{
+    /* A variable of type VolInfo stores information about an image */
+    VolInfo volInfo;
+    /* bk functions return ints that need to be checked to see whether
+    * the functions were successful or not */
+    int rc;
+    
+    if(argv != 2)
+        fatalError("Usage: example myfile.iso");
+    
+    /* initialise volInfo, set it up to scan for duplicate files */
+    rc = bk_init_vol_info(&#38;volInfo, true);
+    if(rc &#60;= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* open the iso file (supplied as argument 1) */
+    rc = bk_open_image(&#38;volInfo, argc[1]);
+    if(rc &#60;= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* read information about the volume (required before reading directory tree) */
+    rc = bk_read_vol_info(&#38;volInfo);
+    if(rc &#60;= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* read the directory tree */
+    if(volInfo.filenameTypes &#38; FNTYPE_ROCKRIDGE)
+        rc = bk_read_dir_tree(&#38;volInfo, FNTYPE_ROCKRIDGE, true, readProgressUpdaterCbk);
+    else if(volInfo.filenameTypes &#38; FNTYPE_JOLIET)
+        rc = bk_read_dir_tree(&#38;volInfo, FNTYPE_JOLIET, false, readProgressUpdaterCbk);
+    else
+        rc = bk_read_dir_tree(&#38;volInfo, FNTYPE_9660, false, readProgressUpdaterCbk);
+    if(rc &#60;= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* add the file /etc/fstab to the root of the image */
+    rc = bk_add(&#38;volInfo, "/etc/fstab", "/", addProgressUpdaterCbk);
+    if(rc &#60;= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* print the entire directory tree */
+    printNameAndContents(BK_BASE_PTR( &#38;(volInfo.dirTree) ), 0);
+    
+    /* save the new ISO as /tmp/example.iso */
+    /* note that bkisofs will print some stuff to stdout when writing an ISO */
+    rc = bk_write_image("/tmp/example.iso", &#38;volInfo, time(NULL),
+                        FNTYPE_9660 | FNTYPE_ROCKRIDGE | FNTYPE_JOLIET,
+                        writeProgressUpdaterCbk);
+    
+    /* we're finished with this ISO, so clean up */
+    bk_destroy_vol_info(&#38;volInfo);
+    
+    return 0;
+}
+
+/* you can use this to update a progress bar or something */
+void addProgressUpdaterCbk(VolInfo* volInfo)
+{
+    printf("Add progress updater\n");
+}
+
+void fatalError(const char* message)
+{
+    printf("Fatal error: %s\n", message);
+    exit(1);
+}
+
+void printNameAndContents(BkFileBase* base, int numSpaces)
+{
+    int count;
+    
+    /* print the spaces (indentation, for prettyness) */
+    for(count = 0; count &#60; numSpaces; count++)
+        printf(" ");
+    
+    if(IS_DIR(base-&#62;posixFileMode))
+    {
+        /* print name of the directory */
+        printf("%s (directory)\n", base-&#62;name);
+        
+        /* print all the directory's children */
+        BkFileBase* child = BK_DIR_PTR(base)-&#62;children;
+        while(child != NULL)
+        {
+            printNameAndContents(child, numSpaces + 2);
+            child = child-&#62;next;
+        }
+    }
+    else if(IS_REG_FILE(base-&#62;posixFileMode))
+    {
+        /* print name and size of the file */
+        printf("%s (regular file), size %u\n", base-&#62;name, BK_FILE_PTR(base)-&#62;size);
+    }
+    else if(IS_SYMLINK(base-&#62;posixFileMode))
+    {
+        /* print name and target of the symbolic link */
+        printf("%s -&#62; %s (symbolic link)\n", base-&#62;name, BK_SYMLINK_PTR(base)-&#62;target);
+    }
+}
+
+/* you can use this to update a progress bar or something */
+void readProgressUpdaterCbk(VolInfo* volInfo)
+{
+    printf("Read progress updater\n");
+}
+
+/* you can use this to update a progress bar or something */
+void writeProgressUpdaterCbk(VolInfo* volInfo, double percentComplete)
+{
+    printf("Write progress updater: ~%.2lf%% complete\n", percentComplete);
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x674.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Casting</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>&nbsp;</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

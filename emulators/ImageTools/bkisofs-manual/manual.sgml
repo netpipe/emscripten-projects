@@ -1,0 +1,808 @@
+<!DOCTYPE book PUBLIC "-//Davenport//DTD DocBook V3.0//EN" [
+]>
+<book>
+
+<bookinfo>
+<date>14 June 2007</date>
+<title>bkisofs Usage and Reference Manual</title>
+<author>
+<firstname>Andrew</firstname>
+<surname>Smith</surname>
+</author>
+</bookinfo>
+<toc></toc>
+
+<chapter>
+<title>bkisofs Overview</title>
+<para>bkisofs (I will often call it simply 'bk') is a simple and stable library for reading and writing ISO9660 files. It can also read NRG files, but not write them. It has support for the Joliet, RockRidge, and EL Torito extensions. It has been tested (with positive results) on many Linux versions and on some BSD versions.</para>
+<para>Currently bk is used as the backbone of ISO Master - a graphical editor for ISO files, but I encourage you to add ISO support to your application if it is appropriate. Being a library, bk is much easier to use from your application then mkisofs.</para>
+<para>Feel free to contact me using <ulink url="http://littlesvr.ca/misc/contactandrew.php">this form</ulink> with questions, I will do all I can to help you get going. Also any suggestions about improving this manual (or the library itself) are welcome.</para>
+<para>The only header file you need to include in your program is <filename class='headerfile'>bk.h</filename>. That has the definitions for all the public functions and the file/directory/volume structures you will have to work with. Do yourself a favour and don't use any other header files from the library - I will do my best to keep <filename class='headerfile'>bk.h</filename> consistent between versions but won't even bother trying with any other files.</para>
+<sect1>
+<title>Getting bkisofs</title>
+<para>The library is currently only distributed with ISO Master, it's under the <literal>bk</literal> directory. You can download a stable release of ISO Master (so a stable version of bkisofs) or if you're interested you can get the most recent version from subversion using the following command: <literal>svn co svn://littlesvr.ca/prog/isomaster/src/bk bkisofs</literal></para>
+</sect1>
+<sect1>
+<title>Return Codes</title>
+<para>Every bk function that can fail returns an int. If the function is successful in doing what it was supposed to do it returns a number greater than 0. If it fails it returns a number less than or equal to 0.</para>
+<para>You should check each function for failure and deal with it accordngly, there is a return code for a reason!</para>
+<para>In one case (rc == <literal>BKWARNING_OPER_PARTLY_FAILED</literal>) a negative return code is not an error but a warning, in which case it is safe to continue to do whatever you would if the function succeeded. If the return code is <literal>BKWARNING_OPER_PARTLY_FAILED</literal>, the warning callback would have been called during the operation so you should have let the user know then that something didn't work.</para>
+<para>A simple example:</para>
+<programlisting><![CDATA[
+void add(char* fullItemName)
+{
+    int rc;
+    
+    rc = bk_add(&GBLvolInfo, fullItemName, GBLisoCurrentDir, activityProgressUpdaterCbk);
+    if(rc <= 0 && rc != BKWARNING_OPER_PARTLY_FAILED)
+    {
+        printf("Adding failed!\n");
+    }
+}
+]]></programlisting>
+</sect1>
+<sect1>
+<title>Constants</title>
+<para>This section has a list of constants from bk.h that you may find useful when programming an application with bk.</para>
+<sect2>
+<title>FNTYPE_*</title>
+<para>The constants <literal>FNTYPE_9660</literal>, <literal>FNTYPE_ROCKRIDGE</literal> and <literal>FNTYPE_JOLIET</literal> are used to tell bk what type of ISO extensions to use.</para>
+<para>Some bk functions take only one of these, some can take a combination. If a combination is desired you can bitwise or them together. For example to have all three of them: <literal>FNTYPE_9660 | FNTYPE_ROCKRIDGE | FNTYPE_JOLIET</literal></para>
+<para>In case you don't already know: ISO9660 filenames are limited to 8.3 length and really are only still used for backwards compatibility, but they are required for any written ISO. RockRidge is an extension alowing for longer filenames, permissions, and special files (of the special files only symbolic links are supported in bk). Any Linux/Unix can read RockRidge extensions, but none of the Windowses as far as I know. Joliet is the Microsoft specification for extending ISO9660 - it supports longer filenames and also unicode (UCS2) characters. bk does not support unicode filenames for now.</para>
+</sect2>
+<sect2>
+<title>NCHARS_FILE_ID_MAX_STORE</title>
+<para>This is the maximum length of a file or directory name that bk will accept (including the NULL byte). As far as I know there is no filesystem that will allow for filenames longer than this (it is set to 255+1 characters), but in case you find one be aware that adding such a file to the ISO won't work.</para>
+<para>You might want to use <literal>NCHARS_FILE_ID_MAX_STORE</literal> to set the length of your own variables storing filenames.</para>
+</sect2>
+<sect2>
+<title>NCHARS_SYMLINK_TARGET_MAX</title>
+<para>You probably won't need to use this one but I included it in the manual so you're aware of the limitation.</para>
+<para>Symbolic links have a string target. You can see this target when you do <literal>ls</literal>. For example here <literal>mylink -> ../../realfile</literal> the target of the link <literal>mylink</literal> is <literal>../../realfile</literal></para>
+<para>The maximum length of a symbolic link's target is different on different platforms. In bk it is currently set to 250+1. If bk is set to not follow symbolic links, adding one with a target longer than NCHARS_SYMLINK_TARGET_MAX-1 won't work.</para>
+</sect2>
+<sect2>
+<title>BOOT_MEDIA_*</title>
+<para>A boot record can be one of several types: no emulation (e.g. isolinux, Windows CDs), floppy emulation (usually DOS), and hard disk emulation (I don't know of any examples for this). When using bk to add a boot record to an ISO, you have to specify the type of the boot record. There is no way to programatically determine the type of boot record by looking at the file, the only way to pick the type that you want is to ask the user to choose.</para>
+<para>You won't need to understand boot records if your application doesn't support adding/replacing boot records. Opening a bootable ISO with bk, modifying it and saving it will preserve the boot record.</para>
+<para>The constants are: <literal>BOOT_MEDIA_NONE</literal>, <literal>BOOT_MEDIA_NO_EMULATION</literal>, <literal>BOOT_MEDIA_1_2_FLOPPY</literal>, <literal>BOOT_MEDIA_1_44_FLOPPY</literal>, <literal>BOOT_MEDIA_2_88_FLOPPY</literal>, and <literal>BOOT_MEDIA_HARD_DISK</literal>. The floppy boot record files must be of a certain size, respectively: 1228800 bytes, 1474560 bytes, and 2949120 bytes.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Missing Features</title>
+<para>This is the only section of the manual that's still not complete, I promise :)</para>
+<para>joliet unicode</para>
+</sect1>
+</chapter>
+<chapter>
+<title>Function Reference</title>
+<para>In this chapter I describe the available bk functions. They are presented in such an order that you can read the chapter sequencially and make use of each function as you go, in the end having full ISO read/write support. You don't have to make use of all the functions of course. For example if bootable ISOs aren't interesting to you - you can sefely ignore the boot functions.</para>
+<sect1>
+<title>Setup</title>
+<para></para>
+<sect2>
+<title><function>bk_init_vol_info()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_init_vol_info</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>bool <parameter>scanForDuplicateFiles</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>This is the first function you need to call - whether you're reading an ISO or creating one from scratch. The first parameter (<parameter>volInfo</parameter>) is the address of a variable of type <classname>VolInfo</classname> which you declare somewhere in your program. It is safe to use bk to work on more than one ISO at the same time, since all the functions take a <classname>VolInfo*</classname> as a parameter, so you would have one <classname>VolInfo</classname> per ISO.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Reading</title>
+<para></para>
+<sect2>
+<title><function>bk_open_image()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_open_image</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>filename</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>This basically just opens the ISO file for reading. The parameter <parameter>filename</parameter> can have any string in it that would work with the C function <function>open()</function>, i.e. it can have a full or relative or no path plus the name of the file.</para>
+<para>Call <function>bk_open_image()</function> after <function>bk_init_vol_info()</function> and before <function>bk_read_vol_info()</function>.</para>
+</sect2>
+<sect2>
+<title><function>bk_read_vol_info()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_read_vol_info</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>This reads information about the ISO: things like the volume name, creation time and the types of directory trees available (ISO9660, Rockrdge, Joliet). Also some boot record information is read (complete boot record info is not guaranteed until after the directory tree is read).</para>
+<para>Important to know is that <function>bk_estimate_iso_size()</function> will not work at this point, you must read the directory tree first.</para>
+</sect2>
+<sect2>
+<title><function>bk_read_dir_tree()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_read_dir_tree</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>int <parameter>filenameType</parameter></paramdef>
+<paramdef>bool <parameter>keepPosixPermissions</parameter></paramdef>
+<paramdef>void(*<parameter>progressFunction</parameter>)(VolInfo*)</paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>This function reads a set of entire directory trees (all the directories and files) from the ISO. bk is capable of reading ISO9660, RockRidge, and Joliet filenames so you can ask to read any of those. You have to decide which one you want based on the available types in <classname>VolInfo</classname>.<classname>filenameTypes</classname>. I recommend that you choose RockRidge over Joliet and Joliet over ISO9660. To illustrate, here's an example:</para>
+<para><programlisting><![CDATA[
+    if(GBLvolInfo.filenameTypes & FNTYPE_ROCKRIDGE)
+        rc = bk_read_dir_tree(&GBLvolInfo, FNTYPE_ROCKRIDGE, true, activityProgressUpdaterCbk);
+    else if(GBLvolInfo.filenameTypes & FNTYPE_JOLIET)
+        rc = bk_read_dir_tree(&GBLvolInfo, FNTYPE_JOLIET, false, activityProgressUpdaterCbk);
+    else
+        rc = bk_read_dir_tree(&GBLvolInfo, FNTYPE_9660, false, activityProgressUpdaterCbk);
+]]></programlisting></para>
+<para><parameter>progressFunction</parameter> is a pointer to a function that takes a <classname>VolInfo*</classname> as a parameter and returns <classname>void</classname>. bk will call this function every 1 second or so. You can pass in NULL if you like but in that case control won't be returned to your code until <function>bk_add()</function> is finished doing what it has to do so you can't update a progress bar or cancel adding.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Adding</title>
+<para></para>
+<sect2>
+<title><function>bk_add()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_add</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>srcPathAndName</parameter></paramdef>
+<paramdef>const char* <parameter>destPathStr</parameter></paramdef>
+<paramdef>void(*<parameter>progressFunction</parameter>)(VolInfo*)</paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Add the file or the directory <parameter>srcPathAndName</parameter> to <parameter>destPathStr</parameter>. The destination is a full path, relative to the root of the ISO. For example, to add <literal>/etc/fstab</literal> to the (existing) <literal>KNOPPIX</literal> directory on the ISO, pass <literal>/KNOPPIX/</literal> as the <parameter>destPathStr</parameter>.</para>
+<para><parameter>progressFunction</parameter> is a pointer to a function that takes a <classname>VolInfo*</classname> as a parameter and returns <classname>void</classname>. bk will call this function every 1 second or so. You can pass in NULL if you like but in that case control won't be returned to your code until <function>bk_add()</function> is finished doing what it has to do so you can't update a progress bar or cancel adding.</para>
+</sect2>
+<sect2>
+<title><function>bk_add()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_add_as</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>srcPathAndName</parameter></paramdef>
+<paramdef>const char* <parameter>destPathStr</parameter></paramdef>
+<paramdef>const char* <parameter>nameToUse</parameter></paramdef>
+<paramdef>void(*<parameter>progressFunction</parameter>)(VolInfo*)</paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Same as <function>bk_add()</function> but with the extra <parameter>nameToUse</parameter> parameter. If this is not null, the file will be added with the name in <parameter>nameToUse</parameter> rather than the same name as it had in the source.</para>
+</sect2>
+<sect2>
+<title><function>bk_create_dir()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_create_dir</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>destPathStr</parameter></paramdef>
+<paramdef>const char* <parameter>newDirName</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Create the directory <parameter>newDirName</parameter> in the directory <parameter>destPathStr</parameter> on the ISO.</para>
+</sect2>
+<sect2>
+<title><function>bk_add_boot_record()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_add_boot_record</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>srcPathAndName</parameter></paramdef>
+<paramdef>int <parameter>bootMediaType</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Set the boot record for the ISO to be a file from the regular filesystem. This file will end up being a hidden file on the ISO. The parameter <parameter>srcPathAndName</parameter> has to be a string (with or without the path) pointing to a file that is an image of a boot record, e.g. <literal>/home/andrew/dosboot.raw</literal>. These images are created using various tools. ISO Master can extract the bootable image from CDs. It's a complex topic and I must assume you understand what a boot record is.</para>
+<para>The <parameter>bootMediaType</parameter> parameter is one of the constants described in the 'Constants' section of this manual. For floppy emulation boot record types the size of the file pointed to by <parameter>srcPathAndName</parameter> must match the size assumed by <parameter>bootMediaType</parameter>.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Extracting</title>
+<para></para>
+<sect2>
+<title><function>bk_extract()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_extract</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>srcPathAndName</parameter></paramdef>
+<paramdef>const char* <parameter>destDir</parameter></paramdef>
+<paramdef>bool <parameter>keepPermissions</parameter></paramdef>
+<paramdef>void(*<parameter>progressFunction</parameter>)(VolInfo*)</paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>This function will extract the file or directory <parameter>srcPathAndName</parameter> on the ISO to the directory <parameter>destDir</parameter> on the regular filesystem.</para>
+<para>If the ISO has the RockRidge extension and you passed <literal>FNTYPE_ROCKRIDGE</literal> to <function>bk_read_dir_tree()</function>, and you pass true for <parameter>keepPermissions</parameter> then the files and directories extracted to the filesystem will have the same permissions as they did on the ISO.</para>
+<para>Note that you cannot extract <literal>/</literal></para>
+<para>Also note that there is no way to make bk overwrite files on the filesystem.</para>
+<para><parameter>progressFunction</parameter> is a pointer to a function that takes a <classname>VolInfo*</classname> as a parameter and returns <classname>void</classname>. bk will call this function every 1 second or so. You can pass in NULL if you like but in that case control won't be returned to your code until <function>bk_extract()</function> is finished doing what it has to do so you can't update a progress bar or cancel extracting.</para>
+</sect2>
+<sect2>
+<title><function>bk_extract_as()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_extract</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>srcPathAndName</parameter></paramdef>
+<paramdef>const char* <parameter>destDir</parameter></paramdef>
+<paramdef>const char* <parameter>nameToUse</parameter></paramdef>
+<paramdef>bool <parameter>keepPermissions</parameter></paramdef>
+<paramdef>void(*<parameter>progressFunction</parameter>)(VolInfo*)</paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Same as <function>bk_extract()</function> but with the extra <parameter>nameToUse</parameter> parameter. If this is not null it will be used as the name of the destination file, rather than the name of the source on the ISO.</para>
+</sect2>
+<sect2>
+<title><function>bk_extract_boot_record()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_extract_boot_record</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>destPathAndName</parameter></paramdef>
+<paramdef>unsigned <parameter>destFilePerms</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Extracts the boot record from the ISO to the file <parameter>destPathAndName</parameter>. The <parameter>destFilePerms</parameter> parameters is permission to be set for the resulting file.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Deleting</title>
+<para></para>
+<sect2>
+<title><function>bk_delete()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_delete</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>pathAndName</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Deletes the file or directory from the ISO, and frees all the memory associated with those items. If <parameter>pathAndName</parameter> points to a directory, all the contents of the directory are also deleted.</para>
+<para>I'm sure I already mentioned somewhere in the manual that the original ISO isn't modified. But I'll reinforce that now - <function>bk_delete()</function> will delete from the representation of the ISO in memory, not from the ISO itself. When you write the new ISO, the deleted files won't be there.</para>
+<para>Files and directories added to the ISO can also be deleted the same way (from the representation of the new ISO in memory, not from the filesystem).</para>
+</sect2>
+<sect2>
+<title><function>bk_delete_boot_record()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>void <function>bk_delete_boot_record</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Deletes the boot record from the ISO. See the notes from <function>bk_delete()</function> about how none of the original data is deleted.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Writing</title>
+<para></para>
+<sect2>
+<title><function>bk_write_image()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_write_image</function></funcdef>
+<paramdef>const char* <parameter>newImagePathAndName</parameter></paramdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>time_t <parameter>creationTime</parameter></paramdef>
+<paramdef>int <parameter>filenameTypes</parameter></paramdef>
+<paramdef>void(*<parameter>progressFunction</parameter>)(VolInfo*, double)</paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Writes the ISO to <parameter>newImagePathAndName</parameter>.</para>
+<para>If you don't care about the <parameter>creationTime</parameter> recorded on the new ISO (this is different from the creation time of the ISO file as recorded by the normal filesystem) just use <literal>time(NULL)</literal> for the parameter, so the current time will be stored as the creation time on the new ISO.</para>
+<para>The <parameter>filenameTypes</parameter> parameter is different from the one used when reading the directory tree (it doesn't have to be the same). This one tells bk which filename types will be used on the new image. It is recommended that you use all of them: <literal>FNTYPE_9660 | FNTYPE_ROCKRIDGE | FNTYPE_JOLIET</literal>. Notice that to specify more than one type you | them together.</para>
+<para><parameter>progressFunction</parameter> is a pointer to a function that takes a <classname>VolInfo*</classname> and a <classname>double</classname> as parameters and returns <classname>void</classname>. bk will call this function every 1 second or so and the double will have a number between 0 and 100, which is a good approximation of how much has been written already. You can pass in NULL if you like but in that case control won't be returned to your code until <function>bk_write_image()</function> is finished doing what it has to do so you can't update a progress bar or cancel writing.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Cleanup</title>
+<para></para>
+<sect2>
+<title><function>bk_destroy_vol_info()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>void <function>bk_destroy_vol_info</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>You should call this once you're finished with this ISO, whether you wrote it to disk or not, for example if the ISO is closed in your GUI. This will free any memory bk allocated and close the original ISO if one was opened.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Getters</title>
+<para></para>
+<sect2>
+<title><function>bk_estimate_iso_size()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>off_t <function>bk_estimate_iso_size</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>int <parameter>filenameTypes</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Call this to get an estimate of how much space the resulting ISO would use if it were written now. It is only an estimate, though usually pretty accurate.</para>
+<para>The <parameter>filenameTypes</parameter> parameter should be the same as the one you would pass to <function>bk_write_image()</function>.</para>
+</sect2>
+<sect2>
+<title><function>bk_get_creation_time()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>time_t <function>bk_get_creation_time</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Returns the creation time of the ISO if one was opened for reading. If no ISO was opened the return is 0.</para>
+<para>The return is in the same format as that given by the system's <function>time()</function> function: the  time  since  the  Epoch (00:00:00 UTC, 1st of January, 1970), measured in seconds.</para>
+</sect2>
+<sect2>
+<title><function>bk_get_permissions()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>time_t <function>bk_get_permissions</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>pathAndName</parameter></paramdef>
+<paramdef>mode_t* <parameter>permissions</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Gets the permissions (not all of the posix info) for an item (file, dir, etc.) and puts them into <parameter>permissions</parameter> (normally just a variable passed in by address).</para>
+</sect2>
+<sect2>
+<title><function>bk_get_publisher()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>const char* <function>bk_get_publisher</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Returns a pointer to a NULL-terminated string with the name of the publisher - either read from an ISO or perhaps set by you using <function>bk_set_publisher()</function>.</para>
+<para>Do not modify or free this string. Make a copy if you need more than read-only access.</para>
+<para>The maximum length of the publisher string is 128+1 bytes.</para>
+</sect2>
+<sect2>
+<title><function>bk_get_volume_name()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>const char* <function>bk_get_volume_name</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Returns a pointer to a NULL-terminated string with the name of the volume - either read from an ISO or perhaps set by you using <function>bk_set_vol_name()</function>.</para>
+<para>Do not modify or free this string. Make a copy if you need more than read-only access.</para>
+<para>The maximum length of the volume name string is 32+1 bytes.</para>
+</sect2>
+<sect2>
+<title><function>bk_get_error_string()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>const char* <function>bk_get_error_string</function></funcdef>
+<paramdef>int <parameter>errorId</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Any bk function that fails returns a negative <classname>int</classname>. That number is an error code, and to get the meaning of it pass it to <function>bk_get_error_string()</function>. It will return a string with an error message.</para>
+<para>The error string won't have the details about what exactly bk tried to do that failed. For example one error is <literal>Failed to open file on the filesystem for writing</literal>. This does not tell you what file bk tried to open or why it failed. But still, it's better than giving -1012 to the user as an explanation for failure.</para>
+<para>Do not modify or free this string. Make a copy if you need more than read-only access.</para>
+</sect2>
+<sect2>
+<title><function>bk_get_dir_from_string()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_get_dir_from_string</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>pathStr</parameter></paramdef>
+<paramdef>BkDir** <parameter>dirFoundPtr</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>This one is useful if you want random access to directories - meaning you can get access to any directory on the ISO using a path string, instead of traversing the entire tree from the root.</para>
+<para>The parameter <parameter>pathStr</parameter> is a full path on the ISO.</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Setters</title>
+<para></para>
+<sect2>
+<title><function>bk_rename()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_rename</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>srcPathAndName</parameter></paramdef>
+<paramdef>const char* <parameter>newName</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Rename the file or directory at <parameter>srcPathAndName</parameter> (full path on the ISO) to <parameter>newName</parameter> (just the name, without a path).</para>
+</sect2>
+<sect2>
+<title><function>bk_set_permissions()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_set_permissions</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>pathAndName</parameter></paramdef>
+<paramdef>mode_t <parameter>permissions</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Set the permissions (not all of the posix info) for an item (file, dir, etc.). This obviously only has an observable effect if RockRidge records are written.</para>
+</sect2>
+<!--para>!!set warning callback</para-->
+<sect2>
+<title><function>bk_cancel_operation()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>void <function>bk_cancel_operation</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>When one of the bk functions that takes a callback function pointer as a parameter calls the callback (wrap your mind around that), inside the callback is the only opportunity you get to cancel the operation.</para>
+<para>The effect is not necessarily immediate, bk will stop what it's doing as soon as it can.</para>
+</sect2>
+<sect2>
+<title><function>bk_set_vol_name()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_set_vol_name</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>volName</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Set the volume name (an attribute of the ISO once it's written). The maximum length is 32 characters (plus NULL byte), the string you pass in will be truncated if it's too long.</para>
+</sect2>
+<sect2>
+<title><function>bk_set_publisher()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_set_publisher</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>publisher</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Set the publisher name (an attribute of the ISO once it's written). The maximum length is 128 characters (plus NULL byte), the string you pass in will be truncated if it's too long.</para>
+</sect2>
+<sect2>
+<title><function>bk_set_follow_symlinks()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>void <function>bk_set_follow_symlinks</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>bool <parameter>doFollow</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Whether bk will add the symbolic links themselves or their target to the ISO. Default is to not follow (i.e. add the links themselves).</para>
+</sect2>
+<sect2>
+<title><function>bk_set_boot_file()</function></title>
+<funcsynopsis>
+<funcprototype>
+<funcdef>int <function>bk_set_boot_file</function></funcdef>
+<paramdef>VolInfo* <parameter>volInfo</parameter></paramdef>
+<paramdef>const char* <parameter>srcPathAndName</parameter></paramdef>
+</funcprototype>
+</funcsynopsis>
+<para>Sets one of the files on the ISO to be the boot file. This is different from <function>bk_add_boot_record()</function> which will set the boot file from a file on the normal filesystem.</para>
+<para><parameter>srcPathAndName</parameter> is the full path and the name of the file on the ISO. Only a regular file can be used as a boot record.</para>
+<para>Using this fuction the only type of boot record possible is BOOT_MEDIA_NO_EMULATION, that's why there is no <parameter>bootMediaType</parameter> parameter.</para>
+</sect2>
+</sect1>
+</chapter>
+<chapter>
+<title>Data Structures</title>
+<para>This section describes the data structures used by bkisofs to store information about the ISO, directories and files. You shouldn't need to understand anything about <classname>VolInfo</classname> because all its members are accessible using getters and setters. You do need to understand how to read <classname>BkDir</classname>, <classname>BkFile</classname>, and <classname>BkSymLink</classname> because even though bk creates them and fills them in you will have to read their members yourself.</para>
+<sect1>
+<title><classname>BkFileBase</classname></title>
+<para><programlisting><![CDATA[
+typedef struct BkFileBase
+{
+    char original9660name[15]; /* 8.3 + ";1" max */
+    char name[NCHARS_FILE_ID_MAX_STORE]; /* '\0' terminated */
+    unsigned posixFileMode; /* file type and permissions */
+    
+    struct BkFileBase* next;
+    
+} BkFileBase;
+]]></programlisting></para>
+<para>This is the base class for directories and any type of files, that is - a directory and any type of file can be cast to a <classname>BkFileBase</classname> using <function>BK_BASE_PTR()</function>.</para>
+<para><literal>original9660name</literal> is probably not going to be useful for you, it's the filename as recorded on the original ISO in the ISO9660 directory tree. It is saved by bk so that when you edit an ISO, it tries to preserve the original ISO9660 names. This helps some bootable CDs to stay bootable. If you only read the ISO9660 directory tree, you can get those filenaes from <literal>name</literal>.</para>
+<para><literal>name</literal> is holds the filename, read from whatever directory tree you requested when you called <function>bk_read_dir_tree()</function>.</para>
+<para><literal>posixFileMode</literal> holds the type of the file and the permissions. It can be passed directly to one of the <function>IS_*()</function> macros.</para>
+</sect1>
+<sect1>
+<title><classname>BkDir</classname></title>
+<para><programlisting><![CDATA[
+typedef struct BkDir
+{
+    BkFileBase base; /* intended to be accessed using a cast */
+    
+    BkFileBase* children; /* child directories, files, etc. */
+    
+} BkDir;
+]]></programlisting></para>
+<para>Besides the <classname>BkFileBase</classname> all a directory has is a list of children (files, special files, and directories).</para>
+</sect1>
+<sect1>
+<title><classname>BkFile</classname></title>
+<para><programlisting><![CDATA[
+typedef struct BkFile
+{
+    BkFileBase base; /* intended to be accessed using a cast */
+    
+    unsigned size; /* in bytes, don't need off_t because it's stored 
+                   * in a 32bit unsigned int on the iso */
+    BkHardLink* location; /* basically a copy of the following variables */
+    bool onImage;
+    off_t position; /* if on image, in bytes */
+    char* pathAndName; /* if on filesystem, full path + filename
+                       * is to be freed whenever the File is freed */
+    
+} BkFile;
+]]></programlisting></para>
+<para><literal>size</literal> is the exact size of the file, whether it is from an original ISO or to be added from the filesystem.</para>
+<para><literal>onImage</literal> is true if the file contents are on the original ISO. It's false if the file is to be added from the regular filesystem.</para>
+<para><literal>position</literal> and <literal>pathAndName</literal> are unlikely to be interesting to you, but you can read them if you like - they record how exactly to access the file for reading. They are set in the reading or adding function.</para>
+<para><literal>location</literal> is definitely not interesting to you, it's used internally to work with hard links.</para>
+</sect1>
+<sect1>
+<title><classname>BkSymLink</classname></title>
+<para><programlisting><![CDATA[
+typedef struct BkSymLink
+{
+    BkFileBase base; /* intended to be accessed using a cast */
+    
+    char target[NCHARS_SYMLINK_TARGET_MAX];
+    
+} BkSymLink;
+]]></programlisting></para>
+<para>Besides the <classname>BkFileBase</classname> all a symbolic link has is a target (a string - what it's pointing to). You may want to display this for the user to see.</para>
+</sect1>
+<sect1>
+<title>Inheritance</title>
+<para>Directories, files, and symbolic links, though certainly different, have something in common - they all have a name and possibly a set of permissions. To save a lot of code duplication bk has a simple inheritance tree: <classname>BkDir</classname>, <classname>BkFile</classname>, and <classname>BkSymLink</classname> all inherit from <classname>BkFileBase</classname>.</para>
+<para>This is relevant for you when, for example, you look at the contents of a directory and want to figure out whether an item is a directory, so you could give it a special icon.</para>
+<para>You can cast one type from another. It is always safe to cast down (to <classname>BkFileBase</classname>) but it is only sometimes safe to cast up (e.g. to <classname>BkDir</classname>). The next section explains how to detect the type of a <classname>BkFileBase</classname> and the section after that explains how to convert from one type to another.</para>
+</sect1>
+<sect1>
+<title>Detecting the type of a <classname>BkFileBase</classname></title>
+<para>A <classname>BkFileBase</classname> has a member named <literal>posixFileMode</literal>. This member can be passed to one of the macros in this section to figure out whether it's a directory, a regular file, or a symbolic link. Examples are given to illustrate how to use the macros.</para>
+<sect2>
+<title><function>IS_DIR()</function></title>
+<para><programlisting><![CDATA[
+    if(IS_DIR(base->posixFileMode))
+    {
+        /* base is a directory, and can be cast to one */
+    }
+]]></programlisting></para>
+</sect2>
+<sect2>
+<title><function>IS_REG_FILE()</function></title>
+<para><programlisting><![CDATA[
+    if(IS_REG_FILE(base->posixFileMode))
+    {
+        /* base is a regular file, and can be cast to one */
+    }
+]]></programlisting></para>
+</sect2>
+<sect2>
+<title><function>IS_SYMLINK()</function></title>
+<para><programlisting><![CDATA[
+    if(IS_SYMLINK(base->posixFileMode))
+    {
+        /* base is a symbolic link, and can be cast to one */
+    }
+]]></programlisting></para>
+</sect2>
+</sect1>
+<sect1>
+<title>Casting</title>
+<para>You can cast any <classname>BkFileBase</classname> to a more elaborate structure. First you use the macros from the previous section to find out what type the <classname>BkFileBase</classname> is and then you use the macros in this section to cast them.</para>
+<sect2>
+<title><function>BK_DIR_PTR()</function></title>
+<para>Use this macro when you have a <classname>BkFileBase*</classname> that you're sure (having checked with <function>IS_DIR()</function>) is a directory.</para>
+<para><programlisting><![CDATA[
+void printName(BkFileBase* base)
+{
+    if(IS_DIR(base->posixFileMode))
+    {
+        /* print name of the directory */
+        printf("directory %s\n", base->name);
+        
+        /* print all the directory's children */
+        BkFileBase* child = BK_DIR_PTR(base)->children;
+        while(child != NULL)
+        {
+            printName(child);
+            child = child->next;
+        }
+    }
+}
+]]></programlisting></para>
+</sect2>
+<sect2>
+<title><function>BK_FILE_PTR()</function></title>
+<para>Use this macro when you have a <classname>BkFileBase*</classname> that you're sure (having checked with <function>IS_REG_FILE()</function>) is a regular file.</para>
+<para><programlisting><![CDATA[
+void printName(BkFileBase* base)
+{
+    if(IS_REG_FILE(base->posixFileMode))
+    {
+        /* print name and size of the file */
+        printf("regular file %s, size %u\n", base->name, BK_FILE_PTR(base)->size);
+    }
+}
+]]></programlisting></para>
+</sect2>
+<sect2>
+<title><function>BK_SYMLINK_PTR()</function></title>
+<para>Use this macro when you have a <classname>BkFileBase*</classname> that you're sure (having checked with <function>IS_SYMLINK()</function>) is a symbolic link.</para>
+<para><programlisting><![CDATA[
+void printName(BkFileBase* base)
+{
+    if(IS_SYMLINK(base->posixFileMode))
+    {
+        /* print name and target of the symbolic link */
+        printf("symbolic link %s -> %s\n", base->name, BK_SYMLINK_PTR(base)->target);
+    }
+}
+]]></programlisting></para>
+</sect2>
+<sect2>
+<title><function>BK_BASE_PTR()</function></title>
+<para>Sometimes you may have a <classname>BkDir*</classname> or a <classname>BkFile*</classname> or a <classname>BkSymLink*</classname> and would like to use the <classname>BkFileBase*</classname> part of it. That's what this macro is for.</para>
+<para><programlisting><![CDATA[
+void printDirName(BkDir* dir)
+{
+    printf("%s\n", BK_FILE_BASE(dir)->name);
+}
+]]></programlisting></para>
+</sect2>
+</sect1>
+</chapter>
+<chapter>
+<title>Example</title>
+<para>This section gives a small example for using bkisofs. All it does is open an ISO, add a file to it, print the contents, and save the modified ISO. It's working code so feel free to use it to experiment.</para>
+
+<para><programlisting><![CDATA[
+/******************************************************************************
+* example.c
+* Example for using bkisofs
+* Author: Andrew Smith
+* Compile with: cc example.c bk.a -o example
+* */
+
+#include <stdio.h>
+#include <time.h>
+
+/* need to include bk.h for access to bkisofs functions and structures */
+#include "bk.h"
+
+void addProgressUpdaterCbk(VolInfo* volInfo);
+void fatalError(const char* message);
+void printNameAndContents(BkFileBase* item, int numSpaces);
+void readProgressUpdaterCbk(VolInfo* volInfo);
+void writeProgressUpdaterCbk(VolInfo* volInfo, double percentComplete);
+
+int main( int argv, char** argc)
+{
+    /* A variable of type VolInfo stores information about an image */
+    VolInfo volInfo;
+    /* bk functions return ints that need to be checked to see whether
+    * the functions were successful or not */
+    int rc;
+    
+    if(argv != 2)
+        fatalError("Usage: example myfile.iso");
+    
+    /* initialise volInfo, set it up to scan for duplicate files */
+    rc = bk_init_vol_info(&volInfo, true);
+    if(rc <= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* open the iso file (supplied as argument 1) */
+    rc = bk_open_image(&volInfo, argc[1]);
+    if(rc <= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* read information about the volume (required before reading directory tree) */
+    rc = bk_read_vol_info(&volInfo);
+    if(rc <= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* read the directory tree */
+    if(volInfo.filenameTypes & FNTYPE_ROCKRIDGE)
+        rc = bk_read_dir_tree(&volInfo, FNTYPE_ROCKRIDGE, true, readProgressUpdaterCbk);
+    else if(volInfo.filenameTypes & FNTYPE_JOLIET)
+        rc = bk_read_dir_tree(&volInfo, FNTYPE_JOLIET, false, readProgressUpdaterCbk);
+    else
+        rc = bk_read_dir_tree(&volInfo, FNTYPE_9660, false, readProgressUpdaterCbk);
+    if(rc <= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* add the file /etc/fstab to the root of the image */
+    rc = bk_add(&volInfo, "/etc/fstab", "/", addProgressUpdaterCbk);
+    if(rc <= 0)
+        fatalError(bk_get_error_string(rc));
+    
+    /* print the entire directory tree */
+    printNameAndContents(BK_BASE_PTR( &(volInfo.dirTree) ), 0);
+    
+    /* save the new ISO as /tmp/example.iso */
+    /* note that bkisofs will print some stuff to stdout when writing an ISO */
+    rc = bk_write_image("/tmp/example.iso", &volInfo, time(NULL),
+                        FNTYPE_9660 | FNTYPE_ROCKRIDGE | FNTYPE_JOLIET,
+                        writeProgressUpdaterCbk);
+    
+    /* we're finished with this ISO, so clean up */
+    bk_destroy_vol_info(&volInfo);
+    
+    return 0;
+}
+
+/* you can use this to update a progress bar or something */
+void addProgressUpdaterCbk(VolInfo* volInfo)
+{
+    printf("Add progress updater\n");
+}
+
+void fatalError(const char* message)
+{
+    printf("Fatal error: %s\n", message);
+    exit(1);
+}
+
+void printNameAndContents(BkFileBase* base, int numSpaces)
+{
+    int count;
+    
+    /* print the spaces (indentation, for prettyness) */
+    for(count = 0; count < numSpaces; count++)
+        printf(" ");
+    
+    if(IS_DIR(base->posixFileMode))
+    {
+        /* print name of the directory */
+        printf("%s (directory)\n", base->name);
+        
+        /* print all the directory's children */
+        BkFileBase* child = BK_DIR_PTR(base)->children;
+        while(child != NULL)
+        {
+            printNameAndContents(child, numSpaces + 2);
+            child = child->next;
+        }
+    }
+    else if(IS_REG_FILE(base->posixFileMode))
+    {
+        /* print name and size of the file */
+        printf("%s (regular file), size %u\n", base->name, BK_FILE_PTR(base)->size);
+    }
+    else if(IS_SYMLINK(base->posixFileMode))
+    {
+        /* print name and target of the symbolic link */
+        printf("%s -> %s (symbolic link)\n", base->name, BK_SYMLINK_PTR(base)->target);
+    }
+}
+
+/* you can use this to update a progress bar or something */
+void readProgressUpdaterCbk(VolInfo* volInfo)
+{
+    printf("Read progress updater\n");
+}
+
+/* you can use this to update a progress bar or something */
+void writeProgressUpdaterCbk(VolInfo* volInfo, double percentComplete)
+{
+    printf("Write progress updater: ~%.2lf%% complete\n", percentComplete);
+}
+]]></programlisting></para>
+
+</chapter>
+<!--
+<chapter>
+<title></title>
+<para></para>
+<sect1>
+<title></title>
+<para></para>
+</sect1>
+</chapter>
+-->
+
+</book>

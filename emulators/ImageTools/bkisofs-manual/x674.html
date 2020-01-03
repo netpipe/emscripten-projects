@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Casting</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="bkisofs Usage and Reference Manual"
+HREF="book1.html"><LINK
+REL="UP"
+TITLE="Data Structures"
+HREF="c589.html"><LINK
+REL="PREVIOUS"
+TITLE="Detecting the type of a BkFileBase"
+HREF="x653.html"><LINK
+REL="NEXT"
+TITLE="Example"
+HREF="c713.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>bkisofs Usage and Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x653.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Data Structures</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="c713.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN674"
+>Casting</A
+></H1
+><P
+>You can cast any <CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+> to a more elaborate structure. First you use the macros from the previous section to find out what type the <CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+> is and then you use the macros in this section to cast them.</P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN679"
+><TT
+CLASS="FUNCTION"
+>BK_DIR_PTR()</TT
+></A
+></H2
+><P
+>Use this macro when you have a <CODE
+CLASS="CLASSNAME"
+>BkFileBase*</CODE
+> that you're sure (having checked with <TT
+CLASS="FUNCTION"
+>IS_DIR()</TT
+>) is a directory.</P
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void printName(BkFileBase* base)
+{
+    if(IS_DIR(base-&#62;posixFileMode))
+    {
+        /* print name of the directory */
+        printf("directory %s\n", base-&#62;name);
+        
+        /* print all the directory's children */
+        BkFileBase* child = BK_DIR_PTR(base)-&#62;children;
+        while(child != NULL)
+        {
+            printName(child);
+            child = child-&#62;next;
+        }
+    }
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN687"
+><TT
+CLASS="FUNCTION"
+>BK_FILE_PTR()</TT
+></A
+></H2
+><P
+>Use this macro when you have a <CODE
+CLASS="CLASSNAME"
+>BkFileBase*</CODE
+> that you're sure (having checked with <TT
+CLASS="FUNCTION"
+>IS_REG_FILE()</TT
+>) is a regular file.</P
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void printName(BkFileBase* base)
+{
+    if(IS_REG_FILE(base-&#62;posixFileMode))
+    {
+        /* print name and size of the file */
+        printf("regular file %s, size %u\n", base-&#62;name, BK_FILE_PTR(base)-&#62;size);
+    }
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN695"
+><TT
+CLASS="FUNCTION"
+>BK_SYMLINK_PTR()</TT
+></A
+></H2
+><P
+>Use this macro when you have a <CODE
+CLASS="CLASSNAME"
+>BkFileBase*</CODE
+> that you're sure (having checked with <TT
+CLASS="FUNCTION"
+>IS_SYMLINK()</TT
+>) is a symbolic link.</P
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void printName(BkFileBase* base)
+{
+    if(IS_SYMLINK(base-&#62;posixFileMode))
+    {
+        /* print name and target of the symbolic link */
+        printf("symbolic link %s -&#62; %s\n", base-&#62;name, BK_SYMLINK_PTR(base)-&#62;target);
+    }
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN703"
+><TT
+CLASS="FUNCTION"
+>BK_BASE_PTR()</TT
+></A
+></H2
+><P
+>Sometimes you may have a <CODE
+CLASS="CLASSNAME"
+>BkDir*</CODE
+> or a <CODE
+CLASS="CLASSNAME"
+>BkFile*</CODE
+> or a <CODE
+CLASS="CLASSNAME"
+>BkSymLink*</CODE
+> and would like to use the <CODE
+CLASS="CLASSNAME"
+>BkFileBase*</CODE
+> part of it. That's what this macro is for.</P
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void printDirName(BkDir* dir)
+{
+    printf("%s\n", BK_FILE_BASE(dir)-&#62;name);
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x653.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="c713.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Detecting the type of a <CODE
+CLASS="CLASSNAME"
+>BkFileBase</CODE
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c589.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Example</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

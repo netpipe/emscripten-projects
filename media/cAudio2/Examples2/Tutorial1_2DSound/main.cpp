@@ -38,7 +38,7 @@ int main()
 		}
 		cout << std::endl;
 		cout << "Choose a device by number: ";
-		unsigned int deviceSelection = 0;
+		unsigned int deviceSelection = 1;
 		//cin >> deviceSelection;
 		cout << std::endl;
 

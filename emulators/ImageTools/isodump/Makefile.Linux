@@ -1,0 +1,40 @@
+CC=gcc
+CFLAGS=-Wall -Wstrict-prototypes -fomit-frame-pointer -pipe -I$(HDDIR) -DOS_TYPE_Linux -DOS_TYPE_STR=\"Linux\" -Dprg_name=\"$(PRG)\" -DMANUAL_NUMBER=$(MAN_NO)
+LDFLAGS=-Wl,-warn-common -s -L$(LIBDIR)
+
+LDLIBS = 
+HDDIR = ./
+LIBDIR = ./
+
+PRG = isodump
+MAN_NO = 1
+
+INSTALLDIR_BIN = /usr/local/bin
+INSTALLDIR_MAN = /usr/local/man/man$(MAN_NO)
+
+
+all:		$(PRG) $(PRG).$(MAN_NO)
+		size $(PRG)
+		touch $@
+
+$(PRG).$(MAN_NO):	mkman
+		./mkman > $@
+
+mkman.c:	header.h mkmkman $(PRG).man
+		cat $(PRG).man | ./mkmkman > $@
+
+header.h:	$(PRG).h
+		ln -s $(PRG).h $@
+
+install:	all
+		install -m 0755 -o root -g root $(PRG) $(INSTALLDIR_BIN)
+		install -m 0644 -o root -g root $(PRG).$(MAN_NO) $(INSTALLDIR_MAN)
+		touch $@
+
+clean:
+		find . -name "*.o" -exec rm -f {} \;
+		rm -f $(PRG) $(PRG).$(MAN_NO) header.h mkmkman mkman* all install
+
+distclean:
+		make clean
+		rm -f Makefile
