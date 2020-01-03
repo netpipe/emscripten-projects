@@ -24,7 +24,6 @@
 				<Compiler>
 					<Add option="-D__EMSCRIPTEN__" />
 					<Add option="-DUSE_TMT" />
-					<Add option="-DNO_AUDIO" />
 					<Add directory="../../../../irrlicht-ogl-es/irrlicht/include" />
 					<Add directory="../../../Libs/physics/Bullet278/src" />
 					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/include" />
