@@ -1,0 +1,5 @@
+*.o
+win32/intermediate/
+win32/.vs/
+win32/bin/
+*.filters

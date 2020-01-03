@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fake86", "fake86.vcxproj", "{4C3260EB-396E-4017-AF95-E0FD33E87046}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imagegen", "imagegen.vcxproj", "{BE8FA015-E801-40C8-B35B-D477C540439F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "embedgen", "embedgen\embedgen.vcxproj", "{AF85F00A-C181-4C74-8050-979771015FF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug (with WinPCap)|Any CPU = Debug (with WinPCap)|Any CPU
+		Debug (with WinPCap)|Win32 = Debug (with WinPCap)|Win32
+		Debug (with WinPCap)|x64 = Debug (with WinPCap)|x64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release (with WinPCap)|Any CPU = Release (with WinPCap)|Any CPU
+		Release (with WinPCap)|Win32 = Release (with WinPCap)|Win32
+		Release (with WinPCap)|x64 = Release (with WinPCap)|x64
+		Release|Any CPU = Release|Any CPU
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Debug (with WinPCap)|Any CPU.ActiveCfg = Debug (with WinPCap)|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Debug (with WinPCap)|Win32.ActiveCfg = Debug (with WinPCap)|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Debug (with WinPCap)|Win32.Build.0 = Debug (with WinPCap)|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Debug (with WinPCap)|x64.ActiveCfg = Debug (with WinPCap)|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Debug|Win32.Build.0 = Debug|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Debug|x64.ActiveCfg = Debug|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Release (with WinPCap)|Any CPU.ActiveCfg = Release (with WinPCap)|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Release (with WinPCap)|Win32.ActiveCfg = Release (with WinPCap)|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Release (with WinPCap)|Win32.Build.0 = Release (with WinPCap)|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Release (with WinPCap)|x64.ActiveCfg = Release (with WinPCap)|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Release|Any CPU.ActiveCfg = Release|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Release|Win32.ActiveCfg = Release|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Release|Win32.Build.0 = Release|Win32
+		{4C3260EB-396E-4017-AF95-E0FD33E87046}.Release|x64.ActiveCfg = Release|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug (with WinPCap)|Any CPU.ActiveCfg = Release (with WinPCap)|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug (with WinPCap)|Any CPU.Build.0 = Release (with WinPCap)|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug (with WinPCap)|Win32.ActiveCfg = Release|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug (with WinPCap)|Win32.Build.0 = Release|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug (with WinPCap)|x64.ActiveCfg = Release (with WinPCap)|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug (with WinPCap)|x64.Build.0 = Release (with WinPCap)|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug|Win32.Build.0 = Debug|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Debug|x64.ActiveCfg = Debug|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Release (with WinPCap)|Any CPU.ActiveCfg = Release (with WinPCap)|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Release (with WinPCap)|Win32.ActiveCfg = Release (with WinPCap)|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Release (with WinPCap)|Win32.Build.0 = Release (with WinPCap)|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Release (with WinPCap)|x64.ActiveCfg = Release (with WinPCap)|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Release|Any CPU.ActiveCfg = Release|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Release|Win32.ActiveCfg = Release|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Release|Win32.Build.0 = Release|Win32
+		{BE8FA015-E801-40C8-B35B-D477C540439F}.Release|x64.ActiveCfg = Release|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug (with WinPCap)|Any CPU.ActiveCfg = Release|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug (with WinPCap)|Any CPU.Build.0 = Release|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug (with WinPCap)|Win32.ActiveCfg = Debug|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug (with WinPCap)|Win32.Build.0 = Debug|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug (with WinPCap)|x64.ActiveCfg = Debug|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug (with WinPCap)|x64.Build.0 = Debug|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug|Win32.Build.0 = Debug|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug|x64.ActiveCfg = Debug|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Debug|x64.Build.0 = Debug|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release (with WinPCap)|Any CPU.ActiveCfg = Release|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release (with WinPCap)|Any CPU.Build.0 = Release|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release (with WinPCap)|Win32.ActiveCfg = Release|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release (with WinPCap)|Win32.Build.0 = Release|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release (with WinPCap)|x64.ActiveCfg = Release|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release (with WinPCap)|x64.Build.0 = Release|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release|Any CPU.ActiveCfg = Release|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release|Win32.ActiveCfg = Release|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release|Win32.Build.0 = Release|Win32
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release|x64.ActiveCfg = Release|x64
+		{AF85F00A-C181-4C74-8050-979771015FF9}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
