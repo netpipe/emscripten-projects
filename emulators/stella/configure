@@ -11,7 +11,8 @@
 
 
 # use environment vars if set
-CXXFLAGS="$CXXFLAGS $CPPFLAGS"
+CXXFLAGS+="$CXXFLAGS $CPPFLAGS"
+LDFLAGS+="-s ALLOW_MEMORY_GROWTH=1"
 
 # default lib behaviour yes/no/auto
 _libpng=auto
