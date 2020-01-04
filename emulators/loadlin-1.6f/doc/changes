@@ -1,0 +1,299 @@
+			History
+			=======
+
+
+LOADLIN-16f
+===========
+Recent Linux kernels have grown their setup code, and thus reduced heap size,
+down to not being bootable at all with just 40 setup+heap sectors.  I have
+sacrificed 1K command line out of 2K, to free some room and get 4K more for the
+setup+heap.  Hopefully that will last some time. Otherwise we will have to
+reconsider the lets-fit-in-64KiB rule.
+
+		Sep 17 2012, Samuel Thibault <samuel.thibault@ens-lyon.org>
+
+LOADLIN-16e
+===========
+
+A bug in my compiler had broken VCPI support.
+Depending on its size, the very end of the initrd could be bogus.
+
+When using INT15, loadlin always try to load kernel+initrd below 16MB for
+old BIOSes, but if that does not fit, now emit a warning and load above 16MB.
+
+Loadlin does not always load setup at 0x95000, since it may not be available
+Linux used to always move itself there, but it doesn't do it any more. Fix
+Loadlin accordingly.
+
+		Aug 25 2010, Samuel Thibault <samuel.thibault@ens-lyon.org>
+
+
+LOADLIN-16d
+===========
+
+Support for loading very big bzImages: up to ~200MB have been tested.
+Fix recent linux setup (>= 2.6.23) which use BSS.
+
+		Feb 8 2009, Samuel Thibault <samuel.thibault@ens-lyon.org>
+
+
+LOADLIN-16c
+===========
+
+Support for loading bzImages bigger than 1MB compressed.
+Those images may be produced by kernels >= 2.4.5
+(setup_header_version >= 0x0202).
+
+				Apr 15 2002, Hans Lermen <lermen@fgan.de>
+
+
+LOADLIN-16b
+===========
+
+This version of LOADLIN contains a small fix to boot kernels with
+GDT layouts other than the standard ones (loadlin-1.6b nevertheless
+can boot also standard kernels).
+Prominent example of such a non-standard GDT kernel is Win4Lin.
+
+Thanks to Robert W. Hall <bobh@n-cantrell.demon.co.uk> for pointing
+this out, having made a primary fix and testing the final binary;-)
+
+
+				Dec 6 2000, Hans Lermen <lermen@fgan.de>
+
+
+LOADLIN-16a
+===========
+
+Small fix to EXT_MEM_K changes in kernels > 2.1.22. We don't check < 4MB
+in LOADLIN any more.
+
+
+				Jan 24 1997, Hans Lermen <lermen@fgan.de>
+-----------------------------------------------------
+version 1.6
+
+  April 30, '96
+  Release of LOADLIN-1.6
+
+- Finaly made the setup-buffer 16 K (again), now we only have 12 K remaining
+  on top of low mem. This doesn't hurt, because setup.S is now movable.
+- Fixed a mapping bug. The auxbuffer-mapping wrapped around
+  (from e000 to 10000, were we needed at least access to the bootsector).
+- Removed 'root=' and ro/rw translation, now passing the string unchanged to
+  the kernel.
+- New option:
+    -dskreset    after completing disk access, reset the disk subsystem
+    -wait=nnn    after completing disk access, wait nnn DOS-timer-ticks
+                 (takes place _after_ -dskreset is checked)
+- Definitively removed old LoadlinX support, because it becomes impossible
+  to translate the DOSish drive letters to Linux device names.
+  ( more the two drives,
+    no standard to detect wether seeing SCSI or IDE drives )
+
+  April 1, '96
+- Made @@...@@ parameter passing working again for below 9000 running setup.S.
+  Now can have params behind the @-responsefile.
+  ( such as: loadlin @linux.par image=other root=/dev/other )
+- Introduced file-suffix (preparing for compound .exe + kernel + initrd )
+
+  Mars 19, '96
+- Heap setting for video.S stuff (CAN_USE_HEAP,heap_end_ptr)
+
+  Mars 7, '96
+- Fixed bug in bzImage code. (finally found, what seemed to be vanished
+  in 1.3.71, but fortunately came up to crash on _my_ machine).
+  kernel/head.S does not setup %esp, it uses the one of boot/head.S,
+  and because this is pointing above 0x100000 for high loaded kernels,
+  part of the kernel gets destroyed on startup.
+
+  Mars 6, '96
+- Fix bug in LOALDIN (not recognizing 'k' or 'm' in mem=xxxK)
+- Some additional features and fixes in bzImage+initrd
+
+  Feb. 21. '96
+- Fixed bug in LOADLIN (not loading old unpatched zImages)
+
+  Feb. 20. '96
+- Fixed a bug in Makefiles, some as86-cleanups
+
+  Feb. 19. '96
+- added support for dd'ed floppy boot (for bzImages).
+- fixed some odd error output in loadlin.exe
+
+  Feb. 17. '96
+- Initial announcement of LILO+LOADLIN+bzImage+initrd
+  by Werner Almesberger
+
+-----------------------------------------------------
+version 1.5
+
+added:
+
+  Adaption to newer kernel:
+    The setup buffer is now 16Kb. Setup size is determined by byte 497 in
+    the boot sector. The actual size and the setup buffer size are printed
+    by the debug output.
+
+    Added kernel version control (needs patch for boot/setup.S).
+
+    Changed the dev-numbers of /dev/xda, /dev/xdb to  0xD00,0xD40.
+    (if you rely on old numbering use the -oldxd switch)
+
+  The Javier method:
+    A very clever guy in Spain, Javier Achirica
+    <javier@autom.uva.es> invented a method to intercept the Linux
+    setup code just before protected mode transition. I call it the
+    "Javier method" and it is enabled whenever the -ja switch is used
+    or neither BIOSINT nor REALBIOS are configured.
+    All configuration steps, that where necessary for version 1.4 and below
+    are now superfluous on allmost all machines.
+    DBLSPACE is no more a problem and, although invented especially for
+    V86 mode I use Javier's method also for realmode to move the image down.
+
+  New option -clone:
+    On some 486 clones we have problems with CR0 while probing for V86 mode.
+    (as reported by Jacek Zapala zapala@if.pw.edu.pl ).
+    It can happen that the CPU is in realmode, but PAGING is enabled !
+    This is possible, but neither documented nor supported by INTEL.
+    May be the motherboard's BIOS is mapping shadow ram this way,
+    or one of those old and strange EMM managers is used,
+    but probably this is an indication of a not exactly compatible
+    486 clone. The -clone switch byepasses the CR0 check and assumes
+    V86 if an EMM manger is found.
+    But of course this EMM manager must not use real paging !
+
+  New option -n:
+    You can switch off the translation of root=/dev/xxx with the -n switch
+    The string is then put unchanged into the command_line.
+    Actually it does both, translates and put into command_line, but
+    Linux will overwrite the LOADLIN-translation, and LOADLIN has
+    a chance to check for know numbers.
+    This option is intended for future Linux devellopement,
+    if Linus expands the root device list, you can use these
+    new device with your then not uptodate LOADLIN.
+
+  Changed ramdisk= param
+    I got report, that the prompt for diskchange (if using ramdisk)
+    was inconvenient when using diskless configurations (builtin ramdisk),
+    as used by <tiv@claudius.sch.bme.hu> (Szemethy, what's the hell is your
+    correct "Reply to").
+    With "ramdisk=1440,no" the prompt will be disabled.
+
+
+  Using VCPI with NOEMS:
+    As told by Jon Peatfield <J.S.Peatfield@damtp.cambridge.ac.uk>
+    there is VCPI available even if using NOEMS in EMM386.
+    The signature is not EMMXXXX0, but EMMQXXX0, which is a violation
+    of the VCPI specification.
+
+  Enhancements for loadlinX:
+    The loadlin preprocessor LOADLINX now fully supports response files
+    (@test.par). Additional command_line options are merged into those
+    comeing from the response file, so you can you a "default" params
+    file and then change some params on the actual call. With this
+    feature LOADLINX can may be useful even if UMSDOS support is not
+    needed.
+    New option --version=... (e.g. --version=1.1.47#1) verifies the
+    kernel version and aborts, if no match is found.
+    Otion --version (without the "=") prints the version-string from
+    a kernel image.
+
+  New docs:
+    QUICKSTA.RT, is taken from Pat Volkerding's LODLIN14.TXT
+
+
+bug-fix:
+   vga=-1 did not work, e.g the sign wasn't interpreted.
+   Minor changes on the cpu_check routine.
+
+-----------------------------------------------------
+version 1.4
+
+added:
+
+REALBIOS support (probing the BIOS via boot from floppy as proposed by
+Alessandro Rubini) to overcome the problem with QEMM.
+Alpha tested by Chuck Munro.
+loadlinX.exe (preprocessor for LOADLIN ("root=c:"),
+   as proposed by Jacques Gelinas)
+
+Better documentation (author: Chuck Munro)
+  readme --> manual.txt
+
+
+removed:
+
+ old source DEBUGMODE switch (don't need it any more)
+
+bug-fix:
+None from 1.3, got no bug report till now,
+ (but problem reports solved with introduction of REALBIOS support)
+
+
+-----------------------------------------------------
+version 1.3
+
+added verbose and debug (-v -d -t) options
+
+
+Adaptation to kernel 1.0.5 changes for init/main.c :
+
+  Kernel changes (by Linus):
+    Command_line size is now 256 by default and is checked for size,
+    but irritating option passing to SYSVinit is not handled.
+  LOADLIN changes:
+    I guess it had been better to let the kernel handle ALL params,
+    and pass the params as string (instead of writing around in the binary),
+    so future devellopement would be much easier.
+    It was a very good idea of Linus to introduce the "command line feature",...
+    and if (one day) the kernel handles all things appropriate, I will
+    change back the following changes:
+
+    Got "ro,rw" flags away from command line, sets 0x1f2 of bootsector instead.
+    Recognize all "root=..." myself, which avoids the bug in "init/main.c".
+
+Fixed bugs:
+   vga=ask,normal,extended did not work
+   parsing DOS-command-line terminated incorrectly
+
+Cleaned up documentation
+
+
+-----------------------------------------------------
+version 1.2.1
+
+never released
+
+Fixed the problem with DBLSPACE
+  Resets interrupt vector if BIOSINTV.SYS is recognized,
+  not only if using VCPIswitch.
+
+-----------------------------------------------------
+version 1.2
+
+first appearence on:
+   sunsite.unc.edu:/pub/Linux/system/Linux-boot
+   elserv.ffm.fgan.de:/pub/linux/loadlin-1.2
+
+Added support for V86 (realmode back switch over VCPI)
+Added BIOSINTV.SYS driver to get a clean interrupt vector table
+Checked and cleaned up "sync before load" out of a LINUX.BAT file
+
+-----------------------------------------------------
+version 1.1
+
+First released version
+appeared on ftp.ffm.fgan.de
+
+Added response file feature
+resolved problem with uppercase conversion in CONFIG.SYS
+Cleaned up documentation.
+Sent my kernel patch to Linus.
+
+-----------------------------------------------------
+version 1.0   (NOTE: I allways start any packet-numbering with 1.0)
+
+Private ALPHA version.
+Never released
+

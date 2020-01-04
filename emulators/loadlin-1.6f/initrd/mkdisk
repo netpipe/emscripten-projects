@@ -1,0 +1,19 @@
+#!/bin/sh
+if [ -z $1 ]; then
+  exit 1
+fi
+
+PROGRAM=$1
+SIZE=`/bin/ls -l $PROGRAM |awk '{print $5}'`
+SIZE=`expr $SIZE / 1024 + 50`
+
+mke2fs /dev/ram $SIZE
+mount -t ext2 /dev/ram /mnt
+mkdir /mnt/dev
+mknod /mnt/dev/tty1 c 4 1
+mkdir /mnt/proc
+chmod 555 /mnt/proc
+cp -p $PROGRAM /mnt/linuxrc
+umount /dev/ram
+dd if=/dev/ram bs=1k count=$SIZE of=initdisk
+freeramdisk /dev/ram

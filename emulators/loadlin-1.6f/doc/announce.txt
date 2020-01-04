@@ -1,0 +1,159 @@
+NOTE: This was the annoncement on linux-kernel of bzImage+initrd
+      Starting with kernel version 1.3.73 bzImage+initrd is part of the
+      official kernel.
+      YOU NEED NOT TO APPLY THE PATCH
+-------------------------------------------------------------------------
+
+From lermen@elserv.ffm.fgan.deWed Mar  6 11:10:17 1996
+Date: Wed, 6 Mar 1996 11:09:46 +0100 (MET)
+From: Hans Lermen <lermen@elserv.ffm.fgan.de>
+To: linux-kernel@vger.rutgers.edu
+Cc: Werner Almesberger <almesber@lrc.epfl.ch>
+Subject: PATCH: Linux high in the sky and more
+
+Hi,
+
+this is a patch that adds direct loading of kernels above 1 MB, support for
+an initial RAM disk that is loaded by the boot loader and that can be
+mounted as root before the "real" root is mounted, plus a few minor fixes
+to make LOADLIN work better, particularly in W95 environments. The initial
+RAM disk feature (we call it simply "initrd") should help to confine the
+number of prebuilt kernels a distribution has to come with to something
+reasonable, i.e. one.
+
+All these features will be supported in the next versions of LILO and
+LOADLIN, which both are essentially ready to be released.
+
+The features are in detail:
+ - kernels can be loaded directly above 1 MB, which removes the 0.5 MB
+   compressed size restriction. This also works with dd'ed floppy boot.
+ - a file (e.g. a RAM disk image) can be loaded by the boot loader and is
+   then available to the kernel, e.g. for mounting
+ - when such a RAM disk is mounted on /, a special initialization program
+   /linuxrc is executed. When it terminates, the RAM disk can be unmounted
+   (or "moved" to a different mount point) and the "real" root FS is mounted.
+   The root FS device can be altered from within that environment.
+ - no loading restrictions when using LOADLIN under Windows 95 (the 0x90000
+   segment is mostly occupied by W'95 )
+
+Attached is a detailed description of what the patch does. The patch itself
+(for 1.3.71) can be found at
+ftp://lrcftp.epfl.ch/pub/people/almesber/lilo/bzImage+initrd-1.3.72.patch.gz
+and
+ftp://elserv.ffm.fgan.de/pub/linux/loadlin-1.6/bzImage+initrd-1.3.72.patch.gz
+
+Since the first announce of this patch in mid-February, some additional
+features have been included, bugs have been fixed and documentation has been
+added. We think it is stable enough to be included in the mainstream kernel.
+
+
+Cheers, Werner & Hans
+
+---------------------------------- cut here -----------------------------------
+
+Loading of big kernels (1 MB compressed)
+----------------------------------------
+
+We call the new kernel format bzImage (big-zImage), and in fact it's the
+the old zImage kernel with the following changes:
+
+1. The gunzip code (arch/i386/boot/compressed/misc.c) will now be linked at
+   0x100000. Because it would overwrite itself while decompressing, the
+   first part of the decompressed data is written to low mem. When low mem
+   becomes exhausted, then the rest is put behind __end. When decompression
+   has completed, then a small move routine is copied down to low mem,
+   which then moves the kernel at its proper place. This technique has the
+   advantage that it needs the fewest changes to the old zImage.
+
+2. The arch/i386/boot/setup.S has gotten a header, which from the kernel's
+   point of view is always located at 0x90202. This header contains
+   information used to coordinate the operation of loaders and the kernel
+   (e.g. to detect inconsistencies).
+
+3. Because the kernel size is given as a 16 bit value (segment format) in
+   the bootsector, the compressed size of the bzImage is limited to 0xffff0
+   Bytes (~1MB). Given a compression ratio of 1:2, which is quite
+   realistic, the decompressed kernel can be about 2 Meg.
+
+
+Loading of ramdisk directly by the loaders
+------------------------------------------
+
+With the same technique used for the kernel, also a ramdisk image can be
+loaded high. The image is loaded directly below mem_end. The start address
+and the size are put into the setup.S header so the kernel can find the
+data. The pages used by the image are marked "in use" and are freed later,
+when no longer needed.
+
+We've extended the RAM disk code to allow loading of a RAM disk from that
+data. (Typically, the loaded data will be compressed.) Then, that initrd
+can be mounted as root and the executable /linuxrc will be run. /linuxrc
+can now access additional media and load modules. (Actually, /linuxrc can
+do most things init can do.)
+
+When done, /linuxrc terminates, the "real" root file system is mounted
+and the initrd is either unmounted or it is "moved" to the mount point
+/initrd. Note that, in the latter case, the initrd is not unmounted, so
+any open files do not need to be closed, i.e. processes can survive the
+root change.
+
+This avoids the need to either have a large collection of precompiled
+kernels, to re-compile the kernel, or to have a "kernel link set". In
+particular, the boot floppy could be self-contained, i.e. no additional
+media would be necessary to create a bootable hard disk based system.
+
+There are a few other options, like
+ - if root=/dev/ram, we boot directly into the RAM disk, using init
+ - from within the initrd environment, the root FS device can be changed
+   (using /proc/sys/kernel/real-root-dev)
+ - if root=/dev/ram _after_ initrd, we simply start init in initrd
+
+A detailed description of the initrd technique can be found within
+the patch in the file linux/Documentation/initrd.txt.
+
+
+Better support for LOADLIN
+--------------------------
+
+The fact that LOADLIN operates in a DOS/Windows environment adds two
+complications:
+
+ - the kernel cannot be loaded in physically contiguous memory. Instead,
+   LOADLIN has to re-arrange the pages after executing setup (which may have
+   to be done in VM86 mode), but before booting the actual kernel
+ - segment 0x9000 may be occupied (i.e. under Windows 95), so that the
+   setup.S code must run in a different segment
+
+For those two reasons, the code32_start has been added to the setup.S
+header and setup.S itself has been made position independent. Since
+earlier versions of LOADLIN already used a setup header similar to the
+one we need now anyway, we've retained compatibility by basing the new
+header on the old one.
+
+
+Final remarks
+-------------
+
+Given that many distributions will be based exclusively on the next major
+release of Linux for the next year, we think that it is important that
+this patch be integrated into 1.4/2.0, although the feature freeze is
+already in place.
+
+The next versions of LOADLIN and LILO will support the features described
+above. Some preliminary test versions are available on
+ftp://elserv.ffm.fgan.de/pub/linux/loadlin-1.6/loadlin-1.6-pre11-bin.tgz
+and
+ftp://lrcftp.epfl.ch/pub/people/almesber/lilo/lilo.18dev3.tar.gz
+
+This patch was jointly developed by Werner Almesberger and Hans Lermen.
+
+-- 
+  _________________________________________________________________________
+ / Werner Almesberger, DI-LRC,EPFL,CH   werner.almesberger@lrc.di.epfl.ch /
+/_IN_R_133__Tel_+41_21_693_6621__Fax_+41_21_693_6610_____________________/
+
+--
+
+Hans Lermen
+<lermen@elserv.ffm.fgan.de>
+

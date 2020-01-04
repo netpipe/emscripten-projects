@@ -1,0 +1,78 @@
+    LOADLIN.EXE, a loader (running under DOS) for LINUX kernel images
+          (fully supporting the kernel's command line feature)
+         (C) 1994..1995 Hans Lermen (lermen@elserv.ffm.fgan.de)
+      (C) 2008..2010 Samuel Thibault (samuel.thibault@ens-lyon.org)
+    =================================================================
+
+LOADLIN uses the same principle as BOOTLIN from F.Coutant, but has
+enhanced error checking and fully supports the "command line feature"
+of Linux. It also accepts a response file, so the command line can be
+greater than 128 bytes.
+
+LOADLIN-1.6 is highly adaptable to different DOS configurations, and now
+has very few loading restrictions. It makes use of extended memory and
+also can load big kernels (bzImages) and ramdisk images (initrd)
+directly high. The bzImage+initrd standard was jointly developed
+by the LILO-author (Werner Almesberger) and the LOADLIN-author (me)
+and is part of the official kernel since version 1.3.73.
+
+It is also capable of booting a UMSDOS-based system from a DOS drive.
+
+Some options (-v, -t, -d) produce debug information, so if you have
+problems, you can follow what is really being done by LOADLIN.
+
+LOADLIN also can load out of Virtual-86 mode (which is normal when
+using EMS drivers) if a VCPI server is present.
+
+
+The loader program works from the DOS prompt or from CONFIG.SYS
+under the following conditions:
+
+   1. The buffer memory (lowmem + extended) is great enough
+      to hold the compressed kernel image (zImage or bzImage)
+      aswell as the initrd image (optional).
+
+   2. A) The CPU is not in virtual-8086 mode
+        or
+      B) The EMS driver supports VCPI.
+
+Note that some VCPI drivers overwrite the ACPI table located at the end
+of the memory.  This that reduces Linux hardware support, it is thus
+recommended to avoid using such VCPI driver.
+
+Some old BIOSes can not load data above 16MB.  If your kernel+initrd does
+not fit in 16MB, loadlin emits a warning.  If the machine crashes, try using
+a memory manager instead of relying on the BIOS only.
+
+
+For a quick start read the QUICKSTA.RT file
+For a detailed description please read the MANUAL.TXT file.
+
+===========================================================================
+
+Contents of LODLIN16.TGZ
+------------------------
+
+  readme.1st        you're reading me now!
+  loadlin.exe       the loader
+  copying           GPL of Free Software Foundation
+  test.par          a sample response (params) file
+  linux.bat         a sample DOS batch file
+  initrd            a _very_ simple initrd (/linuxrc) example
+  doc
+  doc/changes       history of LOADLIN
+  doc/quicksta.rt   as the file name says, but you will need more to read
+  doc/manual.txt    the manual
+  doc/params.doc    description of Linux command line parameters
+  doc/announce.txt  the posting that announced bzImage+initrd
+  doc/initrd.txt    description of initrd (as of linux/Documentation/*)
+  doc/lodlin16.lsm
+  src               source
+  src/loadlin.asm
+  src/loadlina.asm
+  src/loadlini.asm
+  src/loadlinj.asm
+  src/loadlinm.asm
+  src/makefile      makefile for TASM
+  src/srclinux      32-bit source (must compile under Linux)
+

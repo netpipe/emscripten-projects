@@ -1,0 +1,60 @@
+Quickstart for LOADLIN-1.6
+==========================
+
+Version 1.6 of LOADLIN (as opposite to prior versions) normally needs no
+special configuration and has been reported very stable by all ALPHA testers,
+so I guess you will only need
+
+   LOADLIN.EXE,
+
+Copy this file to a DOS partition (e.g C:\LOADLIN).
+
+To boot Linux you need also a compressed kernel image file such as
+the "/vmlinuz" or the "/usr/src/zImage". In Slackware distribution you
+can find a lot of kernels (bare, scsi, modern, ...) in the directory
+..../slackware/kernels of the site you got it from.
+
+Copy the image file to your DOS partion (e.g. C:\).
+
+To boot type at dos prompt:
+
+  1. For a Linux partition (ext2, minix, ...) to mount as root
+
+         loadlin c:\vmlinuz root=/dev/hdb2 ro
+                                           ==
+
+  2. For an UMSDOS filesystem to mount as root
+
+         loadlin c:\vmlinuz root=/dev/hda1 rw
+                                           ==
+
+  3. To boot for installation from a ramdisk image as a file
+     (may be directly from CD) haveing a kernel >= 1.3.73
+
+         loadlin c:zimage root=/dev/ram rw initrd=c:rootdsk.gz
+
+  4. To boot from a SlackWare installation root floppy in drive A:
+     having the kernel ( < 1.3.48 ) image file on the hard disk.
+
+         loadlin c:bare root=/dev/fd0 rw ramdisk=1440
+
+     The same, but with a kernel >= 1.3.48
+
+         loadlin c:bare root=/dev/fd0 rw load_ramdisk=1
+
+     Dito, but haveing a prompt before insertion of the floppy
+
+         loadlin c:bare root=/dev/fd0 rw load_ramdisk=1 prompt_ramdisk=1
+
+
+
+NOTE: You must know what root partition to use, the above /dev/xxx
+      are only examples !!!
+
+
+If you didn't succeed, please read the file MANUAL.TXT.
+
+Hans Lermen
+<elserv.ffm.fgan.de>
+
+

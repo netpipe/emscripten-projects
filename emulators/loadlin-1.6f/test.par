@@ -1,0 +1,65 @@
+# EDIT THIS BEFORE USING !
+#
+# this is an example commandline parameter file for LOADLIN
+# You may have comments starting with "#" at any place
+# comments end at end of a line
+# any number of empty lines may be inserted.
+# The contents are compacted by LOADLIN to produce an as small
+# commandline as possible.
+# For more commandline options see the file PARAMS.DOC.
+#
+# There can only be one parameter file and LOADLIN must be called as:
+#   LOADLIN @param_file
+# However, the parameters in param_file may be overwritten by
+# (or appended to) those following the @param_file, e.g:
+#   LOADLIN @param_file image=other_image root=/dev/other
+#
+#
+..\zImage          # first value must be the filename of the Linux-kernel
+                   # if this should be changed at load time,
+                   # the keyword 'image=' must be used (see above)
+
+#-v              # verbose the actual params, but load anyway
+-t             # write debug output and stop.
+#-d c:\dump     # write debug output to file c:\dump and stop.
+
+vga=ask         # legal values are:
+                # numeric:
+                #   -3    ask
+                #   -2    extended
+                #   -1    normal
+                #   0..9  as if entered on boot-prompt
+                # symbolic:
+                #   ask
+                #   normal
+                #   extended
+                # However, starting with Linux-1.3.75 the code for
+                # vga=has changed, to get the actual values for your
+                # special video card, you should use 'ask' and remember
+                # the values that were printed on screen.
+                #
+                # See also linux/Documentation/svga.txt
+
+root=/dev/hdb2  # the device which gets mounted as root FS
+# root=201      # NOTE: the numeric device tokens are hexa !
+# root=/dev/sda1
+# ....
+
+ro
+# rw
+
+#initrd=..\initdisk.gz  # This file gets loaded as 'initial ramdisk'
+                        # see initrd.txt for more
+
+#noinitrd               # This keyword is usefull, if you wany get
+                        # the 'initial ramdisk' loaded, but not
+                        # processed at startup.
+                        # It will remain as /dev/initrd.
+
+# this can be used in /etc/rc to do some special work
+MY_SPECIAL_OPTION=what_I_need
+
+#ether=10,0x280,0xc8000,0xcbfff,eth0
+#ether=10,0x280,0xd0000,0xd3fff,eth0
+
+
