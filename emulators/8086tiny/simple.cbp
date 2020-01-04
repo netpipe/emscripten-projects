@@ -24,6 +24,7 @@
 				<Compiler>
 					<Add option="-D__EMSCRIPTEN__" />
 					<Add option="-DUSE_TMT" />
+					<Add option="-DTMT_HAS_WCWIDTH" />
 					<Add directory="../../../../irrlicht-ogl-es/irrlicht/include" />
 					<Add directory="../../../Libs/physics/Bullet278/src" />
 					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/include" />
@@ -73,6 +74,37 @@
 					<Add directory="/home/netpipe/Desktop/EMScripten-AddonBundle/Libs/physics/Bullet/bullet/msvc/2008/lib/Release" />
 					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/lib/Linux" />
 					<Add directory="/home/netpipe/Desktop/EMScripten-AddonBundle/Projects/Irrlicht/irrBulletSDK-0.1.8/lib/linux/Release" />
+				</Linker>
+			</Target>
+			<Target title="emscripte-node">
+				<Option output="./8086tiny.html" prefix_auto="0" extension_auto="0" />
+				<Option object_output=".emobjs" />
+				<Option type="1" />
+				<Option compiler="emscripten" />
+				<Option projectCompilerOptionsRelation="1" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="1" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-D__EMSCRIPTEN__" />
+					<Add option="-DVTERM_USE_CR" />
+					<Add option="-DNO_GRAPHICS" />
+					<Add directory="../../../../irrlicht-ogl-es/irrlicht/include" />
+					<Add directory="../../../Libs/physics/Bullet278/src" />
+					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s ALLOW_MEMORY_GROWTH=1" />
+					<Add option="-s NO_EXIT_RUNTIME=1" />
+					<Add option="--embed-file bios" />
+					<Add option="--embed-file fd.img" />
+					<Add option="-s USE_SDL=1" />
+					<Add option="-s EXIT_RUNTIME=1" />
+					<Add library="SDL" />
+					<Add directory="../../../irrlicht-ogl-es/irrlicht/lib/Linux" />
+					<Add directory="../../../Libs/physics/Bullet278/msvc/2008/lib/Release" />
+					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/lib/Linux" />
+					<Add directory="../irrBulletSDK-0.1.8/lib/linux/Release" />
 				</Linker>
 			</Target>
 		</Build>
