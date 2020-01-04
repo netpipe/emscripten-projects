@@ -1,6 +1,13 @@
 emcmake cmake and pass emscripten options to it
 
 
+
+There is no such function in emscripten's SDL. You can use SDL_GetKeyboardState which is similar
+
+
+
+
+
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive")
 
 CFLAGS += -D'fopen_s(pFile,filename,mode)=((*(pFile))=fopen((filename),(mode)))==NULL'

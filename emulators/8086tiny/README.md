@@ -1,7 +1,7 @@
 8086tiny
 ========
 
-emcc 8086tiny.c tmt.c -D__EMSCRIPTEN__ -DNO_AUDIO -DUSE_TMT -o 8086tiny.html -fsigned-char -O1 --embed-file bios --embed-file fd.img -s USE_SDL=1
+emcc 8086tiny.c tmt.c -D__EMSCRIPTEN__ -DUSE_TMT -o 8086tiny.html -fsigned-char -O1 --embed-file bios --embed-file fd.img -s USE_SDL=1
 
 http://extradio.sourceforge.net/extmodem.html
 this could be an alternate way to do networking

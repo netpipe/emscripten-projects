@@ -37,6 +37,12 @@ emcc --show-ports
 export CPPFLAGS='-I/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/tests/freetype/include'
 export LDFLAGS='-lfreetype -L/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/tests/freetype/objs/.libs'
 
+ZLIB_CFLAGS=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/compression/zlib-1.2.3 ZLIB_LIBS=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/compression/zlib-1.2.3
+
+
+
+emconfigure ./configure FREETYPE_CFLAGS=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/tests/freetype/include FREETYPE_LIBS=/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/tests/freetype/objs/.libs
+
 
 /home/netpipe/Desktop/EMScripten-AddonBundle/Libs/SDL2-libs
 
