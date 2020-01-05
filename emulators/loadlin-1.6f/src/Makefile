@@ -4,7 +4,7 @@
 #
 LISTING = ,
 #CCFLAGS = -ml -v -1 -w-pia -f- -y -G -IC:\TC\INCLUDE -LC:\TC\LIB
-CCFLAGS = -ml -1 -w-pia -f- -G -IC:\TC\INCLUDE -LC:\TC\LIB
+CCFLAGS = -ml -1 -w-pia -f- -G 
 AS	= tasm
 #ASFLAGS	= /m3 /zi /DMAKE_EXE_FILE /DDEBUG
 ASFLAGS	= /m3 /zi /DMAKE_EXE_FILE
@@ -14,7 +14,7 @@ LD	= tlink
 #         зд need this (/f) for TLINK >3, disables FAR-optimization !!
 #LDFLAGS	= /f /m
 #LDFLAGS	= /f /m/v
-LDFLAGS	= /m
+LDFLAGS	=/m
 #LDFLAGS	= /v/s/l
 
 #ALPHA = loadlina.asm
@@ -22,11 +22,10 @@ LDFLAGS	= /m
 
 all:  loadlin.exe
 
-loadlin.exe:	loadlin.obj makefile
+loadlin.exe:
 	$(LD) $(LDFLAGS) loadlin.obj, loadlin.exe,,
 
 
 loadlin.obj:	$(ALPHA) loadlin.asm loadlini.asm loadlinj.asm loadlinm.asm pgadjust.asm makefile
 	$(AS) $(ASFLAGS) $(ALPHAD) loadlin, $(LISTING);
 
-
