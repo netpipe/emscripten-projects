@@ -166,3 +166,170 @@
 	"DMA.h"
 	"Gayle.h"
 
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/BCM2837.c
+	"BCM2837.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/BCM2837.h
+	<stdio.h>
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Blitter.c
+	"Blitter.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Blitter.h
+	<stdio.h>
+	<stdint.h>
+	"Chipset.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Chipset.h
+	<stdio.h>
+	<stdint.h>
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Chipset.c
+	"Chipset.h"
+	"CIA.h"
+	"CPU.h"
+	"m68k.h"
+	"DMA.h"
+	"debug.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/CIA.h
+	<stdio.h>
+	"Chipset.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/CPU.h
+	<stdio.h>
+	<stdint.h>
+	"Chipset.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68k.h
+	"m68kconf.h"
+	"m68kmame.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kconf.h
+	"Memory.h"
+	"CPU.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Memory.h
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/DMA.h
+	<stdio.h>
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/debug.h
+	<stdio.h>
+	<stdint.h>
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/CIA.c
+	"CIA.h"
+	"m68k.h"
+	"Floppy.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Floppy.h
+	<stdio.h>
+	"CIA.h"
+	"Chipset.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/CPU.c
+	<stdio.h>
+	"CPU.h"
+	"m68k.h"
+	"Memory.h"
+	"CIA.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/debug.c
+	"debug.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/DMA.c
+	"DMA.h"
+	"Memory.h"
+	"Chipset.h"
+	"CIA.h"
+	"Host.h"
+	"Blitter.h"
+	"CPU.h"
+	"debug.h"
+	"Floppy.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Host.h
+	<stdio.h>
+	"SDL2/SDL.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Floppy.c
+	"Floppy.h"
+	"Chipset.h"
+	"Memory.h"
+	<unistd.h>
+	<fcntl.h>
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Gayle.c
+	"Gayle.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Gayle.h
+	<stdio.h>
+	<stdint.h>
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Host.c
+	"Host.h"
+	"CPU.h"
+	"Chipset.h"
+	"CIA.h"
+	"Floppy.h"
+	"image.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/image.h
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kcpu.c
+	"m68kops.h"
+	"m68kcpu.h"
+	<setjmp.h>
+	<stdio.h>
+	"state.h"
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kops.h
+
+1578189388 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kcpu.h
+	"m68k.h"
+	<limits.h>
+	<setjmp.h>
+	<setjmp.h>
+	<stdio.h>
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kdasm.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"m68k.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kopac.c
+	"m68kcpu.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kopdm.c
+	"m68kcpu.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kopnz.c
+	"m68kcpu.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/m68kops.c
+	"m68kops.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/main.c
+	<unistd.h>
+	<fcntl.h>
+	<stdio.h>
+	<SDL2/SDL.h>
+	"CPU.h"
+	"Host.h"
+	"Memory.h"
+	"DMA.h"
+	"Chipset.h"
+	"CIA.h"
+	"Floppy.h"
+	"m68k.h"
+
+1578189388 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/emscripten-projects/emulators/Omega/Memory.c
+	"Memory.h"
+	"Chipset.h"
+	"CIA.h"
+	"debug.h"
+	"DMA.h"
+	"Gayle.h"
+
