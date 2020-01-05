@@ -357,7 +357,7 @@ int main(int argc, char * argv[]) {
     #ifdef __EMSCRIPTEN__
 	emscripten_set_main_loop(main_loop,0,1);
 #else
-
+submain();
 #endif
 
 
