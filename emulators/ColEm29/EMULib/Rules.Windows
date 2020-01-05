@@ -1,0 +1,11 @@
+###
+### Include this file in the first line of your Makefile when compiling
+### EMULib application for Microsoft Windows (with NMAKE).
+###
+
+!include ..\..\EMULib\Rules.wcc
+
+CFLAGS  = $(CFLAGS) -bt=win95 -zw -I$(EMULIB)\Windows
+DEFINES = $(DEFINES) -DWINDOWS -DLSB_FIRST -DBPS16 -DUSE_D3D \
+	  -D_WIN32_WINNT=0x0501 -DD3D_SDK_VERSION=32
+OBJECTS = $(OBJECTS) $(EMUWIN)

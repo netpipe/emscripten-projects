@@ -1,4 +1,4 @@
-Configure run on Fri Jan 3 18:28:38 MST 2020
+Configure run on Sun Jan 5 01:15:00 MST 2020
 
 int main(void) {
 	#ifndef __GNUC__
@@ -7,24 +7,22 @@ int main(void) {
 	return 0;
 }
 
-/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ ./stella-conf.cxx -s ALLOW_MEMORY_GROWTH=1 -o ./stella-conf.html -c
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ ./stella-conf.cxx -s ALLOW_MEMORY_GROWTH=1 --preload-file media/ -o ./stella-conf.html -c
+shared:ERROR: --preload-file and --embed-file cannot be used with NODERAWFS which disables virtual filesystem
 
 
 #include <stdio.h>
 #include <png.h>
 int main(void) { return printf("%s\n", PNG_HEADER_VERSION_STRING); }
 
-/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ ./stella-conf.cxx -s ALLOW_MEMORY_GROWTH=1 -o ./stella-conf.html -s ALLOW_MEMORY_GROWTH=1 -lpng
-./stella-conf.cxx:2:10: fatal error: 'png.h' file not found
-#include <png.h>
-         ^~~~~~~
-1 error generated.
-shared:ERROR: '/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=4 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/include -Xclang -isystem/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/local/include -std=c++03 -DEMSCRIPTEN ./stella-conf.cxx -Xclang -isystem/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/system/include/SDL -c -o /tmp/emscripten_temp_0s6Goj/stella-conf_0.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ ./stella-conf.cxx -s ALLOW_MEMORY_GROWTH=1 --preload-file media/ -o ./stella-conf.html -s ALLOW_MEMORY_GROWTH=1 --preload-file media/ -lpng
+shared:ERROR: --preload-file and --embed-file cannot be used with NODERAWFS which disables virtual filesystem
 
 
 #include <string.h>
 #include <zlib.h>
 int main(void) { return strcmp(ZLIB_VERSION, zlibVersion()); }
 
-/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ ./stella-conf.cxx -s ALLOW_MEMORY_GROWTH=1 -o ./stella-conf.html -s ALLOW_MEMORY_GROWTH=1 -lz
+/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++ ./stella-conf.cxx -s ALLOW_MEMORY_GROWTH=1 --preload-file media/ -o ./stella-conf.html -s ALLOW_MEMORY_GROWTH=1 --preload-file media/ -lz
+shared:ERROR: --preload-file and --embed-file cannot be used with NODERAWFS which disables virtual filesystem
 

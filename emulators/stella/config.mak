@@ -3,7 +3,7 @@
 CXX := /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++
 CXXFLAGS :=   
 LD := /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/Dev/libs/Scripting/emsdk/upstream/emscripten/em++
-LIBS +=  -s USE_SDL=2 -lz
+LIBS +=  -s USE_SDL=2
 RANLIB := ranlib
 INSTALL := install
 AR := ar cru
@@ -18,7 +18,7 @@ WINDOWSPATH=
 STRIP := strip
 WINDRES := windres
 
-MODULES +=  src/unix src/libpng src/debugger src/debugger/gui src/yacc src/cheat
+MODULES +=  src/unix src/libpng src/zlib src/debugger src/debugger/gui src/yacc src/cheat
 MODULE_DIRS += 
 EXEEXT := .html
 
@@ -28,11 +28,11 @@ DOCDIR := /usr/local/share/doc/stella
 DATADIR := /usr/local/share
 PROFILE := 
 
-HAVE_GCC = 1
 
 
-INCLUDES += -Isrc/emucore -Isrc/common -Isrc/common/tv_filters -Isrc/gui -s USE_SDL=2 -Isrc/unix -Isrc/libpng -Isrc/debugger -Isrc/debugger/gui -Isrc/yacc -Isrc/cheat
+
+INCLUDES += -Isrc/emucore -Isrc/common -Isrc/common/tv_filters -Isrc/gui -s USE_SDL=2 -Isrc/unix -Isrc/libpng -Isrc/zlib -Isrc/debugger -Isrc/debugger/gui -Isrc/yacc -Isrc/cheat
 OBJS += 
 DEFINES +=  -DUNIX -DBSPF_UNIX -DHAVE_GETTIMEOFDAY -DHAVE_INTTYPES -DWINDOWED_SUPPORT -DSOUND_SUPPORT -DDEBUGGER_SUPPORT -DSNAPSHOT_SUPPORT -DJOYSTICK_SUPPORT -DCHEATCODE_SUPPORT -DTHUMB_SUPPORT
-LDFLAGS += -s ALLOW_MEMORY_GROWTH=1
+LDFLAGS += -s ALLOW_MEMORY_GROWTH=1 --preload-file media/
 
