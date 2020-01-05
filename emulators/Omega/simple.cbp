@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="8086tiny" />
+		<Option title="omega" />
 		<Option pch_mode="0" />
 		<Option compiler="emscripten" />
 		<Build>
@@ -35,6 +35,7 @@
 					<Add option="-s USE_SDL=2" />
 					<Add option="-s TOTAL_MEMORY=100MB" />
 					<Add option="-s EXIT_RUNTIME=1" />
+					<Add option="--preload-file media/" />
 					<Add library="SDL" />
 					<Add directory="../../../irrlicht-ogl-es/irrlicht/lib/Linux" />
 					<Add directory="../../../Libs/physics/Bullet278/msvc/2008/lib/Release" />
@@ -62,10 +63,9 @@
 				<Linker>
 					<Add option="-s ALLOW_MEMORY_GROWTH=1" />
 					<Add option="-s NO_EXIT_RUNTIME=1" />
-					<Add option="--embed-file bios" />
-					<Add option="--embed-file fd.img" />
 					<Add option="-s USE_SDL=1" />
 					<Add option="-s EXIT_RUNTIME=1" />
+					<Add option="--preload-file media/" />
 					<Add library="SDL" />
 					<Add directory="../../../irrlicht-ogl-es/irrlicht/lib/Linux" />
 					<Add directory="../../../Libs/physics/Bullet278/msvc/2008/lib/Release" />

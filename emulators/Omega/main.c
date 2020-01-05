@@ -160,8 +160,13 @@ submain();
 }
 
 
-int main(int argc, char * argv[]) {
+int main(int argc1, char * argv1[]) {
 
+    //blitz not working here maybe i never loaded long enough
+//char *argv[]={"appname","./media/kick13.rom","./media/Blitz2-2.adf","./media/Blitz2-1.adf","./media/Blitz2-3.adf","./media/Blitz2-4.adf","test"};
+
+char *argv[]={"appname","./media/kick13.rom","./media/sr2amiga/SR2AMIGA_DISK1.adf","./media/sr2amiga/SR2AMIGA_DISK2.adf","test"};
+	int argc = sizeof(argv) / sizeof(char*) - 1;
 
     //load rom from disk if need be
     int fd=0;
@@ -169,7 +174,7 @@ int main(int argc, char * argv[]) {
     if(argc>1){
         fd = open(argv[1],O_RDWR);
     }else{
-        fd = open("/Users/Shared/uae/roms/Kick2.rom",O_RDONLY); //"/Users/Shared/uae/roms/Kick12.rom" "/Users/Shared/uae/roms/DiagROM"  "/Users/Shared/uae/roms/Kick3.rom"
+        fd = open("./media/kick13.rom",O_RDONLY); //"/Users/Shared/uae/roms/Kick12.rom" "/Users/Shared/uae/roms/DiagROM"  "/Users/Shared/uae/roms/Kick3.rom"
         if(fd<1){
             printf("Usage: zorro <kickstart.rom> <raw adf image>\n");
         return 0;
@@ -211,8 +216,8 @@ int main(int argc, char * argv[]) {
 
         //fd = open("/Users/Shared/uae/WORKBENCH/WB-1.3.adf",O_RDONLY);
         //fd = open("/Users/Shared/uae/WORKBENCH/WB-2_05.ADF",O_RDONLY);
-        //fd = open("/Users/Shared/uae/DosUae/Blitz2-1.ADF",O_RDONLY);
-        fd = open("/Users/Shared/uae/DosUae/Blitz2-1-2.ADF",O_RDONLY);
+        fd = open("./media/Blitz2-1.ADF",O_RDONLY);
+        //fd = open("./media/Blitz2-1-2.ADF",O_RDONLY);
         //fd = open("/Users/Shared/uae/DosUae/DLXP4.ADF",O_RDONLY);
         //fd = open("/Users/Shared/uae/DosUae/DISK1.ADF",O_RDONLY);
         //fd = open("/Users/Shared/uae/DosUae/Fright Night.adf",O_RDONLY);

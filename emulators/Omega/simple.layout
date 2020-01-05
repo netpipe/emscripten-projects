@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
-	<ActiveTarget name="default" />
+	<ActiveTarget name="emscripten" />
+	<File name="CPU.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3186" topLine="42" />
+		</Cursor>
+		<Folding>
+			<Collapse line="102" />
+		</Folding>
+	</File>
+	<File name="DMA.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15107" topLine="149" />
+		</Cursor>
+		<Folding>
+			<Collapse line="874" />
+		</Folding>
+	</File>
 	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="9938" topLine="252" />
+			<Cursor1 position="4017" topLine="58" />
 		</Cursor>
 		<Folding>
 			<Collapse line="61" />
 			<Collapse line="157" />
 		</Folding>
 	</File>
-	<EditorTabsLayout layout="02fd5d505e114c03001067af00000002=*0;8086tiny:main.c@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=541;besth=296;minw=541;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=02fd5d505e114c03001067af00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+	<EditorTabsLayout layout="03e61b105e117b4d0011b14e00000002=*0;omega:main.c,1;omega:CPU.c,2;omega:DMA.c@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=541;besth=296;minw=541;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=03e61b105e117b4d0011b14e00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>
