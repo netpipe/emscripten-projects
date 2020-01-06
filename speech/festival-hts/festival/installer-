@@ -1,0 +1,11 @@
+#!/bin/bash
+#Tecan
+#Description: festival makeshift install hts voices
+
+sudo cp ./src/main/festival /usr/local/bin/festival
+sudo cp ./src/main/festival_client /usr/local/bin/festival_client
+sudo cp ./src/lib/libFestival.so /usr/local/lib64/
+sudo cp ./src/lib/libFestival.so.2.1.0 /usr/local/lib64/
+sudo cp ./lib /usr/share/festival/
+#libFestival.a
+
