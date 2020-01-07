@@ -113,7 +113,8 @@
 // Use hd.img file
 //#define EMSCRIPTEN_USE_HD
 #define EMSCRIPTEN_BIOS_FILE "bios"
-#define EMSCRIPTEN_FD_FILE "fd.img"
+//#define EMSCRIPTEN_FD_FILE "fd.img"
+#define EMSCRIPTEN_FD_FILE "ros.img"
 #define EMSCRIPTEN_HD_FILE "hd.img"
 
 // Virtual terminal related
@@ -584,7 +585,7 @@ void main_loop()
 		switch (xlat_opcode_id)
 		{
 			OPCODE_CHAIN 0: // Conditional jump (JAE, JNAE, etc.)
-				// i_w is the invert flag, e.g. i_w == 1 means JNAE, whereas i_w == 0 means JAE 
+				// i_w is the invert flag, e.g. i_w == 1 means JNAE, whereas i_w == 0 means JAE
 				scratch_uchar = raw_opcode_id / 2 & 7;
 				reg_ip += (char)i_data0 * (i_w ^ (regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_A][scratch_uchar]] || regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_B][scratch_uchar]] || regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_C][scratch_uchar]] ^ regs8[bios_table_lookup[TABLE_COND_JUMP_DECODE_D][scratch_uchar]]))
 			OPCODE 1: // MOV reg, imm
@@ -912,10 +913,10 @@ void main_loop()
 			OPCODE 47: // TEST AL/AX, immed
 				R_M_OP(regs8[REG_AL], &, i_data0)
 			OPCODE 48: // Emulator-specific 0F xx opcodes
-           
+
 				switch ((char)i_data0)
 				{
-                    
+
 					OPCODE_CHAIN 0: // PUTCHAR_AL
 						//write(1, regs8, 1);
 #ifdef USE_TMT
@@ -935,9 +936,9 @@ void main_loop()
 						regs8[REG_AL] = ~fseek(disk[regs8[REG_DL]], CAST(unsigned)regs16[REG_BP] << 9, 0)
 							? ((char)i_data0 == 3 ? (int(*)())fwrite : (int(*)())fread)(mem + SEGREG(REG_ES, REG_BX,), 1, regs16[REG_AX], disk[regs8[REG_DL]])
 							: 0;
-                            
+
 				}
-                
+
 		}
 
 		// Increment instruction pointer by computed instruction length. Tables in the BIOS binary
@@ -973,14 +974,14 @@ void main_loop()
 		if (int8_asap && !seg_override_en && !rep_override_en && regs8[FLAG_IF] && !regs8[FLAG_TF])
         {
 			pc_interrupt(0xA);
-            int8_asap = 0; 
+            int8_asap = 0;
 #ifndef NO_GRAPHICS
             while(SDL_PollEvent(&sdl_event))
                 if(sdl_event.type == SDL_KEYDOWN || sdl_event.type == SDL_KEYUP)
                 {
                     scratch_uint = sdl_event.key.keysym.unicode;
                     scratch2_uint = sdl_event.key.keysym.mod;
-                    scratch3_uint = sdl_key_to_ascii(sdl_event.key.keysym.sym); 
+                    scratch3_uint = sdl_key_to_ascii(sdl_event.key.keysym.sym);
                     CAST(short)mem[0x4A6] = 0x400 + 0x800*!!(scratch2_uint & KMOD_ALT) + 0x1000*!!(scratch2_uint & KMOD_SHIFT) + 0x2000*!!(scratch2_uint & KMOD_CTRL) + 0x4000*(sdl_event.type == SDL_KEYUP) + ((!(scratch_uint) || scratch_uint > 0x7F) ? scratch3_uint : scratch_uint);
                     pc_interrupt(7);
                 }
@@ -1027,7 +1028,7 @@ void main_loop()
                     pixel_colors[i] = mem[0x4AC] ? // CGA?
                         cga_colors[(i & 12) >> 2] + (cga_colors[i & 3] << 16) // CGA -> RGB332
                         : 0xFF*(((i & 1) << 24) + ((i & 2) << 15) + ((i & 4) << 6) + ((i & 8) >> 3)); // Hercules -> RGB332
-                
+
                 for (int i = 0; i < GRAPHICS_X * GRAPHICS_Y / 4; i++)
                     vid_addr_lookup[i] = i / GRAPHICS_X * (GRAPHICS_X / 8) + (i / 2) % (GRAPHICS_X / 8) + 0x2000*(mem[0x4AC] ? (2 * i / GRAPHICS_X) % 2 : (4 * i / GRAPHICS_X) % 4);
 
@@ -1054,7 +1055,7 @@ void main_loop()
 
         }
         else
-        { 
+        {
             if (is_display_init == 1) // Application has gone back to text mode, so return the SDL window to defaults
             {
                 SDL_QuitSubSystem(SDL_INIT_VIDEO);
