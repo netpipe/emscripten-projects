@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1578214408 source:/home/netpipe/Desktop/libepoxy/src/dispatch_common.c
+	<assert.h>
+	<stdlib.h>
+	<windows.h>
+	<dlfcn.h>
+	<err.h>
+	<pthread.h>
+	<string.h>
+	<ctype.h>
+	<stdio.h>
+	"dispatch_common.h"
+
+1578347472 /home/netpipe/Desktop/libepoxy/src/dispatch_common.h
+	"config.h"
+	"epoxy/gl.h"
+	"epoxy/glx.h"
+	"epoxy/egl.h"
+	"epoxy/wgl.h"
+
+1578347145 /home/netpipe/Desktop/libepoxy/src/config.h
+
+1578214408 /home/netpipe/Desktop/libepoxy/include/epoxy/gl.h
+	"epoxy/common.h"
+	"epoxy/gl_generated.h"
+
+1578214408 /home/netpipe/Desktop/libepoxy/include/epoxy/common.h
+	<stdbool.h>
+
+1578214408 /home/netpipe/Desktop/libepoxy/include/epoxy/glx.h
+	<epoxy/gl.h>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	"epoxy/glx_generated.h"
+
+1578214408 /home/netpipe/Desktop/libepoxy/include/epoxy/egl.h
+	"epoxy/common.h"
+	"epoxy/egl_generated.h"
+
+1578214408 /home/netpipe/Desktop/libepoxy/include/epoxy/wgl.h
+	<windows.h>
+	"epoxy/common.h"
+	"epoxy/wgl_generated.h"
+
+1578214408 source:/home/netpipe/Desktop/libepoxy/src/dispatch_egl.c
+	<assert.h>
+	<string.h>
+	<stdio.h>
+	"dispatch_common.h"
+
+1578214408 source:/home/netpipe/Desktop/libepoxy/src/dispatch_glx.c
+	<assert.h>
+	<string.h>
+	<stdio.h>
+	"dispatch_common.h"
+
