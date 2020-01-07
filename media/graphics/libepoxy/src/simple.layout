@@ -7,55 +7,19 @@
 			<Cursor1 position="21460" topLine="404" />
 		</Cursor>
 		<Folding>
-			<Collapse line="219" />
-			<Collapse line="266" />
-			<Collapse line="287" />
-			<Collapse line="293" />
-			<Collapse line="329" />
-			<Collapse line="355" />
-			<Collapse line="395" />
-			<Collapse line="440" />
-			<Collapse line="446" />
-			<Collapse line="470" />
-			<Collapse line="498" />
-			<Collapse line="524" />
-			<Collapse line="552" />
-			<Collapse line="567" />
-			<Collapse line="581" />
-			<Collapse line="622" />
-			<Collapse line="628" />
-			<Collapse line="637" />
-			<Collapse line="647" />
-			<Collapse line="657" />
-			<Collapse line="663" />
-			<Collapse line="669" />
-			<Collapse line="689" />
-			<Collapse line="697" />
-			<Collapse line="708" />
-			<Collapse line="729" />
-			<Collapse line="750" />
-			<Collapse line="798" />
-			<Collapse line="839" />
-			<Collapse line="870" />
-			<Collapse line="884" />
+			<Collapse line="773" />
+			<Collapse line="910" />
 		</Folding>
 	</File>
-	<File name="dispatch_common.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="dispatch_common.h" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1658" topLine="41" />
 		</Cursor>
 	</File>
-	<File name="dispatch_egl.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="dispatch_egl.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="15" />
 		</Cursor>
-		<Folding>
-			<Collapse line="31" />
-			<Collapse line="61" />
-			<Collapse line="77" />
-			<Collapse line="94" />
-			<Collapse line="107" />
-		</Folding>
 	</File>
-	<EditorTabsLayout layout="03fa46905e13aa66004a813e00000002=0;libepoxy:dispatch_common.h,1;libepoxy:dispatch_common.c,3;libepoxy:dispatch_egl.c@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=543;besth=296;minw=543;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=03fa46905e13aa66004a813e00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+	<EditorTabsLayout layout="0440be705e13e6300012b20000000002=*0;libepoxy:dispatch_common.h,1;libepoxy:dispatch_common.c,2;libepoxy:dispatch_egl.c@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=543;besth=296;minw=543;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=0440be705e13e6300012b20000000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>
