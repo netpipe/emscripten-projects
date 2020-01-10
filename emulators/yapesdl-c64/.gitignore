@@ -1,0 +1,102 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# executables & archives
+*.dll
+*.zip
+
+# Visual Studio files
+*.obj
+*.o
+*.pch
+*.prg
+*.sdf
+*.ncb
+*.suo
+*.user
+*.exe
+*.idb
+*.pdb
+*.log
+*.ilk
+*.tlog
+*.buildstate
+*.lastbuildstate
+*.asm
+*.htm
+*.depend
+*.cache
+
+*.tap
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+vic2mem.cpp.bak
+*.ipch
+*.depend
+*.lastcodeanalysissucceeded
+Release/YapeSDL.exe.CodeAnalysisLog.xml
+YapeSDL.VS10.opensdf
+*.vsp
+DebugX64/vc.nativecodeanalysis.all.xml
+*.opensdf
+YapeSDL.depend
+*.layout
+*.filters
+*.js
+*.depend
+*.d64
+*.bat
+*.data
+Release/YapeSDL.html
+*.mem
+Release/favicon.ico
+*.depend
+YapeSDL.layout
+*.yss
+*.opendb
+*.deb
+*.db
+Emscripten/Release/favicon.ico
+*.exp
+*.lib
+/Emscripten/EmbeddedFiles/YapeSDL.html
+Emscripten/Release/YapeSDL.html
