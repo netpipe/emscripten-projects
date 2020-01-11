@@ -1,3 +1,12 @@
 already patched so just compile and it should yeild festival with HTS patches
 
 not confirmed working yet but the library compiles
+
+make -j2 CC=emcc CXX=em++ CC_FOR_BUILD=emcc HOST_CC=emcc
+
+emconfigure ./configure CC_FOR_BUILD=emcc HOST_CC=emcc CC=emcc CXX=em++
+
+
+got an error like this will work on it soon.
+../../../../speech_tools/include/EST_Ngrammar.h:539:29: error: friend declaration specifying a default argument must be a definition
+

@@ -98,7 +98,7 @@ trap 'rm -f $dummy.c $dummy.o $dummy.rel $dummy; exit 1' 1 2 15
 
 set_cc_for_build='case $CC_FOR_BUILD,$HOST_CC,$CC in
  ,,)    echo "int dummy(){}" > $dummy.c ;
-	for c in cc gcc c89 ; do
+	for c in cc gcc c89 emcc ; do
 	  ($c $dummy.c -c -o $dummy.o) >/dev/null 2>&1 ;
 	  if test $? = 0 ; then
 	     CC_FOR_BUILD="$c"; break ;

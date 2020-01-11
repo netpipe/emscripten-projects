@@ -34,11 +34,9 @@ AC_INIT(src/include/festival.h)
 
 AC_CANONICAL_SYSTEM
 AC_PROG_CC
-if test "x$GCC" = "xyes"; then
 	CFLAGS="$CFLAGS -Wall"
-fi
 AC_PROG_RANLIB
-AC_CHECK_TOOL(AR, ar)
+AC_CHECK_TOOL(AR, emar)
 
 AC_C_BIGENDIAN
 
