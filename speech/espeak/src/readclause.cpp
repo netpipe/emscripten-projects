@@ -24,7 +24,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <wctype.h>
-//#include <wchar.h>
+#include <wchar.h>
 #include <math.h>
 
 #include "speak_lib.h"
@@ -58,7 +58,7 @@ static const char *ungot_word = NULL;
 static int end_of_input;
 
 static int ignore_text=0;   // set during <sub> ... </sub>  to ignore text which has been replaced by an alias
-static int audio_text=0;    // set during <audio> ... </audio> 
+static int audio_text=0;    // set during <audio> ... </audio>
 static int clear_skipping_text = 0;  // next clause should clear the skipping_text flag
 int count_characters = 0;
 static int sayas_mode;
@@ -112,7 +112,7 @@ static const unsigned short punct_chars[] = {',','.','?','!',':',';',
   0xff1a,  // fullwidth colon
   0xff1b,  // fullwidth semicolon
   0xff1f,  // fullwidth question mark
-  
+
   0};
 
 
@@ -448,7 +448,7 @@ static int GetC_get(void)
 			end_of_input = 1;
 			return(0);
 		}
-	
+
 		if(!end_of_input)
 		{
 			if(option_multibyte == espeakCHARS_16BIT)
@@ -972,7 +972,7 @@ static int AnnouncePunctuation(Translator *tr, int c1, int *c2_ptr, char *output
 
 	if(attributes & CLAUSE_BIT_SENTENCE)
 		return(attributes);
-	
+
 	return(short_pause);
 }  //  end of AnnouncePunctuation
 
@@ -1232,7 +1232,7 @@ static wchar_t *GetSsmlAttribute(wchar_t *pw, const char *name)
 static int attrcmp(const wchar_t *string1, const char *string2)
 {//============================================================
 	int  ix;
-	
+
 	if(string1 == NULL)
 		return(1);
 
@@ -1318,7 +1318,7 @@ static int attr_prosody_value(int param_type, const wchar_t *pw, int *value_out)
 	}
 	if(*pw == '-')
 	{
-		pw++;	
+		pw++;
 		sign = -1;
 	}
 	value = (double)wcstod(pw,&tail);
@@ -1463,10 +1463,10 @@ static int GetVoiceAttributes(wchar_t *pw, int tag_type)
 			age = GetSsmlAttribute(pw,"age");
 			gender = GetSsmlAttribute(pw,"gender");
 		}
-	
+
 		if((tag_type != SSML_VOICE) && (lang==NULL))
 			return(0);  // <s> or <p> without language spec, nothing to do
-	
+
 		ssml_sp = &ssml_stack[n_ssml_stack++];
 
 		attrcopy_utf8(ssml_sp->language,lang,sizeof(ssml_sp->language));
@@ -1570,7 +1570,7 @@ static int ReplaceKeyName(char *outbuf, int index, int &outix)
 	{"underscore ", 0xe05f},
 	{"double-quote ", '"'},
 	{NULL, 0}};
-	
+
 	int ix;
 	int letter;
 	char *p;
@@ -1602,7 +1602,7 @@ static int ProcessSsmlTag(wchar_t *xml_buf, char *outbuf, int &outix, int n_outb
 	int voice_change_flag;
 	wchar_t *px;
 	wchar_t *attr1;
-	wchar_t *attr2; 
+	wchar_t *attr2;
 	wchar_t *attr3;
 	int terminator;
 	char *uri;
@@ -1665,7 +1665,7 @@ static int ProcessSsmlTag(wchar_t *xml_buf, char *outbuf, int &outix, int n_outb
 	tag_name[ix] = 0;
 
 	px = &xml_buf[ix];   // the tag's attributes
-	
+
 	if(tag_name[0] == '/')
 	{
 		// closing tag
@@ -2233,7 +2233,7 @@ f_input = f_in;  // for GetC etc
 					}
 					xml_buf[n_xml_buf] = 0;
 					c2 = ' ';
-	
+
 					self_closing = 0;
 					if(xml_buf[n_xml_buf-1] == '/')
 					{
@@ -2241,9 +2241,9 @@ f_input = f_in;  // for GetC etc
 						xml_buf[n_xml_buf-1] = ' ';
 						self_closing = 1;
 					}
-		
+
 					terminator = ProcessSsmlTag(xml_buf,buf,ix,n_buf,self_closing);
-		
+
 					if(terminator != 0)
 					{
 						if(end_clause_after_tag)
@@ -2251,7 +2251,7 @@ f_input = f_in;  // for GetC etc
 
 						buf[ix] = ' ';
 						buf[ix++] = 0;
-		
+
 						if(terminator & CLAUSE_BIT_VOICE)
 						{
 							strcpy(voice_change, current_voice_id);
@@ -2355,7 +2355,7 @@ f_input = f_in;  // for GetC etc
 			if(iswspace(c1))
 			{
 				char *p_word;
-	
+
 				if(tr->translator_name == 0x6a626f)
 				{
 					// language jbo : lojban
@@ -2473,7 +2473,7 @@ if(option_ssml) parag=1;
 				// Because of an xml tag, we are waiting for the
 				// next non-blank character to decide whether to end the clause
 				// i.e. is dot followed by an upper-case letter?
-				
+
 				if(!iswspace(c1))
 				{
 					if(!IsAlpha(c1) || !iswlower(c1))
@@ -2507,7 +2507,7 @@ if(option_ssml) parag=1;
 			if((punct = lookupwchar(punct_chars,c1)) != 0)
 			{
 				punct_data = punct_attributes[punct];
-	
+
 				if(punct_data & PUNCT_IN_WORD)
 				{
 					// Armenian punctuation inside a word
@@ -2538,7 +2538,7 @@ if(option_ssml) parag=1;
 					announced_punctuation = c1;
 				}
 			}
-	
+
 			if((punct_data & PUNCT_SAY_NAME) && (announced_punctuation == 0))
 			{
 				// used for elipsis (and 3 dots) if a pronunciation for elipsis is given in *_list
@@ -2585,7 +2585,7 @@ if(option_ssml) parag=1;
 
 					if(c1 == '.')
 					{
-						if((tr->langopts.numbers & NUM_ORDINAL_DOT) && 
+						if((tr->langopts.numbers & NUM_ORDINAL_DOT) &&
 							(iswdigit(cprev) || (IsRomanU(cprev) && (IsRomanU(cprev2) || iswspace(cprev2)))))  // lang=hu
 						{
 							// dot after a number indicates an ordinal number
@@ -2602,7 +2602,7 @@ if(option_ssml) parag=1;
 						else
 						if(c_next == '\'')
 						{
-							is_end_clause = 0;    // eg. u.s.a.'s 
+							is_end_clause = 0;    // eg. u.s.a.'s
 						}
 						if(iswlower(c_next))
 						{

@@ -7,17 +7,17 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="default">
-				<Option output="./libespeak.a" prefix_auto="0" extension_auto="0" />
+				<Option output="./speak" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="" />
 				<Option type="2" />
 				<Option compiler="gcc" />
 				<Option projectResourceIncludeDirsRelation="1" />
 			</Target>
 			<Target title="emscripten">
-				<Option output="./libespeak.a" prefix_auto="0" extension_auto="0" />
-				<Option working_dir="" />
-				<Option type="2" />
+				<Option output="./espeak.html" prefix_auto="0" extension_auto="0" />
+				<Option type="1" />
 				<Option compiler="emscripten" />
+				<Option use_console_runner="0" />
 				<Option projectLinkerOptionsRelation="1" />
 				<Option projectResourceIncludeDirsRelation="1" />
 				<Linker>
@@ -51,53 +51,22 @@
 			<Add directory="../../../../../EMLibs/media/libtheoraplayer/src/.libs" />
 		</Linker>
 		<Unit filename="compiledict.cpp" />
-		<Unit filename="debug.cpp" />
-		<Unit filename="debug.h" />
 		<Unit filename="dictionary.cpp" />
-		<Unit filename="espeak.cpp" />
-		<Unit filename="espeak_command.cpp" />
-		<Unit filename="espeak_command.h" />
-		<Unit filename="event.cpp" />
-		<Unit filename="event.h" />
-		<Unit filename="fifo.cpp" />
-		<Unit filename="fifo.h" />
-		<Unit filename="getopt.cpp" />
-		<Unit filename="getopt.h" />
-		<Unit filename="intonation.cpp" />
 		<Unit filename="klatt.cpp" />
 		<Unit filename="klatt.h" />
-		<Unit filename="libogg_static.layout" />
 		<Unit filename="mbrowrap.cpp" />
 		<Unit filename="mbrowrap.h" />
-		<Unit filename="numbers.cpp" />
-		<Unit filename="phoneme.h" />
 		<Unit filename="phonemelist.cpp" />
-		<Unit filename="portaudio.h" />
-		<Unit filename="portaudio18.h" />
-		<Unit filename="portaudio19.h" />
-		<Unit filename="readclause.cpp" />
-		<Unit filename="setlengths.cpp" />
-		<Unit filename="sintab.h" />
 		<Unit filename="sonic.cpp" />
-		<Unit filename="sonic.h" />
 		<Unit filename="speak.cpp" />
-		<Unit filename="speak_lib.cpp" />
-		<Unit filename="speak_lib.h" />
-		<Unit filename="speech.h" />
 		<Unit filename="strtok.cpp" />
 		<Unit filename="synth_mbrola.cpp" />
 		<Unit filename="synthdata.cpp" />
 		<Unit filename="synthesize.cpp" />
-		<Unit filename="synthesize.h" />
 		<Unit filename="tr_languages.cpp" />
 		<Unit filename="translate.cpp" />
 		<Unit filename="translate.h" />
-		<Unit filename="voice.h" />
 		<Unit filename="voices.cpp" />
-		<Unit filename="wave.cpp" />
-		<Unit filename="wave.h" />
-		<Unit filename="wave_pulse.cpp" />
-		<Unit filename="wave_sada.cpp" />
 		<Unit filename="wavegen.cpp" />
 		<Extensions>
 			<code_completion />
