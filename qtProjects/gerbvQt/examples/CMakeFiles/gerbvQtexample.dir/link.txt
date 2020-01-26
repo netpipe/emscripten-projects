@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11  -rdynamic CMakeFiles/gerbvQtexample.dir/example.cpp.o CMakeFiles/gerbvQtexample.dir/home/netpipe/Desktop/gerbvQt/gerbvQt/gerbvQt.cpp.o  -o gerbvQtexample -lgerbv /usr/lib64/libQt5Gui.so.5.9.4 -lcairo /usr/lib64/libQt5Core.so.5.9.4 
