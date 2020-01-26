@@ -1,0 +1,757 @@
+# depslib dependency file v1.0
+1491023367 source:d:\dropbox\sdl01\main.cpp
+	<SDL.h>
+
+1495349242 source:d:\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\sdl01\main.cpp
+	<SDL2/SDL.h>
+	<cstdio>
+
+1498149959 
+
+1491123122 source:c:\users\siga\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\sdl01\main.cpp
+	<SDL2/SDL.h>
+
+1491123122 h>
+
+1496060901 source:d:\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\lessons\sdl01\main.cpp
+	<SDL2/SDL.h>
+	<cstdio>
+
+1497044895 source:d:\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\sdlgame\2 урока\sdl01\main.cpp
+	<SDL2/SDL.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+
+1497932334 
+
+1497044895 source:d:\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\2 урока\sdl01\main.cpp
+	<SDL2/SDL.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+
+1497705002 source:d:\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\2 урока\sdl01 moy\main.cpp
+	<cmath>
+	"ClassSDLengine.h"
+
+1497974466 ngine.h"
+
+1497693679 source:d:\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\2 урока\sdl01 moy\classsdlengine.cpp
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1497705015 d:\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\2 урока\sdl01 moy\classsdlengine.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<clocale>
+	<stdio.h>
+	<sstream>
+	"GameSetting.h"
+
+1497974670 ng.h"
+
+1497704456 d:\dropbox\С++\ishodniki\!gres\!codeblocks\sdl\2 урока\sdl01 moy\gamesetting.h
+	<cmath>
+	<sstream>
+	<vector>
+
+1497705164 source:d:\dropbox\sdl01 game sdl_01\main.cpp
+	<cmath>
+	"ClassSDLengine.h"
+
+1497705015 d:\dropbox\sdl01 game sdl_01\classsdlengine.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<clocale>
+	<stdio.h>
+	<sstream>
+	"GameSetting.h"
+
+1497704456 d:\dropbox\sdl01 game sdl_01\gamesetting.h
+	<cmath>
+	<sstream>
+	<vector>
+
+1497974466 source:d:\dropbox\sdl01 game sdl_redball\main.cpp
+	<cmath>
+	"ClassSDLengine.h"
+
+1497974670 d:\dropbox\sdl01 game sdl_redball\classsdlengine.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<clocale>
+	<stdio.h>
+	<sstream>
+	"GameSetting.h"
+
+1497974719 d:\dropbox\sdl01 game sdl_redball\gamesetting.h
+	<cmath>
+	<sstream>
+	<vector>
+	<Box2D/Box2D.h>
+
+1498056993 2D.h>
+
+1497974466 source:d:\dropbox\проекты игр\sdl01 game sdl_redball\main.cpp
+	<cmath>
+	"ClassSDLengine.h"
+
+1497974670 d:\dropbox\проекты игр\sdl01 game sdl_redball\classsdlengine.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<clocale>
+	<stdio.h>
+	<sstream>
+	"GameSetting.h"
+
+1497974719 d:\dropbox\проекты игр\sdl01 game sdl_redball\gamesetting.h
+	<cmath>
+	<sstream>
+	<vector>
+	<Box2D/Box2D.h>
+
+1498057077 source:d:\dropbox\проекты игр\ver1\main.cpp
+	<cmath>
+	"ClassSDLengine.h"
+	<cmath>
+	<sstream>
+	<vector>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<clocale>
+	<stdio.h>
+	<sstream>
+	<Box2D/Box2D.h>
+
+1498057077 d:\dropbox\проекты игр\ver1\classsdlengine.h
+
+1498056993 d:\dropbox\проекты игр\ver1\gamesetting.h
+	<cmath>
+	<sstream>
+	<vector>
+	<Box2D/Box2D.h>
+
+1498060365 source:d:\dropbox\проекты игр\sdlgame\ver2\main.cpp
+	"Game_settings.h"
+	"SDL_game.h"
+
+1498060365 h"
+
+1498059966 d:\dropbox\проекты игр\sdlgame\ver2\sdl_game.h
+	"header.h"
+
+1498059829 d:\dropbox\проекты игр\sdlgame\ver2\game_settings.h
+	"header.h"
+
+1498059829 d:\dropbox\проекты игр\sdlgame\ver2\header.h
+	<cmath>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498159110 source:d:\dropbox\проекты игр\sdlgame\ver3\main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+
+1498159110 ine.h"
+
+1498156153 d:\dropbox\проекты игр\sdlgame\ver3\game_settings.h
+	"header.h"
+
+1498158001 d:\dropbox\проекты игр\sdlgame\ver3\header.h
+	<list>
+	<cmath>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498143534 d:\dropbox\проекты игр\sdlgame\ver3\sdl_game.h
+	"header.h"
+
+1498148731 d:\dropbox\проекты игр\sdlgame\ver3\sdl_engine.h
+	"header.h"
+
+1498159378 d:\dropbox\проекты игр\sdlgame\ver3\box2d_engine.h
+	"header.h"
+
+1498155286 d:\dropbox\проекты игр\sdlgame\ver3\music_engine.h
+	"header.h"
+
+1498284191 source:d:\dropbox\проекты игр\sdlgame\ver5\main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498247487 d:\dropbox\проекты игр\sdlgame\ver5\game_settings.h
+	"header.h"
+
+1498158001 d:\dropbox\проекты игр\sdlgame\ver5\header.h
+	<list>
+	<cmath>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498281978 d:\dropbox\проекты игр\sdlgame\ver5\sdl_engine.h
+	"header.h"
+
+1498283913 d:\dropbox\проекты игр\sdlgame\ver5\box2d_engine.h
+	"header.h"
+
+1498155286 d:\dropbox\проекты игр\sdlgame\ver5\music_engine.h
+	"header.h"
+
+1498234132 d:\dropbox\проекты игр\sdlgame\ver5\level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1498234132 inyxml2.h"
+
+1497932334 d:\dropbox\проекты игр\sdlgame\ver5\tinyxml\tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
+1498149959 source:d:\dropbox\проекты игр\sdlgame\ver5\tinyxml\tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+
+1498284191 source:c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498247487 c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\game_settings.h
+	"header.h"
+
+1498158001 c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\header.h
+	<list>
+	<cmath>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498281978 c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\sdl_engine.h
+	"header.h"
+
+1498283913 c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\box2d_engine.h
+	"header.h"
+
+1498155286 c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\music_engine.h
+	"header.h"
+
+1498234132 c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1497932334 c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\tinyxml\tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
+1498149959 source:c:\users\siga\dropbox\проекты игр\sdlgame\ver6 serg\tinyxml\tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+
+1498323800 source:d:\dropbox\проекты игр\sdlgame\ver6 serg\main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498318675 d:\dropbox\проекты игр\sdlgame\ver6 serg\game_settings.h
+	"header.h"
+
+1498318709 d:\dropbox\проекты игр\sdlgame\ver6 serg\header.h
+	<cmath>
+	<list>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498320181 d:\dropbox\проекты игр\sdlgame\ver6 serg\sdl_engine.h
+	"header.h"
+
+1498323591 d:\dropbox\проекты игр\sdlgame\ver6 serg\box2d_engine.h
+	"header.h"
+
+1498318709 d:\dropbox\проекты игр\sdlgame\ver6 serg\music_engine.h
+	"header.h"
+
+1498234132 d:\dropbox\проекты игр\sdlgame\ver6 serg\level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1497932334 d:\dropbox\проекты игр\sdlgame\ver6 serg\tinyxml\tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
+1498149959 source:d:\dropbox\проекты игр\sdlgame\ver6 serg\tinyxml\tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+
+1498368733 source:d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498318675 d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\game_settings.h
+	"header.h"
+
+1498318709 d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\header.h
+	<cmath>
+	<list>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498320181 d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\sdl_engine.h
+	"header.h"
+
+1498368899 d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\box2d_engine.h
+	"header.h"
+
+1498318709 d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\music_engine.h
+	"header.h"
+
+1498234132 d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1497932334 d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\tinyxml\tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
+1498149959 source:d:\dropbox\С++\ishodniki\mygames\sdl\ver6 serg\tinyxml\tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+
+1498373113 source:d:\dropbox\С++\ishodniki\mygames\sdl\game action\main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498318675 d:\dropbox\С++\ishodniki\mygames\sdl\game action\game_settings.h
+	"header.h"
+
+1498318709 d:\dropbox\С++\ishodniki\mygames\sdl\game action\header.h
+	<cmath>
+	<list>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498573594 d:\dropbox\С++\ishodniki\mygames\sdl\game action\sdl_engine.h
+	"header.h"
+
+1498372940 d:\dropbox\С++\ishodniki\mygames\sdl\game action\box2d_engine.h
+	"header.h"
+
+1498318709 d:\dropbox\С++\ishodniki\mygames\sdl\game action\music_engine.h
+	"header.h"
+
+1498234132 d:\dropbox\С++\ishodniki\mygames\sdl\game action\level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1497932334 d:\dropbox\С++\ishodniki\mygames\sdl\game action\tinyxml\tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
+1498149959 source:d:\dropbox\С++\ishodniki\mygames\sdl\game action\tinyxml\tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+
+1498373113 source:e:\С++\ishodniki_02\mygames\sdl\game action_01\main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498318675 e:\С++\ishodniki_02\mygames\sdl\game action_01\game_settings.h
+	"header.h"
+
+1498318709 e:\С++\ishodniki_02\mygames\sdl\game action_01\header.h
+	<cmath>
+	<list>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498573594 e:\С++\ishodniki_02\mygames\sdl\game action_01\sdl_engine.h
+	"header.h"
+
+1498372940 e:\С++\ishodniki_02\mygames\sdl\game action_01\box2d_engine.h
+	"header.h"
+
+1498318709 e:\С++\ishodniki_02\mygames\sdl\game action_01\music_engine.h
+	"header.h"
+
+1498234132 e:\С++\ishodniki_02\mygames\sdl\game action_01\level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1497932334 e:\С++\ishodniki_02\mygames\sdl\game action_01\tinyxml\tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
+1498149959 source:e:\С++\ishodniki_02\mygames\sdl\game action_01\tinyxml\tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+
+1498373113 source:e:\cppmainarhiv\main\!games\sdl\game action_01\main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498318675 e:\cppmainarhiv\main\!games\sdl\game action_01\game_settings.h
+	"header.h"
+
+1498318709 e:\cppmainarhiv\main\!games\sdl\game action_01\header.h
+	<cmath>
+	<list>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498573594 e:\cppmainarhiv\main\!games\sdl\game action_01\sdl_engine.h
+	"header.h"
+
+1498372940 e:\cppmainarhiv\main\!games\sdl\game action_01\box2d_engine.h
+	"header.h"
+
+1498318709 e:\cppmainarhiv\main\!games\sdl\game action_01\music_engine.h
+	"header.h"
+
+1498234132 e:\cppmainarhiv\main\!games\sdl\game action_01\level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1497932334 e:\cppmainarhiv\main\!games\sdl\game action_01\tinyxml\tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
+1498149959 source:e:\cppmainarhiv\main\!games\sdl\game action_01\tinyxml\tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+
+1498373113 source:/home/netpipe/Desktop/untitled folder/Game Action_01/main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498318675 /home/netpipe/Desktop/untitled folder/Game Action_01/Game_settings.h
+	"header.h"
+
+1498318709 /home/netpipe/Desktop/untitled folder/Game Action_01/header.h
+	<cmath>
+	<list>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1498573594 /home/netpipe/Desktop/untitled folder/Game Action_01/SDL_engine.h
+	"header.h"
+
+1498372940 /home/netpipe/Desktop/untitled folder/Game Action_01/Box2d_engine.h
+	"header.h"
+
+1498318709 /home/netpipe/Desktop/untitled folder/Game Action_01/Music_engine.h
+	"header.h"
+
+1498234132 /home/netpipe/Desktop/untitled folder/Game Action_01/level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1497932334 /home/netpipe/Desktop/untitled folder/Game Action_01/TinyXML/tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+
+1498149959 source:/home/netpipe/Desktop/untitled folder/Game Action_01/TinyXML/tinyxml2.cpp
+	"tinyxml2.h"
+	<new>
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<cstdarg>
+

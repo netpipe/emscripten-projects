@@ -1,0 +1,221 @@
+# depslib dependency file v1.0
+1498373113 source:/run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/clay-s2020/qtsdl-stuff/sdlbox2d/Game Action_01/main.cpp
+	"Game_settings.h"
+	"SDL_engine.h"
+	"Box2d_engine.h"
+	"Music_engine.h"
+	"level.h"
+
+1498318675 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/clay-s2020/qtsdl-stuff/sdlbox2d/Game Action_01/Game_settings.h
+	"header.h"
+
+1498318709 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/clay-s2020/qtsdl-stuff/sdlbox2d/Game Action_01/header.h
+	<cmath>
+	<list>
+	<vector>
+	<Box2D/Box2D.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<string>
+	<clocale>
+	<stdio.h>
+	<sstream>
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Box2D.h
+	"Box2D/Common/b2Settings.h"
+	"Box2D/Common/b2Draw.h"
+	"Box2D/Common/b2Timer.h"
+	"Box2D/Collision/Shapes/b2CircleShape.h"
+	"Box2D/Collision/Shapes/b2EdgeShape.h"
+	"Box2D/Collision/Shapes/b2ChainShape.h"
+	"Box2D/Collision/Shapes/b2PolygonShape.h"
+	"Box2D/Collision/b2BroadPhase.h"
+	"Box2D/Collision/b2Distance.h"
+	"Box2D/Collision/b2DynamicTree.h"
+	"Box2D/Collision/b2TimeOfImpact.h"
+	"Box2D/Dynamics/b2Body.h"
+	"Box2D/Dynamics/b2Fixture.h"
+	"Box2D/Dynamics/b2WorldCallbacks.h"
+	"Box2D/Dynamics/b2TimeStep.h"
+	"Box2D/Dynamics/b2World.h"
+	"Box2D/Dynamics/Contacts/b2Contact.h"
+	"Box2D/Dynamics/Joints/b2DistanceJoint.h"
+	"Box2D/Dynamics/Joints/b2FrictionJoint.h"
+	"Box2D/Dynamics/Joints/b2GearJoint.h"
+	"Box2D/Dynamics/Joints/b2MotorJoint.h"
+	"Box2D/Dynamics/Joints/b2MouseJoint.h"
+	"Box2D/Dynamics/Joints/b2PrismaticJoint.h"
+	"Box2D/Dynamics/Joints/b2PulleyJoint.h"
+	"Box2D/Dynamics/Joints/b2RevoluteJoint.h"
+	"Box2D/Dynamics/Joints/b2RopeJoint.h"
+	"Box2D/Dynamics/Joints/b2WeldJoint.h"
+	"Box2D/Dynamics/Joints/b2WheelJoint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Common/b2Settings.h
+	<stddef.h>
+	<assert.h>
+	<float.h>
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Common/b2Draw.h
+	"Box2D/Common/b2Math.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Common/b2Math.h
+	"Box2D/Common/b2Settings.h"
+	<math.h>
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Common/b2Timer.h
+	"Box2D/Common/b2Settings.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/Shapes/b2CircleShape.h
+	"Box2D/Collision/Shapes/b2Shape.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/Shapes/b2Shape.h
+	"Box2D/Common/b2BlockAllocator.h"
+	"Box2D/Common/b2Math.h"
+	"Box2D/Collision/b2Collision.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Common/b2BlockAllocator.h
+	"Box2D/Common/b2Settings.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/b2Collision.h
+	"Box2D/Common/b2Math.h"
+	<limits.h>
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/Shapes/b2EdgeShape.h
+	"Box2D/Collision/Shapes/b2Shape.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/Shapes/b2ChainShape.h
+	"Box2D/Collision/Shapes/b2Shape.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/Shapes/b2PolygonShape.h
+	"Box2D/Collision/Shapes/b2Shape.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/b2BroadPhase.h
+	"Box2D/Common/b2Settings.h"
+	"Box2D/Collision/b2Collision.h"
+	"Box2D/Collision/b2DynamicTree.h"
+	<algorithm>
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/b2DynamicTree.h
+	"Box2D/Collision/b2Collision.h"
+	"Box2D/Common/b2GrowableStack.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Common/b2GrowableStack.h
+	"Box2D/Common/b2Settings.h"
+	<string.h>
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/b2Distance.h
+	"Box2D/Common/b2Math.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Collision/b2TimeOfImpact.h
+	"Box2D/Common/b2Math.h"
+	"Box2D/Collision/b2Distance.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/b2Body.h
+	"Box2D/Common/b2Math.h"
+	"Box2D/Collision/Shapes/b2Shape.h"
+	<memory>
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/b2Fixture.h
+	"Box2D/Dynamics/b2Body.h"
+	"Box2D/Collision/b2Collision.h"
+	"Box2D/Collision/Shapes/b2Shape.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/b2WorldCallbacks.h
+	"Box2D/Common/b2Settings.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/b2TimeStep.h
+	"Box2D/Common/b2Math.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/b2World.h
+	"Box2D/Common/b2Math.h"
+	"Box2D/Common/b2BlockAllocator.h"
+	"Box2D/Common/b2StackAllocator.h"
+	"Box2D/Dynamics/b2ContactManager.h"
+	"Box2D/Dynamics/b2WorldCallbacks.h"
+	"Box2D/Dynamics/b2TimeStep.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Common/b2StackAllocator.h
+	"Box2D/Common/b2Settings.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/b2ContactManager.h
+	"Box2D/Collision/b2BroadPhase.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Contacts/b2Contact.h
+	"Box2D/Common/b2Math.h"
+	"Box2D/Collision/b2Collision.h"
+	"Box2D/Collision/Shapes/b2Shape.h"
+	"Box2D/Dynamics/b2Fixture.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2DistanceJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2Joint.h
+	"Box2D/Common/b2Math.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2FrictionJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2GearJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2MotorJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2MouseJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2PrismaticJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2PulleyJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2RevoluteJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2RopeJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2WeldJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1572056014 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/games/Luna/LunaLibs/physics/emBox2D//Box2D/Dynamics/Joints/b2WheelJoint.h
+	"Box2D/Dynamics/Joints/b2Joint.h"
+
+1498573594 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/clay-s2020/qtsdl-stuff/sdlbox2d/Game Action_01/SDL_engine.h
+	"header.h"
+
+1498372940 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/clay-s2020/qtsdl-stuff/sdlbox2d/Game Action_01/Box2d_engine.h
+	"header.h"
+
+1498318709 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/clay-s2020/qtsdl-stuff/sdlbox2d/Game Action_01/Music_engine.h
+	"header.h"
+
+1498234132 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/clay-s2020/qtsdl-stuff/sdlbox2d/Game Action_01/level.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	"TinyXML/tinyxml2.h"
+
+1497932334 /run/media/netpipe/df7f53ef-2a98-4562-a498-7da578dab660/clay-s2020/qtsdl-stuff/sdlbox2d/Game Action_01/TinyXML/tinyxml2.h
+	<ctype.h>
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	<cctype>
+	<climits>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<stdint.h>
+	<android/log.h>
+	<assert.h>
+

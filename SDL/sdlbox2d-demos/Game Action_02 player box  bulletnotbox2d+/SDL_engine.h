@@ -1,0 +1,314 @@
+#ifndef SDL_GAME_H_INCLUDED
+#define SDL_GAME_H_INCLUDED
+
+#include "header.h"
+
+// Класс с функциями для объектов мира
+class SDL_game
+{
+private:
+
+    float scaleH = 1;
+    float scaleW = 1;
+    float angle =  0;
+    SDL_Point pointCenter={0,0};
+    SDL_Rect rectWin = {0,0,0,0};;
+    SDL_Rect rectSpr;
+    SDL_Color color = {255,255,255,255};
+    int wText=0;
+    int hText=0;
+    SDL_RendererFlip flip = SDL_FLIP_NONE;
+
+public:
+SDL_Texture *text = NULL;
+
+
+setTexture  (SDL_Texture *t)
+        {
+         text = t;
+         SDL_QueryTexture(text, NULL, NULL, &wText, &hText);
+         rectSpr.x =0;
+         rectSpr.y =0;
+         rectSpr.w = wText;
+         rectSpr.h = hText;
+        }
+
+setTextureFile (std::string file)
+{
+   SDL_Surface *loadedImage = 0;
+   text = 0;
+   loadedImage = IMG_Load (file.c_str());   //SDL_LoadBMP
+   if (loadedImage){
+       text = SDL_CreateTextureFromSurface(renderer, loadedImage);
+       SDL_FreeSurface(loadedImage);
+   }
+   else
+       std::cout << SDL_GetError() << std::endl;
+   SDL_QueryTexture(text, NULL, NULL, &wText, &hText);
+   rectSpr.x =0;
+   rectSpr.y =0;
+   rectSpr.w = wText;
+   rectSpr.h = hText;
+
+}
+
+
+
+SDL_Texture* loadImg(std::string file)
+{
+   SDL_Surface *loadedImage = 0;
+
+   loadedImage = IMG_Load (file.c_str());   //SDL_LoadBMP
+   if (loadedImage){
+       text = SDL_CreateTextureFromSurface(renderer, loadedImage);
+       SDL_FreeSurface(loadedImage);
+   }
+   else
+       std::cout << SDL_GetError() << std::endl;
+   return text;
+}
+
+
+
+setPosition (float x, float y)
+
+        {rectWin.x = x; rectWin.y=y;}
+
+setRotation (float a)
+
+        {angle=a;}
+
+setTextureRect(SDL_Rect r)
+
+        {rectSpr = r;}
+
+setTextureRect(int x,int y,int w,int h)
+        {
+         rectSpr.x =x;
+         rectSpr.y =y;
+         rectSpr.w =w;
+         rectSpr.h =h;
+        }
+
+setColor (int r, int g, int b, int a)
+
+        {
+        color.r=r;
+        color.g=g;
+        color.b=b;
+        color.a=a;
+        SDL_SetTextureColorMod  (text, color.r, color.g, color.b );
+        SDL_SetTextureAlphaMod  (text, color.a);
+        }
+
+setScale (float w, float h)
+        {
+           if (w > 0 && h > 0) {flip = SDL_FLIP_NONE;} else
+           if (w < 0 && h < 0) {flip = SDL_RendererFlip (SDL_FLIP_VERTICAL | SDL_FLIP_HORIZONTAL);} else
+           if (w < 0) {flip = SDL_FLIP_HORIZONTAL;} else {flip = SDL_FLIP_VERTICAL;}
+           if (h < 0) h = -h;
+           if (w < 0) w = -w;
+           scaleH =  h;
+           scaleW =  w;
+        }
+
+
+setOrigin (int x, int y)
+        {
+          pointCenter.x = x;
+          pointCenter.y = y;
+
+        }
+
+Draw (SDL_Renderer *rend, SDL_Texture *texture)
+        {
+        SDL_Point Centr;
+        SDL_Rect DrawWin;
+        Centr.x = pointCenter.x*scaleW;
+        Centr.y = pointCenter.y*scaleW;
+        rectWin.w=rectSpr.w*scaleW;
+        rectWin.h=rectSpr.h*scaleH;
+        DrawWin = rectWin;
+        DrawWin.x = DrawWin.x - Centr.x - camera.x;
+        DrawWin.y = DrawWin.y - Centr.y - camera.y;
+        SDL_RenderCopyEx        (rend, texture, &rectSpr, &DrawWin, angle , &Centr ,flip);
+        }
+
+Draw (SDL_Renderer *rend)
+        {
+        SDL_Point Centr;
+        SDL_Rect DrawWin;
+        Centr.x = pointCenter.x*scaleW;
+        Centr.y = pointCenter.y*scaleW;
+        rectWin.w=rectSpr.w*scaleW;
+        rectWin.h=rectSpr.h*scaleH;
+        DrawWin = rectWin;
+        DrawWin.x = DrawWin.x - Centr.x - camera.x;
+        DrawWin.y = DrawWin.y - Centr.y - camera.y;
+
+
+
+        SDL_RenderCopyEx        (rend, text, &rectSpr, &DrawWin, angle , &Centr ,flip);
+        }
+};
+// конец - Класс с функциями для объектов мира
+
+
+// Таймер и FPS
+class Timer
+{
+private:
+    int     lasttime=0;
+    int     lasttimefps=0;
+    int     FPScount=0;
+
+public:
+    int     FPS=0;
+
+    void    Reset()
+            {
+                lasttime = SDL_GetTicks();
+            }
+    float   GetTimer()
+            {
+                return SDL_GetTicks() - lasttime;
+            }
+
+    int     GetFPS()
+            {
+                FPScount++;
+             if (SDL_GetTicks() - lasttimefps >= 1000)
+                {
+                    FPS = FPScount;  lasttimefps = SDL_GetTicks(); FPScount=0;
+                }
+            return FPS;
+            }
+};
+// конец - Таймер и FPS
+
+
+class SDL_Sprite
+{
+private:
+    SDL_Texture *texture = 0;
+    float angle = 0;
+    float scaleH = 1;
+    float scaleW = 1;
+
+    SDL_RendererFlip flip = SDL_FLIP_NONE;
+
+    SDL_Rect  DrawRectWin;
+    SDL_Point pointCenter={0,0};
+    SDL_Rect rectWin;
+    SDL_Rect rectSpr;
+    SDL_Color color = {255,255,255,255};
+public:
+    int wText = 0;
+    int hText = 0;
+
+void setTexture  (SDL_Texture *t)
+        {
+         texture = t;
+         SDL_QueryTexture(texture, NULL, NULL, &wText, &hText);
+         rectSpr.x =0;
+         rectSpr.y =0;
+         rectSpr.w = wText;
+         rectSpr.h = hText;
+        }
+
+void setTextureFile (std::string file)
+{
+   SDL_Surface *loadedImage = 0;
+   texture = 0;
+   loadedImage = IMG_Load (file.c_str());   //SDL_LoadBMP
+   if (loadedImage){
+       texture = SDL_CreateTextureFromSurface(renderer, loadedImage);
+       SDL_FreeSurface(loadedImage);}
+   else
+       std::cout << SDL_GetError() << std::endl;
+   SDL_QueryTexture(texture, NULL, NULL, &wText, &hText);
+   rectSpr.x =0;
+   rectSpr.y =0;
+   rectSpr.w = wText;
+   rectSpr.h = hText;
+}
+
+void setPosition (float x, float y)
+        {rectWin.x = x; rectWin.y=y;}
+
+
+void setRotation (float a)
+
+        {angle=a;}
+
+void setTextureRect(SDL_Rect r)
+
+        {rectSpr = r;}
+
+void setTextureRect(int x,int y,int w,int h)
+        {
+         rectSpr = {x,y,w,h};
+        }
+
+void setColor (int r, int g, int b, int a)
+
+        {
+        color = {r,g,b,a};
+        SDL_SetTextureColorMod  (texture, color.r, color.g, color.b );
+        SDL_SetTextureAlphaMod  (texture, color.a);
+        }
+void setColor (SDL_Color c)
+        {
+        color = c;
+        SDL_SetTextureColorMod  (texture, color.r, color.g, color.b );
+        SDL_SetTextureAlphaMod  (texture, color.a);
+        }
+
+void setScale (float w, float h)
+        {
+           if (w > 0 && h > 0) {flip = SDL_FLIP_NONE;} else
+           if (w < 0 && h < 0) {flip = SDL_RendererFlip (SDL_FLIP_VERTICAL | SDL_FLIP_HORIZONTAL);} else
+           if (w < 0) {flip = SDL_FLIP_HORIZONTAL;} else {flip = SDL_FLIP_VERTICAL;}
+           if (h < 0) h = -h;
+           if (w < 0) w = -w;
+           scaleH =  h;
+           scaleW =  w;
+        }
+
+void setOrigin (int x, int y)
+        {
+          pointCenter.x = x;
+          pointCenter.y = y;
+        }
+
+SDL_Rect getRect ()
+{
+        SDL_Point Centr;
+        Centr.x = pointCenter.x*scaleW;
+        Centr.y = pointCenter.y*scaleW;
+        rectWin.w =rectSpr.w*scaleW;
+        rectWin.h =rectSpr.h*scaleH;
+        DrawRectWin = rectWin;
+        DrawRectWin.x = DrawRectWin.x - Centr.x;
+        DrawRectWin.y = DrawRectWin.y - Centr.y;
+    return DrawRectWin;
+}
+
+        void Draw (SDL_Renderer *rend)
+      {
+        SDL_Point Centr;
+        Centr.x = pointCenter.x * scaleW;
+        Centr.y = pointCenter.y * scaleH;
+        rectWin.w = rectSpr.w * scaleW;
+        rectWin.h = rectSpr.h * scaleH;
+        DrawRectWin = rectWin;
+        DrawRectWin.x = DrawRectWin.x - Centr.x - camera.x;
+        DrawRectWin.y = DrawRectWin.y - Centr.y - camera.y;
+        SDL_RenderCopyEx (rend, texture, &rectSpr, &DrawRectWin, angle , &Centr , flip);
+
+        }
+};
+
+
+
+#endif // SDL_GAME_H_INCLUDED
