@@ -4,7 +4,7 @@ rm src/gentables/CMakeCache.txt
 #rm cmakecache
 mkdir build
 cd build
-emcmake cmake .. -DBUILD_SHARED_LIBS=false
+emcmake cmake .. -DBUILD_SHARED_LIBS=false -DBUILD_STATIC_LIBS=true
 #make -j4
 
 

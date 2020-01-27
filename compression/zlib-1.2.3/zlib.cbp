@@ -8,7 +8,7 @@
 		<Build>
 			<Target title="Linux32 - Static">
 				<Option platforms="Unix;Mac;" />
-				<Option output="../Compiled/Linux/zlib" prefix_auto="1" extension_auto="1" />
+				<Option output="../Compiled/Linux/z" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="../objs/zlib/Linux" />
 				<Option type="2" />
@@ -36,7 +36,7 @@
 				</Linker>
 			</Target>
 			<Target title="Linux64 - Static">
-				<Option output="../Libs/Compiled/zlib" prefix_auto="1" extension_auto="1" />
+				<Option output="../Libs/Compiled/z" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="../objs/zlib/Linux" />
 				<Option type="2" />
@@ -241,7 +241,7 @@
 			</Target>
 			<Target title="emscripten">
 				<Option platforms="Unix;Mac;" />
-				<Option output="./zlib" prefix_auto="1" extension_auto="1" />
+				<Option output="./z" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="../objs/zlib/Linux" />
 				<Option type="2" />
@@ -344,6 +344,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="zutil.h" />
-		<Extensions />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
