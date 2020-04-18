@@ -1,0 +1,21 @@
+ul li img {
+    width: 100px;
+    height: 70px !important;
+    vertical-align: middle;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+ul li span {
+    margin-left: 50px;
+    ;
+}
+
+button {
+    margin: 40px;
+}
+
+body {
+    background: #f8f9fa;
+}

@@ -165,7 +165,11 @@ int main(int argc1, char * argv1[]) {
     //blitz not working here maybe i never loaded long enough
 //char *argv[]={"appname","./media/kick13.rom","./media/Blitz2-2.adf","./media/Blitz2-1.adf","./media/Blitz2-3.adf","./media/Blitz2-4.adf","test"};
 
-char *argv[]={"appname","./media/kick13.rom","./media/sr2amiga/SR2AMIGA_DISK1.adf","./media/sr2amiga/SR2AMIGA_DISK2.adf","test"};
+//char *argv[]={"appname","./media/kick13.rom","./media/sr2amiga/SR2AMIGA_DISK1.adf","./media/sr2amiga/SR2AMIGA_DISK2.adf","test"};
+//char *argv[]={"appname","./media/rom/amiga-os-130.rom","./media/sr2amiga/SR2AMIGA_DISK1.adf","./media/sr2amiga/SR2AMIGA_DISK2.adf","test"};
+char *argv[]={"appname","./media/rom/amiga-os-130.rom","./media/adf/amiga-os-310-workbench.adf","test"};
+
+//char *argv[]={"appname","./media/rom/amiga-os-130.rom","./media/pacmania.adf","test"};
 	int argc = sizeof(argv) / sizeof(char*) - 1;
 
     //load rom from disk if need be

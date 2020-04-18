@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US-x-Hixie">
+
+<head>
+	<meta charset="utf-8" />
+	<title>FileSaver.js Practice</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+</head>
+
+<body>
+
+
+	<input type="file" multiple style="display: none;" id="myfiles">
+
+	<button class="btn btn-success" onclick="$('#myfiles').click()">Upload File To FileSystem</button>
+
+	<ul></ul>
+
+	<p id="demo"></p>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<script type="application/ecmascript" async="" src="javascript/Blob.js"></script>
+	<script type="application/ecmascript" async="" src="javascript/canvas-toBlob.js"></script>
+	<script type="application/ecmascript" async="" src="javascript/FileSaver.js"></script>
+	<script type="application/ecmascript" async="" src="javascript/demo.min.js"></script>
+</body>
+
+</html>

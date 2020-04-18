@@ -2,26 +2,70 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="default" />
+	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4095" topLine="47" />
+		</Cursor>
+		<Folding>
+			<Collapse line="48" />
+			<Collapse line="61" />
+			<Collapse line="157" />
+		</Folding>
+	</File>
+	<File name="DMA.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15107" topLine="148" />
+		</Cursor>
+		<Folding>
+			<Collapse line="98" />
+			<Collapse line="337" />
+			<Collapse line="575" />
+			<Collapse line="587" />
+			<Collapse line="714" />
+			<Collapse line="724" />
+			<Collapse line="734" />
+			<Collapse line="746" />
+			<Collapse line="756" />
+			<Collapse line="762" />
+			<Collapse line="827" />
+			<Collapse line="851" />
+			<Collapse line="897" />
+			<Collapse line="921" />
+			<Collapse line="927" />
+			<Collapse line="961" />
+			<Collapse line="980" />
+			<Collapse line="998" />
+			<Collapse line="1036" />
+			<Collapse line="1055" />
+			<Collapse line="1074" />
+			<Collapse line="1093" />
+			<Collapse line="1136" />
+			<Collapse line="1155" />
+			<Collapse line="1256" />
+			<Collapse line="1344" />
+		</Folding>
+	</File>
 	<File name="CPU.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3186" topLine="42" />
 		</Cursor>
 		<Folding>
-			<Collapse line="102" />
+			<Collapse line="33" />
+			<Collapse line="52" />
+			<Collapse line="64" />
+			<Collapse line="157" />
+			<Collapse line="169" />
+			<Collapse line="178" />
+			<Collapse line="191" />
+			<Collapse line="200" />
+			<Collapse line="209" />
+			<Collapse line="225" />
+			<Collapse line="242" />
+			<Collapse line="248" />
+			<Collapse line="260" />
+			<Collapse line="273" />
+			<Collapse line="293" />
 		</Folding>
 	</File>
-	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4261" topLine="158" />
-		</Cursor>
-	</File>
-	<File name="DMA.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="15107" topLine="149" />
-		</Cursor>
-		<Folding>
-			<Collapse line="874" />
-		</Folding>
-	</File>
-	<EditorTabsLayout layout="032709305e2b6dad002023aa00000002=*0;omega:main.c,1;omega:CPU.c,2;omega:DMA.c@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=814;besth=344;minw=814;minh=344;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=032709305e2b6dad002023aa00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+	<EditorTabsLayout layout="02e1e7305e3a85fb001e3e4900000002=*0;omega:main.c,1;omega:CPU.c,2;omega:DMA.c@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=328;besth=341;minw=328;minh=341;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=02e1e7305e3a85fb001e3e4900000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>

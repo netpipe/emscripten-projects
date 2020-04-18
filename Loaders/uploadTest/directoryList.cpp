@@ -3,7 +3,7 @@
        #include <sys/stat.h>
        #include <sys/types.h>
  #include <dirent.h>
- #include <fcntl.h> 
+ #include <fcntl.h>
 //emcc directoryList.cpp -o test.html
 
 
@@ -30,6 +30,7 @@ int main()
 
 	//if((f_trans != stdout) && (f_trans != stderr))
 	//	fclose(f_trans);  // needed for WinCe
+//emscripten_run_script(saveAs(blob, "test", 1););
 
 EM_ASM(
 var btn = document.createElement('input');
