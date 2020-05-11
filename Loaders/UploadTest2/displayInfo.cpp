@@ -24,6 +24,7 @@ static void list_dir(const char *path)
 
   closedir(dir);
 }
+
 EM_JS(void, initfn, (), {
 
   var button = document.createElement('input');

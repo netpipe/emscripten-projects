@@ -24,6 +24,17 @@ static void list_dir(const char *path)
     closedir(dir);
 }
 
+//https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html
+EM_ASM(
+var btn = document.createElement('input');
+btn.type = 'button';
+btn.name
+= btn.value = 'OK';
+btn.onclick = function() {
+saveAs(blob, "test", 1);
+};
+document.body.appendChild(btn);
+);
 
 int main()
 {
