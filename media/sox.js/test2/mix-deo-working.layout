@@ -4,12 +4,12 @@
 	<ActiveTarget name="emscripten" />
 	<File name="simpledemo2.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="18" />
+			<Cursor1 position="932" topLine="28" />
 		</Cursor>
 		<Folding>
-			<Collapse line="12" />
-			<Collapse line="18" />
+			<Collapse line="24" />
+			<Collapse line="37" />
 		</Folding>
 	</File>
-	<EditorTabsLayout layout="01f24ce05e01aa9c0013a21b00000002=*0;Irrlicht Pong:simpledemo2.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=397;besth=296;minw=397;minh=296;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=01f24ce05e01aa9c0013a21b00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+	<EditorTabsLayout layout="031936f05eb98de70022ef1f00000002=*0;Irrlicht Pong:simpledemo2.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=328;besth=336;minw=328;minh=336;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=031936f05eb98de70022ef1f00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>

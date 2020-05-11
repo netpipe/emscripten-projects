@@ -26,9 +26,8 @@
 				<Linker>
 					<Add option="-s ALLOW_MEMORY_GROWTH=1" />
 					<Add option="-s ASYNCIFY=1" />
+					<Add option="--preload-file media/" />
 					<Add option="-s USE_SDL_MIXER=2" />
-					<Add option='-s &apos;EXPORTED_FUNCTIONS=[&quot;_addFile&quot;,&quot;_processFiles&quot;,&quot;_main&quot;]&apos; -s &apos;EXTRA_EXPORTED_RUNTIME_METHODS=[&quot;cwrap&quot;]&apos;' />
-					<Add option="-s FORCE_FILESYSTEM=1" />
 					<Add library="SDL2" />
 					<Add library="openal" />
 					<Add library="m" />
@@ -62,13 +61,12 @@
 			<Add alias="All" targets="emscripten;" />
 		</VirtualTargets>
 		<Compiler>
-			<Add option="-std=c++11" />
 			<Add option="-DUSESDL" />
 		</Compiler>
 		<Linker>
 			<Add library="SDL" />
 		</Linker>
-		<Unit filename="simpledemo2.cpp" />
+		<Unit filename="simpledemo3.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
