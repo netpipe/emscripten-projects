@@ -3,6 +3,10 @@
 #include <fstream>
 #include <iostream>
 #include <emscripten.h>
+ #include <dirent.h>
+ #include <fcntl.h>
+       #include <sys/stat.h>
+       #include <sys/types.h> 
 
 std::vector<std::string> fileNames;
 
@@ -10,6 +14,21 @@ extern "C" void addFile(const char *name) {
   fileNames.push_back(name);
   std::cout << "Added file " << name << '\n';
 }
+extern "C" void list_dir(const char *path)
+{
+    struct dirent *entry;
+    DIR *dir = opendir(path);
+    if (dir == NULL) {
+        return;
+    }
+
+    while ((entry = readdir(dir)) != NULL) {
+        printf("%s\n",entry->d_name);
+    }
+
+    closedir(dir);
+}
+
 
 extern "C" void processFiles() {
   std::cout << "Processing files\n";
@@ -22,7 +41,11 @@ extern "C" void processFiles() {
     if (file.is_open()) {
       std::cout << "First byte of the file is: " << file.get() << '\n';
     }
+
   }
+
+list_dir("/");
+
   std::cout << "Done processing\n";
   fileNames.clear();
 }
@@ -200,5 +223,7 @@ EM_JS(void, initialize, (), {
 });
 
 int main() {
+mkdir("./test",1);
   initialize();
+
 }
