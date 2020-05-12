@@ -111,7 +111,7 @@ EM_JS(void, initialize, (), {
   
   // Add a file to the list of files.
   // Clicking on a file in the list will download it.
-  window.addFileToList(name, type) >= {
+  window.addFileToList = (name, type) => {
     let item = document.createElement("div");
     item.innerHTML = name;
     
@@ -149,7 +149,7 @@ EM_JS(void, initialize, (), {
     
     let list = document.getElementById("fileList");
     list.appendChild(item);
-  }
+  };
   
   // Create the file input element.
   // This is an invisible element that is clicked to upload files.
