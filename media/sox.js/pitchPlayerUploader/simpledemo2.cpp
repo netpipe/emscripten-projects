@@ -49,8 +49,8 @@ extern "C" void list_dir(const char *path)
     closedir(dir);
 }
 
-EM_JS(void, addfiletolist2, (std::string name, std::string type), {
-  addFileToList(name.c_str(), type.c_str());
+EM_JS(void, addfiletolist2, (const char *name, const char *type), {
+  window.addFileToList(UTF8ToString(name), UTF8ToString(type));
 });
 
 extern "C" void processFiles() {
@@ -74,7 +74,7 @@ mainSOX(argc1,argv1);
     		chunk = Mix_LoadWAV("out.wav");
   		const int channel = Mix_PlayChannel(-1, chunk, -1);
 
-  		addfiletolist2("out.wav", "wav");
+  		addfiletolist2("out.wav", "audio/wav");
 
      Mix_PlayChannel(-1, chunk, 0);
   }
@@ -109,7 +109,7 @@ EM_JS(void, initialize, (), {
 
       reader.onloadend = () => {
         // Add the file to the list
-        addFileToList(file.name, file.type);
+        window.addFileToList(file.name, file.type);
 
         // A new file is created on the emscripten virtual file system.
         // This is part of the private file system API
@@ -139,7 +139,7 @@ EM_JS(void, initialize, (), {
 
   // Add a file to the list of files.
   // Clicking on a file in the list will download it.
-  function addFileToList(name, type) {
+  window.addFileToList = (name, type) => {
     let item = document.createElement("div");
     item.innerHTML = name;
 
@@ -177,7 +177,7 @@ EM_JS(void, initialize, (), {
 
     let list = document.getElementById("fileList");
     list.appendChild(item);
-  }
+  };
 
   // Create the file input element.
   // This is an invisible element that is clicked to upload files.
@@ -311,5 +311,4 @@ initialize();
 //                            Mix_HaltMusic();
 //                            break;
 //                        }
-
 

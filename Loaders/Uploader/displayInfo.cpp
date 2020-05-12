@@ -3,49 +3,36 @@
 #include <fstream>
 #include <iostream>
 #include <emscripten.h>
- #include <dirent.h>
- #include <fcntl.h>
-       #include <sys/stat.h>
-       #include <sys/types.h> 
+
+//credits
+// www.netpipe.ca for organising project 
+//"Indiana K." on freelancer.com kerndog73@gmail.com https://github.com/Kerndog73 for writing it.
 
 std::vector<std::string> fileNames;
+
+EM_JS(void, addFileToList, (const char *name, const char *type), {
+  window.addFileToList(UTF8ToString(name), UTF8ToString(type));
+});
 
 extern "C" void addFile(const char *name) {
   fileNames.push_back(name);
   std::cout << "Added file " << name << '\n';
 }
-extern "C" void list_dir(const char *path)
-{
-    struct dirent *entry;
-    DIR *dir = opendir(path);
-    if (dir == NULL) {
-        return;
-    }
-
-    while ((entry = readdir(dir)) != NULL) {
-        printf("%s\n",entry->d_name);
-    }
-
-    closedir(dir);
-}
-
 
 extern "C" void processFiles() {
   std::cout << "Processing files\n";
   for (const std::string &name : fileNames) {
     // Do whatever you need to do...
     std::cout << "Processing file " << name << '\n';
-    
+
+   // addFileToList(name.c_str(), ""); // adds extra for testing shows how to do js calls
+
     // You can do whatever you want with the file.
     std::ifstream file{name};
     if (file.is_open()) {
       std::cout << "First byte of the file is: " << file.get() << '\n';
     }
-
   }
-
-list_dir("/");
-
   std::cout << "Done processing\n";
   fileNames.clear();
 }
@@ -101,7 +88,7 @@ EM_JS(void, initialize, (), {
   
   // Add a file to the list of files.
   // Clicking on a file in the list will download it.
-  function addFileToList(name, type) {
+  window.addFileToList = (name, type) => {
     let item = document.createElement("div");
     item.innerHTML = name;
     
@@ -139,7 +126,7 @@ EM_JS(void, initialize, (), {
     
     let list = document.getElementById("fileList");
     list.appendChild(item);
-  }
+  };
   
   // Create the file input element.
   // This is an invisible element that is clicked to upload files.
@@ -223,7 +210,5 @@ EM_JS(void, initialize, (), {
 });
 
 int main() {
-mkdir("./test",1);
   initialize();
-
 }
