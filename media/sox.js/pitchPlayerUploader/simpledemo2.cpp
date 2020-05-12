@@ -87,7 +87,6 @@ mainSOX(argc1,argv1);
 }
 
 
-
 EM_JS(void, initialize, (), {
   function err(e) {
     throw e;
@@ -109,7 +108,7 @@ EM_JS(void, initialize, (), {
 
       reader.onloadend = () => {
         // Add the file to the list
-        window.addFileToList(file.name, file.type);
+       // addFileToList(file.name, file.type);
 
         // A new file is created on the emscripten virtual file system.
         // This is part of the private file system API

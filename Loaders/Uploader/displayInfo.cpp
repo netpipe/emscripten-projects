@@ -81,7 +81,7 @@ EM_JS(void, initialize, (), {
       
       reader.onloadend = () => {
         // Add the file to the list
-        addFileToList(file.name, file.type);
+       // addFileToList(file.name, file.type);
       
         // A new file is created on the emscripten virtual file system.
         // This is part of the private file system API
