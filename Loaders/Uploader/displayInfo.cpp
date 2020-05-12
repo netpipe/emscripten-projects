@@ -9,7 +9,7 @@
 #include <sys/types.h> 
 
 //credits
-// www.netpipe.ca for organising project 
+// www.netpipe.ca for organising project https://github.com/tecan/emscripten-projects
 //"Indiana K." on freelancer.com kerndog73@gmail.com https://github.com/Kerndog73 for writing it.
 
 std::vector<std::string> fileNames;
