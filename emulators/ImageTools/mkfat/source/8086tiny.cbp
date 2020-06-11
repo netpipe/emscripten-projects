@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Irrlicht Pong" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="./Pong" prefix_auto="0" extension_auto="0" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="default;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="`wx-config --cflags`" />
+			<Add option="`pkg-config gtk+-2.0 --cflags`" />
+			<Add option="-fpermissive" />
+			<Add directory="/home/Dev/libs/game/Irrlicht-SVN/include" />
+			<Add directory="../include" />
+		</Compiler>
+		<Linker>
+			<Add library="Irrlicht" />
+			<Add library="GL" />
+			<Add library="Xxf86vm" />
+			<Add library="X11" />
+			<Add library="SDL" />
+			<Add directory="/home/Dev/libs/game/Irrlicht-SVN/lib/Linux" />
+		</Linker>
+		<Unit filename="Arguments/ArgumentsCreate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsDelete.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetBootable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetCreatingSystemIdentifier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetCurrent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetDiskPath.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetExtendedBootRecordSignature.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetFileSystemType.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetInputFileAtIndex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetInputFileCount.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetMediumIdentifier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetNumberOfFATs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetNumberOfRootDirectoryEntries.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetNumberOfSides.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetReservedSectorCount.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetSectorSize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetSectorsPerCluster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetSectorsPerFAT.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetSectorsPerTrack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetShowHelp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetTotalSectors.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetVerbose.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetVolumeIDNumber.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsGetVolumeLabel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/ArgumentsValidate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arguments/__ArgumentsAddFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Directory/DirectoryCreate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Directory/DirectoryDelete.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Directory/DirectoryGetDisk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Directory/DirectoryGetEntryAtIndex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Directory/DirectoryGetEntryCount.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Directory/DirectoryWrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryCreate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryDelete.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetAttributes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetCreationDate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetCreationTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetDirectory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetFileLength.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetFilename.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetLastAccessDate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetLastModificationDate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetLastModificationTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryGetStartingClusterNumber.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetAttributes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetCreationDate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetCreationTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetFileLength.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetFilename.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetInfoFromLocalFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetLastAccessDate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetLastModificationDate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetLastModificationTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntrySetStartingClusterNumber.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/DirectoryEntryWrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/__DirectoryEntryDateFromTS.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DirectoryEntry/__DirectoryEntryTimeFromTS.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskAddFile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskCreate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskDelete.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskGetFileCount.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskGetFilePathAtIndex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskGetFileSizeAtIndex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskGetFilenameAtIndex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskGetMBR.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Disk/DiskWrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Display/DisplayGetAvailableColumns.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Display/DisplayPrintArguments.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Display/DisplayPrintData.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Display/DisplayPrintError.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Display/DisplayPrintHeader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Display/DisplayPrintHelp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Display/DisplayPrintLine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FAT/FATDelete.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="IO/IOFileExists.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="IO/IOGetFileSize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRCreate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRDelete.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetCreatingSystemIdentifier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetDisk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetExtendedBootRecordSignature.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetFileSystemType.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetMediumIdentifier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetNumberOfFATs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetNumberOfRootDirectoryEntries.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetNumberOfSides.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetReservedSectorCount.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetSectorSize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetSectorsPerCluster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetSectorsPerFAT.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetSectorsPerTrack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetTotalSectors.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetVolumeIDNumber.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRGetVolumeLabel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRIsBootable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetBootable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetCreatingSystemIdentifier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetExtendedBootRecordSignature.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetFileSystemType.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetMediumIdentifier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetNumberOfFATs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetNumberOfRootDirectoryEntries.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetNumberOfSides.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetReservedSectorCount.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetSectorSize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetSectorsPerCluster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetSectorsPerFAT.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetSectorsPerTrack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetTotalSectors.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetVolumeIDNumber.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRSetVolumeLabel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MBR/MBRWrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SFN/SFNCreate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SFN/__SFNReplaceInvalidCharacters.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SFN/__SFNUniqueFilename.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

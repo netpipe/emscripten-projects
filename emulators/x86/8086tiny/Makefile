@@ -33,8 +33,8 @@ all:
 	emcc 8086tiny.c ${SRC_TMT} ${OPTS_TMT} -DVTERM_USE_CR -DNO_GRAPHICS -o build/8086tiny_node.js -fsigned-char -O1 --embed-file bios --embed-file fd.img
 
 8086tiny_no_tmt: 8086tiny.c
-	${CC} 8086tiny.c ${OPTS_SDL} ${OPTS_ALL} -o ./build/8086tiny
-	strip ./build/8086tiny
+	${CC} 8086tiny.c ${OPTS_SDL} ${OPTS_ALL} -o ./8086tiny
+	strip ./8086tiny
 
 8086tiny_slowcpu: 8086tiny.c
 	${CC} 8086tiny.c ${OPTS_SDL} ${OPTS_ALL} ${OPTS_SLOWCPU} -o ./build/8086tiny

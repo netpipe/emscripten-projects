@@ -1,6 +1,8 @@
 
 #include "test.h"
 #include "fluidsynth.h"
+#include <emscripten.h>
+
 
 // this test should make sure that sample rate changed are handled correctly
 int main(void)
