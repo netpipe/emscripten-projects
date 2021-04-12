@@ -1,3 +1,3 @@
 #!/bin/bash
 
-8086tiny bios fd.img
+./8086tiny bios fd.img
