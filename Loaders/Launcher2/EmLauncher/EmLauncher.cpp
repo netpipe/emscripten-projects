@@ -12,3 +12,4 @@ void launch() {
 EMSCRIPTEN_BINDINGS(my_module) {
     function("launch", &launch);
 }
+
