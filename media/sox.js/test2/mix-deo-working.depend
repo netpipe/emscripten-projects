@@ -12,3 +12,16 @@
 	<sys/types.h>
 	<emscripten.h>
 
+1636883343 source:/run/media/netpipe/DEV/Dev/emscripten-projects-new/media/sox.js/test2/simpledemo2.cpp
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	<string>
+	<vector>
+	<fstream>
+	<iostream>
+	<dirent.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<sys/types.h>
+	<emscripten.h>
+

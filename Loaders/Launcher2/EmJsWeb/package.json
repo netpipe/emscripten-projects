@@ -1,0 +1,8 @@
+{
+    "name": "EmJsWeb",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "L G Liao",
+    "contributors": [],
+    "dependencies": {}
+}

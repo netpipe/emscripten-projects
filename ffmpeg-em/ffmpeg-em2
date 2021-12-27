@@ -8,9 +8,12 @@
 
 #place all files into build folder then put the makefile outside of it if desired
 ###################################################################################
+
+#get libs from here maybe still testing otherwise i have to get revision numbers. https://github.com/Kagami/ffmpeg.js/
+
 downloading=false
-patching=false
-buildinglibs=false
+patching=true
+buildinglibs=true
 compileffmpeg=false
 static="disabled" #"enabled" #build static librarys for ffmpeg
 shared="enabled"

@@ -9,4 +9,8 @@ cd $directory
 sed -i '/___buildEnvironment(__get_environ());/d' "./$name.js"
 #./fix
 
-
+#search for line 
+#      var Module = {
+#and add 
+#arguments: ['-h','-waudio.wav','-ven/en-us', '-f"/usr/speak.txt'],
+#to test.html

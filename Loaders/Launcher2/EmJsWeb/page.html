@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wasm Tool Launcher</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {background-color: lightblue;}
+            .center {text-align: center;}
+        </style>
+        <script>
+            var Module = {onRuntimeInitialized: function () {}};
+        </script>
+        <script type="text/javascript" src="EmLauncher.js"></script>
+    </head>
+    <body>
+        <div id="hello" class="center">
+            <h1>Wasm Tool Launcher</h1>
+            <p/>
+            <h3>The following tool converts a text string to lowercase and uppercase</h3>
+            <p/>
+            <label>Text string:</label><input type="text" id="tid" name="tname">
+            <p/>
+            <button onclick="Module.launch();">Launch</button>
+            <p/>
+            <iframe id="ifrm" src="toolbox.html"></iframe>
+        </div>
+    </body>
+</html>

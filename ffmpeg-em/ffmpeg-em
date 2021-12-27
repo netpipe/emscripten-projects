@@ -8,6 +8,7 @@
 
 #place all files into build folder then put the makefile outside of it if desired
 ###################################################################################
+#get libs from here maybe still testing otherwise i have to get revision numbers. https://github.com/Kagami/ffmpeg.js/
 compileffmpeg=1
 buildexamples=0
 
@@ -258,7 +259,7 @@ if (( $compileffmpeg )); then
 	if (( $webmbuild )); then
 	echo "Building ffmpeg-webm"
 	echo "########################################"
-		cd ./build/ffmpeg-webm
+		cd ../build/ffmpeg-webm
 		git reset --hard
 		patch -p1 < ../ffmpeg-disable-arc4random.patch
 		patch -p1 < ../ffmpeg-default-font.patch
@@ -292,7 +293,7 @@ if (( $compileffmpeg )); then
 	if  (( $mp4build )); then
 	echo "Building ffmpeg-mp4"
 	echo "########################################"
-		cd ./build/ffmpeg-mp4 
+		cd ../build/ffmpeg-mp4 
 		#git reset --hard && \
 		patch -p1 < ../ffmpeg-disable-arc4random.patch 
 		patch -p1 < ../ffmpeg-disable-monotonic.patch 

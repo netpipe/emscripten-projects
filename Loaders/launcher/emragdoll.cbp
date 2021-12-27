@@ -19,6 +19,7 @@
 				<Option projectIncludeDirsRelation="1" />
 				<Option projectResourceIncludeDirsRelation="1" />
 				<Compiler>
+					<Add option="-D__EMSCRIPTEN__" />
 					<Add directory="../../../../irrlicht-ogl-es/irrlicht/include" />
 					<Add directory="../../../Libs/physics/Bullet278/src" />
 					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/include" />
@@ -26,6 +27,7 @@
 				<Linker>
 					<Add option="-s ALLOW_MEMORY_GROWTH=1" />
 					<Add option="--preload-file media/" />
+					<Add option="--embed-file ./media/printsome.bc" />
 					<Add option="-s FULL_ES2=1" />
 					<Add option="-s DISABLE_EXCEPTION_CATCHING=0" />
 					<Add option="-s NO_EXIT_RUNTIME=1" />
@@ -84,6 +86,7 @@
 				<Option projectResourceIncludeDirsRelation="1" />
 				<Option projectLibDirsRelation="1" />
 				<Compiler>
+					<Add option="-D__EMSCRIPTEN__" />
 					<Add directory="../../../Libs/irrlicht-ogl-es/irrlicht/include" />
 				</Compiler>
 				<Linker>

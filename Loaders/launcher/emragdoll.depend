@@ -6,3 +6,10 @@
 	<unistd.h>
 	<stdlib.h>
 
+1637371896 source:/run/media/netpipe/DEV/Dev/emscripten-projects-new/Loaders/launcher/launcher.cpp
+	<iostream>
+	<emscripten.h>
+	<stdio.h>
+	<unistd.h>
+	<stdlib.h>
+

@@ -1,0 +1,46 @@
+Wasm Tool Launcher - 27th December 2021
+=======================================
+
+EmJsWeb     The node.js web application - the Wasm Tool Launcher
+EmLauncher  The C++ program used by EmJsWeb to launch a Wasm Tool
+EmWasmTool  A Wasm Tool that converts a text string to lowercase and uppercase
+
+The entry point of EmJsWeb is main.js through which the main page page.html and
+an IFrame page toolbox.html are loaded in browser.
+
+EmWasmTool is an example Emscripten C++ code which uses a Makefile and an
+embuild.sh script to build and copy files to EmJsWeb.
+
+EmLauncher also uses a Makefile and an embuild.sh script.  EM_ASM is used in its
+code to run Javascript codes on page.html to launch the EmWasmTool with input
+text as argument for the tool.
+
+IFrame is used to separate the two web pages both use Emscripten applications.
+The reason for this arrangement is that two Emscripten applications running on
+the same web page may interfere with each other, causing run time errors.
+
+In the delivered codes, two different methods have been implemented for loading
+the EmWasmTool javascript codes.  In toolbox.js, there are functions of
+staticLoadJs(url) and dynamicLoadJs(url, callback).  The dynamic loading which
+can be activated by commenting out line 6 staticLoadJs(toolJs) in toolbox.js
+causes a runtime error inside the EmWasmTool Wasm Js codes:
+
+abort(Assertion failed: native function `stackSave` called before runtime 
+initialization) at Error
+    at jsStackTrace (EmWasmTool.js:1746)
+    at stackTrace (EmWasmTool.js:1768)
+    at abort (EmWasmTool.js:1437)
+    at assert (EmWasmTool.js:656)
+    at EmWasmTool.js:1502
+    at ccall (EmWasmTool.js:706)
+    at EmWasmTool.js:725
+    at HTMLScriptElement.toolCode [as onreadystatechange] (toolbox.js:19)
+    at abort (EmWasmTool.js:1443)
+    at assert (EmWasmTool.js:656)
+    at EmWasmTool.js:1502
+    at ccall (EmWasmTool.js:706)
+    at EmWasmTool.js:725
+    at HTMLScriptElement.toolCode [as onreadystatechange] (toolbox.js:19)
+
+Because of this error, the Tool's js code is statically loaded on page loading,
+i.e. line 6 staticLoadJs(toolJs) in toolbox.js is not commented out.
